@@ -1,0 +1,62 @@
+.vote {
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 0;
+}
+.freeBox {
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: row;
+  width: 100%;
+  min-width: 0;
+  padding: 20px;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin-left: calc(0px - 44px);
+  width: calc(100% + 44px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 44px;
+}
+.votingCard__hnUh1:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.votingCard__aV27L:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.votingCard___4M1VA:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.text {
+  padding-right: 0px;
+}
+.votingCard__dZYnU:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.votingCard__bhY:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}

@@ -1,0 +1,478 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.gallery01 {
+  background: rgba(255, 255, 255, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.gallery01 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: calc(0px - 50px);
+  height: calc(100% + 50px);
+}
+.gallery01 > :global(.__wab_flex-container) > *,
+.gallery01 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.gallery01 > :global(.__wab_flex-container) > picture > img,
+.gallery01
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 50px;
+}
+.description {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 17px 16px 16px;
+}
+.text__goGpD {
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 41px;
+  color: rgba(41, 41, 41, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 939px;
+  height: 62px;
+  flex-shrink: 0;
+}
+.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: rgba(93, 93, 93, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 1048px;
+}
+.navBar {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.frame108 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: row;
+}
+.frame108 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 32px);
+  width: calc(100% + 32px);
+}
+.frame108 > :global(.__wab_flex-container) > *,
+.frame108 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame108 > :global(.__wab_flex-container) > picture > img,
+.frame108
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 32px;
+}
+.freeBox___8XjHn {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  min-width: 0;
+  padding: 16px;
+}
+.text__tifKi {
+  display: block;
+  font-size: 24px;
+  font-family: "Rounded Mplus 1c";
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: rgba(255, 106, 96, 1);
+  width: auto;
+  height: 25px;
+  flex-shrink: 0;
+}
+.textvariants2_renderings__tifKIhKtTu {
+  color: #292929;
+  font-weight: 400;
+}
+.freeBox__gJf00 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  padding: 16px;
+}
+._3DRenderings {
+  display: block;
+  font-size: 24px;
+  font-family: "Rounded Mplus 1c";
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: rgba(41, 41, 41, 1);
+  width: auto;
+  height: 25px;
+  flex-shrink: 0;
+}
+._3DRenderingsvariants2_renderings {
+  color: #1677ff;
+  font-weight: 800;
+}
+.freeBox__p3Z4V {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  padding: 16px;
+}
+.analysis {
+  display: block;
+  font-size: 24px;
+  font-family: "Rounded Mplus 1c";
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: rgba(41, 41, 41, 1);
+  width: auto;
+  height: 25px;
+  flex-shrink: 0;
+}
+.freeBox__uM7K5 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  min-width: 0;
+  padding: 16px;
+}
+.sketches {
+  display: block;
+  font-size: 24px;
+  font-family: "Rounded Mplus 1c";
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: rgba(41, 41, 41, 1);
+  width: auto;
+  height: 25px;
+  flex-shrink: 0;
+}
+.freeBox__t4Vcl {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__t4Vcl > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  min-width: 0;
+  margin-left: calc(0px - 120px);
+  width: calc(100% + 120px);
+  margin-top: calc(0px - 60px);
+  height: calc(100% + 60px);
+}
+.freeBox__t4Vcl > :global(.__wab_flex-container) > *,
+.freeBox__t4Vcl > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__t4Vcl > :global(.__wab_flex-container) > picture > img,
+.freeBox__t4Vcl
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 120px;
+  margin-top: 60px;
+}
+.freeBox__hh4Lb {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.rectangle3178 {
+  background: url("./images/rectangle3178.png") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 515px;
+  height: 384px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.text__n9Xw0 {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.freeBox__uttHp {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+}
+.rectangle3177 {
+  background: url("./images/rectangle3177.png") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 518px;
+  height: 384px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.text___3Yz3T {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.freeBox__lPps {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+}
+.rectangle3179 {
+  background: url("./images/image4.png") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 515px;
+  height: 384px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.climbingWall {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.freeBox__nzUej {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+}
+.rectangle3181 {
+  background: url("./images/rectangle3181.png") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 518px;
+  height: 384px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.openActivitiesOnTheNorth {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.freeBox__cqgce {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+}
+.rectangle3180 {
+  background: url("./images/rectangle3180.png") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 515px;
+  height: 384px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.text__p0BCx {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+}
+.map {
+  width: 1032px;
+  height: 440px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+.rectangle3183 {
+  background: url("./images/rectangle3182.png") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  width: 1032px;
+  height: 384px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 24px;
+}
+.mapOfTheAreasDesignedOnTopAndUnderTheBridge {
+  display: block;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 402px;
+  left: 167px;
+}
+.popUpGallery__bVuN:global(.__wab_instance) {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+.popUpGallerypopUp2__bVuNaS23:global(.__wab_instance) {
+  display: flex;
+}
+.popUpGallery__tge3D:global(.__wab_instance) {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+.popUpGalleryunnamedGroupOfVariants3_activityPopUp1__tge3DcEnHz:global(
+    .__wab_instance
+  ) {
+  display: flex;
+}

@@ -1,0 +1,178 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.generalFrame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+.introBox {
+  width: 505px;
+  height: 453px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-shrink: 0;
+}
+.boxArea {
+  box-shadow: 0px 0px 0px 0px var(--token-kzT08fQBAHgz);
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition-property: all;
+  transition-duration: 1s;
+  flex-direction: column;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid var(--token-kzT08fQBAHgz);
+}
+.textGroup {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+}
+.text__t84Eh {
+  display: block;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: sticky;
+  top: 27px;
+  left: 31px;
+  z-index: 1;
+  text-align: left;
+  margin: 10px;
+}
+.helpUsMore {
+  display: block;
+  font-size: undefinedpx;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: sticky;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  margin: 20px;
+}
+.byFillingInAVeryQuickQuestionnaire {
+  display: block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 402px;
+  z-index: 1;
+  padding: 0px;
+  margin: 10px 20px 20px;
+}
+.button1 {
+  width: 423px;
+  height: 57px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 1;
+  align-self: center;
+  flex-shrink: 0;
+  padding: 10px;
+  margin: 30px 30px 10px;
+}
+.rectangle1 {
+  background: rgba(0, 0, 0, 1);
+  width: 423px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 6px;
+}
+.text__jRxe {
+  display: block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 17px;
+  left: 103px;
+}
+.button2 {
+  width: 423px;
+  height: 57px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  align-self: center;
+  flex-shrink: 0;
+  padding: 10px;
+  margin: 10px 30px 50px;
+}
+.rectangle2 {
+  background: rgba(0, 0, 0, 1);
+  width: 423px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 6px;
+}
+.answerTheQuestions {
+  display: block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 17px;
+  left: 125px;
+}

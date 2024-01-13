@@ -1,0 +1,197 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+.lightboxDisplay {
+  background: var(--token-MjYUWCcX38Uk);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 8px;
+}
+.img___18Uwh {
+  object-fit: cover;
+  max-width: 100%;
+  transform: scale(1, -1) rotate(-180deg);
+  width: 47px;
+  height: 56px;
+  display: block !important;
+  transform-origin: top left;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.img___18Uwh > picture > img {
+  object-fit: cover;
+}
+.display {
+  width: 1023px;
+  height: 1034px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  overflow: hidden;
+  box-shadow: 0px 4px 16px 0px #00000047;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #464646;
+}
+.maskGroup {
+  width: 1023px;
+  height: 464px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.image {
+  background: url("./images/image.png") center center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.maskGroup2 {
+  width: 269px;
+  height: 570px;
+  display: block;
+  position: absolute;
+  top: 464px;
+  left: 0px;
+}
+.image2 {
+  background: rgba(0, 0, 0, 0.33);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.extendingFromTheSkateParkUsersWillFlowFromRampsToAnOpenAreaAdornedWithGraffitiCoveredColumnsHereOneCanRelaxWhileLookingAtTheArtOrIndulgeInClimbingConvenientlyCloseToHomeTheClimbingWallIntegratedOntoReinforcedWallsSupportingRampsMaintainsPrivacyWithCoveredUpperSidesAndAllowsNaturalLightThroughCarefullyPlacedOpeningsWellLitForNighttimeUseTheSpaceIncludesAFewParkingSpotsWithPowerStationsForElectricVehiclesEnhancingAccessibilityAndConvenience {
+  position: absolute;
+  top: 315px;
+  left: 12px;
+  width: 249px;
+  height: 244px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text {
+  display: block;
+  font-size: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+.maskGroup3 {
+  transform: rotate(-90deg);
+  width: 259px;
+  height: 754px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  top: 723px;
+  left: 269px;
+}
+.image3 {
+  background: url("./images/image2.png") center center / cover no-repeat;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.maskGroup4 {
+  width: 754px;
+  height: 311px;
+  display: block;
+  position: absolute;
+  top: 723px;
+  left: 269px;
+}
+.image4 {
+  background: url("./images/image4.png") center center / cover no-repeat;
+  width: 100%;
+  height: 101.28%;
+  display: block;
+  position: absolute;
+  top: -1.29%;
+  left: 0%;
+}
+.caption {
+  display: block;
+  font-size: 32px;
+  font-family: "Bangers";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 463px;
+  left: 16px;
+}
+.img__yCs8F {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 47px;
+  height: 56px;
+  display: block !important;
+  top: auto;
+  left: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.img__yCs8F > picture > img {
+  object-fit: cover;
+}
+.img__hj0Qc {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 36px;
+  height: 36px;
+  display: block !important;
+  top: auto;
+  left: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.img__hj0Qc > picture > img {
+  object-fit: cover;
+}

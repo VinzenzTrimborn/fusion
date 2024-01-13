@@ -1,0 +1,135 @@
+.root {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 1);
+  width: 403px;
+  height: 484px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  cursor: pointer;
+  backdrop-filter: none;
+  filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 16px;
+}
+.root:hover {
+  box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 1), 0px 4px 16px 0px #000000;
+}
+.freeBox___24Uq5 {
+  transform: none;
+  width: 395px;
+  height: 152px;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 25px;
+}
+.freeBox___24Uq5 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.freeBox___24Uq5 > :global(.__wab_flex-container) > *,
+.freeBox___24Uq5 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox___24Uq5 > :global(.__wab_flex-container) > picture > img,
+.freeBox___24Uq5
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+.freeBox__aJjh {
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: translate(0px, 0.0779999999999994px);
+  flex-direction: row;
+}
+.slotTargetChildren {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 1);
+  line-height: 28px;
+  letter-spacing: -1px;
+}
+.freeBox__r5WcM {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  left: auto;
+  bottom: auto;
+  flex-direction: row;
+  margin-top: calc(10px + 10px) !important;
+  margin-bottom: 10px;
+}
+.freeBox__r5WcM > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: calc(0px - 6.718px);
+  width: calc(100% + 6.718px);
+}
+.freeBox__r5WcM > :global(.__wab_flex-container) > *,
+.freeBox__r5WcM > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__r5WcM > :global(.__wab_flex-container) > picture > img,
+.freeBox__r5WcM
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 6.718px;
+}
+.root:hover .freeBox__r5WcM {
+  margin-top: calc(10px + 10px) !important;
+}
+.text {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+}
+.root:hover .text {
+  font-weight: 800;
+}
+.freeBox__clxF7 {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.svg {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #000;
+  width: 14px;
+  height: 14px;
+  display: block;
+  top: 0px;
+  left: 0px;
+}
+.freeBox__oOw0O {
+  background: url("./images/dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign1.png") center center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
