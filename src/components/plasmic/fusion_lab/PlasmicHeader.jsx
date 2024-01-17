@@ -17,6 +17,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
+import UserAuth from "../../UserAuth"; // plasmic-import: zv2IqcCjwXro/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -43,11 +44,13 @@ function PlasmicHeader__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   return (
-    <div
-      data-plasmic-name={"intro"}
-      data-plasmic-override={overrides.intro}
+    <p.Stack
+      as={"div"}
+      data-plasmic-name={"root"}
+      data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
+      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -56,44 +59,64 @@ function PlasmicHeader__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.intro
+        sty.root
       )}
     >
+      <section
+        data-plasmic-name={"section"}
+        data-plasmic-override={overrides.section}
+        className={classNames(projectcss.all, sty.section)}
+      />
+
       <p.Stack
         as={"div"}
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
         hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__nA3A)}
+        className={classNames(projectcss.all, sty.freeBox)}
       >
-        <div className={classNames(projectcss.all, sty.freeBox___8YuVi)} />
-        <div className={classNames(projectcss.all, sty.freeBox__wiRfS)}>
-          <div className={classNames(projectcss.all, sty.freeBox__bAcVc)}>
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              {"Donnersberger\nBr\u00fccke"}
-            </div>
-          </div>
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__yx87D
+          )}
+        >
+          {"Donnersberger Bridge needs to be rebuild"}
+        </div>
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__ebHd9
+          )}
+        >
+          {
+            "Help to choose the right design and contribute your idea and feedback"
+          }
         </div>
         <ActionButton
-          data-plasmic-name={"actionButton"}
-          data-plasmic-override={overrides.actionButton}
-          className={classNames("__wab_instance", sty.actionButton)}
+          data-plasmic-name={"participateButton"}
+          data-plasmic-override={overrides.participateButton}
+          className={classNames("__wab_instance", sty.participateButton)}
         />
       </p.Stack>
-    </div>
+      <UserAuth
+        data-plasmic-name={"auth"}
+        data-plasmic-override={overrides.auth}
+        className={classNames("__wab_instance", sty.auth)}
+        open={false}
+      />
+    </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  intro: ["intro", "text", "actionButton"],
-  text: ["text"],
-  actionButton: ["actionButton"]
+  root: ["root", "section", "freeBox", "participateButton", "auth"],
+  section: ["section"],
+  freeBox: ["freeBox", "participateButton"],
+  participateButton: ["participateButton"],
+  auth: ["auth"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -115,7 +138,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "intro") {
+  if (nodeName === "root") {
     func.displayName = "PlasmicHeader";
   } else {
     func.displayName = `PlasmicHeader.${nodeName}`;
@@ -125,11 +148,13 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicHeader = Object.assign(
   // Top-level PlasmicHeader renders the root element
-  makeNodeComponent("intro"),
+  makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
-    actionButton: makeNodeComponent("actionButton"),
+    section: makeNodeComponent("section"),
+    freeBox: makeNodeComponent("freeBox"),
+    participateButton: makeNodeComponent("participateButton"),
+    auth: makeNodeComponent("auth"),
     // Metadata about props expected for PlasmicHeader
     internalVariantProps: PlasmicHeader__VariantProps,
     internalArgProps: PlasmicHeader__ArgProps

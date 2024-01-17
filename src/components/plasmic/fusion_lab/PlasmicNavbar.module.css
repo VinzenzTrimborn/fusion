@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  padding: 20px 0px;
+  padding: 20px 123px 20px 40px;
 }
 .root > :global(.__wab_flex-container) {
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: calc(0px - 0px);
   width: calc(100% + 0px);
 }
@@ -23,16 +23,28 @@
   background: url("./images/oip1.jpg") center center / cover no-repeat;
   width: 83px;
   height: 45px;
-  display: block;
+  display: flex;
   position: relative;
+  flex-direction: row;
   flex-shrink: 0;
+}
+.freeBox__qIZs {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
 }
 .freeBox___7ORoh {
   background: rgba(255, 255, 255, 1);
   width: 100%;
   height: auto;
   display: flex;
-  position: relative;
   flex-direction: row;
   max-width: 600px;
   min-width: 0;
@@ -62,16 +74,16 @@
   top: auto;
   left: auto;
 }
-.navBarNavButton___2IuX6:global(.__wab_instance) {
-  position: relative;
-  top: auto;
-  left: auto;
-}
 .navBarNavButton__co2H6:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;
   min-width: 145px;
+}
+.navBarNavButton___2IuX6:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
 }
 .navBarNavButton__vvEtk:global(.__wab_instance) {
   position: relative;
@@ -82,8 +94,4 @@
   position: relative;
   top: auto;
   left: auto;
-}
-.actionButton:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
 }

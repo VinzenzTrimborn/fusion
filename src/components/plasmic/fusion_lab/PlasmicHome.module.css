@@ -10,57 +10,62 @@
   min-width: 0;
   min-height: 0;
 }
-.section {
-  display: grid;
-  position: relative;
-  align-content: flex-start;
-  justify-items: center;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  height: 90px;
-  background: #ffffff;
-  min-width: 0;
-  flex-shrink: 0;
-  grid-template-columns:
-    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
-    min(
-      var(--plsmc-standard-width),
-      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
-    )
-    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-}
-.section > * {
-  grid-column: 4;
-}
-.gltfView:global(.__wab_instance) {
+.header:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  height: 80vh;
-  flex-shrink: 0;
 }
 .navbar:global(.__wab_instance) {
+  max-width: 100%;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  left: 0;
+  top: 0;
   z-index: 1;
+  right: 0;
 }
-.header:global(.__wab_instance) {
+.participationArea:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+.viewBar:global(.__wab_instance) {
+  max-width: 100%;
   position: relative;
-  top: auto;
-  left: auto;
-  flex-shrink: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  min-width: 0;
+}
+.votingSection:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
 }
 .aboutUs:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
-.commentCloudSection:global(.__wab_instance) {
+.team:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  margin: 40px;
 }
-.team:global(.__wab_instance) {
+@media (min-width: 0px) and (max-width: 768px) {
+  .team:global(.__wab_instance) {
+    width: 100%;
+    min-width: 0;
+  }
+}
+.galleryDisplay:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }
@@ -68,4 +73,5 @@
   max-width: 100%;
   position: relative;
   margin-top: 104px;
+  width: auto;
 }

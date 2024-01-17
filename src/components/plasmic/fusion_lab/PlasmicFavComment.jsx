@@ -12,6 +12,7 @@ import * as React from "react";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -26,7 +27,7 @@ import LocationArrowSvgrepoComsvgIcon from "./icons/PlasmicIcon__LocationArrowSv
 
 createPlasmicElementProxy;
 
-export const PlasmicFavComment__VariantProps = new Array();
+export const PlasmicFavComment__VariantProps = new Array("inFront");
 
 export const PlasmicFavComment__ArgProps = new Array();
 
@@ -43,6 +44,24 @@ function PlasmicFavComment__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "inFront",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.inFront
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = p.useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -57,20 +76,29 @@ function PlasmicFavComment__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        { [sty.rootinFront]: hasVariant($state, "inFront", "inFront") }
       )}
     >
       <p.Stack
         as={"div"}
         hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox___5RZm1)}
+        className={classNames(projectcss.all, sty.freeBox___5RZm1, {
+          [sty.freeBoxinFront___5RZm1N7Wy6]: hasVariant(
+            $state,
+            "inFront",
+            "inFront"
+          )
+        })}
       >
         <div className={classNames(projectcss.all, sty.freeBox__kyBml)}>
           <div
+            data-plasmic-name={"username"}
+            data-plasmic-override={overrides.username}
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text__hSbLs
+              sty.username
             )}
           >
             {"Vinzenz@trimborn"}
@@ -84,10 +112,12 @@ function PlasmicFavComment__RenderFunc(props) {
             </div>
             <div className={classNames(projectcss.all, sty.freeBox__fNv2V)}>
               <div
+                data-plasmic-name={"likes"}
+                data-plasmic-override={overrides.likes}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__nQtYc
+                  sty.likes
                 )}
               >
                 {"400"}
@@ -106,10 +136,13 @@ function PlasmicFavComment__RenderFunc(props) {
           </div>
         </div>
         <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text__vvwwr
+            sty.text,
+            { [sty.textinFront]: hasVariant($state, "inFront", "inFront") }
           )}
         >
           {
@@ -122,8 +155,11 @@ function PlasmicFavComment__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "locationButton"],
-  locationButton: ["locationButton"]
+  root: ["root", "username", "likes", "locationButton", "text"],
+  username: ["username"],
+  likes: ["likes"],
+  locationButton: ["locationButton"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -158,7 +194,10 @@ export const PlasmicFavComment = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    username: makeNodeComponent("username"),
+    likes: makeNodeComponent("likes"),
     locationButton: makeNodeComponent("locationButton"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicFavComment
     internalVariantProps: PlasmicFavComment__VariantProps,
     internalArgProps: PlasmicFavComment__ArgProps

@@ -27,7 +27,7 @@ createPlasmicElementProxy;
 
 export const PlasmicActionButton__VariantProps = new Array("options");
 
-export const PlasmicActionButton__ArgProps = new Array();
+export const PlasmicActionButton__ArgProps = new Array("children");
 
 const $$ = {};
 
@@ -81,23 +81,35 @@ function PlasmicActionButton__RenderFunc(props) {
       )}
     >
       <div
-        data-plasmic-name={"text"}
-        data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text, {
-          [sty.textoptions_sVersion]: hasVariant($state, "options", "sVersion")
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox, {
+          [sty.freeBoxoptions_sVersion]: hasVariant(
+            $state,
+            "options",
+            "sVersion"
+          )
         })}
       >
-        {hasVariant($state, "options", "sVersion")
-          ? "Participate"
-          : "Participate & Give Feedback"}
+        {p.renderPlasmicSlot({
+          defaultContents: "Participate & Give Feedback",
+          value: args.children,
+          className: classNames(sty.slotTargetChildren, {
+            [sty.slotTargetChildrenoptions_sVersion]: hasVariant(
+              $state,
+              "options",
+              "sVersion"
+            )
+          })
+        })}
       </div>
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "text"],
-  text: ["text"]
+  root: ["root", "freeBox"],
+  freeBox: ["freeBox"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -132,7 +144,7 @@ export const PlasmicActionButton = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
+    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicActionButton
     internalVariantProps: PlasmicActionButton__VariantProps,
     internalArgProps: PlasmicActionButton__ArgProps

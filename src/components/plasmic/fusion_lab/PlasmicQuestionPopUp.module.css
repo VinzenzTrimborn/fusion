@@ -165,32 +165,40 @@
   > img {
   margin-left: 16px;
 }
-.button:global(.__wab_instance) {
-  width: 180px;
-  height: 44px;
+.no:global(.__wab_instance) {
+  width: auto;
+  height: 100%;
   display: block;
   position: relative;
-  flex-shrink: 0;
+  min-height: 0;
+  padding: 5px 25px;
+  border: 2px solid var(--token-kzT08fQBAHgz);
 }
 .text__vCvkL {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  margin-right: 0px;
+  font-weight: 700;
   min-width: 0;
 }
-.button2:global(.__wab_instance) {
-  width: 180px;
-  height: 44px;
+.yes:global(.__wab_instance) {
+  width: auto;
+  height: 100%;
   display: block;
   position: relative;
-  flex-shrink: 0;
+  background: linear-gradient(0deg, #d85caf 0%, #3343db 100%);
+  min-height: 0;
+  padding: 5px 35px;
+  border: 2px solid var(--token-kzT08fQBAHgz);
 }
 .text__rjorO {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-weight: 700;
   min-width: 0;
 }
 .img {

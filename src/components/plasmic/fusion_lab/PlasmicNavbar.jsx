@@ -17,7 +17,6 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import NavBarNavButton from "../../NavBarNavButton"; // plasmic-import: t7jVw_W02fSH/component
-import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -63,49 +62,47 @@ function PlasmicNavbar__RenderFunc(props) {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox___521Hd)} />
-      <p.Stack
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox___7ORoh)}
-      >
-        <NavBarNavButton
-          className={classNames("__wab_instance", sty.navBarNavButton__pO42K)}
-        />
+      <div className={classNames(projectcss.all, sty.freeBox__qIZs)}>
+        <p.Stack
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox___7ORoh)}
+        >
+          <NavBarNavButton
+            className={classNames("__wab_instance", sty.navBarNavButton__pO42K)}
+          />
 
-        <NavBarNavButton
-          className={classNames("__wab_instance", sty.navBarNavButton___2IuX6)}
-        >
-          {"About"}
-        </NavBarNavButton>
-        <NavBarNavButton
-          className={classNames("__wab_instance", sty.navBarNavButton__co2H6)}
-        >
-          {"Public Feedback"}
-        </NavBarNavButton>
-        <NavBarNavButton
-          className={classNames("__wab_instance", sty.navBarNavButton__vvEtk)}
-        >
-          {"Team"}
-        </NavBarNavButton>
-        <NavBarNavButton
-          className={classNames("__wab_instance", sty.navBarNavButton__dl7Wd)}
-        >
-          {"Gallery"}
-        </NavBarNavButton>
-      </p.Stack>
-      <ActionButton
-        data-plasmic-name={"actionButton"}
-        data-plasmic-override={overrides.actionButton}
-        className={classNames("__wab_instance", sty.actionButton)}
-        options={"sVersion"}
-      />
+          <NavBarNavButton
+            className={classNames("__wab_instance", sty.navBarNavButton__co2H6)}
+          >
+            {"3D Model"}
+          </NavBarNavButton>
+          <NavBarNavButton
+            className={classNames(
+              "__wab_instance",
+              sty.navBarNavButton___2IuX6
+            )}
+          >
+            {"About"}
+          </NavBarNavButton>
+          <NavBarNavButton
+            className={classNames("__wab_instance", sty.navBarNavButton__vvEtk)}
+          >
+            {"Team"}
+          </NavBarNavButton>
+          <NavBarNavButton
+            className={classNames("__wab_instance", sty.navBarNavButton__dl7Wd)}
+          >
+            {"Gallery"}
+          </NavBarNavButton>
+        </p.Stack>
+      </div>
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "actionButton"],
-  actionButton: ["actionButton"]
+  root: ["root"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -140,7 +137,6 @@ export const PlasmicNavbar = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    actionButton: makeNodeComponent("actionButton"),
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
     internalArgProps: PlasmicNavbar__ArgProps

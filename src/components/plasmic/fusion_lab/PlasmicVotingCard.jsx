@@ -88,11 +88,36 @@ function PlasmicVotingCard__RenderFunc(props) {
                 sty.text__vpS7Q
               )}
             >
-              {"Votes:"}
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#000000" }}
+                >
+                  {"Votes:"}
+                </span>
+              </React.Fragment>
             </div>
           </div>
           {p.renderPlasmicSlot({
-            defaultContents: "434.535",
+            defaultContents: (
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__lpWrm
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#000000" }}
+                  >
+                    {"434.535"}
+                  </span>
+                </React.Fragment>
+              </div>
+            ),
+
             value: args.voteCount,
             className: classNames(sty.slotTargetVoteCount)
           })}

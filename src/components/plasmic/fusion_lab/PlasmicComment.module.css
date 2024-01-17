@@ -1,0 +1,281 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  background: none;
+}
+.freeBox__t0ZT {
+  width: 350px;
+  height: 82px;
+  display: flex;
+  box-shadow: 0px 4px 16px 0px var(--token-RHb8DXPBtDBn);
+  flex-direction: row;
+  background: #ffffff;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 2px solid var(--token-LqpCVPPZF4_r);
+}
+.freeBox__p7Sb1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.freeBox___0CtHj {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-height: 0;
+  padding: 8px;
+}
+.freeBox___0CtHj > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.freeBox___0CtHj > :global(.__wab_flex-container) > *,
+.freeBox___0CtHj > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox___0CtHj > :global(.__wab_flex-container) > picture > img,
+.freeBox___0CtHj
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+}
+.freeBox___9CRnq {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 0px 8px 8px;
+}
+.freeBox__vxEdt {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 0px;
+}
+.username {
+  display: block;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.28906;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: 100%;
+  margin-bottom: 0px;
+  min-height: 0;
+  padding: 0px;
+}
+.freeBox__d5Jt9 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text {
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.40625;
+  color: rgba(0, 0, 0, 0.87);
+  width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.modal:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 1158px;
+  padding: 200px;
+}
+.freeBox__d3Fcb {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 8px;
+}
+.button__sIvBb:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  margin-right: 5px;
+  min-width: 0;
+}
+.svg__jp43N {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__uOzge {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.button__yb73:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  margin-left: 5px;
+  min-width: 0;
+}
+.svg___7Lndc {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__ymVvI {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.freeBox__xpSoV {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.likeButton {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 16px;
+  height: 16px;
+  max-width: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0px;
+}
+.svg__prLvb {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.freeBox__ut5N {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  padding: 8px;
+}
+.likes {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0px;
+}
+.showLocation {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 8px;
+  border: 1px solid var(--token-Pxe4wDL2kJpb);
+}
+.svg__c9AeG {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  height: 1em;
+  flex-shrink: 0;
+}
+.threedots {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #000;
+  transform: scale(1.000000499999875, 0.999999500000375)
+    rotate(179.94270423958343deg) skew(-0.05729570311883569deg, 0deg)
+    translate(0.06099999999997863px, 0.47093900000000133px);
+  width: 15px;
+  height: 15px;
+  display: block;
+  top: auto;
+  left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0px;
+}

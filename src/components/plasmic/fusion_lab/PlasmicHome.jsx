@@ -16,12 +16,14 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
-import GltfView from "../../GltfView"; // plasmic-import: 2gypwESdRVuN/component
-import Navbar from "../../Navbar"; // plasmic-import: lwEnvYluELlC/component
 import Header from "../../Header"; // plasmic-import: iV9ipicgvWtS/component
+import Navbar from "../../Navbar"; // plasmic-import: lwEnvYluELlC/component
+import ParticipationArea from "../../ParticipationArea"; // plasmic-import: clPh1NSkBPaO/component
+import ViewBar from "../../ViewBar"; // plasmic-import: XC59IaIFr3ao/component
+import VotingSection from "../../VotingSection"; // plasmic-import: y-2j-fa4twS1/component
 import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
-import CommentCloudSection from "../../CommentCloudSection"; // plasmic-import: NG6kf33f9FmD/component
 import Team from "../../Team"; // plasmic-import: SnzWAy89iw5m/component
+import GalleryDisplay from "../../GalleryDisplay"; // plasmic-import: v_wMKsIXVD_E/component
 import FaqSection from "../../FaqSection"; // plasmic-import: Qhhf4YZ2QDy9/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -67,16 +69,10 @@ function PlasmicHome__RenderFunc(props) {
             sty.root
           )}
         >
-          <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
-          />
-
-          <GltfView
-            data-plasmic-name={"gltfView"}
-            data-plasmic-override={overrides.gltfView}
-            className={classNames("__wab_instance", sty.gltfView)}
+          <Header
+            data-plasmic-name={"header"}
+            data-plasmic-override={overrides.header}
+            className={classNames("__wab_instance", sty.header)}
           />
 
           <Navbar
@@ -85,10 +81,33 @@ function PlasmicHome__RenderFunc(props) {
             className={classNames("__wab_instance", sty.navbar)}
           />
 
-          <Header
-            data-plasmic-name={"header"}
-            data-plasmic-override={overrides.header}
-            className={classNames("__wab_instance", sty.header)}
+          <ParticipationArea
+            data-plasmic-name={"participationArea"}
+            data-plasmic-override={overrides.participationArea}
+            className={classNames("__wab_instance", sty.participationArea)}
+          />
+
+          <ViewBar
+            data-plasmic-name={"viewBar"}
+            data-plasmic-override={overrides.viewBar}
+            className={classNames("__wab_instance", sty.viewBar)}
+          />
+
+          <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text
+            )}
+          >
+            {"Choose Your Favorite Proposal!"}
+          </div>
+          <VotingSection
+            data-plasmic-name={"votingSection"}
+            data-plasmic-override={overrides.votingSection}
+            className={classNames("__wab_instance", sty.votingSection)}
           />
 
           <AboutUs
@@ -97,16 +116,16 @@ function PlasmicHome__RenderFunc(props) {
             className={classNames("__wab_instance", sty.aboutUs)}
           />
 
-          <CommentCloudSection
-            data-plasmic-name={"commentCloudSection"}
-            data-plasmic-override={overrides.commentCloudSection}
-            className={classNames("__wab_instance", sty.commentCloudSection)}
-          />
-
           <Team
             data-plasmic-name={"team"}
             data-plasmic-override={overrides.team}
             className={classNames("__wab_instance", sty.team)}
+          />
+
+          <GalleryDisplay
+            data-plasmic-name={"galleryDisplay"}
+            data-plasmic-override={overrides.galleryDisplay}
+            className={classNames("__wab_instance", sty.galleryDisplay)}
           />
 
           <FaqSection
@@ -123,23 +142,27 @@ function PlasmicHome__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "section",
-    "gltfView",
-    "navbar",
     "header",
+    "navbar",
+    "participationArea",
+    "viewBar",
+    "text",
+    "votingSection",
     "aboutUs",
-    "commentCloudSection",
     "team",
+    "galleryDisplay",
     "faqSection"
   ],
 
-  section: ["section"],
-  gltfView: ["gltfView"],
-  navbar: ["navbar"],
   header: ["header"],
+  navbar: ["navbar"],
+  participationArea: ["participationArea"],
+  viewBar: ["viewBar"],
+  text: ["text"],
+  votingSection: ["votingSection"],
   aboutUs: ["aboutUs"],
-  commentCloudSection: ["commentCloudSection"],
   team: ["team"],
+  galleryDisplay: ["galleryDisplay"],
   faqSection: ["faqSection"]
 };
 
@@ -175,13 +198,15 @@ export const PlasmicHome = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    section: makeNodeComponent("section"),
-    gltfView: makeNodeComponent("gltfView"),
-    navbar: makeNodeComponent("navbar"),
     header: makeNodeComponent("header"),
+    navbar: makeNodeComponent("navbar"),
+    participationArea: makeNodeComponent("participationArea"),
+    viewBar: makeNodeComponent("viewBar"),
+    text: makeNodeComponent("text"),
+    votingSection: makeNodeComponent("votingSection"),
     aboutUs: makeNodeComponent("aboutUs"),
-    commentCloudSection: makeNodeComponent("commentCloudSection"),
     team: makeNodeComponent("team"),
+    galleryDisplay: makeNodeComponent("galleryDisplay"),
     faqSection: makeNodeComponent("faqSection"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

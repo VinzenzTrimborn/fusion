@@ -123,9 +123,9 @@ function PlasmicQuestionPopUp__RenderFunc(props) {
               className={classNames(projectcss.all, sty.buttonGroup)}
             >
               <AntdButton
-                data-plasmic-name={"button"}
-                data-plasmic-override={overrides.button}
-                className={classNames("__wab_instance", sty.button)}
+                data-plasmic-name={"no"}
+                data-plasmic-override={overrides.no}
+                className={classNames("__wab_instance", sty.no)}
                 type={"Secondary"}
               >
                 <div
@@ -135,13 +135,13 @@ function PlasmicQuestionPopUp__RenderFunc(props) {
                     sty.text__vCvkL
                   )}
                 >
-                  {"Button"}
+                  {"No, Just Leave a Comment"}
                 </div>
               </AntdButton>
               <AntdButton
-                data-plasmic-name={"button2"}
-                data-plasmic-override={overrides.button2}
-                className={classNames("__wab_instance", sty.button2)}
+                data-plasmic-name={"yes"}
+                data-plasmic-override={overrides.yes}
+                className={classNames("__wab_instance", sty.yes)}
                 type={"Primary"}
               >
                 <div
@@ -151,7 +151,14 @@ function PlasmicQuestionPopUp__RenderFunc(props) {
                     sty.text__rjorO
                   )}
                 >
-                  {"Button"}
+                  <React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ color: "#FFFFFF" }}
+                    >
+                      {"Yes, Confirm"}
+                    </span>
+                  </React.Fragment>
                 </div>
               </AntdButton>
             </p.Stack>
@@ -193,8 +200,8 @@ const PlasmicDescendants = {
     "textGroupIn",
     "paragraph",
     "buttonGroup",
-    "button",
-    "button2",
+    "no",
+    "yes",
     "img"
   ],
 
@@ -206,8 +213,8 @@ const PlasmicDescendants = {
     "textGroupIn",
     "paragraph",
     "buttonGroup",
-    "button",
-    "button2",
+    "no",
+    "yes",
     "img"
   ],
 
@@ -218,8 +225,8 @@ const PlasmicDescendants = {
     "textGroupIn",
     "paragraph",
     "buttonGroup",
-    "button",
-    "button2",
+    "no",
+    "yes",
     "img"
   ],
 
@@ -229,16 +236,16 @@ const PlasmicDescendants = {
     "textGroupIn",
     "paragraph",
     "buttonGroup",
-    "button",
-    "button2"
+    "no",
+    "yes"
   ],
 
   textGroup: ["textGroup", "textGroupIn", "paragraph"],
   textGroupIn: ["textGroupIn", "paragraph"],
   paragraph: ["paragraph"],
-  buttonGroup: ["buttonGroup", "button", "button2"],
-  button: ["button"],
-  button2: ["button2"],
+  buttonGroup: ["buttonGroup", "no", "yes"],
+  no: ["no"],
+  yes: ["yes"],
   img: ["img"]
 };
 
@@ -281,8 +288,8 @@ export const PlasmicQuestionPopUp = Object.assign(
     textGroupIn: makeNodeComponent("textGroupIn"),
     paragraph: makeNodeComponent("paragraph"),
     buttonGroup: makeNodeComponent("buttonGroup"),
-    button: makeNodeComponent("button"),
-    button2: makeNodeComponent("button2"),
+    no: makeNodeComponent("no"),
+    yes: makeNodeComponent("yes"),
     img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicQuestionPopUp
     internalVariantProps: PlasmicQuestionPopUp__VariantProps,

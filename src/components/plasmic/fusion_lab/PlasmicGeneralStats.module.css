@@ -1,0 +1,403 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+}
+.statsGroup {
+  display: flex;
+  position: relative;
+  width: 1440px;
+  height: 430px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+.generalStatistics {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: auto;
+  top: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.text__epFe {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 80px;
+  color: rgba(0, 0, 0, 1);
+}
+.statBox {
+  width: 1440px;
+  height: 250px;
+  display: block;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-shrink: 0;
+}
+.statBoxRectangle {
+  background: rgba(216, 216, 216, 1);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+.statGroup {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 60px;
+  left: 217px;
+  flex-direction: row;
+}
+.statGroup > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 50px);
+  width: calc(100% + 50px);
+}
+.statGroup > :global(.__wab_flex-container) > *,
+.statGroup > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.statGroup > :global(.__wab_flex-container) > picture > img,
+.statGroup
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 50px;
+}
+.seen {
+  width: 161px;
+  height: 131px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+.text__blFOe {
+  display: block;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.text__hlHdK {
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(72, 72, 72, 1);
+  position: absolute;
+  top: 45.03%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.svg__l7XL {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 50px;
+  height: 4px;
+  display: block;
+  transform-origin: top left;
+  top: 6.87%;
+  left: 0%;
+}
+.svg__pQzjf {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 42px;
+  height: 1px;
+  display: block;
+  transform-origin: top left;
+  top: 45.03%;
+  left: 0%;
+}
+.comments {
+  width: 161px;
+  height: 131px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+._351 {
+  display: block;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.peopleHaveSeenTheModel {
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(72, 72, 72, 1);
+  position: absolute;
+  top: 45.03%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.svg__fw6Kx {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 50px;
+  height: 4px;
+  display: block;
+  transform-origin: top left;
+  top: 6.87%;
+  left: 0%;
+}
+.svg__vE9D {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 42px;
+  height: 1px;
+  display: block;
+  transform-origin: top left;
+  top: 45.03%;
+  left: 0%;
+}
+.surveys {
+  width: 161px;
+  height: 131px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+._124 {
+  display: block;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.peopleHaveSeenTheModel2 {
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(72, 72, 72, 1);
+  position: absolute;
+  top: 45.03%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.svg__bHi18 {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 50px;
+  height: 4px;
+  display: block;
+  transform-origin: top left;
+  top: 6.87%;
+  left: 0%;
+}
+.svg__aTmW9 {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 42px;
+  height: 1px;
+  display: block;
+  transform-origin: top left;
+  top: 45.03%;
+  left: 0%;
+}
+.images {
+  width: 161px;
+  height: 131px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+._54 {
+  display: block;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.peopleHaveSeenTheModel3 {
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(72, 72, 72, 1);
+  position: absolute;
+  top: 45.03%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.svg__wrCgW {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 50px;
+  height: 4px;
+  display: block;
+  transform-origin: top left;
+  top: 6.87%;
+  left: 0%;
+}
+.svg___8MIuW {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 42px;
+  height: 1px;
+  display: block;
+  transform-origin: top left;
+  top: 45.03%;
+  left: 0%;
+}
+.liked {
+  width: 161px;
+  height: 131px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+._254 {
+  display: block;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 0%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.peopleHaveSeenTheModel4 {
+  display: block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(72, 72, 72, 1);
+  position: absolute;
+  top: 45.03%;
+  left: 8.07%;
+  width: 91.92%;
+  height: 54.96%;
+}
+.svg__xne8 {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 50px;
+  height: 4px;
+  display: block;
+  transform-origin: top left;
+  top: 6.87%;
+  left: 0%;
+}
+.svg__zFr1I {
+  position: absolute;
+  object-fit: cover;
+  max-width: 100%;
+  color: #747474;
+  transform: scale(1.000000499999875, 1.0000004999998748)
+    rotate(90.0572957604145deg);
+  width: 42px;
+  height: 1px;
+  display: block;
+  transform-origin: top left;
+  top: 45.03%;
+  left: 0%;
+}

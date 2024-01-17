@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   max-height: 400px;
   position: relative;
+  background: none;
   min-width: 0;
   padding: 8px;
 }
@@ -19,7 +20,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token-5flkhAz6pTxg);
+  background: var(--token-jgohepLVeKvh);
   min-width: 0;
   border-radius: 15px;
   padding: 8px 16px 16px;
@@ -43,6 +44,9 @@
   > img {
   margin-top: 10px;
 }
+.freeBoxinFront___5RZm1N7Wy6 {
+  z-index: 5;
+}
 .freeBox__kyBml {
   display: flex;
   position: relative;
@@ -55,7 +59,7 @@
   min-width: 0;
   padding: 0px;
 }
-.text__hSbLs {
+.username {
   position: relative;
   width: auto;
   height: auto;
@@ -104,7 +108,7 @@
   max-width: 100px;
   padding: 8px 8px 8px 0px;
 }
-.text__nQtYc {
+.likes {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -132,7 +136,7 @@
   height: 1em;
   flex-shrink: 0;
 }
-.text__vvwwr {
+.text {
   position: relative;
   width: 100%;
   height: auto;

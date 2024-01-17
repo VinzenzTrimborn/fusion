@@ -16,6 +16,8 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import Navbar from "../../Navbar"; // plasmic-import: lwEnvYluELlC/component
+import GalleryDisplay from "../../GalleryDisplay"; // plasmic-import: v_wMKsIXVD_E/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -59,14 +61,28 @@ function PlasmicGallery__RenderFunc(props) {
             plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <Navbar
+            data-plasmic-name={"navbar"}
+            data-plasmic-override={overrides.navbar}
+            className={classNames("__wab_instance", sty.navbar)}
+          />
+
+          <GalleryDisplay
+            data-plasmic-name={"galleryDisplay"}
+            data-plasmic-override={overrides.galleryDisplay}
+            className={classNames("__wab_instance", sty.galleryDisplay)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "navbar", "galleryDisplay"],
+  navbar: ["navbar"],
+  galleryDisplay: ["galleryDisplay"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -101,6 +117,8 @@ export const PlasmicGallery = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navbar: makeNodeComponent("navbar"),
+    galleryDisplay: makeNodeComponent("galleryDisplay"),
     // Metadata about props expected for PlasmicGallery
     internalVariantProps: PlasmicGallery__VariantProps,
     internalArgProps: PlasmicGallery__ArgProps,

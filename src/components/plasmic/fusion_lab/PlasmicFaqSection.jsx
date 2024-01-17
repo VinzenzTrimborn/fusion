@@ -76,14 +76,26 @@ function PlasmicFaqSection__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootanswers__2]: hasVariant($state, "answers", "_2"),
+          [sty.rootanswers_x]: hasVariant($state, "answers", "x")
+        }
       )}
     >
       <div
         className={classNames(
           projectcss.all,
           projectcss.__wab_text,
-          sty.text__hIykt
+          sty.text__hIykt,
+          {
+            [sty.textanswers__2__hIyktmlkfn]: hasVariant(
+              $state,
+              "answers",
+              "_2"
+            ),
+            [sty.textanswers_x__hIyktFbPfn]: hasVariant($state, "answers", "x")
+          }
         )}
       >
         {"Frequently Asked Questions"}
@@ -96,7 +108,18 @@ function PlasmicFaqSection__RenderFunc(props) {
         <p.Stack
           as={"div"}
           hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__mLyEs)}
+          className={classNames(projectcss.all, sty.freeBox__mLyEs, {
+            [sty.freeBoxanswers__2__mLyESmlkfn]: hasVariant(
+              $state,
+              "answers",
+              "_2"
+            ),
+            [sty.freeBoxanswers_x__mLyEsFbPfn]: hasVariant(
+              $state,
+              "answers",
+              "x"
+            )
+          })}
         >
           <div
             className={classNames(
@@ -109,15 +132,20 @@ function PlasmicFaqSection__RenderFunc(props) {
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__ugDyI, {
-              [sty.freeBoxanswers__1__ugDyIFbPfn]: hasVariant(
+              [sty.freeBoxanswers__11__ugDyIycudh]: hasVariant(
                 $state,
                 "answers",
-                "_1"
+                "_11"
               ),
               [sty.freeBoxanswers__2__ugDyImlkfn]: hasVariant(
                 $state,
                 "answers",
                 "_2"
+              ),
+              [sty.freeBoxanswers_x__ugDyIFbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
               )
             })}
             onClick={async event => {
@@ -127,7 +155,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                     const actionArgs = {
                       vgroup: "answers",
                       operation: 0,
-                      value: "_1"
+                      value: "_11"
                     };
                     return (({ vgroup, value }) => {
                       if (typeof value === "string") {
@@ -153,10 +181,15 @@ function PlasmicFaqSection__RenderFunc(props) {
                 projectcss.__wab_text,
                 sty.text__vDhs5,
                 {
-                  [sty.textanswers__1__vDhs5FbPfn]: hasVariant(
+                  [sty.textanswers__2__vDhs5Mlkfn]: hasVariant(
                     $state,
                     "answers",
-                    "_1"
+                    "_2"
+                  ),
+                  [sty.textanswers_x__vDhs5FbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
                   )
                 }
               )}
@@ -166,15 +199,15 @@ function PlasmicFaqSection__RenderFunc(props) {
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__dnLwG, {
-              [sty.freeBoxanswers__1__dnLwGFbPfn]: hasVariant(
-                $state,
-                "answers",
-                "_1"
-              ),
               [sty.freeBoxanswers__2__dnLwGmlkfn]: hasVariant(
                 $state,
                 "answers",
                 "_2"
+              ),
+              [sty.freeBoxanswers_x__dnLwGFbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
               )
             })}
             onClick={async event => {
@@ -210,30 +243,303 @@ function PlasmicFaqSection__RenderFunc(props) {
                 projectcss.__wab_text,
                 sty.text__vPeGy,
                 {
-                  [sty.textanswers__1__vPeGyFbPfn]: hasVariant(
+                  [sty.textanswers__2__vPeGymlkfn]: hasVariant(
                     $state,
                     "answers",
-                    "_1"
+                    "_2"
+                  ),
+                  [sty.textanswers__4__vPeGyjrPol]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  ),
+                  [sty.textanswers_x__vPeGyFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
                   )
                 }
               )}
             >
-              {
-                "What are the main challenges addressed by the bridge\nreconstruction project?"
-              }
+              {hasVariant($state, "answers", "x")
+                ? "Why is the Donnersberger Bridge being re-designed?"
+                : "What are the main challenges addressed by the reconstruction?"}
             </div>
+            {(hasVariant($state, "answers", "x") ? true : false) ? (
+              <div
+                className={classNames(projectcss.all, sty.freeBox___87LfC, {
+                  [sty.freeBoxanswers__2___87LfCmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x___87LfCFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "x"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__tBnMu,
+                    {
+                      [sty.textanswers__2__tBnMUmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers_x__tBnMuFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {"Why is the Donnersberger Bridge being re-designed?"}
+                </div>
+              </div>
+            ) : null}
           </div>
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox___1Gtth, {
+                [sty.freeBoxanswers__2___1Gtthmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x___1GtthFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__iJl78,
+                  {
+                    [sty.textanswers__2__iJl78Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__iJl78FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__bXiX, {
+                [sty.freeBoxanswers__2__bXiXmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__bXiXFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_2"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rs06A,
+                  {
+                    [sty.textanswers__2__rs06Amlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers__4__rs06AjrPol]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.textanswers_x__rs06AFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {
+                  "What are the main challenges addressed by the reconstruction?"
+                }
+              </div>
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__nxWp8, {
+                    [sty.freeBoxanswers__2__nxWp8Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__nxWp8FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___0QuEb,
+                      {
+                        [sty.textanswers__2___0QuEBmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x___0QuEbFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
           <div
             className={classNames(projectcss.all, sty.freeBox__sx5K0, {
-              [sty.freeBoxanswers__1__sx5K0FbPfn]: hasVariant(
-                $state,
-                "answers",
-                "_1"
-              ),
               [sty.freeBoxanswers__3__sx5K03L9Fx]: hasVariant(
                 $state,
                 "answers",
                 "_3"
+              ),
+              [sty.freeBoxanswers_x__sx5K0FbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
               )
             })}
             onClick={async event => {
@@ -271,12 +577,17 @@ function PlasmicFaqSection__RenderFunc(props) {
               )}
             >
               {
-                "How long is the projected timeline for the bridge redesign, and what are the key milestones?"
+                "How long is the projected timeline for the redesign, and what are the key milestones?"
               }
             </div>
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__ydFmg, {
+              [sty.freeBoxanswers__2__ydFmgmlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
               [sty.freeBoxanswers__4__ydFmgjrPol]: hasVariant(
                 $state,
                 "answers",
@@ -318,12 +629,17 @@ function PlasmicFaqSection__RenderFunc(props) {
               )}
             >
               {
-                "Will the new bridge design incorporate sustainable or environmentally friendly features?"
+                "Will the new design incorporate sustainable or environmentally friendly features?"
               }
             </div>
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__csKlA, {
+              [sty.freeBoxanswers__2__csKlAmlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
               [sty.freeBoxanswers__5__csKlA4GKjS]: hasVariant(
                 $state,
                 "answers",
@@ -412,12 +728,17 @@ function PlasmicFaqSection__RenderFunc(props) {
               )}
             >
               {
-                "What measures are in place to ensure the safety of pedestrians and cyclists during and after construction?"
+                "What measures are in place to ensure the safety of pedestrians and cyclists?"
               }
             </div>
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__tISf, {
+              [sty.freeBoxanswers__2__tISfmlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
               [sty.freeBoxanswers__7__tISfaIuc3]: hasVariant(
                 $state,
                 "answers",
@@ -504,7 +825,7 @@ function PlasmicFaqSection__RenderFunc(props) {
               )}
             >
               {
-                "Are there opportunities for the public to actively contribute to the bridge project?"
+                "Are there opportunities for the public to actively contribute to the project?"
               }
             </div>
           </div>
@@ -600,8 +921,270 @@ function PlasmicFaqSection__RenderFunc(props) {
               {"How will the bridge be built?"}
             </div>
           </div>
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__qCam8, {
+                [sty.freeBoxanswers__2__qCam8Mlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__qCam8FbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___8A3Ka,
+                  {
+                    [sty.textanswers__2___8A3Kamlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x___8A3KaFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__ofpQ, {
+                [sty.freeBoxanswers__2__ofpQmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__ofpQFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__kRr8,
+                  {
+                    [sty.textanswers__2__kRr8Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__kRr8FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__kPx9F, {
+                [sty.freeBoxanswers__2__kPx9Fmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__kPx9FFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__cKMl8,
+                  {
+                    [sty.textanswers__2__cKMl8Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__cKMl8FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__jMLaU, {
+                [sty.freeBoxanswers__2__jMLaUmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__jMLaUFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rh6F0,
+                  {
+                    [sty.textanswers__2__rh6F0Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__rh6F0FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
         </p.Stack>
-        <div className={classNames(projectcss.all, sty.freeBox__xb9Kz)}>
+        <div
+          data-plasmic-name={"stackAnswers"}
+          data-plasmic-override={overrides.stackAnswers}
+          className={classNames(projectcss.all, sty.stackAnswers, {
+            [sty.stackAnswersanswers_x]: hasVariant($state, "answers", "x")
+          })}
+        >
           <div
             className={classNames(
               projectcss.all,
@@ -632,7 +1215,11 @@ function PlasmicFaqSection__RenderFunc(props) {
                   "answers",
                   "_10"
                 ),
-                [sty.answerBoxanswers__1]: hasVariant($state, "answers", "_1"),
+                [sty.answerBoxanswers__11]: hasVariant(
+                  $state,
+                  "answers",
+                  "_11"
+                ),
                 [sty.answerBoxanswers__2]: hasVariant($state, "answers", "_2"),
                 [sty.answerBoxanswers__3]: hasVariant($state, "answers", "_3"),
                 [sty.answerBoxanswers__4]: hasVariant($state, "answers", "_4"),
@@ -640,7 +1227,8 @@ function PlasmicFaqSection__RenderFunc(props) {
                 [sty.answerBoxanswers__6]: hasVariant($state, "answers", "_6"),
                 [sty.answerBoxanswers__7]: hasVariant($state, "answers", "_7"),
                 [sty.answerBoxanswers__8]: hasVariant($state, "answers", "_8"),
-                [sty.answerBoxanswers__9]: hasVariant($state, "answers", "_9")
+                [sty.answerBoxanswers__9]: hasVariant($state, "answers", "_9"),
+                [sty.answerBoxanswers_x]: hasVariant($state, "answers", "x")
               })}
             >
               <div
@@ -653,11 +1241,6 @@ function PlasmicFaqSection__RenderFunc(props) {
                       $state,
                       "answers",
                       "_10"
-                    ),
-                    [sty.textanswers__1___0UzpdFbPfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "_1"
                     ),
                     [sty.textanswers__2___0Uzpdmlkfn]: hasVariant(
                       $state,
@@ -698,30 +1281,55 @@ function PlasmicFaqSection__RenderFunc(props) {
                       $state,
                       "answers",
                       "_9"
+                    ),
+                    [sty.textanswers_x___0UzpdFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
                     )
                   }
                 )}
               >
                 {hasVariant($state, "answers", "_10")
-                  ? "The bridge will be built with least amount of disturbance to the \non going traffic. Lanes will be closed in such an order that the \nflow of traffic will be unaffacted. The middle portion of the \nbridge will be built on the side and then it will be moved to its \nlocation. We even prepared a video of this! Check it out in our \ngallery."
+                  ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
                   : hasVariant($state, "answers", "_9")
-                  ? "We have diverse activities, including tree planting events, art \ninstallations, and even unique features like climbing walls \nintegrated into the bridge design."
+                  ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
                   : hasVariant($state, "answers", "_8")
-                  ? "Yes, we encourage active participation from the community. We \nhave implemented various engagement activities to involve the \npublic in the project."
+                  ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
                   : hasVariant($state, "answers", "_7")
-                  ? "BIM and Parametrical design tools such as Grasshopper were \nthe main approaches during the design phase."
+                  ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
                   : hasVariant($state, "answers", "_6")
-                  ? "Safety measures include designated pedestrian and cyclist \npathways, well-marked crossings, and the installation of \nappropriate signage. Construction zones will be secured to \nminimize risks."
+                  ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
                   : hasVariant($state, "answers", "_5")
-                  ? "The new bridge design incorporates innovative engineering \ntechniques and architectural features aimed at optimizing \nstructural integrity, traffic flow, and overall aesthetic appeal."
+                  ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
                   : hasVariant($state, "answers", "_4")
-                  ? "Yes, the new bridge design places a strong emphasis \non sustainability, incorporating features such as eco-friendly \nmaterials, energy-efficient lighting, and green spaces where \npossible."
+                  ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
                   : hasVariant($state, "answers", "_3")
-                  ? "The projected timeline for the bridge redesign is 2 years, \nwhich is normal for a project at this scale. Key milestones include \nplanning, approvals, construction, and post-construction evaluations."
+                  ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
                   : hasVariant($state, "answers", "_2")
-                  ? "The project addresses challenges such as aging infrastructure, \nincreased traffic volumes, and the need for improved safety \nstandards, all of which necessitate a comprehensive\n reconstruction effort."
+                  ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
                   : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
               </div>
+              {(hasVariant($state, "answers", "_11") ? true : false) ? (
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__kFcYp,
+                    {
+                      [sty.textanswers__11__kFcYpYcudh]: hasVariant(
+                        $state,
+                        "answers",
+                        "_11"
+                      )
+                    }
+                  )}
+                >
+                  {
+                    "The bridge is being redesigned to address structural \r\ndeficiencies, enhance overall safety and functionality\r\n and create a new icon for the city.\r\n"
+                  }
+                </div>
+              ) : null}
             </div>
             <div
               data-plasmic-name={"answerPic"}
@@ -729,16 +1337,5237 @@ function PlasmicFaqSection__RenderFunc(props) {
               className={classNames(projectcss.all, sty.answerPic)}
             />
           </p.Stack>
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__hsXB, {
+                [sty.freeBoxanswers__2__hsXBmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__hsXBFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__efCht
+                )}
+              >
+                {"Questions"}
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__x51Ih, {
+                  [sty.freeBoxanswers__2__x51IHmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x__x51IhFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "x"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__w3Uqm,
+                    {
+                      [sty.textanswers__2__w3UqMmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers_x__w3UqmFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {"Why is the Donnersberger Bridge being re-designed?"}
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__leEXf, {
+                  [sty.freeBoxanswers__2__leEXfmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x__leEXfFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_2"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__a49Fn,
+                    {
+                      [sty.textanswers__2__a49Fnmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers__4__a49FnjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      ),
+                      [sty.textanswers_x__a49FnFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {hasVariant($state, "answers", "x")
+                    ? "Why is the Donnersberger Bridge being re-designed?"
+                    : "What are the main challenges addressed by the reconstruction?"}
+                </div>
+                {(hasVariant($state, "answers", "x") ? true : false) ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__mtgGn, {
+                      [sty.freeBoxanswers__2__mtgGnmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.freeBoxanswers_x__mtgGnFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "x"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___6C3Ix,
+                        {
+                          [sty.textanswers__2___6C3Ixmlkfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "_2"
+                          ),
+                          [sty.textanswers_x___6C3IxFbPfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "x"
+                          )
+                        }
+                      )}
+                    >
+                      {"Why is the Donnersberger Bridge being re-designed?"}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__cBccc, {
+                    [sty.freeBoxanswers__2__cBcccmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__cBcccFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__oqizt,
+                      {
+                        [sty.textanswers__2__oqiztmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x__oqiztFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__i8BeW, {
+                    [sty.freeBoxanswers__2__i8BeWmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__i8BeWFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "_2"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__j1It,
+                      {
+                        [sty.textanswers__2__j1ItMlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers__4__j1ItJrPol]: hasVariant(
+                          $state,
+                          "answers",
+                          "_4"
+                        ),
+                        [sty.textanswers_x__j1ItFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {
+                      "What are the main challenges addressed by the reconstruction?"
+                    }
+                  </div>
+                  {(hasVariant($state, "answers", "x") ? true : false) ? (
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__puDKg,
+                        {
+                          [sty.freeBoxanswers__2__puDKgmlkfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "_2"
+                          ),
+                          [sty.freeBoxanswers_x__puDKgFbPfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "x"
+                          )
+                        }
+                      )}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["updateAnswers"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                vgroup: "answers",
+                                operation: 0,
+                                value: "x"
+                              };
+                              return (({ vgroup, value }) => {
+                                if (typeof value === "string") {
+                                  value = [value];
+                                }
+                                p.set($state, vgroup, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateAnswers"] != null &&
+                          typeof $steps["updateAnswers"] === "object" &&
+                          typeof $steps["updateAnswers"].then === "function"
+                        ) {
+                          $steps["updateAnswers"] = await $steps[
+                            "updateAnswers"
+                          ];
+                        }
+                      }}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kCeL,
+                          {
+                            [sty.textanswers__2__kCeLMlkfn]: hasVariant(
+                              $state,
+                              "answers",
+                              "_2"
+                            ),
+                            [sty.textanswers_x__kCeLFbPfn]: hasVariant(
+                              $state,
+                              "answers",
+                              "x"
+                            )
+                          }
+                        )}
+                      >
+                        {"Why is the Donnersberger Bridge being re-designed?"}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+              <div
+                className={classNames(projectcss.all, sty.freeBox__xUsId, {
+                  [sty.freeBoxanswers__3__xUsId3L9Fx]: hasVariant(
+                    $state,
+                    "answers",
+                    "_3"
+                  ),
+                  [sty.freeBoxanswers_x__xUsIdFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_3"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cMzgU
+                  )}
+                >
+                  {
+                    "How long is the projected timeline for the redesign, and what are the key milestones?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox___2VwAs, {
+                  [sty.freeBoxanswers__2___2VwASmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__4___2VwASjrPol]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_4"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__awSd8
+                  )}
+                >
+                  {
+                    "Will the new design incorporate sustainable or environmentally friendly features?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__eiJn3, {
+                  [sty.freeBoxanswers__2__eiJn3Mlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__5__eiJn34GKjS]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_5"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__iqqpX
+                  )}
+                >
+                  {
+                    "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__liCsb, {
+                  [sty.freeBoxanswers__6__liCsBdayq8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_6"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___3VsA
+                  )}
+                >
+                  {
+                    "What measures are in place to ensure the safety of pedestrians and cyclists?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__py2YD, {
+                  [sty.freeBoxanswers__2__py2YDmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__7__py2YDaIuc3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_7"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__iu0C
+                  )}
+                >
+                  {"Which methods were used for the design phase?"}
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__hdEzZ, {
+                  [sty.freeBoxanswers__8__hdEzZCwtP]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_8"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__biPp7
+                  )}
+                >
+                  {
+                    "Are there opportunities for the public to actively contribute to the project?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__mezLl, {
+                  [sty.freeBoxanswers__9__mezLlsSeH]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_9"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lpfjk
+                  )}
+                >
+                  {
+                    "What types of activities are available for public contribution?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__nqCna, {
+                  [sty.freeBoxanswers__10__nqCnaRmuR4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_10"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__knrhb
+                  )}
+                >
+                  {"How will the bridge be built?"}
+                </div>
+              </div>
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__k9Z0R, {
+                    [sty.freeBoxanswers__2__k9Z0Rmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__k9Z0RFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___3PJWy,
+                      {
+                        [sty.textanswers__2___3PJWymlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x___3PJWyFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__nLzH, {
+                    [sty.freeBoxanswers__2__nLzHmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__nLzHFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__oszl2,
+                      {
+                        [sty.textanswers__2__oszl2Mlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x__oszl2FbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__lbLnM, {
+                    [sty.freeBoxanswers__2__lbLnMmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__lbLnMFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__shYdC,
+                      {
+                        [sty.textanswers__2__shYdCmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x__shYdCFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__ceYqV, {
+                    [sty.freeBoxanswers__2__ceYqVmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__ceYqVFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___1M9Nc,
+                      {
+                        [sty.textanswers__2___1M9Ncmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x___1M9NcFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+            </p.Stack>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              data-plasmic-name={"stackAnswers5"}
+              data-plasmic-override={overrides.stackAnswers5}
+              className={classNames(projectcss.all, sty.stackAnswers5, {
+                [sty.stackAnswers5answers_x]: hasVariant($state, "answers", "x")
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rtJva
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#535353" }}
+                  >
+                    {"Answers"}
+                  </span>
+                </React.Fragment>
+              </div>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__cQrmj)}
+              >
+                <div
+                  data-plasmic-name={"answerBox5"}
+                  data-plasmic-override={overrides.answerBox5}
+                  className={classNames(projectcss.all, sty.answerBox5, {
+                    [sty.answerBox5answers__10]: hasVariant(
+                      $state,
+                      "answers",
+                      "_10"
+                    ),
+                    [sty.answerBox5answers__2]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.answerBox5answers__3]: hasVariant(
+                      $state,
+                      "answers",
+                      "_3"
+                    ),
+                    [sty.answerBox5answers__4]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.answerBox5answers__5]: hasVariant(
+                      $state,
+                      "answers",
+                      "_5"
+                    ),
+                    [sty.answerBox5answers__6]: hasVariant(
+                      $state,
+                      "answers",
+                      "_6"
+                    ),
+                    [sty.answerBox5answers__7]: hasVariant(
+                      $state,
+                      "answers",
+                      "_7"
+                    ),
+                    [sty.answerBox5answers__8]: hasVariant(
+                      $state,
+                      "answers",
+                      "_8"
+                    ),
+                    [sty.answerBox5answers__9]: hasVariant(
+                      $state,
+                      "answers",
+                      "_9"
+                    ),
+                    [sty.answerBox5answers_x]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__sCedS,
+                      {
+                        [sty.textanswers__10__sCedSRmuR4]: hasVariant(
+                          $state,
+                          "answers",
+                          "_10"
+                        ),
+                        [sty.textanswers__2__sCedSmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers__3__sCedS3L9Fx]: hasVariant(
+                          $state,
+                          "answers",
+                          "_3"
+                        ),
+                        [sty.textanswers__4__sCedSjrPol]: hasVariant(
+                          $state,
+                          "answers",
+                          "_4"
+                        ),
+                        [sty.textanswers__5__sCedS4GKjS]: hasVariant(
+                          $state,
+                          "answers",
+                          "_5"
+                        ),
+                        [sty.textanswers__6__sCedSdayq8]: hasVariant(
+                          $state,
+                          "answers",
+                          "_6"
+                        ),
+                        [sty.textanswers__7__sCedSaIuc3]: hasVariant(
+                          $state,
+                          "answers",
+                          "_7"
+                        ),
+                        [sty.textanswers__8__sCedSCwtP]: hasVariant(
+                          $state,
+                          "answers",
+                          "_8"
+                        ),
+                        [sty.textanswers__9__sCedSsSeH]: hasVariant(
+                          $state,
+                          "answers",
+                          "_9"
+                        ),
+                        [sty.textanswers_x__sCedSFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {hasVariant($state, "answers", "_10")
+                      ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                      : hasVariant($state, "answers", "_9")
+                      ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                      : hasVariant($state, "answers", "_8")
+                      ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                      : hasVariant($state, "answers", "_7")
+                      ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                      : hasVariant($state, "answers", "_6")
+                      ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                      : hasVariant($state, "answers", "_5")
+                      ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                      : hasVariant($state, "answers", "_4")
+                      ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                      : hasVariant($state, "answers", "_3")
+                      ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                      : hasVariant($state, "answers", "_2")
+                      ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                      : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"answerPic5"}
+                  data-plasmic-override={overrides.answerPic5}
+                  className={classNames(projectcss.all, sty.answerPic5)}
+                />
+              </p.Stack>
+            </div>
+          ) : null}
         </div>
       </p.Stack>
+      {(hasVariant($state, "answers", "x") ? true : false) ? (
+        <p.Stack
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox__gOvZm, {
+            [sty.freeBoxanswers_x__gOvZmFbPfn]: hasVariant(
+              $state,
+              "answers",
+              "x"
+            )
+          })}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__ecEMk,
+              {
+                [sty.textanswers_x__ecEMkFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              }
+            )}
+          >
+            {"Frequently Asked Questions"}
+          </div>
+          <p.Stack
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__qR6Xw)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__xTjhe, {
+                [sty.freeBoxanswers__2__xTjhemlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__xTjheFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___9Az4Z
+                )}
+              >
+                {"Questions"}
+              </div>
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__g4EG, {
+                    [sty.freeBoxanswers__2__g4EGmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__g4EGFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__pZrcm,
+                      {
+                        [sty.textanswers__2__pZrcMmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x__pZrcmFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+              <div
+                className={classNames(projectcss.all, sty.freeBox__zsQm0, {
+                  [sty.freeBoxanswers__2__zsQm0Mlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x__zsQm0FbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "x"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___9DIb,
+                    {
+                      [sty.textanswers__2___9DIbmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers_x___9DIbFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {"Why is the Donnersberger Bridge being re-designed?"}
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__pa2Af, {
+                  [sty.freeBoxanswers__2__pa2Afmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x__pa2AfFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_2"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___397Yw,
+                    {
+                      [sty.textanswers__2___397YWmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers__4___397YWjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      ),
+                      [sty.textanswers_x___397YwFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {
+                    "What are the main challenges addressed by the reconstruction?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__rYOe, {
+                  [sty.freeBoxanswers__3__rYOe3L9Fx]: hasVariant(
+                    $state,
+                    "answers",
+                    "_3"
+                  ),
+                  [sty.freeBoxanswers_x__rYOeFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_3"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___0Njcc
+                  )}
+                >
+                  {
+                    "How long is the projected timeline for the redesign, and what are the key milestones?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__vnbKw, {
+                  [sty.freeBoxanswers__2__vnbKWmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__4__vnbKWjrPol]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_4"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__zkVws
+                  )}
+                >
+                  {
+                    "Will the new design incorporate sustainable or environmentally friendly features?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__zuJpA, {
+                  [sty.freeBoxanswers__2__zuJpAmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__5__zuJpA4GKjS]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_5"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__aza79
+                  )}
+                >
+                  {
+                    "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox___2Y75F, {
+                  [sty.freeBoxanswers__6___2Y75Fdayq8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_6"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__hMihV
+                  )}
+                >
+                  {
+                    "What measures are in place to ensure the safety of pedestrians and cyclists?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__qG56W, {
+                  [sty.freeBoxanswers__2__qG56Wmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__7__qG56WaIuc3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_7"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__kgRc7
+                  )}
+                >
+                  {"Which methods were used for the design phase?"}
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__mc2I, {
+                  [sty.freeBoxanswers__8__mc2ICwtP]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_8"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__hudBn
+                  )}
+                >
+                  {
+                    "Are there opportunities for the public to actively contribute to the project?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__hdakH, {
+                  [sty.freeBoxanswers__9__hdakHsSeH]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_9"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__yLffR
+                  )}
+                >
+                  {
+                    "What types of activities are available for public contribution?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox___5IEDd, {
+                  [sty.freeBoxanswers__10___5IEDdRmuR4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_10"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___8Ot1S
+                  )}
+                >
+                  {"How will the bridge be built?"}
+                </div>
+              </div>
+            </p.Stack>
+            <div
+              data-plasmic-name={"stackAnswers2"}
+              data-plasmic-override={overrides.stackAnswers2}
+              className={classNames(projectcss.all, sty.stackAnswers2)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___11Umi
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#535353" }}
+                  >
+                    {"Answers"}
+                  </span>
+                </React.Fragment>
+              </div>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__nCjdn)}
+              >
+                <div
+                  data-plasmic-name={"answerBox2"}
+                  data-plasmic-override={overrides.answerBox2}
+                  className={classNames(projectcss.all, sty.answerBox2, {
+                    [sty.answerBox2answers__10]: hasVariant(
+                      $state,
+                      "answers",
+                      "_10"
+                    ),
+                    [sty.answerBox2answers__2]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.answerBox2answers__3]: hasVariant(
+                      $state,
+                      "answers",
+                      "_3"
+                    ),
+                    [sty.answerBox2answers__4]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.answerBox2answers__5]: hasVariant(
+                      $state,
+                      "answers",
+                      "_5"
+                    ),
+                    [sty.answerBox2answers__6]: hasVariant(
+                      $state,
+                      "answers",
+                      "_6"
+                    ),
+                    [sty.answerBox2answers__7]: hasVariant(
+                      $state,
+                      "answers",
+                      "_7"
+                    ),
+                    [sty.answerBox2answers__8]: hasVariant(
+                      $state,
+                      "answers",
+                      "_8"
+                    ),
+                    [sty.answerBox2answers__9]: hasVariant(
+                      $state,
+                      "answers",
+                      "_9"
+                    ),
+                    [sty.answerBox2answers_x]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___5QqiE,
+                      {
+                        [sty.textanswers__10___5QqiERmuR4]: hasVariant(
+                          $state,
+                          "answers",
+                          "_10"
+                        ),
+                        [sty.textanswers__2___5QqiEmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers__3___5QqiE3L9Fx]: hasVariant(
+                          $state,
+                          "answers",
+                          "_3"
+                        ),
+                        [sty.textanswers__4___5QqiEjrPol]: hasVariant(
+                          $state,
+                          "answers",
+                          "_4"
+                        ),
+                        [sty.textanswers__5___5QqiE4GKjS]: hasVariant(
+                          $state,
+                          "answers",
+                          "_5"
+                        ),
+                        [sty.textanswers__6___5QqiEdayq8]: hasVariant(
+                          $state,
+                          "answers",
+                          "_6"
+                        ),
+                        [sty.textanswers__7___5QqiEaIuc3]: hasVariant(
+                          $state,
+                          "answers",
+                          "_7"
+                        ),
+                        [sty.textanswers__8___5QqiECwtP]: hasVariant(
+                          $state,
+                          "answers",
+                          "_8"
+                        ),
+                        [sty.textanswers__9___5QqiEsSeH]: hasVariant(
+                          $state,
+                          "answers",
+                          "_9"
+                        ),
+                        [sty.textanswers_x___5QqiEFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {hasVariant($state, "answers", "_10")
+                      ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                      : hasVariant($state, "answers", "_9")
+                      ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                      : hasVariant($state, "answers", "_8")
+                      ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                      : hasVariant($state, "answers", "_7")
+                      ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                      : hasVariant($state, "answers", "_6")
+                      ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                      : hasVariant($state, "answers", "_5")
+                      ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                      : hasVariant($state, "answers", "_4")
+                      ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                      : hasVariant($state, "answers", "_3")
+                      ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                      : hasVariant($state, "answers", "_2")
+                      ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                      : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"answerPic2"}
+                  data-plasmic-override={overrides.answerPic2}
+                  className={classNames(projectcss.all, sty.answerPic2)}
+                />
+              </p.Stack>
+            </div>
+          </p.Stack>
+        </p.Stack>
+      ) : null}
+      {(hasVariant($state, "answers", "x") ? true : false) ? (
+        <p.Stack
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox__dxQUl, {
+            [sty.freeBoxanswers__2__dxQUlmlkfn]: hasVariant(
+              $state,
+              "answers",
+              "_2"
+            ),
+            [sty.freeBoxanswers_x__dxQUlFbPfn]: hasVariant(
+              $state,
+              "answers",
+              "x"
+            )
+          })}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__sTrSm,
+              {
+                [sty.textanswers__2__sTrSMmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.textanswers_x__sTrSmFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              }
+            )}
+          >
+            {"Frequently Asked Questions"}
+          </div>
+          <p.Stack
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__ounJs)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___0MaEi, {
+                [sty.freeBoxanswers__2___0MaEImlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x___0MaEiFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__euyU
+                )}
+              >
+                {"Questions"}
+              </div>
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__yWnsb, {
+                    [sty.freeBoxanswers__2__yWnsbmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__yWnsbFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__r959I,
+                      {
+                        [sty.textanswers__2__r959Imlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x__r959IFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+              <div
+                className={classNames(projectcss.all, sty.freeBox__fFxid, {
+                  [sty.freeBoxanswers__2__fFxiDmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x__fFxidFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "x"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__dLvn,
+                    {
+                      [sty.textanswers__2__dLvnmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers_x__dLvnFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {"Why is the Donnersberger Bridge being re-designed?"}
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__eVSrj, {
+                  [sty.freeBoxanswers__2__eVSrjmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x__eVSrjFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_2"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__vbAyr,
+                    {
+                      [sty.textanswers__2__vbAyrmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers__4__vbAyrjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      ),
+                      [sty.textanswers_x__vbAyrFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {
+                    "What are the main challenges addressed by the reconstruction?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__uApan, {
+                  [sty.freeBoxanswers__3__uApan3L9Fx]: hasVariant(
+                    $state,
+                    "answers",
+                    "_3"
+                  ),
+                  [sty.freeBoxanswers_x__uApanFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_3"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__ojUf8
+                  )}
+                >
+                  {
+                    "How long is the projected timeline for the redesign, and what are the key milestones?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__k9Je8, {
+                  [sty.freeBoxanswers__2__k9Je8Mlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__4__k9Je8JrPol]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_4"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lJvC
+                  )}
+                >
+                  {
+                    "Will the new design incorporate sustainable or environmentally friendly features?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__koUwD, {
+                  [sty.freeBoxanswers__2__koUwDmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__5__koUwD4GKjS]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_5"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__czEh0
+                  )}
+                >
+                  {
+                    "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__zGva9, {
+                  [sty.freeBoxanswers__6__zGva9Dayq8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_6"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__oXj5X
+                  )}
+                >
+                  {
+                    "What measures are in place to ensure the safety of pedestrians and cyclists?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__gxTw, {
+                  [sty.freeBoxanswers__2__gxTWmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers__7__gxTWaIuc3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_7"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__vDr3V
+                  )}
+                >
+                  {"Which methods were used for the design phase?"}
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox___5Ae2H, {
+                  [sty.freeBoxanswers__8___5Ae2HCwtP]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_8"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__liv6
+                  )}
+                >
+                  {
+                    "Are there opportunities for the public to actively contribute to the project?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__oOuRr, {
+                  [sty.freeBoxanswers__9__oOuRrsSeH]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_9"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__wisCq
+                  )}
+                >
+                  {
+                    "What types of activities are available for public contribution?"
+                  }
+                </div>
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__clZfk, {
+                  [sty.freeBoxanswers__10__clZfkRmuR4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "_10"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__aubpJ
+                  )}
+                >
+                  {"How will the bridge be built?"}
+                </div>
+              </div>
+            </p.Stack>
+            <div
+              data-plasmic-name={"stackAnswers3"}
+              data-plasmic-override={overrides.stackAnswers3}
+              className={classNames(projectcss.all, sty.stackAnswers3)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___9E2Bk
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ color: "#535353" }}
+                  >
+                    {"Answers"}
+                  </span>
+                </React.Fragment>
+              </div>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__gAwQz)}
+              >
+                <div
+                  data-plasmic-name={"answerBox3"}
+                  data-plasmic-override={overrides.answerBox3}
+                  className={classNames(projectcss.all, sty.answerBox3, {
+                    [sty.answerBox3answers__10]: hasVariant(
+                      $state,
+                      "answers",
+                      "_10"
+                    ),
+                    [sty.answerBox3answers__2]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.answerBox3answers__3]: hasVariant(
+                      $state,
+                      "answers",
+                      "_3"
+                    ),
+                    [sty.answerBox3answers__4]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.answerBox3answers__5]: hasVariant(
+                      $state,
+                      "answers",
+                      "_5"
+                    ),
+                    [sty.answerBox3answers__6]: hasVariant(
+                      $state,
+                      "answers",
+                      "_6"
+                    ),
+                    [sty.answerBox3answers__7]: hasVariant(
+                      $state,
+                      "answers",
+                      "_7"
+                    ),
+                    [sty.answerBox3answers__8]: hasVariant(
+                      $state,
+                      "answers",
+                      "_8"
+                    ),
+                    [sty.answerBox3answers__9]: hasVariant(
+                      $state,
+                      "answers",
+                      "_9"
+                    ),
+                    [sty.answerBox3answers_x]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__qs6ZS,
+                      {
+                        [sty.textanswers__10__qs6ZSRmuR4]: hasVariant(
+                          $state,
+                          "answers",
+                          "_10"
+                        ),
+                        [sty.textanswers__2__qs6ZSmlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers__3__qs6ZS3L9Fx]: hasVariant(
+                          $state,
+                          "answers",
+                          "_3"
+                        ),
+                        [sty.textanswers__4__qs6ZSjrPol]: hasVariant(
+                          $state,
+                          "answers",
+                          "_4"
+                        ),
+                        [sty.textanswers__5__qs6ZS4GKjS]: hasVariant(
+                          $state,
+                          "answers",
+                          "_5"
+                        ),
+                        [sty.textanswers__6__qs6ZSdayq8]: hasVariant(
+                          $state,
+                          "answers",
+                          "_6"
+                        ),
+                        [sty.textanswers__7__qs6ZSaIuc3]: hasVariant(
+                          $state,
+                          "answers",
+                          "_7"
+                        ),
+                        [sty.textanswers__8__qs6ZSCwtP]: hasVariant(
+                          $state,
+                          "answers",
+                          "_8"
+                        ),
+                        [sty.textanswers__9__qs6ZSsSeH]: hasVariant(
+                          $state,
+                          "answers",
+                          "_9"
+                        ),
+                        [sty.textanswers_x__qs6ZSFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {hasVariant($state, "answers", "_10")
+                      ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                      : hasVariant($state, "answers", "_9")
+                      ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                      : hasVariant($state, "answers", "_8")
+                      ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                      : hasVariant($state, "answers", "_7")
+                      ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                      : hasVariant($state, "answers", "_6")
+                      ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                      : hasVariant($state, "answers", "_5")
+                      ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                      : hasVariant($state, "answers", "_4")
+                      ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                      : hasVariant($state, "answers", "_3")
+                      ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                      : hasVariant($state, "answers", "_2")
+                      ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                      : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"answerPic3"}
+                  data-plasmic-override={overrides.answerPic3}
+                  className={classNames(projectcss.all, sty.answerPic3)}
+                />
+              </p.Stack>
+            </div>
+          </p.Stack>
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__jRhPe, {
+                [sty.freeBoxanswers_x__jRhPeFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rVqC,
+                  {
+                    [sty.textanswers_x__rVqCFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Frequently Asked Questions"}
+              </div>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__xIjZt)}
+              >
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__wytpB, {
+                    [sty.freeBoxanswers__2__wytpBmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__wytpBFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___9FUsl
+                    )}
+                  >
+                    {"Questions"}
+                  </div>
+                  {(hasVariant($state, "answers", "x") ? true : false) ? (
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__tmA9Y,
+                        {
+                          [sty.freeBoxanswers__2__tmA9Ymlkfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "_2"
+                          ),
+                          [sty.freeBoxanswers_x__tmA9YFbPfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "x"
+                          )
+                        }
+                      )}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["updateAnswers"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                vgroup: "answers",
+                                operation: 0,
+                                value: "x"
+                              };
+                              return (({ vgroup, value }) => {
+                                if (typeof value === "string") {
+                                  value = [value];
+                                }
+                                p.set($state, vgroup, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateAnswers"] != null &&
+                          typeof $steps["updateAnswers"] === "object" &&
+                          typeof $steps["updateAnswers"].then === "function"
+                        ) {
+                          $steps["updateAnswers"] = await $steps[
+                            "updateAnswers"
+                          ];
+                        }
+                      }}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__to2He,
+                          {
+                            [sty.textanswers__2__to2Hemlkfn]: hasVariant(
+                              $state,
+                              "answers",
+                              "_2"
+                            ),
+                            [sty.textanswers_x__to2HeFbPfn]: hasVariant(
+                              $state,
+                              "answers",
+                              "x"
+                            )
+                          }
+                        )}
+                      >
+                        {"Why is the Donnersberger Bridge being re-designed?"}
+                      </div>
+                    </div>
+                  ) : null}
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__bi8AY, {
+                      [sty.freeBoxanswers__2__bi8AYmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.freeBoxanswers_x__bi8AYFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "x"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___133Lg,
+                        {
+                          [sty.textanswers__2___133Lgmlkfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "_2"
+                          ),
+                          [sty.textanswers_x___133LgFbPfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "x"
+                          )
+                        }
+                      )}
+                    >
+                      {"Why is the Donnersberger Bridge being re-designed?"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gdvVk, {
+                      [sty.freeBoxanswers__2__gdvVkmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.freeBoxanswers_x__gdvVkFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_2"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__a3Mzb,
+                        {
+                          [sty.textanswers__2__a3MzBmlkfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "_2"
+                          ),
+                          [sty.textanswers__4__a3MzBjrPol]: hasVariant(
+                            $state,
+                            "answers",
+                            "_4"
+                          ),
+                          [sty.textanswers_x__a3MzbFbPfn]: hasVariant(
+                            $state,
+                            "answers",
+                            "x"
+                          )
+                        }
+                      )}
+                    >
+                      {
+                        "What are the main challenges addressed by the reconstruction?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__yJiPo, {
+                      [sty.freeBoxanswers__3__yJiPo3L9Fx]: hasVariant(
+                        $state,
+                        "answers",
+                        "_3"
+                      ),
+                      [sty.freeBoxanswers_x__yJiPoFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_3"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hJ4IT
+                      )}
+                    >
+                      {
+                        "How long is the projected timeline for the redesign, and what are the key milestones?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__bMrpk, {
+                      [sty.freeBoxanswers__2__bMrpkmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.freeBoxanswers__4__bMrpkjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_4"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4VlQl
+                      )}
+                    >
+                      {
+                        "Will the new design incorporate sustainable or environmentally friendly features?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__pqRYp, {
+                      [sty.freeBoxanswers__2__pqRYpmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.freeBoxanswers__5__pqRYp4GKjS]: hasVariant(
+                        $state,
+                        "answers",
+                        "_5"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_5"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__g5VjD
+                      )}
+                    >
+                      {
+                        "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sN3Dj, {
+                      [sty.freeBoxanswers__6__sN3Djdayq8]: hasVariant(
+                        $state,
+                        "answers",
+                        "_6"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_6"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___2DpV4
+                      )}
+                    >
+                      {
+                        "What measures are in place to ensure the safety of pedestrians and cyclists?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__kjpGz, {
+                      [sty.freeBoxanswers__2__kjpGZmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.freeBoxanswers__7__kjpGZaIuc3]: hasVariant(
+                        $state,
+                        "answers",
+                        "_7"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_7"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vqzPi
+                      )}
+                    >
+                      {"Which methods were used for the design phase?"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__sPzHd, {
+                      [sty.freeBoxanswers__8__sPzHdCwtP]: hasVariant(
+                        $state,
+                        "answers",
+                        "_8"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_8"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__lyau
+                      )}
+                    >
+                      {
+                        "Are there opportunities for the public to actively contribute to the project?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__yYJgM, {
+                      [sty.freeBoxanswers__9__yYJgMsSeH]: hasVariant(
+                        $state,
+                        "answers",
+                        "_9"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_9"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__eLGfA
+                      )}
+                    >
+                      {
+                        "What types of activities are available for public contribution?"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__emf6O, {
+                      [sty.freeBoxanswers__10__emf6ORmuR4]: hasVariant(
+                        $state,
+                        "answers",
+                        "_10"
+                      )
+                    })}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["updateAnswers"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              vgroup: "answers",
+                              operation: 0,
+                              value: "_10"
+                            };
+                            return (({ vgroup, value }) => {
+                              if (typeof value === "string") {
+                                value = [value];
+                              }
+                              p.set($state, vgroup, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateAnswers"] != null &&
+                        typeof $steps["updateAnswers"] === "object" &&
+                        typeof $steps["updateAnswers"].then === "function"
+                      ) {
+                        $steps["updateAnswers"] = await $steps["updateAnswers"];
+                      }
+                    }}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__mAbpP
+                      )}
+                    >
+                      {"How will the bridge be built?"}
+                    </div>
+                  </div>
+                </p.Stack>
+                <div
+                  data-plasmic-name={"stackAnswers4"}
+                  data-plasmic-override={overrides.stackAnswers4}
+                  className={classNames(projectcss.all, sty.stackAnswers4)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__pm9Fk
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#535353" }}
+                      >
+                        {"Answers"}
+                      </span>
+                    </React.Fragment>
+                  </div>
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__qrF1Q)}
+                  >
+                    <div
+                      data-plasmic-name={"answerBox4"}
+                      data-plasmic-override={overrides.answerBox4}
+                      className={classNames(projectcss.all, sty.answerBox4, {
+                        [sty.answerBox4answers__10]: hasVariant(
+                          $state,
+                          "answers",
+                          "_10"
+                        ),
+                        [sty.answerBox4answers__2]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.answerBox4answers__3]: hasVariant(
+                          $state,
+                          "answers",
+                          "_3"
+                        ),
+                        [sty.answerBox4answers__4]: hasVariant(
+                          $state,
+                          "answers",
+                          "_4"
+                        ),
+                        [sty.answerBox4answers__5]: hasVariant(
+                          $state,
+                          "answers",
+                          "_5"
+                        ),
+                        [sty.answerBox4answers__6]: hasVariant(
+                          $state,
+                          "answers",
+                          "_6"
+                        ),
+                        [sty.answerBox4answers__7]: hasVariant(
+                          $state,
+                          "answers",
+                          "_7"
+                        ),
+                        [sty.answerBox4answers__8]: hasVariant(
+                          $state,
+                          "answers",
+                          "_8"
+                        ),
+                        [sty.answerBox4answers__9]: hasVariant(
+                          $state,
+                          "answers",
+                          "_9"
+                        ),
+                        [sty.answerBox4answers_x]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      })}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__tpsSh,
+                          {
+                            [sty.textanswers__10__tpsShRmuR4]: hasVariant(
+                              $state,
+                              "answers",
+                              "_10"
+                            ),
+                            [sty.textanswers__2__tpsShmlkfn]: hasVariant(
+                              $state,
+                              "answers",
+                              "_2"
+                            ),
+                            [sty.textanswers__3__tpsSh3L9Fx]: hasVariant(
+                              $state,
+                              "answers",
+                              "_3"
+                            ),
+                            [sty.textanswers__4__tpsShjrPol]: hasVariant(
+                              $state,
+                              "answers",
+                              "_4"
+                            ),
+                            [sty.textanswers__5__tpsSh4GKjS]: hasVariant(
+                              $state,
+                              "answers",
+                              "_5"
+                            ),
+                            [sty.textanswers__6__tpsShdayq8]: hasVariant(
+                              $state,
+                              "answers",
+                              "_6"
+                            ),
+                            [sty.textanswers__7__tpsShaIuc3]: hasVariant(
+                              $state,
+                              "answers",
+                              "_7"
+                            ),
+                            [sty.textanswers__8__tpsShCwtP]: hasVariant(
+                              $state,
+                              "answers",
+                              "_8"
+                            ),
+                            [sty.textanswers__9__tpsShsSeH]: hasVariant(
+                              $state,
+                              "answers",
+                              "_9"
+                            ),
+                            [sty.textanswers_x__tpsShFbPfn]: hasVariant(
+                              $state,
+                              "answers",
+                              "x"
+                            )
+                          }
+                        )}
+                      >
+                        {hasVariant($state, "answers", "_10")
+                          ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                          : hasVariant($state, "answers", "_9")
+                          ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                          : hasVariant($state, "answers", "_8")
+                          ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                          : hasVariant($state, "answers", "_7")
+                          ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                          : hasVariant($state, "answers", "_6")
+                          ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                          : hasVariant($state, "answers", "_5")
+                          ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                          : hasVariant($state, "answers", "_4")
+                          ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                          : hasVariant($state, "answers", "_3")
+                          ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                          : hasVariant($state, "answers", "_2")
+                          ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                          : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"answerPic4"}
+                      data-plasmic-override={overrides.answerPic4}
+                      className={classNames(projectcss.all, sty.answerPic4)}
+                    />
+                  </p.Stack>
+                </div>
+              </p.Stack>
+            </p.Stack>
+          ) : null}
+        </p.Stack>
+      ) : null}
+      {(hasVariant($state, "answers", "x") ? true : false) ? (
+        <div
+          className={classNames(projectcss.all, sty.freeBox__p6NBe, {
+            [sty.freeBoxanswers__2__p6NBemlkfn]: hasVariant(
+              $state,
+              "answers",
+              "_2"
+            ),
+            [sty.freeBoxanswers_x__p6NBeFbPfn]: hasVariant(
+              $state,
+              "answers",
+              "x"
+            )
+          })}
+          onClick={async event => {
+            const $steps = {};
+            $steps["updateAnswers"] = true
+              ? (() => {
+                  const actionArgs = {
+                    vgroup: "answers",
+                    operation: 0,
+                    value: "x"
+                  };
+                  return (({ vgroup, value }) => {
+                    if (typeof value === "string") {
+                      value = [value];
+                    }
+                    p.set($state, vgroup, value);
+                    return value;
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["updateAnswers"] != null &&
+              typeof $steps["updateAnswers"] === "object" &&
+              typeof $steps["updateAnswers"].then === "function"
+            ) {
+              $steps["updateAnswers"] = await $steps["updateAnswers"];
+            }
+          }}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__shRad,
+              {
+                [sty.textanswers__2__shRaDmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.textanswers_x__shRadFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              }
+            )}
+          >
+            {"Why is the Donnersberger Bridge being re-designed?"}
+          </div>
+        </div>
+      ) : null}
+      {(hasVariant($state, "answers", "x") ? true : false) ? (
+        <p.Stack
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox__iiyaR, {
+            [sty.freeBoxanswers__2__iiyaRmlkfn]: hasVariant(
+              $state,
+              "answers",
+              "_2"
+            ),
+            [sty.freeBoxanswers_x__iiyaRFbPfn]: hasVariant(
+              $state,
+              "answers",
+              "x"
+            )
+          })}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__u1Wjs
+            )}
+          >
+            {"Questions"}
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__v3Gx4, {
+              [sty.freeBoxanswers__2__v3Gx4Mlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
+              [sty.freeBoxanswers_x__v3Gx4FbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "x"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__quV0N,
+                {
+                  [sty.textanswers__2__quV0Nmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.textanswers_x__quV0NFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                }
+              )}
+            >
+              {"Why is the Donnersberger Bridge being re-designed?"}
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__n0J55, {
+              [sty.freeBoxanswers__2__n0J55Mlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
+              [sty.freeBoxanswers_x__n0J55FbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_2"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__vh2Gq,
+                {
+                  [sty.textanswers__2__vh2Gqmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.textanswers__4__vh2GqjrPol]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  ),
+                  [sty.textanswers_x__vh2GqFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                }
+              )}
+            >
+              {hasVariant($state, "answers", "x")
+                ? "Why is the Donnersberger Bridge being re-designed?"
+                : "What are the main challenges addressed by the reconstruction?"}
+            </div>
+            {(hasVariant($state, "answers", "x") ? true : false) ? (
+              <div
+                className={classNames(projectcss.all, sty.freeBox___7Em4B, {
+                  [sty.freeBoxanswers__2___7Em4Bmlkfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.freeBoxanswers_x___7Em4BFbPfn]: hasVariant(
+                    $state,
+                    "answers",
+                    "x"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateAnswers"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "answers",
+                          operation: 0,
+                          value: "x"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAnswers"] != null &&
+                    typeof $steps["updateAnswers"] === "object" &&
+                    typeof $steps["updateAnswers"].then === "function"
+                  ) {
+                    $steps["updateAnswers"] = await $steps["updateAnswers"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__gw7Qk,
+                    {
+                      [sty.textanswers__2__gw7Qkmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers_x__gw7QkFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {"Why is the Donnersberger Bridge being re-designed?"}
+                </div>
+              </div>
+            ) : null}
+          </div>
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__vXx6R, {
+                [sty.freeBoxanswers__2__vXx6Rmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__vXx6RFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__u4XS7,
+                  {
+                    [sty.textanswers__2__u4XS7Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__u4XS7FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__ga2Yv, {
+                [sty.freeBoxanswers__2__ga2Yvmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__ga2YvFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_2"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__gLwse,
+                  {
+                    [sty.textanswers__2__gLwsemlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers__4__gLwsejrPol]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.textanswers_x__gLwseFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {
+                  "What are the main challenges addressed by the reconstruction?"
+                }
+              </div>
+              {(hasVariant($state, "answers", "x") ? true : false) ? (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__ujUwr, {
+                    [sty.freeBoxanswers__2__ujUwRmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.freeBoxanswers_x__ujUwrFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateAnswers"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            vgroup: "answers",
+                            operation: 0,
+                            value: "x"
+                          };
+                          return (({ vgroup, value }) => {
+                            if (typeof value === "string") {
+                              value = [value];
+                            }
+                            p.set($state, vgroup, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateAnswers"] != null &&
+                      typeof $steps["updateAnswers"] === "object" &&
+                      typeof $steps["updateAnswers"].then === "function"
+                    ) {
+                      $steps["updateAnswers"] = await $steps["updateAnswers"];
+                    }
+                  }}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__bBs9A,
+                      {
+                        [sty.textanswers__2__bBs9Amlkfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "_2"
+                        ),
+                        [sty.textanswers_x__bBs9AFbPfn]: hasVariant(
+                          $state,
+                          "answers",
+                          "x"
+                        )
+                      }
+                    )}
+                  >
+                    {"Why is the Donnersberger Bridge being re-designed?"}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+          <div
+            className={classNames(projectcss.all, sty.freeBox__okzg6, {
+              [sty.freeBoxanswers__3__okzg63L9Fx]: hasVariant(
+                $state,
+                "answers",
+                "_3"
+              ),
+              [sty.freeBoxanswers_x__okzg6FbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_3"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___8FNs
+              )}
+            >
+              {
+                "How long is the projected timeline for the redesign, and what are the key milestones?"
+              }
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox___1XgUd, {
+              [sty.freeBoxanswers__2___1XgUDmlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
+              [sty.freeBoxanswers__4___1XgUDjrPol]: hasVariant(
+                $state,
+                "answers",
+                "_4"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_4"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__sqpno
+              )}
+            >
+              {
+                "Will the new design incorporate sustainable or environmentally friendly features?"
+              }
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__hcP6E, {
+              [sty.freeBoxanswers__2__hcP6Emlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
+              [sty.freeBoxanswers__5__hcP6E4GKjS]: hasVariant(
+                $state,
+                "answers",
+                "_5"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_5"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__fHpv
+              )}
+            >
+              {
+                "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
+              }
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__a7RHm, {
+              [sty.freeBoxanswers__6__a7RHmdayq8]: hasVariant(
+                $state,
+                "answers",
+                "_6"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_6"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__demZg
+              )}
+            >
+              {
+                "What measures are in place to ensure the safety of pedestrians and cyclists?"
+              }
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__z5Wve, {
+              [sty.freeBoxanswers__2__z5Wvemlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
+              [sty.freeBoxanswers__7__z5WveaIuc3]: hasVariant(
+                $state,
+                "answers",
+                "_7"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_7"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___1Chks
+              )}
+            >
+              {"Which methods were used for the design phase?"}
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox___8Y1G, {
+              [sty.freeBoxanswers__8___8Y1GCwtP]: hasVariant(
+                $state,
+                "answers",
+                "_8"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_8"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__vxxqb
+              )}
+            >
+              {
+                "Are there opportunities for the public to actively contribute to the project?"
+              }
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__oFfGi, {
+              [sty.freeBoxanswers__9__oFfGisSeH]: hasVariant(
+                $state,
+                "answers",
+                "_9"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_9"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___93C9Q
+              )}
+            >
+              {
+                "What types of activities are available for public contribution?"
+              }
+            </div>
+          </div>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__s8IX4, {
+              [sty.freeBoxanswers__10__s8IX4RmuR4]: hasVariant(
+                $state,
+                "answers",
+                "_10"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateAnswers"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "answers",
+                      operation: 0,
+                      value: "_10"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateAnswers"] != null &&
+                typeof $steps["updateAnswers"] === "object" &&
+                typeof $steps["updateAnswers"].then === "function"
+              ) {
+                $steps["updateAnswers"] = await $steps["updateAnswers"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__gouHk
+              )}
+            >
+              {"How will the bridge be built?"}
+            </div>
+          </div>
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__l80WR, {
+                [sty.freeBoxanswers__2__l80WRmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__l80WRFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__fdIuS,
+                  {
+                    [sty.textanswers__2__fdIuSmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__fdIuSFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__gT9X5, {
+                [sty.freeBoxanswers__2__gT9X5Mlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__gT9X5FbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__uQSj7,
+                  {
+                    [sty.textanswers__2__uQSj7Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__uQSj7FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__lmHtt, {
+                [sty.freeBoxanswers__2__lmHttmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__lmHttFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___0RBgF,
+                  {
+                    [sty.textanswers__2___0RBgFmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x___0RBgFFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "answers", "x") ? true : false) ? (
+            <div
+              className={classNames(projectcss.all, sty.freeBox__uAcQz, {
+                [sty.freeBoxanswers__2__uAcQzmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__uAcQzFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        p.set($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__dvaOp,
+                  {
+                    [sty.textanswers__2__dvaOPmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x__dvaOpFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+          ) : null}
+          <div
+            data-plasmic-name={"stackAnswers7"}
+            data-plasmic-override={overrides.stackAnswers7}
+            className={classNames(projectcss.all, sty.stackAnswers7, {
+              [sty.stackAnswers7answers_x]: hasVariant($state, "answers", "x")
+            })}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___1SRvn
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#535353" }}
+                >
+                  {"Answers"}
+                </span>
+              </React.Fragment>
+            </div>
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__j3Jl)}
+            >
+              <div
+                data-plasmic-name={"answerBox7"}
+                data-plasmic-override={overrides.answerBox7}
+                className={classNames(projectcss.all, sty.answerBox7, {
+                  [sty.answerBox7answers__10]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  ),
+                  [sty.answerBox7answers__2]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.answerBox7answers__3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_3"
+                  ),
+                  [sty.answerBox7answers__4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  ),
+                  [sty.answerBox7answers__5]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  ),
+                  [sty.answerBox7answers__6]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  ),
+                  [sty.answerBox7answers__7]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  ),
+                  [sty.answerBox7answers__8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  ),
+                  [sty.answerBox7answers__9]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  ),
+                  [sty.answerBox7answers_x]: hasVariant($state, "answers", "x")
+                })}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__qzPrI,
+                    {
+                      [sty.textanswers__10__qzPrIRmuR4]: hasVariant(
+                        $state,
+                        "answers",
+                        "_10"
+                      ),
+                      [sty.textanswers__2__qzPrImlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers__3__qzPrI3L9Fx]: hasVariant(
+                        $state,
+                        "answers",
+                        "_3"
+                      ),
+                      [sty.textanswers__4__qzPrIjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      ),
+                      [sty.textanswers__5__qzPrI4GKjS]: hasVariant(
+                        $state,
+                        "answers",
+                        "_5"
+                      ),
+                      [sty.textanswers__6__qzPrIdayq8]: hasVariant(
+                        $state,
+                        "answers",
+                        "_6"
+                      ),
+                      [sty.textanswers__7__qzPrIaIuc3]: hasVariant(
+                        $state,
+                        "answers",
+                        "_7"
+                      ),
+                      [sty.textanswers__8__qzPrICwtP]: hasVariant(
+                        $state,
+                        "answers",
+                        "_8"
+                      ),
+                      [sty.textanswers__9__qzPrIsSeH]: hasVariant(
+                        $state,
+                        "answers",
+                        "_9"
+                      ),
+                      [sty.textanswers_x__qzPrIFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
+                      )
+                    }
+                  )}
+                >
+                  {hasVariant($state, "answers", "_10")
+                    ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                    : hasVariant($state, "answers", "_9")
+                    ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                    : hasVariant($state, "answers", "_8")
+                    ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                    : hasVariant($state, "answers", "_7")
+                    ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                    : hasVariant($state, "answers", "_6")
+                    ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                    : hasVariant($state, "answers", "_5")
+                    ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                    : hasVariant($state, "answers", "_4")
+                    ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                    : hasVariant($state, "answers", "_3")
+                    ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                    : hasVariant($state, "answers", "_2")
+                    ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                    : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"answerPic7"}
+                data-plasmic-override={overrides.answerPic7}
+                className={classNames(projectcss.all, sty.answerPic7)}
+              />
+            </p.Stack>
+          </div>
+        </p.Stack>
+      ) : null}
+      {(hasVariant($state, "answers", "x") ? true : false) ? (
+        <div
+          data-plasmic-name={"stackAnswers8"}
+          data-plasmic-override={overrides.stackAnswers8}
+          className={classNames(projectcss.all, sty.stackAnswers8, {
+            [sty.stackAnswers8answers_x]: hasVariant($state, "answers", "x")
+          })}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text___40S0,
+              {
+                [sty.textanswers_x___40S0FbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              }
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#535353" }}
+              >
+                {"Answers"}
+              </span>
+            </React.Fragment>
+          </div>
+          <p.Stack
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__j2Nvj, {
+              [sty.freeBoxanswers_x__j2NvjFbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
+              )
+            })}
+          >
+            <div
+              data-plasmic-name={"answerBox8"}
+              data-plasmic-override={overrides.answerBox8}
+              className={classNames(projectcss.all, sty.answerBox8, {
+                [sty.answerBox8answers__10]: hasVariant(
+                  $state,
+                  "answers",
+                  "_10"
+                ),
+                [sty.answerBox8answers__2]: hasVariant($state, "answers", "_2"),
+                [sty.answerBox8answers__3]: hasVariant($state, "answers", "_3"),
+                [sty.answerBox8answers__4]: hasVariant($state, "answers", "_4"),
+                [sty.answerBox8answers__5]: hasVariant($state, "answers", "_5"),
+                [sty.answerBox8answers__6]: hasVariant($state, "answers", "_6"),
+                [sty.answerBox8answers__7]: hasVariant($state, "answers", "_7"),
+                [sty.answerBox8answers__8]: hasVariant($state, "answers", "_8"),
+                [sty.answerBox8answers__9]: hasVariant($state, "answers", "_9"),
+                [sty.answerBox8answers_x]: hasVariant($state, "answers", "x")
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__q7Ke4,
+                  {
+                    [sty.textanswers__10__q7Ke4RmuR4]: hasVariant(
+                      $state,
+                      "answers",
+                      "_10"
+                    ),
+                    [sty.textanswers__2__q7Ke4Mlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers__3__q7Ke43L9Fx]: hasVariant(
+                      $state,
+                      "answers",
+                      "_3"
+                    ),
+                    [sty.textanswers__4__q7Ke4JrPol]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.textanswers__5__q7Ke44GKjS]: hasVariant(
+                      $state,
+                      "answers",
+                      "_5"
+                    ),
+                    [sty.textanswers__6__q7Ke4Dayq8]: hasVariant(
+                      $state,
+                      "answers",
+                      "_6"
+                    ),
+                    [sty.textanswers__7__q7Ke4AIuc3]: hasVariant(
+                      $state,
+                      "answers",
+                      "_7"
+                    ),
+                    [sty.textanswers__8__q7Ke4CwtP]: hasVariant(
+                      $state,
+                      "answers",
+                      "_8"
+                    ),
+                    [sty.textanswers__9__q7Ke4SSeH]: hasVariant(
+                      $state,
+                      "answers",
+                      "_9"
+                    ),
+                    [sty.textanswers_x__q7Ke4FbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "answers", "_10")
+                  ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                  : hasVariant($state, "answers", "_9")
+                  ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                  : hasVariant($state, "answers", "_8")
+                  ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                  : hasVariant($state, "answers", "_7")
+                  ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                  : hasVariant($state, "answers", "_6")
+                  ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                  : hasVariant($state, "answers", "_5")
+                  ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                  : hasVariant($state, "answers", "_4")
+                  ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                  : hasVariant($state, "answers", "_3")
+                  ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                  : hasVariant($state, "answers", "_2")
+                  ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                  : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"answerPic8"}
+              data-plasmic-override={overrides.answerPic8}
+              className={classNames(projectcss.all, sty.answerPic8)}
+            />
+          </p.Stack>
+        </div>
+      ) : null}
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "answerBox", "answerPic"],
+  root: [
+    "root",
+    "stackAnswers",
+    "answerBox",
+    "answerPic",
+    "stackAnswers5",
+    "answerBox5",
+    "answerPic5",
+    "stackAnswers2",
+    "answerBox2",
+    "answerPic2",
+    "stackAnswers3",
+    "answerBox3",
+    "answerPic3",
+    "stackAnswers4",
+    "answerBox4",
+    "answerPic4",
+    "stackAnswers7",
+    "answerBox7",
+    "answerPic7",
+    "stackAnswers8",
+    "answerBox8",
+    "answerPic8"
+  ],
+
+  stackAnswers: [
+    "stackAnswers",
+    "answerBox",
+    "answerPic",
+    "stackAnswers5",
+    "answerBox5",
+    "answerPic5"
+  ],
+
   answerBox: ["answerBox"],
-  answerPic: ["answerPic"]
+  answerPic: ["answerPic"],
+  stackAnswers5: ["stackAnswers5", "answerBox5", "answerPic5"],
+  answerBox5: ["answerBox5"],
+  answerPic5: ["answerPic5"],
+  stackAnswers2: ["stackAnswers2", "answerBox2", "answerPic2"],
+  answerBox2: ["answerBox2"],
+  answerPic2: ["answerPic2"],
+  stackAnswers3: ["stackAnswers3", "answerBox3", "answerPic3"],
+  answerBox3: ["answerBox3"],
+  answerPic3: ["answerPic3"],
+  stackAnswers4: ["stackAnswers4", "answerBox4", "answerPic4"],
+  answerBox4: ["answerBox4"],
+  answerPic4: ["answerPic4"],
+  stackAnswers7: ["stackAnswers7", "answerBox7", "answerPic7"],
+  answerBox7: ["answerBox7"],
+  answerPic7: ["answerPic7"],
+  stackAnswers8: ["stackAnswers8", "answerBox8", "answerPic8"],
+  answerBox8: ["answerBox8"],
+  answerPic8: ["answerPic8"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -773,8 +6602,27 @@ export const PlasmicFaqSection = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    stackAnswers: makeNodeComponent("stackAnswers"),
     answerBox: makeNodeComponent("answerBox"),
     answerPic: makeNodeComponent("answerPic"),
+    stackAnswers5: makeNodeComponent("stackAnswers5"),
+    answerBox5: makeNodeComponent("answerBox5"),
+    answerPic5: makeNodeComponent("answerPic5"),
+    stackAnswers2: makeNodeComponent("stackAnswers2"),
+    answerBox2: makeNodeComponent("answerBox2"),
+    answerPic2: makeNodeComponent("answerPic2"),
+    stackAnswers3: makeNodeComponent("stackAnswers3"),
+    answerBox3: makeNodeComponent("answerBox3"),
+    answerPic3: makeNodeComponent("answerPic3"),
+    stackAnswers4: makeNodeComponent("stackAnswers4"),
+    answerBox4: makeNodeComponent("answerBox4"),
+    answerPic4: makeNodeComponent("answerPic4"),
+    stackAnswers7: makeNodeComponent("stackAnswers7"),
+    answerBox7: makeNodeComponent("answerBox7"),
+    answerPic7: makeNodeComponent("answerPic7"),
+    stackAnswers8: makeNodeComponent("stackAnswers8"),
+    answerBox8: makeNodeComponent("answerBox8"),
+    answerPic8: makeNodeComponent("answerPic8"),
     // Metadata about props expected for PlasmicFaqSection
     internalVariantProps: PlasmicFaqSection__VariantProps,
     internalArgProps: PlasmicFaqSection__ArgProps

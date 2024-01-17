@@ -110,6 +110,16 @@ function PlasmicDisplay__RenderFunc(props) {
             "unnamedGroupOfVariants3",
             "activityPopUp3"
           ),
+          [sty.rootunnamedGroupOfVariants3_activityPopUp4]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants3",
+            "activityPopUp4"
+          ),
+          [sty.rootunnamedGroupOfVariants3_activityPopUp5]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants3",
+            "activityPopUp5"
+          ),
           [sty.rootvariants2_activities]: hasVariant(
             $state,
             "variants2",
@@ -144,6 +154,26 @@ function PlasmicDisplay__RenderFunc(props) {
             $state,
             "unnamedGroupOfVariants3",
             "activityPopUp1"
+          ),
+          [sty.gallery01unnamedGroupOfVariants3_activityPopUp2]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants3",
+            "activityPopUp2"
+          ),
+          [sty.gallery01unnamedGroupOfVariants3_activityPopUp4]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants3",
+            "activityPopUp4"
+          ),
+          [sty.gallery01unnamedGroupOfVariants3_activityPopUp5]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants3",
+            "activityPopUp5"
+          ),
+          [sty.gallery01variants2_analysis]: hasVariant(
+            $state,
+            "variants2",
+            "analysis"
           ),
           [sty.gallery01variants2_renderings]: hasVariant(
             $state,
@@ -237,19 +267,66 @@ function PlasmicDisplay__RenderFunc(props) {
                   projectcss.__wab_text,
                   sty.text__tifKi,
                   {
+                    [sty.textvariants2_activities__tifKIoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    ),
+                    [sty.textvariants2_analysis__tifKiw6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    ),
                     [sty.textvariants2_renderings__tifKIhKtTu]: hasVariant(
                       $state,
                       "variants2",
                       "renderings"
+                    ),
+                    [sty.textvariants2_sketches__tifKIl9NWu]: hasVariant(
+                      $state,
+                      "variants2",
+                      "sketches"
                     )
                   }
                 )}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "variants2",
+                          operation: 0,
+                          value: "activities"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateVariants2"] != null &&
+                    typeof $steps["updateVariants2"] === "object" &&
+                    typeof $steps["updateVariants2"].then === "function"
+                  ) {
+                    $steps["updateVariants2"] = await $steps["updateVariants2"];
+                  }
+                }}
               >
                 {"Activities"}
               </div>
             </div>
             <div
-              className={classNames(projectcss.all, sty.freeBox__gJf00)}
+              className={classNames(projectcss.all, sty.freeBox__gJf00, {
+                [sty.freeBoxvariants2_renderings__gJf00HKtTu]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                )
+              })}
               onClick={async event => {
                 const $steps = {};
                 $steps["updateVariants2"] = true
@@ -292,6 +369,32 @@ function PlasmicDisplay__RenderFunc(props) {
                     )
                   }
                 )}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "variants2",
+                          operation: 0,
+                          value: "renderings"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateVariants2"] != null &&
+                    typeof $steps["updateVariants2"] === "object" &&
+                    typeof $steps["updateVariants2"].then === "function"
+                  ) {
+                    $steps["updateVariants2"] = await $steps["updateVariants2"];
+                  }
+                }}
               >
                 {"Renderings "}
               </div>
@@ -305,26 +408,103 @@ function PlasmicDisplay__RenderFunc(props) {
                   projectcss.__wab_text,
                   sty.analysis,
                   {
+                    [sty.analysisvariants2_analysis]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    ),
                     [sty.analysisvariants2_renderings]: hasVariant(
                       $state,
                       "variants2",
                       "renderings"
+                    ),
+                    [sty.analysisvariants2_sketches]: hasVariant(
+                      $state,
+                      "variants2",
+                      "sketches"
                     )
                   }
                 )}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "variants2",
+                          operation: 0,
+                          value: "analysis"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateVariants2"] != null &&
+                    typeof $steps["updateVariants2"] === "object" &&
+                    typeof $steps["updateVariants2"].then === "function"
+                  ) {
+                    $steps["updateVariants2"] = await $steps["updateVariants2"];
+                  }
+                }}
               >
                 {"Analysis "}
               </div>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__uM7K5)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__uM7K5, {
+                [sty.freeBoxvariants2_sketches__uM7K5L9NWu]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+            >
               <div
                 data-plasmic-name={"sketches"}
                 data-plasmic-override={overrides.sketches}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.sketches
+                  sty.sketches,
+                  {
+                    [sty.sketchesvariants2_sketches]: hasVariant(
+                      $state,
+                      "variants2",
+                      "sketches"
+                    )
+                  }
                 )}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "variants2",
+                          operation: 0,
+                          value: "sketches"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateVariants2"] != null &&
+                    typeof $steps["updateVariants2"] === "object" &&
+                    typeof $steps["updateVariants2"].then === "function"
+                  ) {
+                    $steps["updateVariants2"] = await $steps["updateVariants2"];
+                  }
+                }}
               >
                 {"Sketches "}
               </div>
@@ -334,13 +514,67 @@ function PlasmicDisplay__RenderFunc(props) {
         <p.Stack
           as={"div"}
           hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__t4Vcl)}
+          className={classNames(projectcss.all, sty.freeBox__t4Vcl, {
+            [sty.freeBoxvariants2_activities__t4Vcloy1JL]: hasVariant(
+              $state,
+              "variants2",
+              "activities"
+            )
+          })}
         >
-          <div className={classNames(projectcss.all, sty.freeBox__hh4Lb)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__hh4Lb, {
+              [sty.freeBoxvariants2_activities__hh4LBoy1JL]: hasVariant(
+                $state,
+                "variants2",
+                "activities"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateUnnamedGroupOfVariants3"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "unnamedGroupOfVariants3",
+                      operation: 0,
+                      value: "activityPopUp3"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateUnnamedGroupOfVariants3"] != null &&
+                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
+                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
+                  "function"
+              ) {
+                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
+                  "updateUnnamedGroupOfVariants3"
+                ];
+              }
+            }}
+          >
             <div
               data-plasmic-name={"rectangle3178"}
               data-plasmic-override={overrides.rectangle3178}
-              className={classNames(projectcss.all, sty.rectangle3178)}
+              className={classNames(projectcss.all, sty.rectangle3178, {
+                [sty.rectangle3178variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.rectangle3178variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                )
+              })}
             />
 
             <div
@@ -353,11 +587,59 @@ function PlasmicDisplay__RenderFunc(props) {
               {"Over the bridge platform"}
             </div>
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__uttHp)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__uttHp, {
+              [sty.freeBoxvariants2_activities__uttHpoy1JL]: hasVariant(
+                $state,
+                "variants2",
+                "activities"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateUnnamedGroupOfVariants3"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "unnamedGroupOfVariants3",
+                      operation: 0,
+                      value: "activityPopUp2"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateUnnamedGroupOfVariants3"] != null &&
+                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
+                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
+                  "function"
+              ) {
+                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
+                  "updateUnnamedGroupOfVariants3"
+                ];
+              }
+            }}
+          >
             <div
               data-plasmic-name={"rectangle3177"}
               data-plasmic-override={overrides.rectangle3177}
-              className={classNames(projectcss.all, sty.rectangle3177)}
+              className={classNames(projectcss.all, sty.rectangle3177, {
+                [sty.rectangle3177variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.rectangle3177variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                )
+              })}
             />
 
             <div
@@ -370,11 +652,59 @@ function PlasmicDisplay__RenderFunc(props) {
               {"Skate-park area"}
             </div>
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__lPps)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__lPps, {
+              [sty.freeBoxvariants2_activities__lPpsoy1JL]: hasVariant(
+                $state,
+                "variants2",
+                "activities"
+              )
+            })}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateUnnamedGroupOfVariants3"] = true
+                ? (() => {
+                    const actionArgs = {
+                      vgroup: "unnamedGroupOfVariants3",
+                      operation: 0,
+                      value: "activityPopUp1"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
+                      }
+                      p.set($state, vgroup, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateUnnamedGroupOfVariants3"] != null &&
+                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
+                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
+                  "function"
+              ) {
+                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
+                  "updateUnnamedGroupOfVariants3"
+                ];
+              }
+            }}
+          >
             <div
               data-plasmic-name={"rectangle3179"}
               data-plasmic-override={overrides.rectangle3179}
-              className={classNames(projectcss.all, sty.rectangle3179)}
+              className={classNames(projectcss.all, sty.rectangle3179, {
+                [sty.rectangle3179variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.rectangle3179variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                )
+              })}
             />
 
             <div
@@ -429,12 +759,24 @@ function PlasmicDisplay__RenderFunc(props) {
         <div
           data-plasmic-name={"map"}
           data-plasmic-override={overrides.map}
-          className={classNames(projectcss.all, sty.map)}
+          className={classNames(projectcss.all, sty.map, {
+            [sty.mapvariants2_renderings]: hasVariant(
+              $state,
+              "variants2",
+              "renderings"
+            )
+          })}
         >
           <div
             data-plasmic-name={"rectangle3183"}
             data-plasmic-override={overrides.rectangle3183}
-            className={classNames(projectcss.all, sty.rectangle3183)}
+            className={classNames(projectcss.all, sty.rectangle3183, {
+              [sty.rectangle3183variants2_renderings]: hasVariant(
+                $state,
+                "variants2",
+                "renderings"
+              )
+            })}
           />
 
           <div
@@ -463,10 +805,43 @@ function PlasmicDisplay__RenderFunc(props) {
       />
 
       <PopUpGallery
+        className={classNames("__wab_instance", sty.popUpGallery__eh0Jh, {
+          [sty.popUpGalleryunnamedGroupOfVariants3_activityPopUp5__eh0JhZowXe]:
+            hasVariant($state, "unnamedGroupOfVariants3", "activityPopUp5")
+        })}
+        popUpVariants={"activity5"}
+      />
+
+      <PopUpGallery
+        className={classNames("__wab_instance", sty.popUpGallery___0FCo, {
+          [sty.popUpGalleryunnamedGroupOfVariants3_activityPopUp4___0FCoo2SZo]:
+            hasVariant($state, "unnamedGroupOfVariants3", "activityPopUp4")
+        })}
+        popUpVariants={"activity4"}
+      />
+
+      <PopUpGallery
         className={classNames("__wab_instance", sty.popUpGallery__tge3D, {
           [sty.popUpGalleryunnamedGroupOfVariants3_activityPopUp1__tge3DcEnHz]:
             hasVariant($state, "unnamedGroupOfVariants3", "activityPopUp1")
         })}
+        popUpVariants={"activity1"}
+      />
+
+      <PopUpGallery
+        className={classNames("__wab_instance", sty.popUpGallery___3REa3, {
+          [sty.popUpGalleryunnamedGroupOfVariants3_activityPopUp2___3REa3I33Ht]:
+            hasVariant($state, "unnamedGroupOfVariants3", "activityPopUp2")
+        })}
+        popUpVariants={"activity2"}
+      />
+
+      <PopUpGallery
+        className={classNames("__wab_instance", sty.popUpGallery__mcG2S, {
+          [sty.popUpGalleryunnamedGroupOfVariants3_activityPopUp3__mcG2S67F2T]:
+            hasVariant($state, "unnamedGroupOfVariants3", "activityPopUp3")
+        })}
+        popUpVariants={"activity3"}
       />
     </div>
   );

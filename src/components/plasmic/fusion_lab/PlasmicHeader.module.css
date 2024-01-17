@@ -1,90 +1,98 @@
-.intro {
-  height: 100vh;
-  display: flex;
+.root {
+  height: auto;
+  display: inline-flex;
   overflow: hidden;
-  width: 100%;
+  width: auto;
   flex-direction: column;
   position: relative;
-  min-width: 0;
+  justify-self: flex-start;
 }
-.freeBox__nA3A {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  top: auto;
-  left: auto;
-  overflow: hidden;
+.root > :global(.__wab_flex-container) {
   flex-direction: column;
-  min-width: 0;
-  min-height: 0;
-  padding: 0px;
-}
-.freeBox__nA3A > :global(.__wab_flex-container) {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-  min-height: 0;
   margin-top: calc(0px - 0px);
   height: calc(100% + 0px);
 }
-.freeBox__nA3A > :global(.__wab_flex-container) > *,
-.freeBox__nA3A > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__nA3A > :global(.__wab_flex-container) > picture > img,
-.freeBox__nA3A
+.root > :global(.__wab_flex-container) > *,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.root > :global(.__wab_flex-container) > picture > img,
+.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 0px;
+}
+.section {
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  height: 45px;
+  min-width: 0;
+  flex-shrink: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+}
+.section > * {
+  grid-column: 4;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin-top: calc(160px + 0px) !important;
+  margin-bottom: 160px;
+  padding: 8px;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
   > img {
-  margin-top: 0px;
+  margin-top: 10px;
 }
-.freeBox___8YuVi {
-  background: url("./images/dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign1.png") center center / cover no-repeat;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 0;
-  flex-direction: column;
-  min-width: 0;
-  min-height: 0;
-}
-.freeBox__wiRfS {
+.text__yx87D {
   width: auto;
   height: auto;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
-.freeBox__bAcVc {
-  position: relative;
-  top: auto;
-  left: auto;
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.text {
-  display: block;
-  font-size: 112px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  font-size: var(--token-EBGyLHrpfttb);
   font-weight: 700;
-  letter-spacing: -5.6px;
-  line-height: 112px;
-  color: rgba(0, 0, 0, 1);
-  margin-bottom: 40px;
+  text-align: center;
 }
-@media (min-width: 0px) and (max-width: 768px) {
-  .text {
-    font-size: 60px;
-  }
+.text__ebHd9 {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 55%;
+  font-size: var(--token-UXPBeNJ4rrVx);
+  text-align: center;
 }
-.actionButton:global(.__wab_instance) {
+.participateButton:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  margin-top: calc(16px + 10px) !important;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+}
+.auth:global(.__wab_instance) {
+  max-width: 100%;
   position: relative;
 }

@@ -17,19 +17,23 @@
   border-radius: 100px;
   padding: 15px 20px;
 }
-.text {
-  display: block;
-  font-size: 24px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 20px;
-  color: rgba(255, 255, 255, 1);
+.freeBox {
+  display: flex;
   position: relative;
   width: auto;
-  text-align: center;
 }
-.textoptions_sVersion {
+.freeBoxoptions_sVersion {
   width: auto;
+}
+.slotTargetChildren {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+.slotTargetChildrenoptions_sVersion {
   font-size: 16px;
 }

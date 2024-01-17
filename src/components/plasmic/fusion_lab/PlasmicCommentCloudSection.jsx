@@ -99,15 +99,27 @@ function PlasmicCommentCloudSection__RenderFunc(props) {
         />
 
         <FavComment
-          className={classNames("__wab_instance", sty.favComment__sFuEo)}
+          className={classNames("__wab_instance", sty.favComment__mMzBw)}
         />
 
         <FavComment
-          className={classNames("__wab_instance", sty.favComment___5JKxk)}
+          className={classNames("__wab_instance", sty.favComment__b7Kc)}
         />
 
         <FavComment
-          className={classNames("__wab_instance", sty.favComment__aiUf0)}
+          className={classNames("__wab_instance", sty.favComment__ncQxu)}
+        />
+
+        <FavComment
+          className={classNames("__wab_instance", sty.favComment__l1EZr)}
+        />
+
+        <FavComment
+          className={classNames("__wab_instance", sty.favComment__sxjfK)}
+        />
+
+        <FavComment
+          className={classNames("__wab_instance", sty.favComment___73UV)}
         />
 
         <FavComment
