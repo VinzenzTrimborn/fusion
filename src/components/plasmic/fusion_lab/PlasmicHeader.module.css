@@ -72,7 +72,7 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  font-size: var(--token-EBGyLHrpfttb);
+  font-size: 42px;
   font-weight: 700;
   text-align: center;
 }
@@ -81,7 +81,7 @@
   width: auto;
   height: auto;
   max-width: 55%;
-  font-size: var(--token-UXPBeNJ4rrVx);
+  font-size: 28px;
   text-align: center;
 }
 .participateButton:global(.__wab_instance) {

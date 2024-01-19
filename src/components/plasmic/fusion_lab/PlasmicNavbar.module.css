@@ -50,6 +50,7 @@
   min-width: 0;
   border-radius: 30px;
   padding: 10px;
+  border: 1px solid #f0f0f0;
 }
 .freeBox___7ORoh > :global(.__wab_flex-container) {
   flex-direction: row;

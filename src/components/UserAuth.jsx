@@ -15,6 +15,7 @@ function UserAuth_({showAuth, ...props}, ref) {
 
         registerButton={{
             onClick() {
+
                 console.log("register", email);
                 showAuth(false);
                 setEmail("");

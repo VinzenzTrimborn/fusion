@@ -34,7 +34,7 @@ import rectangle3175XJq2VvylRzOp from "./images/rectangle3175.png"; // plasmic-i
 
 createPlasmicElementProxy;
 
-export const PlasmicAnalysisCarousel__VariantProps = new Array("renders");
+export const PlasmicAnalysisCarousel__VariantProps = new Array("analysis");
 
 export const PlasmicAnalysisCarousel__ArgProps = new Array("render4");
 
@@ -67,17 +67,17 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
         type: "private",
         variableType: "number",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
-          hasVariant($state, "renders", "render6")
+          hasVariant($state, "analysis", "a6")
             ? 5
-            : hasVariant($state, "renders", "render5")
+            : hasVariant($state, "analysis", "a5")
             ? 4
-            : hasVariant($state, "renders", "render4")
+            : hasVariant($state, "analysis", "a4")
             ? 3
-            : hasVariant($state, "renders", "render3")
+            : hasVariant($state, "analysis", "a3")
             ? 2
-            : hasVariant($state, "renders", "render2")
+            : hasVariant($state, "analysis", "a2")
             ? 1
-            : hasVariant($state, "renders", "render1")
+            : hasVariant($state, "analysis", "a1")
             ? 0
             : 0,
         refName: "sliderCarousel",
@@ -87,10 +87,10 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
         )
       },
       {
-        path: "renders",
+        path: "analysis",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.renders
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.analysis
       }
     ],
 
@@ -118,21 +118,21 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
-          [sty.rootrenders_render1]: hasVariant($state, "renders", "render1"),
-          [sty.rootrenders_render2]: hasVariant($state, "renders", "render2"),
-          [sty.rootrenders_render3]: hasVariant($state, "renders", "render3"),
-          [sty.rootrenders_render4]: hasVariant($state, "renders", "render4"),
-          [sty.rootrenders_render5]: hasVariant($state, "renders", "render5"),
-          [sty.rootrenders_render6]: hasVariant($state, "renders", "render6")
+          [sty.rootanalysis_a1]: hasVariant($state, "analysis", "a1"),
+          [sty.rootanalysis_a2]: hasVariant($state, "analysis", "a2"),
+          [sty.rootanalysis_a3]: hasVariant($state, "analysis", "a3"),
+          [sty.rootanalysis_a4]: hasVariant($state, "analysis", "a4"),
+          [sty.rootanalysis_a5]: hasVariant($state, "analysis", "a5"),
+          [sty.rootanalysis_a6]: hasVariant($state, "analysis", "a6")
         }
       )}
     >
       <div
         className={classNames(projectcss.all, sty.freeBox__eAxG, {
-          [sty.freeBoxrenders_render2__eAxG7ZTqA]: hasVariant(
+          [sty.freeBoxanalysis_a2__eAxG7ZTqA]: hasVariant(
             $state,
-            "renders",
-            "render2"
+            "analysis",
+            "a2"
           )
         })}
       >
@@ -192,35 +192,35 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
           ),
           centerMode: true,
           className: classNames("__wab_instance", sty.sliderCarousel, {
-            [sty.sliderCarouselrenders_render1]: hasVariant(
+            [sty.sliderCarouselanalysis_a1]: hasVariant(
               $state,
-              "renders",
-              "render1"
+              "analysis",
+              "a1"
             ),
-            [sty.sliderCarouselrenders_render2]: hasVariant(
+            [sty.sliderCarouselanalysis_a2]: hasVariant(
               $state,
-              "renders",
-              "render2"
+              "analysis",
+              "a2"
             ),
-            [sty.sliderCarouselrenders_render3]: hasVariant(
+            [sty.sliderCarouselanalysis_a3]: hasVariant(
               $state,
-              "renders",
-              "render3"
+              "analysis",
+              "a3"
             ),
-            [sty.sliderCarouselrenders_render4]: hasVariant(
+            [sty.sliderCarouselanalysis_a4]: hasVariant(
               $state,
-              "renders",
-              "render4"
+              "analysis",
+              "a4"
             ),
-            [sty.sliderCarouselrenders_render5]: hasVariant(
+            [sty.sliderCarouselanalysis_a5]: hasVariant(
               $state,
-              "renders",
-              "render5"
+              "analysis",
+              "a5"
             ),
-            [sty.sliderCarouselrenders_render6]: hasVariant(
+            [sty.sliderCarouselanalysis_a6]: hasVariant(
               $state,
-              "renders",
-              "render6"
+              "analysis",
+              "a6"
             )
           }),
           initialSlide: p.generateStateValueProp($state, [
@@ -253,30 +253,30 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
           >
             <div
               className={classNames(projectcss.all, sty.freeBox__eBaLv, {
-                [sty.freeBoxrenders_render2__eBaLv7ZTqA]: hasVariant(
+                [sty.freeBoxanalysis_a2__eBaLv7ZTqA]: hasVariant(
                   $state,
-                  "renders",
-                  "render2"
+                  "analysis",
+                  "a2"
                 )
               })}
             >
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__aUmrW, {
-                  [sty.imgrenders_render1__aUmrWk7SmL]: hasVariant(
+                  [sty.imganalysis_a1__aUmrWk7SmL]: hasVariant(
                     $state,
-                    "renders",
-                    "render1"
+                    "analysis",
+                    "a1"
                   ),
-                  [sty.imgrenders_render2__aUmrW7ZTqA]: hasVariant(
+                  [sty.imganalysis_a2__aUmrW7ZTqA]: hasVariant(
                     $state,
-                    "renders",
-                    "render2"
+                    "analysis",
+                    "a2"
                   ),
-                  [sty.imgrenders_render6__aUmrWajah8]: hasVariant(
+                  [sty.imganalysis_a6__aUmrWajah8]: hasVariant(
                     $state,
-                    "renders",
-                    "render6"
+                    "analysis",
+                    "a6"
                   )
                 })}
                 displayHeight={"auto"}
@@ -297,10 +297,15 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__q8QeK, {
-                  [sty.imgrenders_render3__q8QeKm15D]: hasVariant(
+                  [sty.imganalysis_a2__q8QeK7ZTqA]: hasVariant(
                     $state,
-                    "renders",
-                    "render3"
+                    "analysis",
+                    "a2"
+                  ),
+                  [sty.imganalysis_a3__q8QeKm15D]: hasVariant(
+                    $state,
+                    "analysis",
+                    "a3"
                   )
                 })}
                 displayHeight={"auto"}
@@ -319,20 +324,20 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
             </div>
             <div
               className={classNames(projectcss.all, sty.freeBox__gjtnH, {
-                [sty.freeBoxrenders_render2__gjtnH7ZTqA]: hasVariant(
+                [sty.freeBoxanalysis_a2__gjtnH7ZTqA]: hasVariant(
                   $state,
-                  "renders",
-                  "render2"
+                  "analysis",
+                  "a2"
                 )
               })}
             >
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__qloD8, {
-                  [sty.imgrenders_render2__qloD87ZTqA]: hasVariant(
+                  [sty.imganalysis_a2__qloD87ZTqA]: hasVariant(
                     $state,
-                    "renders",
-                    "render2"
+                    "analysis",
+                    "a2"
                   )
                 })}
                 displayHeight={"auto"}
@@ -369,20 +374,20 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
             </div>
             <div
               className={classNames(projectcss.all, sty.freeBox__rHy9H, {
-                [sty.freeBoxrenders_render2__rHy9H7ZTqA]: hasVariant(
+                [sty.freeBoxanalysis_a2__rHy9H7ZTqA]: hasVariant(
                   $state,
-                  "renders",
-                  "render2"
+                  "analysis",
+                  "a2"
                 )
               })}
             >
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__qr3Pz, {
-                  [sty.imgrenders_render2__qr3Pz7ZTqA]: hasVariant(
+                  [sty.imganalysis_a2__qr3Pz7ZTqA]: hasVariant(
                     $state,
-                    "renders",
-                    "render2"
+                    "analysis",
+                    "a2"
                   )
                 })}
                 displayHeight={"auto"}
@@ -403,10 +408,10 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__fpcP, {
-                  [sty.imgrenders_render6__fpcPAjah8]: hasVariant(
+                  [sty.imganalysis_a6__fpcPAjah8]: hasVariant(
                     $state,
-                    "renders",
-                    "render6"
+                    "analysis",
+                    "a6"
                   )
                 })}
                 displayHeight={"auto"}

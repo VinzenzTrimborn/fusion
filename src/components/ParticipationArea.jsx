@@ -27,35 +27,42 @@ function ParticipationArea_(props, ref) {
         setCameraDirection(direction);
     }, []);
 
-
+    //ToDo Koray: get comments from DB
     const getCommentsFromDB = useCallback(() => {
+        //ToDo Koray: After getting the comments likedByUser should be set to true if the user liked the comment
         return [
             {
                 likes: 45,
                 text: "Hi there!",
                 username: "Vinzenz",
                 cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0}
+                commentPosition: {x: 0, y: 2, z: 0},
+                likedByUser: false
             },
             {
                 likes: 23,
                 text: "Koray is the best!",
                 username: "Koray",
                 cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0}
+                commentPosition: {x: 0, y: 2, z: 0},
+                likedByUser: true
             }
         ];
     }, []);
 
+    //ToDo Koray: add comment to DB
     const addCommentDB = useCallback((newComment) => {
 
         setComments([...comments, newComment]);
     }, [comments]);
 
-    const like = useCallback((comment) => {
+    const changeLike = useCallback((comment) => {
+        //ToDo Koray: increase or decrease likes in DB
         const newComments = comments.map((c) => {
-            if (c === comment) {
-                return {...c, likes: c.likes + 1};
+            if (c === comment && !c.likedByUser) {
+                return {...c, likes: c.likes + 1, likedByUser: true};
+            }else if(c === comment && c.likedByUser){
+                return {...c, likes: c.likes - 1, likedByUser: false};
             }
             return c;
         });
@@ -79,7 +86,7 @@ function ParticipationArea_(props, ref) {
             }}
             commentSidebar={{
                 children: comments.map((comment) => {
-                    return <Comment comment={comment} lookAt={lookAt} like={like}/>;
+                    return <Comment comment={comment} lookAt={lookAt} changeLike={changeLike}/>;
                 }, [])
             }}
             newCommentText={{

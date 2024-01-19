@@ -26,10 +26,7 @@ createPlasmicElementProxy;
 
 export const PlasmicVotingCard__VariantProps = new Array();
 
-export const PlasmicVotingCard__ArgProps = new Array(
-  "voteCount",
-  "proposalName"
-);
+export const PlasmicVotingCard__ArgProps = new Array();
 
 const $$ = {};
 
@@ -64,11 +61,15 @@ function PlasmicVotingCard__RenderFunc(props) {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox__mKHqX)}>
-        {p.renderPlasmicSlot({
-          defaultContents: "Proposal A",
-          value: args.proposalName,
-          className: classNames(sty.slotTargetProposalName)
-        })}
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__w2Hc0
+          )}
+        >
+          {"Proposal A"}
+        </div>
       </div>
       <p.Stack
         as={"div"}
@@ -98,29 +99,22 @@ function PlasmicVotingCard__RenderFunc(props) {
               </React.Fragment>
             </div>
           </div>
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__lpWrm
-                )}
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__lpWrm
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#000000" }}
               >
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "#000000" }}
-                  >
-                    {"434.535"}
-                  </span>
-                </React.Fragment>
-              </div>
-            ),
-
-            value: args.voteCount,
-            className: classNames(sty.slotTargetVoteCount)
-          })}
+                {"434.535"}
+              </span>
+            </React.Fragment>
+          </div>
         </p.Stack>
       </p.Stack>
       <div className={classNames(projectcss.all, sty.freeBox__jZvUe)}>

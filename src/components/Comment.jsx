@@ -1,13 +1,14 @@
 import * as React from "react";
 import {PlasmicComment} from "./plasmic/fusion_lab/PlasmicComment";
 
-function Comment_({comment, lookAt, like, ...props}, ref) {
+function Comment_({comment, lookAt, changeLike, ...props}, ref) {
     const {likes, text, username, cameraPosition, commentPosition} = comment;
     return <PlasmicComment
         likes={likes}
+        liked={comment.likedByUser}
         text={text}
         likeButton={{
-            onClick: () => like(comment)
+            onClick: () => changeLike(comment)
         }}
         showLocation={{
             onClick: () => lookAt(cameraPosition, commentPosition)

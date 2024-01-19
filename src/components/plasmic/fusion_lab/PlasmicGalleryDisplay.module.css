@@ -50,7 +50,7 @@
 }
 .text__goGpD {
   display: block;
-  font-size: 40px;
+  font-size: 34px;
   text-align: center;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
@@ -100,7 +100,7 @@
   flex-direction: row;
   background: none;
   border-radius: 20px;
-  border: 1px solid var(--token-kzT08fQBAHgz);
+  border: 1px solid #535353e0;
 }
 .frame108 > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -136,10 +136,10 @@
   display: block;
   font-size: 24px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: 0px;
   line-height: 22px;
-  color: #292929;
+  color: #1677ff;
   width: auto;
   height: 25px;
   cursor: pointer;
@@ -725,6 +725,8 @@
   position: absolute;
   top: 0px;
   left: 1px;
+  padding-bottom: 72px;
+  cursor: pointer;
   border-radius: 24px;
 }
 .htmlVideo:global(.__wab_instance) {
@@ -740,7 +742,8 @@
   display: none;
 }
 .rectangle3187 {
-  background: url("./images/rectangle3186.png") center center / cover no-repeat,
+  background: url("https://studio.plasmic.app/static/img/placeholder.png") top
+      50% left 50% / cover repeat,
     rgba(195, 195, 195, 1);
   width: 368px;
   height: 273px;
@@ -759,6 +762,7 @@
   position: absolute;
   top: 456px;
   left: 0px;
+  cursor: pointer;
   border-radius: 24px;
 }
 .rectangle3175 {
@@ -770,6 +774,7 @@
   position: absolute;
   top: 309px;
   left: 398px;
+  cursor: pointer;
   border-radius: 24px;
 }
 .pics3 {
@@ -1140,6 +1145,66 @@
   display: none;
 }
 .sketchesCarouselgroupOfPopUpVariants2_sketch6PopUp__vh9NvlLv:global(
+    .__wab_instance
+  ) {
+  display: flex;
+}
+.analysisCarousel__gwN7K:global(.__wab_instance) {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 620px;
+  height: auto;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+.analysisCarouselgroupOfPopUpVariants2_analysisPopUp1__gwN7KSdd1:global(
+    .__wab_instance
+  ) {
+  display: flex;
+}
+.analysisCarousel__kdf8S:global(.__wab_instance) {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 620px;
+  height: auto;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+.analysisCarouselgroupOfPopUpVariants2_analysisPopUp2__kdf8S66Hk0:global(
+    .__wab_instance
+  ) {
+  display: flex;
+}
+.analysisCarousel__x88OU:global(.__wab_instance) {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 620px;
+  height: auto;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+.analysisCarouselgroupOfPopUpVariants2_analysisPopUp3__x88OUeNMaR:global(
+    .__wab_instance
+  ) {
+  display: flex;
+}
+.analysisCarousel__tylxu:global(.__wab_instance) {
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 620px;
+  height: auto;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+.analysisCarouselgroupOfPopUpVariants2_analysisPopUp4__tylxukydrM:global(
     .__wab_instance
   ) {
   display: flex;

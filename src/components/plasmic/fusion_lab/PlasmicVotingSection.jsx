@@ -68,39 +68,22 @@ function PlasmicVotingSection__RenderFunc(props) {
       >
         <VotingCard
           className={classNames("__wab_instance", sty.votingCard__hnUh1)}
-          proposalName={"Proposal A"}
         />
 
         <VotingCard
           className={classNames("__wab_instance", sty.votingCard__aV27L)}
-          proposalName={"Proposal B"}
         />
 
         <VotingCard
           className={classNames("__wab_instance", sty.votingCard___4M1VA)}
-          proposalName={
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              {"Proposal C"}
-            </div>
-          }
         />
 
         <VotingCard
           className={classNames("__wab_instance", sty.votingCard__dZYnU)}
-          proposalName={"Proposal D"}
         />
 
         <VotingCard
           className={classNames("__wab_instance", sty.votingCard__bhY)}
-          proposalName={"Proposal E"}
         />
       </p.Stack>
     </div>
@@ -108,9 +91,8 @@ function PlasmicVotingSection__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  vote: ["vote", "freeBox", "text"],
-  freeBox: ["freeBox", "text"],
-  text: ["text"]
+  vote: ["vote", "freeBox"],
+  freeBox: ["freeBox"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -146,7 +128,6 @@ export const PlasmicVotingSection = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
-    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicVotingSection
     internalVariantProps: PlasmicVotingSection__VariantProps,
     internalArgProps: PlasmicVotingSection__ArgProps

@@ -3,9 +3,9 @@ import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
 import {Gltf, Html, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {Suspense, useEffect, useRef, useState} from "react";
+import {Suspense, useEffect, useMemo, useRef, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
-import {DoubleSide, Vector3} from "three";
+import {DoubleSide, MeshLambertMaterial, Vector3} from "three";
 import FavComment from "./FavComment";
 import Display from "./Display";
 import PopUpGallery from "./PopUpGallery";
@@ -26,9 +26,11 @@ export default function Scene({handleCameraChange}) {
 
     const camera = useThree((state) => state.camera);
     const raycaster = useThree((state) => state.raycaster);
+    const scene = useThree((state) => state.scene);
+    const [highlightedIDs, setHighlightedIDs] = useState([]);
 
     useFrame(() => {
-        if (camera && false) {
+        if (camera) {
             handleCameraChange({position: camera.position, direction: camera.getWorldDirection(new Vector3())});
         }
     });
@@ -51,6 +53,57 @@ export default function Scene({handleCameraChange}) {
     const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_01.ifc", (ifcLoader) => {
         ifcLoader.ifcManager.setWasmPath("../../wasm/");
     });
+    const highlightedMaterial = useMemo(() => new MeshLambertMaterial({
+        transparent: false,
+        opacity: 0.6,
+        color: 0xff88ff,
+        depthTest: true,
+    }), []);
+
+    useEffect(() => {
+        console.log("highlightedIDs", highlightedIDs);
+        const manager = ifc.ifcManager;
+        manager.createSubset({
+            modelID: 0,
+            ids: highlightedIDs,
+            scene: scene,
+            material: highlightedMaterial,
+            removePrevious: true,
+            customID: "highlightedMaterial"
+        });
+        return () => manager.removeSubset({
+            modelID: 0,
+            material: highlightedMaterial,
+            customID: "highlightedMaterial"
+        });
+    }, [ifc, scene, highlightedIDs, highlightedMaterial]);
+
+    useEffect(() => {
+        const manager = ifc.ifcManager;
+
+        const parseIFCCategories = async () => {
+            const ifcCategoryOnExpressIDs = {};
+            const ifcCategorySubsets = {};
+            for (const [key, category] of Object.entries(manager.typesMap)) {
+                const categoryVal = parseInt(key);
+                const slabsIDs = await manager.getAllItemsOfType(0, categoryVal, false);
+                if (slabsIDs.length > 0) {
+                    ifcCategoryOnExpressIDs[category] = slabsIDs;
+                    ifcCategorySubsets[category] = manager.createSubset({
+                        modelID: 0,
+                        ids: slabsIDs,
+                        scene: scene,
+                        customID: category
+                    });
+                }
+            }
+
+            setIfcCategorySubsets(ifcCategorySubsets);
+        }
+        parseIFCCategories();
+
+
+    }, [ifc, scene]);
 
     return (
         <>
@@ -71,6 +124,19 @@ export default function Scene({handleCameraChange}) {
                         cameraPosition: cameraVector
                     })
                 }}/>
+
+                {/*<group>
+                    {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
+                        <primitive key={index} object={value}
+                                   onDoubleClick={(e) => {
+                                       ifc.ifcManager.getItemProperties(0, value.id).then((value)=> console.log(value))
+                                       setHighlightedIDs([value.id]);
+                                       console.log(value.id)
+                                   }}
+                        />
+                    )}
+                </group>*/}
+
                 <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
                 {comments.map((comment, index) => <Annotation key={index} comment={comment}/>, [])}
             </Suspense>

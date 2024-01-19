@@ -21,6 +21,7 @@ import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import PopUpGallery from "../../PopUpGallery"; // plasmic-import: lKMH_lDVGHXv/component
 import RenderingsCarousel from "../../RenderingsCarousel"; // plasmic-import: Jj6Wy6mGqjeW/component
 import SketchesCarousel from "../../SketchesCarousel"; // plasmic-import: SJ9BZMm9j-BB/component
+import AnalysisCarousel from "../../AnalysisCarousel"; // plasmic-import: kt1oJ-MMekfG/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -111,6 +112,26 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
+          [sty.rootgroupOfPopUpVariants2_analysisPopUp1]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp1"
+          ),
+          [sty.rootgroupOfPopUpVariants2_analysisPopUp2]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp2"
+          ),
+          [sty.rootgroupOfPopUpVariants2_analysisPopUp3]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp3"
+          ),
+          [sty.rootgroupOfPopUpVariants2_analysisPopUp4]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp4"
+          ),
           [sty.rootgroupOfPopUpVariants2_sketch1PopUp]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
@@ -226,6 +247,21 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
         data-plasmic-override={overrides.gallery01}
         hasGap={true}
         className={classNames(projectcss.all, sty.gallery01, {
+          [sty.gallery01groupOfPopUpVariants2_analysisPopUp1]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp1"
+          ),
+          [sty.gallery01groupOfPopUpVariants2_analysisPopUp3]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp3"
+          ),
+          [sty.gallery01groupOfPopUpVariants2_analysisPopUp4]: hasVariant(
+            $state,
+            "groupOfPopUpVariants2",
+            "analysisPopUp4"
+          ),
           [sty.gallery01groupOfPopUpVariants2_sketch1PopUp]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
@@ -1361,6 +1397,35 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 data-plasmic-name={"rectangle3186"}
                 data-plasmic-override={overrides.rectangle3186}
                 className={classNames(projectcss.all, sty.rectangle3186)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateGroupOfPopUpVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "groupOfPopUpVariants2",
+                          operation: 0,
+                          value: "analysisPopUp2"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateGroupOfPopUpVariants2"] != null &&
+                    typeof $steps["updateGroupOfPopUpVariants2"] === "object" &&
+                    typeof $steps["updateGroupOfPopUpVariants2"].then ===
+                      "function"
+                  ) {
+                    $steps["updateGroupOfPopUpVariants2"] = await $steps[
+                      "updateGroupOfPopUpVariants2"
+                    ];
+                  }
+                }}
               >
                 <Video
                   data-plasmic-name={"htmlVideo"}
@@ -1388,12 +1453,70 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 data-plasmic-name={"rectangle3174"}
                 data-plasmic-override={overrides.rectangle3174}
                 className={classNames(projectcss.all, sty.rectangle3174)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateGroupOfPopUpVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "groupOfPopUpVariants2",
+                          operation: 0,
+                          value: "analysisPopUp1"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateGroupOfPopUpVariants2"] != null &&
+                    typeof $steps["updateGroupOfPopUpVariants2"] === "object" &&
+                    typeof $steps["updateGroupOfPopUpVariants2"].then ===
+                      "function"
+                  ) {
+                    $steps["updateGroupOfPopUpVariants2"] = await $steps[
+                      "updateGroupOfPopUpVariants2"
+                    ];
+                  }
+                }}
               />
 
               <div
                 data-plasmic-name={"rectangle3175"}
                 data-plasmic-override={overrides.rectangle3175}
                 className={classNames(projectcss.all, sty.rectangle3175)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateGroupOfPopUpVariants2"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          vgroup: "groupOfPopUpVariants2",
+                          operation: 0,
+                          value: "analysisPopUp3"
+                        };
+                        return (({ vgroup, value }) => {
+                          if (typeof value === "string") {
+                            value = [value];
+                          }
+                          p.set($state, vgroup, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateGroupOfPopUpVariants2"] != null &&
+                    typeof $steps["updateGroupOfPopUpVariants2"] === "object" &&
+                    typeof $steps["updateGroupOfPopUpVariants2"].then ===
+                      "function"
+                  ) {
+                    $steps["updateGroupOfPopUpVariants2"] = await $steps[
+                      "updateGroupOfPopUpVariants2"
+                    ];
+                  }
+                }}
               />
             </div>
           ) : null}
@@ -1757,6 +1880,38 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
             hasVariant($state, "groupOfPopUpVariants2", "sketch6PopUp")
         })}
         sketchPopUp1={"sketch6"}
+      />
+
+      <AnalysisCarousel
+        analysis={"a1"}
+        className={classNames("__wab_instance", sty.analysisCarousel__gwN7K, {
+          [sty.analysisCarouselgroupOfPopUpVariants2_analysisPopUp1__gwN7KSdd1]:
+            hasVariant($state, "groupOfPopUpVariants2", "analysisPopUp1")
+        })}
+      />
+
+      <AnalysisCarousel
+        analysis={"a3"}
+        className={classNames("__wab_instance", sty.analysisCarousel__kdf8S, {
+          [sty.analysisCarouselgroupOfPopUpVariants2_analysisPopUp2__kdf8S66Hk0]:
+            hasVariant($state, "groupOfPopUpVariants2", "analysisPopUp2")
+        })}
+      />
+
+      <AnalysisCarousel
+        analysis={"a6"}
+        className={classNames("__wab_instance", sty.analysisCarousel__x88OU, {
+          [sty.analysisCarouselgroupOfPopUpVariants2_analysisPopUp3__x88OUeNMaR]:
+            hasVariant($state, "groupOfPopUpVariants2", "analysisPopUp3")
+        })}
+      />
+
+      <AnalysisCarousel
+        analysis={"a2"}
+        className={classNames("__wab_instance", sty.analysisCarousel__tylxu, {
+          [sty.analysisCarouselgroupOfPopUpVariants2_analysisPopUp4__tylxukydrM]:
+            hasVariant($state, "groupOfPopUpVariants2", "analysisPopUp4")
+        })}
       />
     </div>
   );

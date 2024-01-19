@@ -776,7 +776,14 @@ function PlasmicFaqSection__RenderFunc(props) {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__jPTo
+                sty.text__jPTo,
+                {
+                  [sty.textanswers__7__jPToaIuc3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  )
+                }
               )}
             >
               {"Which methods were used for the design phase?"}

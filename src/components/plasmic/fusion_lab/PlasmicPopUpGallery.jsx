@@ -127,29 +127,30 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             loading={"lazy"}
             onClick={async event => {
               const $steps = {};
-              $steps["goToGallery"] = true
+              $steps["updatePopUpVariants"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/gallery` };
-                    return (({ destination }) => {
-                      if (
-                        typeof destination === "string" &&
-                        destination.startsWith("#")
-                      ) {
-                        document
-                          .getElementById(destination.substr(1))
-                          .scrollIntoView({ behavior: "smooth" });
-                      } else {
-                        location.assign(destination);
+                    const actionArgs = {
+                      vgroup: "popUpVariants",
+                      operation: 1,
+                      value: "activity1"
+                    };
+                    return (({ vgroup, value }) => {
+                      if (typeof value === "string") {
+                        value = [value];
                       }
+                      p.set($state, vgroup, undefined);
+                      return undefined;
                     })?.apply(null, [actionArgs]);
                   })()
                 : undefined;
               if (
-                $steps["goToGallery"] != null &&
-                typeof $steps["goToGallery"] === "object" &&
-                typeof $steps["goToGallery"].then === "function"
+                $steps["updatePopUpVariants"] != null &&
+                typeof $steps["updatePopUpVariants"] === "object" &&
+                typeof $steps["updatePopUpVariants"].then === "function"
               ) {
-                $steps["goToGallery"] = await $steps["goToGallery"];
+                $steps["updatePopUpVariants"] = await $steps[
+                  "updatePopUpVariants"
+                ];
               }
             }}
             src={{

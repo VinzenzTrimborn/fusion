@@ -21,11 +21,12 @@
 }
 .freeBox > :global(.__wab_flex-container) {
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+  flex-wrap: wrap;
   min-width: 0;
-  margin-left: calc(0px - 44px);
-  width: calc(100% + 44px);
+  margin-left: calc(0px - 20px);
+  width: calc(100% + 20px);
 }
 .freeBox > :global(.__wab_flex-container) > *,
 .freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
@@ -35,28 +36,20 @@
   > :global(.__wab_slot)
   > picture
   > img {
-  margin-left: 44px;
+  margin-left: 20px;
 }
 .votingCard__hnUh1:global(.__wab_instance) {
   position: relative;
-  flex-shrink: 0;
 }
 .votingCard__aV27L:global(.__wab_instance) {
   position: relative;
-  flex-shrink: 0;
 }
 .votingCard___4M1VA:global(.__wab_instance) {
   position: relative;
-  flex-shrink: 0;
-}
-.text {
-  padding-right: 0px;
 }
 .votingCard__dZYnU:global(.__wab_instance) {
   position: relative;
-  flex-shrink: 0;
 }
 .votingCard__bhY:global(.__wab_instance) {
   position: relative;
-  flex-shrink: 0;
 }

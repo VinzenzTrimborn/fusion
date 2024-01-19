@@ -15,13 +15,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   justify-content: flex-start;
   align-items: center;
   max-height: 1600px;
   min-width: 0;
   flex-shrink: 0;
-  padding: 4%;
+  padding: 4% 4% 2%;
 }
 .freeBox__vAye7 {
   display: flex;
@@ -37,6 +37,7 @@
   min-height: 0;
   padding: 0px;
   margin: 0px;
+  border: 1px solid #f0f0f0;
 }
 .canvas {
   display: flex;
@@ -120,12 +121,12 @@
   width: 100%;
   height: 40%;
   max-width: 100%;
-  background: var(--token-zy6xhYnWF8Y7);
-  box-shadow: 0px 4px 16px 0px var(--token-MjYUWCcX38Uk);
+  background: #ffffff;
+  box-shadow: none;
   min-width: 0;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 8px;
-  border-width: 5px;
+  border: 1px solid #f0f0f0;
 }
 .freeBox__diJG > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -165,11 +166,11 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  background: var(--token-zy6xhYnWF8Y7);
+  background: #ffffff;
   cursor: pointer;
   border-radius: 5px;
   padding: 8px;
-  border: 1px solid var(--token-RvPI6LyeIPmd);
+  border: 1px solid #535353d9;
 }
 .text {
   position: relative;
@@ -187,7 +188,7 @@
   overflow: auto;
   max-height: 60%;
   min-width: 0;
-  padding: 0px 16px 0px 0px;
+  padding: 0px;
 }
 .commentSidebar > :global(.__wab_flex-container) {
   flex-direction: column;

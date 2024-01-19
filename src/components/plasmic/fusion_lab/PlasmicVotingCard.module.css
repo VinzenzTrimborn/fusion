@@ -1,13 +1,15 @@
 .root {
   background: #ededed;
-  width: 232px;
-  height: 238px;
-  display: flex;
+  width: auto;
+  height: auto;
+  display: inline-flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0px 4px 16px 0px var(--token-LqpCVPPZF4_r);
+  box-shadow: 0px 4px 16px 0px rgba(83, 83, 83, 0.04);
+  justify-self: flex-start;
   border-radius: 20px;
-  border: 1px solid var(--token-kzT08fQBAHgz);
+  padding: 10px;
+  border: 1px solid #f0f0f0;
 }
 .root > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -31,16 +33,11 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
+  padding-top: 10px;
 }
-.slotTargetProposalName {
-  font-family: "Inter", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: rgba(1, 2, 58, 1);
-  line-height: 50px;
-  letter-spacing: -0.48px;
-  text-align: center;
+.text__w2Hc0 {
+  font-weight: 700;
 }
 .freeBox__hPmQr {
   height: auto;
@@ -74,7 +71,7 @@
   position: relative;
   flex-direction: row;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 5px 10px;
   border: 2px solid var(--token-kzT08fQBAHgz);
 }
 .freeBox___47I6H > :global(.__wab_flex-container) {
@@ -105,22 +102,13 @@
 }
 .text__vpS7Q {
   display: block;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   letter-spacing: 0em;
   line-height: 20px;
   color: rgba(255, 255, 255, 1);
-}
-.slotTargetVoteCount {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 1);
-  text-align: center;
-  line-height: 20px;
-  letter-spacing: 0em;
 }
 .freeBox__jZvUe {
   height: auto;
@@ -131,7 +119,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 10px;
 }
 .vottingButton {
@@ -147,7 +135,7 @@
   cursor: pointer;
   flex-shrink: 0;
   border-radius: 30px;
-  padding: 16px 20px;
+  padding: 10px 5px;
 }
 .text__c7DRc {
   display: block;

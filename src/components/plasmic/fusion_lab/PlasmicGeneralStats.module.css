@@ -89,9 +89,9 @@
 .seen {
   width: 161px;
   height: 131px;
-  display: block;
   position: relative;
   flex-shrink: 0;
+  display: none;
 }
 .text__blFOe {
   display: block;

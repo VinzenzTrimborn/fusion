@@ -12,6 +12,7 @@ import * as React from "react";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -29,7 +30,7 @@ import IcMoreVertBlack24PxIcon from "./icons/PlasmicIcon__IcMoreVertBlack24Px"; 
 
 createPlasmicElementProxy;
 
-export const PlasmicComment__VariantProps = new Array();
+export const PlasmicComment__VariantProps = new Array("liked");
 
 export const PlasmicComment__ArgProps = new Array();
 
@@ -53,6 +54,12 @@ function PlasmicComment__RenderFunc(props) {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "liked",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.liked
       }
     ],
 
@@ -159,7 +166,13 @@ function PlasmicComment__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.likeButton)}
               >
                 <LikeSvgrepoComsvgIcon
-                  className={classNames(projectcss.all, sty.svg__prLvb)}
+                  className={classNames(projectcss.all, sty.svg__prLvb, {
+                    [sty.svgliked__prLvbdFe6S]: hasVariant(
+                      $state,
+                      "liked",
+                      "liked"
+                    )
+                  })}
                   role={"img"}
                 />
               </div>
