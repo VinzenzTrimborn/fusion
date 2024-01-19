@@ -16,9 +16,6 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
-import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
-import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
-import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
 import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
 import Select from "../../Select"; // plasmic-import: YbzHlcQNiy51/component
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
@@ -53,62 +50,46 @@ function PlasmicQuestions__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "fullForm.value",
-        type: "private",
-        variableType: "object",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        refName: "fullForm",
-        onMutate: p.generateOnMutateForSpec("value", FormWrapper_Helpers)
-      },
-      {
-        path: "fullForm.isSubmitting",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
-        refName: "fullForm",
-        onMutate: p.generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
-      },
-      {
-        path: "select2.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "numberInput.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "select3.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "select4.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "select5.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "select6.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
         path: "modal.open",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "postalCode.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "select.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "howOften.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "bridgeUse.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "commute.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "bridgeActivities.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
 
@@ -122,8 +103,8 @@ function PlasmicQuestions__RenderFunc(props) {
   });
   return (
     <div
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"generalStack"}
+      data-plasmic-override={overrides.generalStack}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
@@ -134,331 +115,296 @@ function PlasmicQuestions__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.generalStack
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__ybcpY)}>
-        <div className={classNames(projectcss.all, sty.freeBox__hrXGa)}>
-          <div className={classNames(projectcss.all, sty.freeBox__ag8CX)}>
+      <div
+        data-plasmic-name={"textForm"}
+        data-plasmic-override={overrides.textForm}
+        className={classNames(projectcss.all, sty.textForm)}
+      >
+        <div
+          data-plasmic-name={"textGroup"}
+          data-plasmic-override={overrides.textGroup}
+          className={classNames(projectcss.all, sty.textGroup)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text___1YjqO
+            )}
+          >
+            {"That\u2019s very nice of you "}
+          </div>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__daDbc
+            )}
+          >
+            {
+              "The questions below help us understand your feedback better and enable us to address them in our design"
+            }
+          </div>
+        </div>
+        <div
+          data-plasmic-name={"formGroup"}
+          data-plasmic-override={overrides.formGroup}
+          className={classNames(projectcss.all, sty.formGroup)}
+        >
+          <div
+            data-plasmic-name={"formColumn"}
+            data-plasmic-override={overrides.formColumn}
+            className={classNames(projectcss.all, sty.formColumn)}
+          >
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__yINft
-              )}
+              data-plasmic-name={"firstRow"}
+              data-plasmic-override={overrides.firstRow}
+              className={classNames(projectcss.all, sty.firstRow)}
             >
-              {"Great!"}
-            </div>
-            <div className={classNames(projectcss.all, sty.freeBox__ikmu2)}>
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___1YjqO
-                )}
+                data-plasmic-name={"postalCodeBox"}
+                data-plasmic-override={overrides.postalCodeBox}
+                className={classNames(projectcss.all, sty.postalCodeBox)}
               >
-                {"That\u2019s very nice of you "}
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___7WNz
+                  )}
+                >
+                  {"Postal Code"}
+                </div>
+                <AntdInputNumber
+                  data-plasmic-name={"postalCode"}
+                  data-plasmic-override={overrides.postalCode}
+                  className={classNames("__wab_instance", sty.postalCode)}
+                  maxLength={8}
+                  onChange={p.generateStateOnChangeProp($state, [
+                    "postalCode",
+                    "value"
+                  ])}
+                  type={"number"}
+                  value={p.generateStateValueProp($state, [
+                    "postalCode",
+                    "value"
+                  ])}
+                />
               </div>
               <div
+                data-plasmic-name={"countryBox"}
+                data-plasmic-override={overrides.countryBox}
+                className={classNames(projectcss.all, sty.countryBox)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__hCdoE
+                  )}
+                >
+                  {"Country"}
+                </div>
+                <Select
+                  data-plasmic-name={"select"}
+                  data-plasmic-override={overrides.select}
+                  className={classNames("__wab_instance", sty.select)}
+                  onChange={(...eventArgs) => {
+                    p.generateStateOnChangeProp($state, ["select", "value"])(
+                      eventArgs[0]
+                    );
+                  }}
+                  options={[
+                    { value: "option1", label: "Option 1" },
+                    { value: "option2", label: "Option 2" }
+                  ]}
+                  value={p.generateStateValueProp($state, ["select", "value"])}
+                />
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"howOftenBox"}
+              data-plasmic-override={overrides.howOftenBox}
+              className={classNames(projectcss.all, sty.howOftenBox)}
+            >
+              <div
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__daDbc
+                  sty.text___7ANih
                 )}
               >
                 {
-                  "The questions below help us understand your feedback better and enable us to address them in our design"
+                  "How often do you use the Donnersberger Bridge Station (Bus or S-Bahn)?"
                 }
               </div>
+              <Select
+                data-plasmic-name={"howOften"}
+                data-plasmic-override={overrides.howOften}
+                className={classNames("__wab_instance", sty.howOften)}
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, ["howOften", "value"])(
+                    eventArgs[0]
+                  );
+                }}
+                options={[
+                  { value: "option1", label: "Option 1" },
+                  { value: "option2", label: "Option 2" }
+                ]}
+                value={p.generateStateValueProp($state, ["howOften", "value"])}
+              />
+            </div>
+            <div
+              data-plasmic-name={"bridgeUseBox"}
+              data-plasmic-override={overrides.bridgeUseBox}
+              className={classNames(projectcss.all, sty.bridgeUseBox)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__nTn1
+                )}
+              >
+                {"What do you use the Bridge for?"}
+              </div>
+              <Select
+                data-plasmic-name={"bridgeUse"}
+                data-plasmic-override={overrides.bridgeUse}
+                className={classNames("__wab_instance", sty.bridgeUse)}
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, ["bridgeUse", "value"])(
+                    eventArgs[0]
+                  );
+                }}
+                options={[
+                  { value: "option1", label: "Option 1" },
+                  { value: "option2", label: "Option 2" }
+                ]}
+                value={p.generateStateValueProp($state, ["bridgeUse", "value"])}
+              />
+            </div>
+            <div
+              data-plasmic-name={"commuteBox"}
+              data-plasmic-override={overrides.commuteBox}
+              className={classNames(projectcss.all, sty.commuteBox)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__padt3
+                )}
+              >
+                {"How do you usually commute on the Bridge?"}
+              </div>
+              <Select
+                data-plasmic-name={"commute"}
+                data-plasmic-override={overrides.commute}
+                className={classNames("__wab_instance", sty.commute)}
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, ["commute", "value"])(
+                    eventArgs[0]
+                  );
+                }}
+                options={[
+                  { value: "option1", label: "Option 1" },
+                  { value: "option2", label: "Option 2" }
+                ]}
+                value={p.generateStateValueProp($state, ["commute", "value"])}
+              />
+            </div>
+            <div
+              data-plasmic-name={"bridgeActivitiesBox"}
+              data-plasmic-override={overrides.bridgeActivitiesBox}
+              className={classNames(projectcss.all, sty.bridgeActivitiesBox)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___78JRn
+                )}
+              >
+                {"What kind of Bridge activities would spark your interest?"}
+              </div>
+              <Select
+                data-plasmic-name={"bridgeActivities"}
+                data-plasmic-override={overrides.bridgeActivities}
+                className={classNames("__wab_instance", sty.bridgeActivities)}
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, [
+                    "bridgeActivities",
+                    "value"
+                  ])(eventArgs[0]);
+                }}
+                options={[
+                  { value: "option1", label: "Option 1" },
+                  { value: "option2", label: "Option 2" }
+                ]}
+                value={p.generateStateValueProp($state, [
+                  "bridgeActivities",
+                  "value"
+                ])}
+              />
             </div>
           </div>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox___4WLj0)}>
-          {(() => {
-            const child$Props = {
-              className: classNames("__wab_instance", sty.fullForm),
-              extendedOnValuesChange:
-                p.generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "value",
-                  ["fullForm", "value"],
-                  FormWrapper_Helpers
-                ),
-              formItems: [
-                { label: "Name", name: "name", inputType: "Text" },
-                { label: "Message", name: "message", inputType: "Text Area" }
-              ],
-
-              labelCol: { span: 8, horizontalOnly: true },
-              layout: "vertical",
-              mode: "advanced",
-              onIsSubmittingChange:
-                p.generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "isSubmitting",
-                  ["fullForm", "isSubmitting"],
-                  FormWrapper_Helpers
-                ),
-              ref: ref => {
-                $refs["fullForm"] = ref;
-              },
-              submitSlot: null,
-              wrapperCol: { span: 16, horizontalOnly: true }
-            };
-            p.initializeCodeComponentStates(
-              $state,
-              [
-                {
-                  name: "value",
-                  plasmicStateName: "fullForm.value"
-                },
-                {
-                  name: "isSubmitting",
-                  plasmicStateName: "fullForm.isSubmitting"
-                }
-              ],
-
-              [],
-              FormWrapper_Helpers ?? {},
-              child$Props
-            );
-            return (
-              <FormWrapper
-                data-plasmic-name={"fullForm"}
-                data-plasmic-override={overrides.fullForm}
-                {...child$Props}
-              >
-                <FormItemWrapper
-                  data-plasmic-name={"postalCodeField"}
-                  data-plasmic-override={overrides.postalCodeField}
-                  className={classNames("__wab_instance", sty.postalCodeField)}
-                  label={"Postal Code"}
-                  name={"name"}
-                >
-                  <AntdInputNumber
-                    data-plasmic-name={"numberInput"}
-                    data-plasmic-override={overrides.numberInput}
-                    className={classNames("__wab_instance", sty.numberInput)}
-                    onChange={p.generateStateOnChangeProp($state, [
-                      "numberInput",
-                      "value"
-                    ])}
-                    type={"number"}
-                    value={p.generateStateValueProp($state, [
-                      "numberInput",
-                      "value"
-                    ])}
-                  />
-
-                  <FormItemWrapper
-                    data-plasmic-name={"howOften"}
-                    data-plasmic-override={overrides.howOften}
-                    className={classNames("__wab_instance", sty.howOften)}
-                    label={
-                      "How often do you use the Donnersberger Bridge Station (Bus or S-Bahn)?"
+        <AntdButton
+          className={classNames("__wab_instance", sty.button___64Ewy)}
+          onClick={async () => {
+            const $steps = {};
+            $steps["updateModalOpen"] = true
+              ? (() => {
+                  const actionArgs = {
+                    variable: {
+                      objRoot: $state,
+                      variablePath: ["modal", "open"]
+                    },
+                    operation: 0,
+                    value: true
+                  };
+                  return (({ variable, value, startIndex, deleteCount }) => {
+                    if (!variable) {
+                      return;
                     }
-                    name={"name"}
-                  >
-                    <Select
-                      data-plasmic-name={"select2"}
-                      data-plasmic-override={overrides.select2}
-                      className={classNames("__wab_instance", sty.select2)}
-                      onChange={(...eventArgs) => {
-                        p.generateStateOnChangeProp($state, [
-                          "select2",
-                          "value"
-                        ])(eventArgs[0]);
-                      }}
-                      options={[
-                        { value: "option1", label: "Option 1" },
-                        { value: "option2", label: "Option 2" }
-                      ]}
-                      value={p.generateStateValueProp($state, [
-                        "select2",
-                        "value"
-                      ])}
-                    />
-
-                    <FormItemWrapper
-                      data-plasmic-name={"bridgeUse"}
-                      data-plasmic-override={overrides.bridgeUse}
-                      className={classNames("__wab_instance", sty.bridgeUse)}
-                      label={"What do you use the Bridge for?"}
-                      name={"name"}
-                    >
-                      <Select
-                        data-plasmic-name={"select4"}
-                        data-plasmic-override={overrides.select4}
-                        className={classNames("__wab_instance", sty.select4)}
-                        onChange={(...eventArgs) => {
-                          p.generateStateOnChangeProp($state, [
-                            "select4",
-                            "value"
-                          ])(eventArgs[0]);
-                        }}
-                        options={[
-                          { value: "option1", label: "Option 1" },
-                          { value: "option2", label: "Option 2" }
-                        ]}
-                        value={p.generateStateValueProp($state, [
-                          "select4",
-                          "value"
-                        ])}
-                      />
-                    </FormItemWrapper>
-                    <FormItemWrapper
-                      data-plasmic-name={"commute"}
-                      data-plasmic-override={overrides.commute}
-                      className={classNames("__wab_instance", sty.commute)}
-                      label={"How do you usually commute in the Bridge?"}
-                      name={"name"}
-                    >
-                      <Select
-                        data-plasmic-name={"select5"}
-                        data-plasmic-override={overrides.select5}
-                        className={classNames("__wab_instance", sty.select5)}
-                        onChange={(...eventArgs) => {
-                          p.generateStateOnChangeProp($state, [
-                            "select5",
-                            "value"
-                          ])(eventArgs[0]);
-                        }}
-                        options={[
-                          { value: "option1", label: "Option 1" },
-                          { value: "option2", label: "Option 2" }
-                        ]}
-                        value={p.generateStateValueProp($state, [
-                          "select5",
-                          "value"
-                        ])}
-                      />
-                    </FormItemWrapper>
-                    <FormItemWrapper
-                      data-plasmic-name={"activities"}
-                      data-plasmic-override={overrides.activities}
-                      className={classNames("__wab_instance", sty.activities)}
-                      label={
-                        "What kind of bridge activities would spark your interest?"
-                      }
-                      name={"name"}
-                    >
-                      <Select
-                        data-plasmic-name={"select6"}
-                        data-plasmic-override={overrides.select6}
-                        className={classNames("__wab_instance", sty.select6)}
-                        onChange={(...eventArgs) => {
-                          p.generateStateOnChangeProp($state, [
-                            "select6",
-                            "value"
-                          ])(eventArgs[0]);
-                        }}
-                        options={[
-                          { value: "option1", label: "Option 1" },
-                          { value: "option2", label: "Option 2" }
-                        ]}
-                        value={p.generateStateValueProp($state, [
-                          "select6",
-                          "value"
-                        ])}
-                      />
-
-                      <AntdButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button___64Ewy
-                        )}
-                        onClick={async () => {
-                          const $steps = {};
-                          $steps["updateModalOpen"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  variable: {
-                                    objRoot: $state,
-                                    variablePath: ["modal", "open"]
-                                  },
-                                  operation: 0,
-                                  value: true
-                                };
-                                return (({
-                                  variable,
-                                  value,
-                                  startIndex,
-                                  deleteCount
-                                }) => {
-                                  if (!variable) {
-                                    return;
-                                  }
-                                  const { objRoot, variablePath } = variable;
-                                  p.set(objRoot, variablePath, value);
-                                  return value;
-                                })?.apply(null, [actionArgs]);
-                              })()
-                            : undefined;
-                          if (
-                            $steps["updateModalOpen"] != null &&
-                            typeof $steps["updateModalOpen"] === "object" &&
-                            typeof $steps["updateModalOpen"].then === "function"
-                          ) {
-                            $steps["updateModalOpen"] = await $steps[
-                              "updateModalOpen"
-                            ];
-                          }
-                        }}
-                        submitsForm={true}
-                        type={"primary"}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__tbYx5
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ fontWeight: 700 }}
-                            >
-                              {"Submit"}
-                            </span>
-                          </React.Fragment>
-                        </div>
-                      </AntdButton>
-                    </FormItemWrapper>
-                  </FormItemWrapper>
-                </FormItemWrapper>
-                <FormItemWrapper
-                  data-plasmic-name={"formField"}
-                  data-plasmic-override={overrides.formField}
-                  className={classNames("__wab_instance", sty.formField)}
-                  label={"Country"}
-                  name={"name"}
-                >
-                  <Select
-                    data-plasmic-name={"select3"}
-                    data-plasmic-override={overrides.select3}
-                    className={classNames("__wab_instance", sty.select3)}
-                    onChange={(...eventArgs) => {
-                      p.generateStateOnChangeProp($state, ["select3", "value"])(
-                        eventArgs[0]
-                      );
-                    }}
-                    options={[
-                      { value: "option1", label: "Option 1" },
-                      { value: "option2", label: "Option 2" }
-                    ]}
-                    value={p.generateStateValueProp($state, [
-                      "select3",
-                      "value"
-                    ])}
-                  />
-                </FormItemWrapper>
-              </FormWrapper>
-            );
-          })()}
-        </div>
+                    const { objRoot, variablePath } = variable;
+                    p.set(objRoot, variablePath, value);
+                    return value;
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["updateModalOpen"] != null &&
+              typeof $steps["updateModalOpen"] === "object" &&
+              typeof $steps["updateModalOpen"].then === "function"
+            ) {
+              $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+            }
+          }}
+          submitsForm={true}
+          type={"primary"}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__tbYx5
+            )}
+          >
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ fontWeight: 700 }}
+              >
+                {"Submit"}
+              </span>
+            </React.Fragment>
+          </div>
+        </AntdButton>
       </div>
       <AntdModal
         data-plasmic-name={"modal"}
@@ -489,21 +435,7 @@ function PlasmicQuestions__RenderFunc(props) {
             </div>
           </div>
         }
-        trigger={
-          <AntdButton
-            className={classNames("__wab_instance", sty.button__hwC4R)}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__yueeO
-              )}
-            >
-              {"Show modal"}
-            </div>
-          </AntdButton>
-        }
+        trigger={null}
       >
         <div className={classNames(projectcss.all, sty.freeBox__rIj1H)}>
           <div
@@ -596,77 +528,100 @@ function PlasmicQuestions__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "fullForm",
-    "postalCodeField",
-    "numberInput",
+  generalStack: [
+    "generalStack",
+    "textForm",
+    "textGroup",
+    "formGroup",
+    "formColumn",
+    "firstRow",
+    "postalCodeBox",
+    "postalCode",
+    "countryBox",
+    "select",
+    "howOftenBox",
     "howOften",
-    "select2",
+    "bridgeUseBox",
     "bridgeUse",
-    "select4",
+    "commuteBox",
     "commute",
-    "select5",
-    "activities",
-    "select6",
-    "formField",
-    "select3",
+    "bridgeActivitiesBox",
+    "bridgeActivities",
     "modal",
     "icon",
     "img",
     "thanks"
   ],
 
-  fullForm: [
-    "fullForm",
-    "postalCodeField",
-    "numberInput",
+  textForm: [
+    "textForm",
+    "textGroup",
+    "formGroup",
+    "formColumn",
+    "firstRow",
+    "postalCodeBox",
+    "postalCode",
+    "countryBox",
+    "select",
+    "howOftenBox",
     "howOften",
-    "select2",
+    "bridgeUseBox",
     "bridgeUse",
-    "select4",
+    "commuteBox",
     "commute",
-    "select5",
-    "activities",
-    "select6",
-    "formField",
-    "select3"
+    "bridgeActivitiesBox",
+    "bridgeActivities"
   ],
 
-  postalCodeField: [
-    "postalCodeField",
-    "numberInput",
+  textGroup: ["textGroup"],
+  formGroup: [
+    "formGroup",
+    "formColumn",
+    "firstRow",
+    "postalCodeBox",
+    "postalCode",
+    "countryBox",
+    "select",
+    "howOftenBox",
     "howOften",
-    "select2",
+    "bridgeUseBox",
     "bridgeUse",
-    "select4",
+    "commuteBox",
     "commute",
-    "select5",
-    "activities",
-    "select6"
+    "bridgeActivitiesBox",
+    "bridgeActivities"
   ],
 
-  numberInput: ["numberInput"],
-  howOften: [
+  formColumn: [
+    "formColumn",
+    "firstRow",
+    "postalCodeBox",
+    "postalCode",
+    "countryBox",
+    "select",
+    "howOftenBox",
     "howOften",
-    "select2",
+    "bridgeUseBox",
     "bridgeUse",
-    "select4",
+    "commuteBox",
     "commute",
-    "select5",
-    "activities",
-    "select6"
+    "bridgeActivitiesBox",
+    "bridgeActivities"
   ],
 
-  select2: ["select2"],
-  bridgeUse: ["bridgeUse", "select4"],
-  select4: ["select4"],
-  commute: ["commute", "select5"],
-  select5: ["select5"],
-  activities: ["activities", "select6"],
-  select6: ["select6"],
-  formField: ["formField", "select3"],
-  select3: ["select3"],
+  firstRow: ["firstRow", "postalCodeBox", "postalCode", "countryBox", "select"],
+  postalCodeBox: ["postalCodeBox", "postalCode"],
+  postalCode: ["postalCode"],
+  countryBox: ["countryBox", "select"],
+  select: ["select"],
+  howOftenBox: ["howOftenBox", "howOften"],
+  howOften: ["howOften"],
+  bridgeUseBox: ["bridgeUseBox", "bridgeUse"],
+  bridgeUse: ["bridgeUse"],
+  commuteBox: ["commuteBox", "commute"],
+  commute: ["commute"],
+  bridgeActivitiesBox: ["bridgeActivitiesBox", "bridgeActivities"],
+  bridgeActivities: ["bridgeActivities"],
   modal: ["modal", "icon", "img", "thanks"],
   icon: ["icon", "img"],
   img: ["img"],
@@ -692,7 +647,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "generalStack") {
     func.displayName = "PlasmicQuestions";
   } else {
     func.displayName = `PlasmicQuestions.${nodeName}`;
@@ -702,22 +657,26 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicQuestions = Object.assign(
   // Top-level PlasmicQuestions renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("generalStack"),
   {
     // Helper components rendering sub-elements
-    fullForm: makeNodeComponent("fullForm"),
-    postalCodeField: makeNodeComponent("postalCodeField"),
-    numberInput: makeNodeComponent("numberInput"),
+    textForm: makeNodeComponent("textForm"),
+    textGroup: makeNodeComponent("textGroup"),
+    formGroup: makeNodeComponent("formGroup"),
+    formColumn: makeNodeComponent("formColumn"),
+    firstRow: makeNodeComponent("firstRow"),
+    postalCodeBox: makeNodeComponent("postalCodeBox"),
+    postalCode: makeNodeComponent("postalCode"),
+    countryBox: makeNodeComponent("countryBox"),
+    select: makeNodeComponent("select"),
+    howOftenBox: makeNodeComponent("howOftenBox"),
     howOften: makeNodeComponent("howOften"),
-    select2: makeNodeComponent("select2"),
+    bridgeUseBox: makeNodeComponent("bridgeUseBox"),
     bridgeUse: makeNodeComponent("bridgeUse"),
-    select4: makeNodeComponent("select4"),
+    commuteBox: makeNodeComponent("commuteBox"),
     commute: makeNodeComponent("commute"),
-    select5: makeNodeComponent("select5"),
-    activities: makeNodeComponent("activities"),
-    select6: makeNodeComponent("select6"),
-    formField: makeNodeComponent("formField"),
-    select3: makeNodeComponent("select3"),
+    bridgeActivitiesBox: makeNodeComponent("bridgeActivitiesBox"),
+    bridgeActivities: makeNodeComponent("bridgeActivities"),
     modal: makeNodeComponent("modal"),
     icon: makeNodeComponent("icon"),
     img: makeNodeComponent("img"),

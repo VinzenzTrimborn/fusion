@@ -16,7 +16,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
-import NavBarNavButton from "../../NavBarNavButton"; // plasmic-import: t7jVw_W02fSH/component
+import Button from "../../Button"; // plasmic-import: apXgE63BR30L/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -45,8 +45,8 @@ function PlasmicNavbar__RenderFunc(props) {
   return (
     <p.Stack
       as={"div"}
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"home2"}
+      data-plasmic-override={overrides.home2}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       hasGap={true}
@@ -58,7 +58,7 @@ function PlasmicNavbar__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.home2
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox___521Hd)} />
@@ -68,33 +68,202 @@ function PlasmicNavbar__RenderFunc(props) {
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox___7ORoh)}
         >
-          <NavBarNavButton
-            className={classNames("__wab_instance", sty.navBarNavButton__pO42K)}
-          />
-
-          <NavBarNavButton
-            className={classNames("__wab_instance", sty.navBarNavButton__co2H6)}
+          <Button
+            data-plasmic-name={"home"}
+            data-plasmic-override={overrides.home}
+            className={classNames("__wab_instance", sty.home)}
+            onClick={async event => {
+              const $steps = {};
+              $steps["goToHome"] = true
+                ? (() => {
+                    const actionArgs = { destination: `/` };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        location.assign(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToHome"] != null &&
+                typeof $steps["goToHome"] === "object" &&
+                typeof $steps["goToHome"].then === "function"
+              ) {
+                $steps["goToHome"] = await $steps["goToHome"];
+              }
+            }}
           >
-            {"3D Model"}
-          </NavBarNavButton>
-          <NavBarNavButton
-            className={classNames(
-              "__wab_instance",
-              sty.navBarNavButton___2IuX6
-            )}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__ht4Wt
+              )}
+            >
+              {"Home"}
+            </div>
+          </Button>
+          <Button
+            data-plasmic-name={"visualization"}
+            data-plasmic-override={overrides.visualization}
+            className={classNames("__wab_instance", sty.visualization)}
           >
-            {"About"}
-          </NavBarNavButton>
-          <NavBarNavButton
-            className={classNames("__wab_instance", sty.navBarNavButton__vvEtk)}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__qhg7W
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#000000" }}
+                >
+                  {"Visualization"}
+                </span>
+              </React.Fragment>
+            </div>
+          </Button>
+          <Button
+            data-plasmic-name={"about"}
+            data-plasmic-override={overrides.about}
+            className={classNames("__wab_instance", sty.about)}
           >
-            {"Team"}
-          </NavBarNavButton>
-          <NavBarNavButton
-            className={classNames("__wab_instance", sty.navBarNavButton__dl7Wd)}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___6S7Cc
+              )}
+            >
+              {"About"}
+            </div>
+          </Button>
+          <Button
+            data-plasmic-name={"team"}
+            data-plasmic-override={overrides.team}
+            className={classNames("__wab_instance", sty.team)}
           >
-            {"Gallery"}
-          </NavBarNavButton>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__v3Zh
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#000000" }}
+                >
+                  {"Team"}
+                </span>
+              </React.Fragment>
+            </div>
+          </Button>
+          <Button
+            data-plasmic-name={"faq"}
+            data-plasmic-override={overrides.faq}
+            className={classNames("__wab_instance", sty.faq)}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateStateVariable"] = true
+                ? (() => {
+                    const actionArgs = {};
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+                      undefined;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateStateVariable"] != null &&
+                typeof $steps["updateStateVariable"] === "object" &&
+                typeof $steps["updateStateVariable"].then === "function"
+              ) {
+                $steps["updateStateVariable"] = await $steps[
+                  "updateStateVariable"
+                ];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__vfA
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700, color: "#000000" }}
+                >
+                  {"FAQ"}
+                </span>
+              </React.Fragment>
+            </div>
+          </Button>
+          <Button
+            data-plasmic-name={"faq2"}
+            data-plasmic-override={overrides.faq2}
+            className={classNames("__wab_instance", sty.faq2)}
+            onClick={async event => {
+              const $steps = {};
+              $steps["goToGallery"] = true
+                ? (() => {
+                    const actionArgs = { destination: `/gallery` };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        location.assign(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToGallery"] != null &&
+                typeof $steps["goToGallery"] === "object" &&
+                typeof $steps["goToGallery"].then === "function"
+              ) {
+                $steps["goToGallery"] = await $steps["goToGallery"];
+              }
+            }}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__aq5Yd
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700, color: "#000000" }}
+                >
+                  {"Gallery"}
+                </span>
+              </React.Fragment>
+            </div>
+          </Button>
         </p.Stack>
       </div>
     </p.Stack>
@@ -102,7 +271,13 @@ function PlasmicNavbar__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  home2: ["home2", "home", "visualization", "about", "team", "faq", "faq2"],
+  home: ["home"],
+  visualization: ["visualization"],
+  about: ["about"],
+  team: ["team"],
+  faq: ["faq"],
+  faq2: ["faq2"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -124,7 +299,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "home2") {
     func.displayName = "PlasmicNavbar";
   } else {
     func.displayName = `PlasmicNavbar.${nodeName}`;
@@ -134,9 +309,15 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicNavbar = Object.assign(
   // Top-level PlasmicNavbar renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("home2"),
   {
     // Helper components rendering sub-elements
+    home: makeNodeComponent("home"),
+    visualization: makeNodeComponent("visualization"),
+    about: makeNodeComponent("about"),
+    team: makeNodeComponent("team"),
+    faq: makeNodeComponent("faq"),
+    faq2: makeNodeComponent("faq2"),
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
     internalArgProps: PlasmicNavbar__ArgProps

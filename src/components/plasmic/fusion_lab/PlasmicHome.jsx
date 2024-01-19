@@ -69,6 +69,30 @@ function PlasmicHome__RenderFunc(props) {
             sty.root
           )}
         >
+          <div
+            data-plasmic-name={"intro"}
+            data-plasmic-override={overrides.intro}
+            className={classNames(projectcss.all, sty.intro)}
+          >
+            <div
+              data-plasmic-name={"renderOfTheBridge"}
+              data-plasmic-override={overrides.renderOfTheBridge}
+              className={classNames(projectcss.all, sty.renderOfTheBridge)}
+            >
+              <div
+                data-plasmic-name={
+                  "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
+                }
+                data-plasmic-override={
+                  overrides.dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2
+                }
+                className={classNames(
+                  projectcss.all,
+                  sty.dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2
+                )}
+              />
+            </div>
+          </div>
           <Header
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
@@ -142,6 +166,9 @@ function PlasmicHome__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "intro",
+    "renderOfTheBridge",
+    "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2",
     "header",
     "navbar",
     "participationArea",
@@ -153,6 +180,22 @@ const PlasmicDescendants = {
     "galleryDisplay",
     "faqSection"
   ],
+
+  intro: [
+    "intro",
+    "renderOfTheBridge",
+    "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
+  ],
+
+  renderOfTheBridge: [
+    "renderOfTheBridge",
+    "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
+  ],
+
+  dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2:
+    [
+      "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
+    ],
 
   header: ["header"],
   navbar: ["navbar"],
@@ -198,6 +241,12 @@ export const PlasmicHome = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    intro: makeNodeComponent("intro"),
+    renderOfTheBridge: makeNodeComponent("renderOfTheBridge"),
+    dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2:
+      makeNodeComponent(
+        "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
+      ),
     header: makeNodeComponent("header"),
     navbar: makeNodeComponent("navbar"),
     participationArea: makeNodeComponent("participationArea"),

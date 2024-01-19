@@ -3,6 +3,8 @@ import {PlasmicUserAuth} from "./plasmic/fusion_lab/PlasmicUserAuth";
 
 function UserAuth_({showAuth, ...props}, ref) {
     const [email, setEmail] = React.useState("");
+    const [password, setPassword] = React.useState("");
+
     return <PlasmicUserAuth
         root={{ref}}
         {...props}
@@ -12,13 +14,35 @@ function UserAuth_({showAuth, ...props}, ref) {
                 setEmail(e.target.value);
             }
         }}
+        password={{
+            value: password,
+            onChange(e) {
+                setPassword(e.target.value);
+            }
+        }}
 
         registerButton={{
             onClick() {
-
-                console.log("register", email);
+                // ToDo Konrad: register user
+                console.log("register", email, password);
                 showAuth(false);
                 setEmail("");
+                setPassword("");
+            }
+        }}
+        closeIcon={{
+            onClick: () => {
+                console.log("close");
+                showAuth(false);
+                setEmail("");
+                setPassword("");
+            }
+        }}
+        cancelButton={{
+            onClick: () => {
+                showAuth(false);
+                setEmail("");
+                setPassword("");
             }
         }}
     />;

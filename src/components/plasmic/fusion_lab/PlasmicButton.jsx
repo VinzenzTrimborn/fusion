@@ -306,7 +306,25 @@ function PlasmicButton__RenderFunc(props) {
         })}
       >
         {p.renderPlasmicSlot({
-          defaultContents: "Button",
+          defaultContents: (
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__mxDxH
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700, color: "#FFFFFF" }}
+                >
+                  {"Button"}
+                </span>
+              </React.Fragment>
+            </div>
+          ),
+
           value: args.children,
           className: classNames(sty.slotTargetChildren, {
             [sty.slotTargetChildren___focusVisibleWithin]:
@@ -407,92 +425,92 @@ function PlasmicButton__RenderFunc(props) {
           })
         })}
       </div>
-      {(hasVariant($state, "showEndIcon", "showEndIcon") ? true : false) ? (
-        <div
-          data-plasmic-name={"endIconContainer"}
-          data-plasmic-override={overrides.endIconContainer}
-          className={classNames(projectcss.all, sty.endIconContainer, {
-            [sty.endIconContainercolor_white]: hasVariant(
-              $state,
-              "color",
-              "white"
-            ),
-            [sty.endIconContainercolor_yellow]: hasVariant(
-              $state,
-              "color",
-              "yellow"
-            ),
-            [sty.endIconContainershowEndIcon]: hasVariant(
-              $state,
-              "showEndIcon",
-              "showEndIcon"
-            )
-          })}
-        >
-          {p.renderPlasmicSlot({
-            defaultContents: (
-              <IconIcon
-                className={classNames(projectcss.all, sty.svg___3OQp)}
-                role={"img"}
-              />
-            ),
+      <div
+        data-plasmic-name={"endIconContainer"}
+        data-plasmic-override={overrides.endIconContainer}
+        className={classNames(projectcss.all, sty.endIconContainer, {
+          [sty.endIconContainercolor_white]: hasVariant(
+            $state,
+            "color",
+            "white"
+          ),
+          [sty.endIconContainercolor_yellow]: hasVariant(
+            $state,
+            "color",
+            "yellow"
+          ),
+          [sty.endIconContainershowEndIcon]: hasVariant(
+            $state,
+            "showEndIcon",
+            "showEndIcon"
+          )
+        })}
+      >
+        {false
+          ? p.renderPlasmicSlot({
+              defaultContents: (
+                <IconIcon
+                  className={classNames(projectcss.all, sty.svg___3OQp)}
+                  role={"img"}
+                />
+              ),
 
-            value: args.endIcon,
-            className: classNames(sty.slotTargetEndIcon, {
-              [sty.slotTargetEndIconcolor_clear]: hasVariant(
-                $state,
-                "color",
-                "clear"
-              ),
-              [sty.slotTargetEndIconcolor_link]: hasVariant(
-                $state,
-                "color",
-                "link"
-              ),
-              [sty.slotTargetEndIconcolor_softBlue]: hasVariant(
-                $state,
-                "color",
-                "softBlue"
-              ),
-              [sty.slotTargetEndIconcolor_softGreen]: hasVariant(
-                $state,
-                "color",
-                "softGreen"
-              ),
-              [sty.slotTargetEndIconcolor_softRed]: hasVariant(
-                $state,
-                "color",
-                "softRed"
-              ),
-              [sty.slotTargetEndIconcolor_softSand]: hasVariant(
-                $state,
-                "color",
-                "softSand"
-              ),
-              [sty.slotTargetEndIconcolor_softYellow]: hasVariant(
-                $state,
-                "color",
-                "softYellow"
-              ),
-              [sty.slotTargetEndIconcolor_white]: hasVariant(
-                $state,
-                "color",
-                "white"
-              ),
-              [sty.slotTargetEndIconcolor_yellow]: hasVariant(
-                $state,
-                "color",
-                "yellow"
-              ),
-              [sty.slotTargetEndIconshowEndIcon]: hasVariant(
-                $state,
-                "showEndIcon",
-                "showEndIcon"
-              )
+              value: args.endIcon,
+              className: classNames(sty.slotTargetEndIcon, {
+                [sty.slotTargetEndIconcolor_clear]: hasVariant(
+                  $state,
+                  "color",
+                  "clear"
+                ),
+                [sty.slotTargetEndIconcolor_link]: hasVariant(
+                  $state,
+                  "color",
+                  "link"
+                ),
+                [sty.slotTargetEndIconcolor_softBlue]: hasVariant(
+                  $state,
+                  "color",
+                  "softBlue"
+                ),
+                [sty.slotTargetEndIconcolor_softGreen]: hasVariant(
+                  $state,
+                  "color",
+                  "softGreen"
+                ),
+                [sty.slotTargetEndIconcolor_softRed]: hasVariant(
+                  $state,
+                  "color",
+                  "softRed"
+                ),
+                [sty.slotTargetEndIconcolor_softSand]: hasVariant(
+                  $state,
+                  "color",
+                  "softSand"
+                ),
+                [sty.slotTargetEndIconcolor_softYellow]: hasVariant(
+                  $state,
+                  "color",
+                  "softYellow"
+                ),
+                [sty.slotTargetEndIconcolor_white]: hasVariant(
+                  $state,
+                  "color",
+                  "white"
+                ),
+                [sty.slotTargetEndIconcolor_yellow]: hasVariant(
+                  $state,
+                  "color",
+                  "yellow"
+                ),
+                [sty.slotTargetEndIconshowEndIcon]: hasVariant(
+                  $state,
+                  "showEndIcon",
+                  "showEndIcon"
+                )
+              })
             })
-          })}
-        </div>
-      ) : null}
+          : null}
+      </div>
     </p.Stack>
   );
 }

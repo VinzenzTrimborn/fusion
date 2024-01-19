@@ -62,12 +62,6 @@ function PlasmicHeader__RenderFunc(props) {
         sty.root
       )}
     >
-      <section
-        data-plasmic-name={"section"}
-        data-plasmic-override={overrides.section}
-        className={classNames(projectcss.all, sty.section)}
-      />
-
       <p.Stack
         as={"div"}
         data-plasmic-name={"freeBox"}
@@ -112,8 +106,7 @@ function PlasmicHeader__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "freeBox", "participateButton", "auth"],
-  section: ["section"],
+  root: ["root", "freeBox", "participateButton", "auth"],
   freeBox: ["freeBox", "participateButton"],
   participateButton: ["participateButton"],
   auth: ["auth"]
@@ -151,7 +144,6 @@ export const PlasmicHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    section: makeNodeComponent("section"),
     freeBox: makeNodeComponent("freeBox"),
     participateButton: makeNodeComponent("participateButton"),
     auth: makeNodeComponent("auth"),

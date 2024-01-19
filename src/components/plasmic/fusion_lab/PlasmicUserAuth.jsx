@@ -19,6 +19,8 @@ import {
 } from "@plasmicapp/react-web";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import TextInput from "../../TextInput"; // plasmic-import: eo06WAQVRF2h/component
+import { AntdPassword } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { inputHelpers as AntdPassword_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import Button from "../../Button"; // plasmic-import: apXgE63BR30L/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -26,6 +28,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU29zJd9uLGW9TewABBsV/projectcss
 import sty from "./PlasmicUserAuth.module.css"; // plasmic-import: zv2IqcCjwXro/css
+import CloseSvgrepoComsvgIcon from "./icons/PlasmicIcon__CloseSvgrepoComsvg"; // plasmic-import: naIJz5VNedYp/icon
 
 createPlasmicElementProxy;
 
@@ -86,6 +89,13 @@ function PlasmicUserAuth__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      },
+      {
+        path: "password.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        onMutate: p.generateOnMutateForSpec("value", AntdPassword_Helpers)
       }
     ],
 
@@ -119,6 +129,14 @@ function PlasmicUserAuth__RenderFunc(props) {
         data-plasmic-name={"modal"}
         data-plasmic-override={overrides.modal}
         className={classNames("__wab_instance", sty.modal)}
+        closeIcon={
+          <CloseSvgrepoComsvgIcon
+            data-plasmic-name={"closeIcon"}
+            data-plasmic-override={overrides.closeIcon}
+            className={classNames(projectcss.all, sty.closeIcon)}
+            role={"img"}
+          />
+        }
         defaultStylesClassName={classNames(
           projectcss.root_reset,
           projectcss.plasmic_default_styles,
@@ -149,14 +167,31 @@ function PlasmicUserAuth__RenderFunc(props) {
               className={classNames("__wab_instance", sty.registerButton, {
                 [sty.registerButtonlogin]: hasVariant($state, "login", "login")
               })}
+              color={"blue"}
               shape={"sharp"}
               size={"compact"}
               submitsForm={false}
             >
-              {hasVariant($state, "login", "login") ? "Log In" : "Register"}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__jxpht,
+                  {
+                    [sty.textlogin__jxphtxLejx]: hasVariant(
+                      $state,
+                      "login",
+                      "login"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "login", "login") ? "Log In" : "Register"}
+              </div>
             </Button>
           </p.Stack>
         }
+        maskClosable={false}
         modalScopeClassName={sty["modal__modal"]}
         onOpenChange={p.generateStateOnChangeProp($state, ["modal", "open"])}
         open={p.generateStateValueProp($state, ["modal", "open"])}
@@ -215,6 +250,40 @@ function PlasmicUserAuth__RenderFunc(props) {
                   p.generateStateValueProp($state, ["email", "value"]) ?? ""
                 }
               />
+
+              {(() => {
+                const child$Props = {
+                  className: classNames("__wab_instance", sty.password),
+                  onChange: p.generateStateOnChangePropForCodeComponents(
+                    $state,
+                    "value",
+                    ["password", "value"],
+                    AntdPassword_Helpers
+                  ),
+                  placeholder: "Password",
+                  value: p.generateStateValueProp($state, ["password", "value"])
+                };
+                p.initializeCodeComponentStates(
+                  $state,
+                  [
+                    {
+                      name: "value",
+                      plasmicStateName: "password.value"
+                    }
+                  ],
+
+                  [],
+                  AntdPassword_Helpers ?? {},
+                  child$Props
+                );
+                return (
+                  <AntdPassword
+                    data-plasmic-name={"password"}
+                    data-plasmic-override={overrides.password}
+                    {...child$Props}
+                  />
+                );
+              })()}
             </p.Stack>
           </div>
           <p.Stack
@@ -356,12 +425,33 @@ function PlasmicUserAuth__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "modal", "email", "button", "cancelButton", "registerButton"],
-  modal: ["modal", "email", "button", "cancelButton", "registerButton"],
+  root: [
+    "root",
+    "modal",
+    "email",
+    "password",
+    "button",
+    "cancelButton",
+    "registerButton",
+    "closeIcon"
+  ],
+
+  modal: [
+    "modal",
+    "email",
+    "password",
+    "button",
+    "cancelButton",
+    "registerButton",
+    "closeIcon"
+  ],
+
   email: ["email"],
+  password: ["password"],
   button: ["button"],
   cancelButton: ["cancelButton"],
-  registerButton: ["registerButton"]
+  registerButton: ["registerButton"],
+  closeIcon: ["closeIcon"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -398,9 +488,11 @@ export const PlasmicUserAuth = Object.assign(
     // Helper components rendering sub-elements
     modal: makeNodeComponent("modal"),
     email: makeNodeComponent("email"),
+    password: makeNodeComponent("password"),
     button: makeNodeComponent("button"),
     cancelButton: makeNodeComponent("cancelButton"),
     registerButton: makeNodeComponent("registerButton"),
+    closeIcon: makeNodeComponent("closeIcon"),
     // Metadata about props expected for PlasmicUserAuth
     internalVariantProps: PlasmicUserAuth__VariantProps,
     internalArgProps: PlasmicUserAuth__ArgProps

@@ -57,6 +57,33 @@ function PlasmicNavBarNavButton__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root
       )}
+      onClick={async event => {
+        const $steps = {};
+        $steps["goToHome"] = true
+          ? (() => {
+              const actionArgs = { destination: `/` };
+              return (({ destination }) => {
+                if (
+                  typeof destination === "string" &&
+                  destination.startsWith("#")
+                ) {
+                  document
+                    .getElementById(destination.substr(1))
+                    .scrollIntoView({ behavior: "smooth" });
+                } else {
+                  location.assign(destination);
+                }
+              })?.apply(null, [actionArgs]);
+            })()
+          : undefined;
+        if (
+          $steps["goToHome"] != null &&
+          typeof $steps["goToHome"] === "object" &&
+          typeof $steps["goToHome"].then === "function"
+        ) {
+          $steps["goToHome"] = await $steps["goToHome"];
+        }
+      }}
     >
       {p.renderPlasmicSlot({
         defaultContents: "Home",

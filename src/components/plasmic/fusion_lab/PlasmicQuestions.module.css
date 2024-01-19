@@ -1,4 +1,4 @@
-.root {
+.generalStack {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -9,7 +9,7 @@
   background: var(--token-9ZrR1Kut5qQh);
   overflow: visible;
 }
-.freeBox__ybcpY {
+.textForm {
   width: auto;
   height: auto;
   display: flex;
@@ -18,11 +18,14 @@
   left: auto;
   flex-direction: column;
   background: #ffffff;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0px 4px 16px 0px var(--token-kzT08fQBAHgz);
   border-radius: 20px;
   padding: 5px 15px;
   border: 3px solid var(--token-kzT08fQBAHgz);
 }
-.freeBox__hrXGa {
+.textGroup {
   width: 100%;
   height: auto;
   display: flex;
@@ -31,50 +34,10 @@
   left: auto;
   z-index: 1;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-}
-.freeBox__ag8CX {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  top: auto;
-  left: auto;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  z-index: 1;
+  justify-content: flex-start;
+  max-width: 487px;
   min-width: 0;
-  min-height: 0;
-  margin: 20px;
-}
-.text__yINft {
-  display: block;
-  font-size: 25px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 1);
-  position: relative;
-  top: auto;
-  left: auto;
-  text-align: left;
-  margin: 10px 10px 10px 5px;
-}
-.freeBox__ikmu2 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  top: auto;
-  left: auto;
-  flex-direction: column;
-  min-width: 0;
-  min-height: 0;
-  margin: 5px;
 }
 .text___1YjqO {
   display: block;
@@ -88,6 +51,10 @@
   top: auto;
   left: auto;
   text-align: left;
+  padding-top: 10px;
+  padding-left: 0px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 .text__daDbc {
   display: block;
@@ -100,116 +67,171 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 397px;
-  height: auto;
-  margin: 20px 20px 20px 0px;
-}
-.freeBox___4WLj0 {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-width: 0;
+  margin: 20px 20px 20px 10px;
+}
+.formGroup {
+  width: auto;
+  height: auto;
   display: flex;
   position: relative;
   top: auto;
   left: auto;
   padding-top: 0px;
   flex-direction: column;
-  min-width: 0;
-  min-height: 0;
-  margin: 10px 10px 10px 5px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0px 5px 10px;
 }
-.fullForm:global(.__wab_instance) {
-  display: grid;
+.formColumn {
+  display: flex;
   position: relative;
-  width: 100%;
-  height: 515px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: auto;
+  height: 100%;
   max-width: 100%;
-  object-fit: cover;
-  left: auto;
   top: auto;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: auto;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  min-width: 0;
+  left: auto;
+  margin-bottom: 10px;
+  min-height: 0;
+  padding: 8px;
+}
+.firstRow {
+  display: flex;
+  width: 468px;
+  height: 100px;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-shrink: 0;
   padding: 8px;
 }
-.postalCodeField:global(.__wab_instance) {
-  width: 100%;
-  margin-bottom: 24px;
+.postalCodeBox {
+  display: flex;
   position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 230px;
+  height: 100px;
+  max-width: auto;
   left: auto;
   top: auto;
-  height: 81px;
-  max-width: 217px;
-  min-width: 0;
+  flex-shrink: 0;
+  padding: 8px;
 }
-.numberInput:global(.__wab_instance) {
+.postalCode:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
-  width: 202px;
-  height: 39px;
+  position: relative;
+  width: 196px;
+}
+.countryBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 230px;
+  height: 100px;
+  max-width: auto;
+  left: auto;
+  top: auto;
+  flex-shrink: 0;
+  padding: 8px;
+}
+.select:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 250px;
+}
+.howOftenBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 450px;
+  height: auto;
+  max-width: 100%;
+  margin-top: 0px;
+  padding: 8px;
+}
+.text___7ANih {
+  padding-bottom: 10px;
+  max-width: 438px;
+  width: 100%;
+  min-width: 0;
 }
 .howOften:global(.__wab_instance) {
-  width: 470px;
-  margin-bottom: 24px;
-  position: relative;
-  left: auto;
-  top: auto;
-  height: 62px;
-  margin-top: 10px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-}
-.select2:global(.__wab_instance) {
   max-width: 100%;
+  position: relative;
+  width: 350px;
+}
+.bridgeUseBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 450px;
+  height: auto;
+  max-width: 100%;
+  margin-top: 0px;
+  padding: 8px;
+}
+.text__nTn1 {
+  padding-bottom: 10px;
 }
 .bridgeUse:global(.__wab_instance) {
-  width: 470px;
-  margin-bottom: 24px;
-  position: relative;
-  left: auto;
-  top: auto;
-  height: 62px;
-  margin-top: 10px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-}
-.select4:global(.__wab_instance) {
   max-width: 100%;
+  position: relative;
+  width: 350px;
+}
+.commuteBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 450px;
+  height: auto;
+  max-width: 100%;
+  margin-top: 0px;
+  padding: 8px;
+}
+.text__padt3 {
+  padding-bottom: 10px;
 }
 .commute:global(.__wab_instance) {
-  width: 470px;
-  margin-bottom: 24px;
-  position: relative;
-  left: auto;
-  top: auto;
-  height: 62px;
-  margin-top: 10px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-}
-.select5:global(.__wab_instance) {
   max-width: 100%;
-}
-.activities:global(.__wab_instance) {
-  width: 470px;
   position: relative;
-  left: auto;
-  top: auto;
-  height: 62px;
-  margin-top: 10px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
+  width: 350px;
 }
-.select6:global(.__wab_instance) {
+.bridgeActivitiesBox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 450px;
+  height: auto;
   max-width: 100%;
+  margin-top: 0px;
+  padding: 8px;
+}
+.text___78JRn {
+  padding-bottom: 10px;
+}
+.bridgeActivities:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 350px;
 }
 .button___64Ewy:global(.__wab_instance) {
   max-width: 100%;
@@ -217,14 +239,13 @@
   position: relative;
   left: auto;
   top: auto;
-  width: 100%;
+  width: auto;
   background: linear-gradient(0deg, #3343db 0%, #d85caf 100%);
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
   height: 100%;
-  min-width: 0;
   min-height: 0;
-  padding: 6px;
+  padding: 10px;
 }
 .text__tbYx5 {
   position: relative;
@@ -232,18 +253,7 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
-}
-.formField:global(.__wab_instance) {
-  width: 100%;
-  margin-bottom: 24px;
-  position: relative;
-  left: auto;
-  top: auto;
-  height: 62px;
-  min-width: 0;
-}
-.select3:global(.__wab_instance) {
-  max-width: 100%;
+  padding: 0px 180px;
 }
 .modal:global(.__wab_instance) {
   max-width: 100%;
@@ -306,7 +316,7 @@
   text-align: justify;
   padding-right: 0px;
 }
-.svg___7KmwE {
+.svg__tyYeL {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -327,15 +337,4 @@
 .text__vfAhg {
   width: 424px;
   flex-shrink: 0;
-}
-.button__hwC4R:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-}
-.text__yueeO {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
 }

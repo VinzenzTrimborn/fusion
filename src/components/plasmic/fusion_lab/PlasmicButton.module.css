@@ -2,14 +2,17 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  background: #232320;
+  background: #ffffff;
   cursor: pointer;
   transition-property: background;
   transition-duration: 0.1s;
+  backdrop-filter: none;
+  transform: none;
+  -webkit-backdrop-filter: none;
   -webkit-transition-property: background;
   -webkit-transition-duration: 0.1s;
   border-radius: 6px;
-  padding: 12px 20px;
+  padding: 12px 15px 12px 20px;
   border-width: 0px;
 }
 .root > :global(.__wab_flex-container) {
@@ -103,7 +106,19 @@
   padding: 6px;
 }
 .root:hover {
-  background: #282826;
+  background: linear-gradient(0deg, #d85caf 0%, #3343db 100%) 0% 0% / 100% 100%
+    repeat;
+  box-shadow: none;
+  width: auto;
+  justify-self: flex-start;
+  height: auto;
+  padding-right: 15px;
+  display: inline-flex;
+  border-radius: 6px;
+}
+.root:hover > :global(.__wab_flex-container) {
+  justify-content: center;
+  align-items: center;
 }
 .rootcolor_blue:hover {
   background: #369eff;
@@ -261,6 +276,9 @@
   font-weight: 500;
   white-space: pre;
 }
+.slotTargetChildrenshowEndIcon {
+  text-align: center;
+}
 .slotTargetChildrencolor_blue {
   color: #ffffff;
 }
@@ -299,6 +317,9 @@
 }
 .slotTargetChildrencolor_link {
   color: #0091ff;
+}
+.root:hover .slotTargetChildren {
+  text-align: center;
 }
 .rootcolor_link:hover .slotTargetChildrencolor_link {
   color: #0081f1;
@@ -424,15 +445,25 @@
 .rootcolor_link:active .slotTargetChildrencolor_link {
   color: #006adc;
 }
+.text__mxDxH {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
 .endIconContainer {
   display: flex;
   position: relative;
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-}
-.endIconContainershowEndIcon {
-  display: flex;
+  background: #d4a9ff;
 }
 .slotTargetEndIcon {
   color: #ededec;

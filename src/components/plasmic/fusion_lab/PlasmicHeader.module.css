@@ -18,28 +18,6 @@
 .root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
   margin-top: 0px;
 }
-.section {
-  display: grid;
-  position: relative;
-  align-content: flex-start;
-  justify-items: center;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  height: 45px;
-  min-width: 0;
-  flex-shrink: 0;
-  grid-template-columns:
-    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
-    min(
-      var(--plsmc-standard-width),
-      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
-    )
-    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-}
-.section > * {
-  grid-column: 4;
-}
 .freeBox {
   display: flex;
   position: relative;
@@ -48,7 +26,7 @@
   height: auto;
   max-width: 100%;
   margin-top: calc(160px + 0px) !important;
-  margin-bottom: 160px;
+  margin-bottom: 100px;
   padding: 8px;
 }
 .freeBox > :global(.__wab_flex-container) {

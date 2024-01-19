@@ -1,4 +1,4 @@
-.root {
+.home2 {
   width: 100vw;
   height: auto;
   display: flex;
@@ -6,21 +6,21 @@
   position: relative;
   padding: 20px 123px 20px 40px;
 }
-.root > :global(.__wab_flex-container) {
+.home2 > :global(.__wab_flex-container) {
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-left: calc(0px - 0px);
   width: calc(100% + 0px);
 }
-.root > :global(.__wab_flex-container) > *,
-.root > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.root > :global(.__wab_flex-container) > picture > img,
-.root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+.home2 > :global(.__wab_flex-container) > *,
+.home2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.home2 > :global(.__wab_flex-container) > picture > img,
+.home2 > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
   margin-left: 0px;
 }
 .freeBox___521Hd {
-  background: url("./images/oip1.jpg") center center / cover no-repeat;
+  background: url("./images/tu8494Tf90TumLogoThuereyGroupComputerScienceI15Png2.png") center center / cover no-repeat;
   width: 83px;
   height: 45px;
   display: flex;
@@ -41,16 +41,16 @@
   padding: 0px;
 }
 .freeBox___7ORoh {
-  background: rgba(255, 255, 255, 1);
+  background: #ffffffd1;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
-  max-width: 600px;
+  max-width: 650px;
   min-width: 0;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 10px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #000000;
 }
 .freeBox___7ORoh > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -70,29 +70,116 @@
   > img {
   margin-left: 5px;
 }
-.navBarNavButton__pO42K:global(.__wab_instance) {
+.home:global(.__wab_instance) {
+  max-width: 100%;
   position: relative;
-  top: auto;
-  left: auto;
 }
-.navBarNavButton__co2H6:global(.__wab_instance) {
+.svg__aNf0O {
   position: relative;
-  top: auto;
-  left: auto;
-  min-width: 145px;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
 }
-.navBarNavButton___2IuX6:global(.__wab_instance) {
-  position: relative;
-  top: auto;
-  left: auto;
+.text__ht4Wt {
+  padding-right: 0px;
+  color: #000000;
+  font-weight: 700;
 }
-.navBarNavButton__vvEtk:global(.__wab_instance) {
+.svg__o0DXh {
   position: relative;
-  top: auto;
-  left: auto;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
 }
-.navBarNavButton__dl7Wd:global(.__wab_instance) {
+.visualization:global(.__wab_instance) {
+  max-width: 100%;
   position: relative;
-  top: auto;
-  left: auto;
+}
+.svg__qv4Uj {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__qhg7W {
+  padding-right: 0px;
+  font-weight: 700;
+}
+.svg___1QhvH {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.about:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__yCtT {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text___6S7Cc {
+  color: #000000;
+  font-weight: 700;
+  padding-bottom: 0px;
+}
+.svg___0Wkyw {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.team:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__giJO {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__v3Zh {
+  font-weight: 700;
+}
+.svg__a7G7 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.faq:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__zvpmj {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__pEtyF {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.faq2:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__q0C6P {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__t3HXn {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
 }

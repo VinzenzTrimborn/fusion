@@ -111,36 +111,17 @@ function PlasmicTeam__RenderFunc(props) {
               }}
             />
 
-            <div
+            <a
               data-plasmic-name={"linkedinLelino"}
               data-plasmic-override={overrides.linkedinLelino}
-              className={classNames(projectcss.all, sty.linkedinLelino)}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.linkedinLelino
+              )}
+              href={"https://www.linkedin.com/in/lelino-gomes-92b7b0a9/"}
               onClick={async event => {
                 const $steps = {};
-                $steps["goToPage"] = true
-                  ? (() => {
-                      const actionArgs = {};
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          location.assign(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToPage"] != null &&
-                  typeof $steps["goToPage"] === "object" &&
-                  typeof $steps["goToPage"].then === "function"
-                ) {
-                  $steps["goToPage"] = await $steps["goToPage"];
-                }
               }}
             />
 
@@ -179,10 +160,17 @@ function PlasmicTeam__RenderFunc(props) {
               }}
             />
 
-            <div
+            <a
               data-plasmic-name={"linkedinTina"}
               data-plasmic-override={overrides.linkedinTina}
-              className={classNames(projectcss.all, sty.linkedinTina)}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.linkedinTina
+              )}
+              href={
+                "https://www.linkedin.com/in/%C3%A7eltina-balaj-3141592653589793238/"
+              }
               onClick={async event => {
                 const $steps = {};
                 $steps["goToPage"] = true
@@ -247,42 +235,17 @@ function PlasmicTeam__RenderFunc(props) {
               }}
             />
 
-            <div
+            <a
               data-plasmic-name={"linkedinVinzenz"}
               data-plasmic-override={overrides.linkedinVinzenz}
-              className={classNames(projectcss.all, sty.linkedinVinzenz)}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.linkedinVinzenz
+              )}
+              href={"https://www.linkedin.com/in/vinzenz-trimborn/"}
               onClick={async event => {
                 const $steps = {};
-                $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        destination:
-                          "https://www.linkedin.com/in/vinzenz-trimborn/"
-                      };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          location.assign(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] != null &&
-                  typeof $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] ===
-                    "object" &&
-                  typeof $steps["goToHttpswwwlinkedincominvinzenzTrimborn"]
-                    .then === "function"
-                ) {
-                  $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] =
-                    await $steps["goToHttpswwwlinkedincominvinzenzTrimborn"];
-                }
               }}
             />
 
@@ -327,10 +290,15 @@ function PlasmicTeam__RenderFunc(props) {
               }}
             />
 
-            <div
+            <a
               data-plasmic-name={"linkedinMohammad"}
               data-plasmic-override={overrides.linkedinMohammad}
-              className={classNames(projectcss.all, sty.linkedinMohammad)}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.linkedinMohammad
+              )}
+              href={"https://www.linkedin.com/in/mohammad-alrabab-h-a00a72104/"}
               onClick={async event => {
                 const $steps = {};
                 $steps["goToPage"] = true
@@ -395,10 +363,15 @@ function PlasmicTeam__RenderFunc(props) {
               }}
             />
 
-            <div
+            <a
               data-plasmic-name={"linkedinKoray"}
               data-plasmic-override={overrides.linkedinKoray}
-              className={classNames(projectcss.all, sty.linkedinKoray)}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.linkedinKoray
+              )}
+              href={"https://www.linkedin.com/in/koray-inal/"}
               onClick={async event => {
                 const $steps = {};
                 $steps["goToPage"] = true
