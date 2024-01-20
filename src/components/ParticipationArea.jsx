@@ -11,6 +11,7 @@ function ParticipationArea_(props, ref) {
     const [comments, setComments] = useState([]);
     const [input, setInput] = useState("");
 
+    //ToDo Mohammad: set initial camera position and direction so that the user is looking at the bridge
     const [cameraPosition, setCameraPosition] = useState({x: 0, y: 2, z: 0});
     const [cameraDirection, setCameraDirection] = useState({x: 0, y: 2, z: 0});
 
@@ -135,6 +136,39 @@ function ParticipationArea_(props, ref) {
                         </Canvas>
                     </>
                 )
+            }}
+
+            //ToDO Mohammad: choose nice camera positions
+            viewButton1={{
+                onClick: () => {
+                    console.log("viewButton1");
+                    setCameraDirection({x: 0, y: 2, z: 0});
+                    setCameraPosition({x: 0, y: 2, z: 0});
+                }
+            }}
+            viewButton2={{
+                onClick: () => {
+                    setCameraDirection({x: 5, y: 5, z: 5});
+                    setCameraPosition({x: 0, y: 2, z: 0});
+                }
+            }}
+            viewButton3={{
+                onClick: () => {
+                    setCameraDirection({x: 10, y: 12, z: 10});
+                    setCameraPosition({x: 0, y: 2, z: 0});
+                }
+            }}
+            viewButton4={{
+                onClick: () => {
+                    setCameraDirection({x: 20, y: 22, z: 20});
+                    setCameraPosition({x: 0, y: 2, z: 0});
+                }
+            }}
+            viewButton5={{
+                onClick: () => {
+                    setCameraDirection({x: 30, y: 32, z: 30});
+                    setCameraPosition({x: 0, y: 2, z: 0});
+                }
             }}
         />
     )

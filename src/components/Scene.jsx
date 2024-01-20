@@ -1,12 +1,12 @@
 import * as React from "react";
 import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
-import {Gltf, Html, Sky} from "@react-three/drei";
+import {Html, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {Suspense, useEffect, useMemo, useRef, useState} from "react";
+import {Suspense, useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
 import {MeshLambertMaterial, Vector3} from "three";
-import VotingCard from "./VotingCard";
+import PopUpGallery from "./PopUpGallery";
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -31,7 +31,6 @@ export default function Scene({handleCameraChange}) {
         }
     });
 
-    const mesh = useRef();
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
     // ToDo Koray: instead of using the ifc file from the public folder, use the ifc file from the database
     const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_01.ifc", (ifcLoader) => {
@@ -88,6 +87,10 @@ export default function Scene({handleCameraChange}) {
 
     }, [ifc, scene]);
 
+    //ToDo Mohammad: Choose nice lights. Maybe add a sun. Maybe add a skybox.
+    // Maybe add a ground. Maybe add a background. Maybe add a fog.
+    // For the different IFC Categories you can use different materials.
+    // Choose nice positions for Tinas Annotations
     return (
         <>
             <pointLight position={[400, 400, 0]} intensity={0.5} color="white"/>
@@ -107,7 +110,7 @@ export default function Scene({handleCameraChange}) {
                     )}
                 </group>
                 <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
-                <Annotation position={[-4.5, 3.6, -3]}/>
+                <Annotation position={[-4.5, 13.6, -60]}/>
             </Suspense>
         </>
     )
@@ -115,6 +118,7 @@ export default function Scene({handleCameraChange}) {
 
 function Annotation({position, ...props}) {
     return (
+        // ToDo Mohammad: You can play aroud  with the annotations here. Let them throw a shadow or transform.
         <Html
             {...props}
             position={position}
@@ -124,7 +128,7 @@ function Annotation({position, ...props}) {
             transform
             scale={0.5}
         >
-            <VotingCard/>
+            <PopUpGallery/>
         </Html>
     )
 }

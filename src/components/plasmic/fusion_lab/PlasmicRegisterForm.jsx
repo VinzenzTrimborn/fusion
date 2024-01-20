@@ -406,9 +406,9 @@ function PlasmicRegisterForm__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__r5T9V,
+                            sty.text__q5Twg,
                             {
-                              [sty.textlogin2__r5T9VsWr9K]: hasVariant(
+                              [sty.textlogin2__q5TwgsWr9K]: hasVariant(
                                 $state,
                                 "login2",
                                 "login2"

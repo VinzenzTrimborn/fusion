@@ -19,7 +19,7 @@ import {
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import Comment from "../../Comment"; // plasmic-import: FjjS-KWqLu0p/component
 import UserAuth from "../../UserAuth"; // plasmic-import: zv2IqcCjwXro/component
-import ViewBar from "../../ViewBar"; // plasmic-import: XC59IaIFr3ao/component
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -286,11 +286,87 @@ function PlasmicParticipationArea__RenderFunc(props) {
         open={false}
       />
 
-      <ViewBar
-        data-plasmic-name={"viewBar"}
-        data-plasmic-override={overrides.viewBar}
-        className={classNames("__wab_instance", sty.viewBar)}
-      />
+      <p.Stack
+        as={"div"}
+        hasGap={true}
+        className={classNames(projectcss.all, sty.freeBox__p0MIh)}
+      >
+        <AntdButton
+          data-plasmic-name={"viewButton1"}
+          data-plasmic-override={overrides.viewButton1}
+          className={classNames("__wab_instance", sty.viewButton1)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__jWhYk
+            )}
+          >
+            {"View 1"}
+          </div>
+        </AntdButton>
+        <AntdButton
+          data-plasmic-name={"viewButton2"}
+          data-plasmic-override={overrides.viewButton2}
+          className={classNames("__wab_instance", sty.viewButton2)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__iy8Eb
+            )}
+          >
+            {"View 2"}
+          </div>
+        </AntdButton>
+        <AntdButton
+          data-plasmic-name={"viewButton3"}
+          data-plasmic-override={overrides.viewButton3}
+          className={classNames("__wab_instance", sty.viewButton3)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text___6C9Ky
+            )}
+          >
+            {"View 3"}
+          </div>
+        </AntdButton>
+        <AntdButton
+          data-plasmic-name={"viewButton4"}
+          data-plasmic-override={overrides.viewButton4}
+          className={classNames("__wab_instance", sty.viewButton4)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__dbbOx
+            )}
+          >
+            {"View 4"}
+          </div>
+        </AntdButton>
+        <AntdButton
+          data-plasmic-name={"viewButton5"}
+          data-plasmic-override={overrides.viewButton5}
+          className={classNames("__wab_instance", sty.viewButton5)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__pcs4K
+            )}
+          >
+            {"View 5"}
+          </div>
+        </AntdButton>
+      </p.Stack>
     </div>
   );
 }
@@ -307,7 +383,11 @@ const PlasmicDescendants = {
     "sendButton",
     "commentSidebar",
     "userAuth",
-    "viewBar"
+    "viewButton1",
+    "viewButton2",
+    "viewButton3",
+    "viewButton4",
+    "viewButton5"
   ],
 
   canvas: ["canvas"],
@@ -319,7 +399,11 @@ const PlasmicDescendants = {
   sendButton: ["sendButton"],
   commentSidebar: ["commentSidebar"],
   userAuth: ["userAuth"],
-  viewBar: ["viewBar"]
+  viewButton1: ["viewButton1"],
+  viewButton2: ["viewButton2"],
+  viewButton3: ["viewButton3"],
+  viewButton4: ["viewButton4"],
+  viewButton5: ["viewButton5"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -363,7 +447,11 @@ export const PlasmicParticipationArea = Object.assign(
     sendButton: makeNodeComponent("sendButton"),
     commentSidebar: makeNodeComponent("commentSidebar"),
     userAuth: makeNodeComponent("userAuth"),
-    viewBar: makeNodeComponent("viewBar"),
+    viewButton1: makeNodeComponent("viewButton1"),
+    viewButton2: makeNodeComponent("viewButton2"),
+    viewButton3: makeNodeComponent("viewButton3"),
+    viewButton4: makeNodeComponent("viewButton4"),
+    viewButton5: makeNodeComponent("viewButton5"),
     // Metadata about props expected for PlasmicParticipationArea
     internalVariantProps: PlasmicParticipationArea__VariantProps,
     internalArgProps: PlasmicParticipationArea__ArgProps
