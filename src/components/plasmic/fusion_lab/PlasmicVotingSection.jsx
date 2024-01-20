@@ -59,40 +59,51 @@ function PlasmicVotingSection__RenderFunc(props) {
         sty.vote
       )}
     >
-      <p.Stack
-        as={"div"}
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
-        <VotingCard
-          className={classNames("__wab_instance", sty.votingCard__hnUh1)}
-        />
+      <div className={classNames(projectcss.all, sty.freeBox__bH803)}>
+        <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text
+          )}
+        >
+          {"Choose Your Favorite Proposal!"}
+        </div>
+        <p.Stack
+          as={"div"}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.freeBox__eYkYc)}
+        >
+          <VotingCard
+            className={classNames("__wab_instance", sty.votingCard__hnUh1)}
+          />
 
-        <VotingCard
-          className={classNames("__wab_instance", sty.votingCard__aV27L)}
-        />
+          <VotingCard
+            className={classNames("__wab_instance", sty.votingCard__aV27L)}
+          />
 
-        <VotingCard
-          className={classNames("__wab_instance", sty.votingCard___4M1VA)}
-        />
+          <VotingCard
+            className={classNames("__wab_instance", sty.votingCard___4M1VA)}
+          />
 
-        <VotingCard
-          className={classNames("__wab_instance", sty.votingCard__dZYnU)}
-        />
+          <VotingCard
+            className={classNames("__wab_instance", sty.votingCard__dZYnU)}
+          />
 
-        <VotingCard
-          className={classNames("__wab_instance", sty.votingCard__bhY)}
-        />
-      </p.Stack>
+          <VotingCard
+            className={classNames("__wab_instance", sty.votingCard__bhY)}
+          />
+        </p.Stack>
+      </div>
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  vote: ["vote", "freeBox"],
-  freeBox: ["freeBox"]
+  vote: ["vote", "text"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -127,7 +138,7 @@ export const PlasmicVotingSection = Object.assign(
   makeNodeComponent("vote"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicVotingSection
     internalVariantProps: PlasmicVotingSection__VariantProps,
     internalArgProps: PlasmicVotingSection__ArgProps

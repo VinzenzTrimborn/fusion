@@ -23,7 +23,6 @@ function UserAuth_({showAuth, ...props}, ref) {
 
         registerButton={{
             onClick() {
-                // ToDo Konrad: register user
                 console.log("register", email, password);
                 showAuth(false);
                 setEmail("");

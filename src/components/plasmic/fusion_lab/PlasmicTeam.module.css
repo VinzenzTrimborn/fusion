@@ -1,15 +1,18 @@
 .root {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   position: relative;
-  width: auto;
+  width: 100%;
   height: auto;
   justify-self: flex-start;
+  max-width: 1436px;
+  min-width: 0;
 }
 .root > :global(.__wab_flex-container) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-width: 0;
   margin-top: calc(0px - 10px);
   height: calc(100% + 10px);
 }
@@ -48,10 +51,10 @@
   width: auto;
   height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .freeBox__mcGsO > :global(.__wab_flex-container) {
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: flex-start;
@@ -76,21 +79,25 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: auto;
   height: auto;
   max-width: 100%;
-  padding: 8px;
+  padding: 8px 8px 8px 16px;
 }
 .boxLelino {
-  width: 331px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-shrink: 0;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  position: sticky;
+  min-width: 0;
 }
 .photoLelino {
   object-fit: cover;
@@ -108,13 +115,14 @@
 }
 .linkedinLelino {
   background: url("./images/image5.png") center center / cover no-repeat;
-  width: 15%;
-  height: 14%;
+  width: 17%;
+  height: 15%;
   display: block;
   position: absolute;
-  top: 204px;
-  left: 127px;
+  top: 166px;
+  left: 108px;
   cursor: pointer;
+  padding-top: 0px;
   margin: 10px;
 }
 .text___144B0 {
@@ -134,7 +142,7 @@
   margin: 10px;
 }
 .boxTina {
-  width: 331px;
+  width: 100%;
   height: auto;
   display: flex;
   position: relative;
@@ -143,7 +151,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-shrink: 0;
+  min-width: 0;
   margin: 0px;
 }
 .photoTina {
@@ -162,12 +170,12 @@
 }
 .linkedinTina {
   background: url("./images/image5.png") center center / cover no-repeat;
-  width: 15%;
-  height: 14%;
+  width: 17%;
+  height: 15%;
   display: block;
   position: absolute;
-  top: 212px;
-  left: 143px;
+  top: 176px;
+  left: 117px;
   cursor: pointer;
   padding-top: 0px;
 }
@@ -187,79 +195,15 @@
   height: 11.62%;
   margin: 10px;
 }
-.boxVinzenz {
-  width: 331px;
-  height: auto;
-  display: flex;
-  position: relative;
-  top: auto;
-  left: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-}
-.photoVinzenz {
-  position: relative;
-  object-fit: cover;
-  max-width: 80%;
-  width: auto;
-  height: auto;
-  display: block !important;
-  top: auto;
-  left: auto;
-  margin: 10px;
-}
-.photoVinzenz > picture > img {
-  object-fit: cover;
-}
-.linkedinVinzenz {
-  background: url("./images/image5.png") center center / cover no-repeat;
-  width: 15%;
-  height: 14%;
-  display: block;
-  position: absolute;
-  top: 210px;
-  left: 145px;
-  cursor: pointer;
-}
-.text__sVNtH {
-  display: block;
-  font-size: 25px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 1);
-  position: relative;
-  top: auto;
-  left: auto;
-  width: 62.83%;
-  height: 11.62%;
-  margin: 10px;
-}
-.secondRoll {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  top: auto;
-  left: auto;
-  padding: 8px;
-}
 .boxMohammad {
-  width: 331px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
 }
 .photoMohammad {
   position: relative;
@@ -277,12 +221,12 @@
 }
 .linkedinMohammad {
   background: url("./images/image5.png") center center / cover no-repeat;
-  width: 15%;
-  height: 14%;
+  width: 17%;
+  height: 15%;
   display: block;
   position: absolute;
-  top: 216px;
-  left: 143px;
+  top: 176px;
+  left: 120px;
   cursor: pointer;
 }
 .text__nwz1W {
@@ -301,9 +245,9 @@
   height: 11.62%;
   margin: 10px;
 }
-.boxKoray {
-  width: 331px;
-  height: auto;
+.boxVinzenz {
+  width: 100%;
+  height: 100%;
   display: flex;
   position: relative;
   top: auto;
@@ -311,7 +255,61 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
+}
+.photoVinzenz {
+  position: relative;
+  object-fit: cover;
+  max-width: 80%;
+  width: auto;
+  height: auto;
+  display: block !important;
+  top: auto;
+  left: auto;
+  margin: 10px;
+}
+.photoVinzenz > picture > img {
+  object-fit: cover;
+}
+.linkedinVinzenz {
+  background: url("./images/image5.png") center center / cover no-repeat;
+  width: 17%;
+  height: 15%;
+  display: block;
+  position: absolute;
+  top: 176px;
+  left: 121px;
+  cursor: pointer;
+}
+.text__sVNtH {
+  display: block;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 62.83%;
+  height: 11.62%;
+  margin: 10px;
+}
+.boxKoray {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 0;
 }
 .photoKoray {
   position: relative;
@@ -329,12 +327,12 @@
 }
 .linkedinKoray {
   background: url("./images/image5.png") center center / cover no-repeat;
-  width: 15%;
-  height: 14%;
+  width: 17%;
+  height: 15%;
   display: block;
   position: absolute;
-  top: 211px;
-  left: 141px;
+  top: 175px;
+  left: 117px;
   cursor: pointer;
 }
 .text__o2J8N {

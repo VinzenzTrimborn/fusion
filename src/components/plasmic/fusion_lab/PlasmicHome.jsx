@@ -16,15 +16,14 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
-import Header from "../../Header"; // plasmic-import: iV9ipicgvWtS/component
 import Navbar from "../../Navbar"; // plasmic-import: lwEnvYluELlC/component
+import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
+import QuestionsForm from "../../QuestionsForm"; // plasmic-import: Uk8ghP4bFAyL/component
 import ParticipationArea from "../../ParticipationArea"; // plasmic-import: clPh1NSkBPaO/component
-import ViewBar from "../../ViewBar"; // plasmic-import: XC59IaIFr3ao/component
-import VotingSection from "../../VotingSection"; // plasmic-import: y-2j-fa4twS1/component
 import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
-import Team from "../../Team"; // plasmic-import: SnzWAy89iw5m/component
 import GalleryDisplay from "../../GalleryDisplay"; // plasmic-import: v_wMKsIXVD_E/component
 import FaqSection from "../../FaqSection"; // plasmic-import: Qhhf4YZ2QDy9/component
+import Team from "../../Team"; // plasmic-import: SnzWAy89iw5m/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -93,57 +92,73 @@ function PlasmicHome__RenderFunc(props) {
               />
             </div>
           </div>
-          <Header
-            data-plasmic-name={"header"}
-            data-plasmic-override={overrides.header}
-            className={classNames("__wab_instance", sty.header)}
-          />
-
           <Navbar
             data-plasmic-name={"navbar"}
             data-plasmic-override={overrides.navbar}
             className={classNames("__wab_instance", sty.navbar)}
           />
 
+          <p.Stack
+            as={"div"}
+            data-plasmic-name={"header"}
+            data-plasmic-override={overrides.header}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.header)}
+          >
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__kVxWg)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__tbQo
+                )}
+              >
+                {"Donnersberger Bridge needs to be rebuild"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__r1Z
+                )}
+              >
+                {
+                  "Help to choose the right design and contribute your idea and feedback"
+                }
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__qn852)}>
+                <ActionButton
+                  data-plasmic-name={"participateButton"}
+                  data-plasmic-override={overrides.participateButton}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.participateButton
+                  )}
+                >
+                  {"Tell us how you use the bridge"}
+                </ActionButton>
+              </div>
+            </p.Stack>
+            <QuestionsForm
+              data-plasmic-name={"questions"}
+              data-plasmic-override={overrides.questions}
+              className={classNames("__wab_instance", sty.questions)}
+            />
+          </p.Stack>
           <ParticipationArea
             data-plasmic-name={"participationArea"}
             data-plasmic-override={overrides.participationArea}
             className={classNames("__wab_instance", sty.participationArea)}
           />
 
-          <ViewBar
-            data-plasmic-name={"viewBar"}
-            data-plasmic-override={overrides.viewBar}
-            className={classNames("__wab_instance", sty.viewBar)}
-          />
-
-          <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text
-            )}
-          >
-            {"Choose Your Favorite Proposal!"}
-          </div>
-          <VotingSection
-            data-plasmic-name={"votingSection"}
-            data-plasmic-override={overrides.votingSection}
-            className={classNames("__wab_instance", sty.votingSection)}
-          />
-
           <AboutUs
             data-plasmic-name={"aboutUs"}
             data-plasmic-override={overrides.aboutUs}
             className={classNames("__wab_instance", sty.aboutUs)}
-          />
-
-          <Team
-            data-plasmic-name={"team"}
-            data-plasmic-override={overrides.team}
-            className={classNames("__wab_instance", sty.team)}
           />
 
           <GalleryDisplay
@@ -157,6 +172,12 @@ function PlasmicHome__RenderFunc(props) {
             data-plasmic-override={overrides.faqSection}
             className={classNames("__wab_instance", sty.faqSection)}
           />
+
+          <Team
+            data-plasmic-name={"team"}
+            data-plasmic-override={overrides.team}
+            className={classNames("__wab_instance", sty.team)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -169,16 +190,15 @@ const PlasmicDescendants = {
     "intro",
     "renderOfTheBridge",
     "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2",
-    "header",
     "navbar",
+    "header",
+    "participateButton",
+    "questions",
     "participationArea",
-    "viewBar",
-    "text",
-    "votingSection",
     "aboutUs",
-    "team",
     "galleryDisplay",
-    "faqSection"
+    "faqSection",
+    "team"
   ],
 
   intro: [
@@ -197,16 +217,15 @@ const PlasmicDescendants = {
       "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
     ],
 
-  header: ["header"],
   navbar: ["navbar"],
+  header: ["header", "participateButton", "questions"],
+  participateButton: ["participateButton"],
+  questions: ["questions"],
   participationArea: ["participationArea"],
-  viewBar: ["viewBar"],
-  text: ["text"],
-  votingSection: ["votingSection"],
   aboutUs: ["aboutUs"],
-  team: ["team"],
   galleryDisplay: ["galleryDisplay"],
-  faqSection: ["faqSection"]
+  faqSection: ["faqSection"],
+  team: ["team"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -247,16 +266,15 @@ export const PlasmicHome = Object.assign(
       makeNodeComponent(
         "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
       ),
-    header: makeNodeComponent("header"),
     navbar: makeNodeComponent("navbar"),
+    header: makeNodeComponent("header"),
+    participateButton: makeNodeComponent("participateButton"),
+    questions: makeNodeComponent("questions"),
     participationArea: makeNodeComponent("participationArea"),
-    viewBar: makeNodeComponent("viewBar"),
-    text: makeNodeComponent("text"),
-    votingSection: makeNodeComponent("votingSection"),
     aboutUs: makeNodeComponent("aboutUs"),
-    team: makeNodeComponent("team"),
     galleryDisplay: makeNodeComponent("galleryDisplay"),
     faqSection: makeNodeComponent("faqSection"),
+    team: makeNodeComponent("team"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,
     internalArgProps: PlasmicHome__ArgProps,

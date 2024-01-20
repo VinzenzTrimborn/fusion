@@ -50,6 +50,7 @@ export default function Scene({handleCameraChange}) {
 
     const mesh = useRef();
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
+    // ToDo Koray: instead of using the ifc file from the public folder, use the ifc file from the database
     const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_01.ifc", (ifcLoader) => {
         ifcLoader.ifcManager.setWasmPath("../../wasm/");
     });

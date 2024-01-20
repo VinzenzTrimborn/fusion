@@ -16,8 +16,10 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import Comment from "../../Comment"; // plasmic-import: FjjS-KWqLu0p/component
 import UserAuth from "../../UserAuth"; // plasmic-import: zv2IqcCjwXro/component
+import ViewBar from "../../ViewBar"; // plasmic-import: XC59IaIFr3ao/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -51,6 +53,12 @@ function PlasmicParticipationArea__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
+      },
+      {
+        path: "modal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -96,8 +104,94 @@ function PlasmicParticipationArea__RenderFunc(props) {
               data-plasmic-name={"svg"}
               data-plasmic-override={overrides.svg}
               className={classNames(projectcss.all, sty.svg)}
+              onMouseOver={async event => {
+                const $steps = {};
+                $steps["updateModalOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["modal", "open"]
+                        },
+                        operation: 0,
+                        value: true
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        p.set(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateModalOpen"] != null &&
+                  typeof $steps["updateModalOpen"] === "object" &&
+                  typeof $steps["updateModalOpen"].then === "function"
+                ) {
+                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                }
+              }}
               role={"img"}
             />
+
+            <AntdModal
+              data-plasmic-name={"modal"}
+              data-plasmic-override={overrides.modal}
+              className={classNames("__wab_instance", sty.modal)}
+              defaultStylesClassName={classNames(
+                projectcss.root_reset,
+                projectcss.plasmic_default_styles,
+                projectcss.plasmic_mixins,
+                projectcss.plasmic_tokens,
+                plasmic_antd_5_hostless_css.plasmic_tokens,
+                plasmic_plasmic_rich_components_css.plasmic_tokens
+              )}
+              hideFooter={true}
+              modalScopeClassName={sty["modal__modal"]}
+              onOpenChange={p.generateStateOnChangeProp($state, [
+                "modal",
+                "open"
+              ])}
+              open={p.generateStateValueProp($state, ["modal", "open"])}
+              title={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__va8WI
+                  )}
+                >
+                  {"Instructions on how to move around"}
+                </div>
+              }
+              trigger={null}
+            >
+              <div
+                data-plasmic-name={"hintsDropdownMenu"}
+                data-plasmic-override={overrides.hintsDropdownMenu}
+                className={classNames(projectcss.all, sty.hintsDropdownMenu)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__jsaMo
+                  )}
+                >
+                  {
+                    "Pan: Click and hold Left-click\nOrbit: Click and hold on the mouse wheel\nZoom: Scroll the mouse wheel\nComment: Double Click"
+                  }
+                </div>
+              </div>
+            </AntdModal>
           </div>
           <p.Stack
             as={"div"}
@@ -141,12 +235,10 @@ function PlasmicParticipationArea__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.sendButton)}
               >
                 <div
-                  data-plasmic-name={"text"}
-                  data-plasmic-override={overrides.text}
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text
+                    sty.text__kmLsl
                   )}
                 >
                   {"Leave Comment"}
@@ -193,6 +285,12 @@ function PlasmicParticipationArea__RenderFunc(props) {
         className={classNames("__wab_instance", sty.userAuth)}
         open={false}
       />
+
+      <ViewBar
+        data-plasmic-name={"viewBar"}
+        data-plasmic-override={overrides.viewBar}
+        className={classNames("__wab_instance", sty.viewBar)}
+      />
     </div>
   );
 }
@@ -203,21 +301,25 @@ const PlasmicDescendants = {
     "canvas",
     "helpButton",
     "svg",
+    "modal",
+    "hintsDropdownMenu",
     "newCommentText",
     "sendButton",
-    "text",
     "commentSidebar",
-    "userAuth"
+    "userAuth",
+    "viewBar"
   ],
 
   canvas: ["canvas"],
-  helpButton: ["helpButton", "svg"],
+  helpButton: ["helpButton", "svg", "modal", "hintsDropdownMenu"],
   svg: ["svg"],
+  modal: ["modal", "hintsDropdownMenu"],
+  hintsDropdownMenu: ["hintsDropdownMenu"],
   newCommentText: ["newCommentText"],
-  sendButton: ["sendButton", "text"],
-  text: ["text"],
+  sendButton: ["sendButton"],
   commentSidebar: ["commentSidebar"],
-  userAuth: ["userAuth"]
+  userAuth: ["userAuth"],
+  viewBar: ["viewBar"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -255,11 +357,13 @@ export const PlasmicParticipationArea = Object.assign(
     canvas: makeNodeComponent("canvas"),
     helpButton: makeNodeComponent("helpButton"),
     svg: makeNodeComponent("svg"),
+    modal: makeNodeComponent("modal"),
+    hintsDropdownMenu: makeNodeComponent("hintsDropdownMenu"),
     newCommentText: makeNodeComponent("newCommentText"),
     sendButton: makeNodeComponent("sendButton"),
-    text: makeNodeComponent("text"),
     commentSidebar: makeNodeComponent("commentSidebar"),
     userAuth: makeNodeComponent("userAuth"),
+    viewBar: makeNodeComponent("viewBar"),
     // Metadata about props expected for PlasmicParticipationArea
     internalVariantProps: PlasmicParticipationArea__VariantProps,
     internalArgProps: PlasmicParticipationArea__ArgProps

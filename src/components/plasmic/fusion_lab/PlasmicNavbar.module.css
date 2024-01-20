@@ -9,7 +9,7 @@
 .home2 > :global(.__wab_flex-container) {
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: calc(0px - 0px);
   width: calc(100% + 0px);
 }
@@ -29,7 +29,6 @@
   flex-shrink: 0;
 }
 .freeBox__qIZs {
-  display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -38,6 +37,7 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
+  display: none;
   padding: 0px;
 }
 .freeBox___7ORoh {

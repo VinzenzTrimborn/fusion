@@ -21,7 +21,7 @@
   max-height: 1600px;
   min-width: 0;
   flex-shrink: 0;
-  padding: 4% 4% 2%;
+  padding: 4% 4% 1%;
 }
 .freeBox__vAye7 {
   display: flex;
@@ -78,8 +78,43 @@
   max-width: 100%;
   width: 60px;
   height: 60px;
+  cursor: pointer;
   flex-shrink: 0;
   margin: 0px;
+}
+.modal:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  align-self: flex-start;
+  position: fixed;
+  left: 0;
+  top: auto;
+  z-index: 1;
+  bottom: 150px;
+}
+.hintsDropdownMenu {
+  background: rgba(241, 241, 241, 1);
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.text__jsaMo {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  color: rgba(11, 11, 11, 1);
+  position: relative;
+}
+.text__va8WI {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
 }
 .freeBox__nw8Q1 {
   display: flex;
@@ -172,7 +207,7 @@
   padding: 8px;
   border: 1px solid #535353d9;
 }
-.text {
+.text__kmLsl {
   position: relative;
   width: auto;
   height: auto;
@@ -233,6 +268,10 @@
   position: relative;
 }
 .userAuth:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.viewBar:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

@@ -17,7 +17,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
-import UserAuth from "../../UserAuth"; // plasmic-import: zv2IqcCjwXro/component
+import QuestionsForm from "../../QuestionsForm"; // plasmic-import: Uk8ghP4bFAyL/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -28,7 +28,7 @@ createPlasmicElementProxy;
 
 export const PlasmicHeader__VariantProps = new Array();
 
-export const PlasmicHeader__ArgProps = new Array();
+export const PlasmicHeader__ArgProps = new Array("participateButton2");
 
 const $$ = {};
 
@@ -64,10 +64,8 @@ function PlasmicHeader__RenderFunc(props) {
     >
       <p.Stack
         as={"div"}
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
         hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox__wwkb)}
       >
         <div
           className={classNames(
@@ -89,27 +87,33 @@ function PlasmicHeader__RenderFunc(props) {
             "Help to choose the right design and contribute your idea and feedback"
           }
         </div>
-        <ActionButton
-          data-plasmic-name={"participateButton"}
-          data-plasmic-override={overrides.participateButton}
-          className={classNames("__wab_instance", sty.participateButton)}
-        />
+        <div className={classNames(projectcss.all, sty.freeBox__gviDt)}>
+          {p.renderPlasmicSlot({
+            defaultContents: (
+              <ActionButton
+                className={classNames(
+                  "__wab_instance",
+                  sty.actionButton__v7GGu
+                )}
+              />
+            ),
+
+            value: args.participateButton2
+          })}
+        </div>
       </p.Stack>
-      <UserAuth
-        data-plasmic-name={"auth"}
-        data-plasmic-override={overrides.auth}
-        className={classNames("__wab_instance", sty.auth)}
-        open={false}
+      <QuestionsForm
+        data-plasmic-name={"questionsForm"}
+        data-plasmic-override={overrides.questionsForm}
+        className={classNames("__wab_instance", sty.questionsForm)}
       />
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "participateButton", "auth"],
-  freeBox: ["freeBox", "participateButton"],
-  participateButton: ["participateButton"],
-  auth: ["auth"]
+  root: ["root", "questionsForm"],
+  questionsForm: ["questionsForm"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -144,9 +148,7 @@ export const PlasmicHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
-    participateButton: makeNodeComponent("participateButton"),
-    auth: makeNodeComponent("auth"),
+    questionsForm: makeNodeComponent("questionsForm"),
     // Metadata about props expected for PlasmicHeader
     internalVariantProps: PlasmicHeader__VariantProps,
     internalArgProps: PlasmicHeader__ArgProps

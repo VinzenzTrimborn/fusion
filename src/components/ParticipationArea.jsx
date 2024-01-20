@@ -53,7 +53,7 @@ function ParticipationArea_(props, ref) {
     //ToDo Koray: add comment to DB
     const addCommentDB = useCallback((newComment) => {
 
-        setComments([...comments, newComment]);
+        setComments([...4, newComment]);
     }, [comments]);
 
     const changeLike = useCallback((comment) => {

@@ -23,8 +23,8 @@ import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU
 import sty from "./PlasmicTeam.module.css"; // plasmic-import: SnzWAy89iw5m/css
 import ellipse94Pwwq9GinLkcJ from "./images/ellipse94.svg"; // plasmic-import: Pwwq9GINLkcJ/picture
 import ellipse96VqRzDp9T50Mu from "./images/ellipse96.svg"; // plasmic-import: VqRzDP9t50MU/picture
-import ellipse95Z1FcWs93Tz from "./images/ellipse95.svg"; // plasmic-import: Z1fcWS9-3TZ-/picture
 import ellipse98HNxjJfqdv0Ot from "./images/ellipse98.svg"; // plasmic-import: hNXJJfqdv0ot/picture
+import ellipse95Z1FcWs93Tz from "./images/ellipse95.svg"; // plasmic-import: Z1fcWS9-3TZ-/picture
 import ellipse97WXYy61HktYmm from "./images/ellipse97.svg"; // plasmic-import: wXYy61hktYmm/picture
 
 createPlasmicElementProxy;
@@ -211,61 +211,6 @@ function PlasmicTeam__RenderFunc(props) {
             </div>
           </div>
           <div
-            data-plasmic-name={"boxVinzenz"}
-            data-plasmic-override={overrides.boxVinzenz}
-            className={classNames(projectcss.all, sty.boxVinzenz)}
-          >
-            <p.PlasmicImg
-              data-plasmic-name={"photoVinzenz"}
-              data-plasmic-override={overrides.photoVinzenz}
-              alt={""}
-              className={classNames(sty.photoVinzenz)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"80%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: ellipse95Z1FcWs93Tz,
-                fullWidth: 331,
-                fullHeight: 331,
-                aspectRatio: 1
-              }}
-            />
-
-            <a
-              data-plasmic-name={"linkedinVinzenz"}
-              data-plasmic-override={overrides.linkedinVinzenz}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.linkedinVinzenz
-              )}
-              href={"https://www.linkedin.com/in/vinzenz-trimborn/"}
-              onClick={async event => {
-                const $steps = {};
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__sVNtH
-              )}
-            >
-              {"Vinzenz\nTrimborn"}
-            </div>
-          </div>
-        </div>
-        <div
-          data-plasmic-name={"secondRoll"}
-          data-plasmic-override={overrides.secondRoll}
-          className={classNames(projectcss.all, sty.secondRoll)}
-        >
-          <div
             data-plasmic-name={"boxMohammad"}
             data-plasmic-override={overrides.boxMohammad}
             className={classNames(projectcss.all, sty.boxMohammad)}
@@ -336,6 +281,55 @@ function PlasmicTeam__RenderFunc(props) {
               )}
             >
               {"Mohammad Alrabab\u2019h"}
+            </div>
+          </div>
+          <div
+            data-plasmic-name={"boxVinzenz"}
+            data-plasmic-override={overrides.boxVinzenz}
+            className={classNames(projectcss.all, sty.boxVinzenz)}
+          >
+            <p.PlasmicImg
+              data-plasmic-name={"photoVinzenz"}
+              data-plasmic-override={overrides.photoVinzenz}
+              alt={""}
+              className={classNames(sty.photoVinzenz)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"80%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"auto"}
+              loading={"lazy"}
+              src={{
+                src: ellipse95Z1FcWs93Tz,
+                fullWidth: 331,
+                fullHeight: 331,
+                aspectRatio: 1
+              }}
+            />
+
+            <a
+              data-plasmic-name={"linkedinVinzenz"}
+              data-plasmic-override={overrides.linkedinVinzenz}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.linkedinVinzenz
+              )}
+              href={"https://www.linkedin.com/in/vinzenz-trimborn/"}
+              onClick={async event => {
+                const $steps = {};
+              }}
+            />
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__sVNtH
+              )}
+            >
+              {"Vinzenz\nTrimborn"}
             </div>
           </div>
           <div
@@ -427,13 +421,12 @@ const PlasmicDescendants = {
     "boxTina",
     "photoTina",
     "linkedinTina",
-    "boxVinzenz",
-    "photoVinzenz",
-    "linkedinVinzenz",
-    "secondRoll",
     "boxMohammad",
     "photoMohammad",
     "linkedinMohammad",
+    "boxVinzenz",
+    "photoVinzenz",
+    "linkedinVinzenz",
     "boxKoray",
     "photoKoray",
     "linkedinKoray"
@@ -447,9 +440,15 @@ const PlasmicDescendants = {
     "boxTina",
     "photoTina",
     "linkedinTina",
+    "boxMohammad",
+    "photoMohammad",
+    "linkedinMohammad",
     "boxVinzenz",
     "photoVinzenz",
-    "linkedinVinzenz"
+    "linkedinVinzenz",
+    "boxKoray",
+    "photoKoray",
+    "linkedinKoray"
   ],
 
   boxLelino: ["boxLelino", "photoLelino", "linkedinLelino"],
@@ -458,22 +457,12 @@ const PlasmicDescendants = {
   boxTina: ["boxTina", "photoTina", "linkedinTina"],
   photoTina: ["photoTina"],
   linkedinTina: ["linkedinTina"],
-  boxVinzenz: ["boxVinzenz", "photoVinzenz", "linkedinVinzenz"],
-  photoVinzenz: ["photoVinzenz"],
-  linkedinVinzenz: ["linkedinVinzenz"],
-  secondRoll: [
-    "secondRoll",
-    "boxMohammad",
-    "photoMohammad",
-    "linkedinMohammad",
-    "boxKoray",
-    "photoKoray",
-    "linkedinKoray"
-  ],
-
   boxMohammad: ["boxMohammad", "photoMohammad", "linkedinMohammad"],
   photoMohammad: ["photoMohammad"],
   linkedinMohammad: ["linkedinMohammad"],
+  boxVinzenz: ["boxVinzenz", "photoVinzenz", "linkedinVinzenz"],
+  photoVinzenz: ["photoVinzenz"],
+  linkedinVinzenz: ["linkedinVinzenz"],
   boxKoray: ["boxKoray", "photoKoray", "linkedinKoray"],
   photoKoray: ["photoKoray"],
   linkedinKoray: ["linkedinKoray"]
@@ -518,13 +507,12 @@ export const PlasmicTeam = Object.assign(
     boxTina: makeNodeComponent("boxTina"),
     photoTina: makeNodeComponent("photoTina"),
     linkedinTina: makeNodeComponent("linkedinTina"),
-    boxVinzenz: makeNodeComponent("boxVinzenz"),
-    photoVinzenz: makeNodeComponent("photoVinzenz"),
-    linkedinVinzenz: makeNodeComponent("linkedinVinzenz"),
-    secondRoll: makeNodeComponent("secondRoll"),
     boxMohammad: makeNodeComponent("boxMohammad"),
     photoMohammad: makeNodeComponent("photoMohammad"),
     linkedinMohammad: makeNodeComponent("linkedinMohammad"),
+    boxVinzenz: makeNodeComponent("boxVinzenz"),
+    photoVinzenz: makeNodeComponent("photoVinzenz"),
+    linkedinVinzenz: makeNodeComponent("linkedinVinzenz"),
     boxKoray: makeNodeComponent("boxKoray"),
     photoKoray: makeNodeComponent("photoKoray"),
     linkedinKoray: makeNodeComponent("linkedinKoray"),
