@@ -5,10 +5,8 @@ import {Gltf, Html, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {Suspense, useEffect, useMemo, useRef, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
-import {DoubleSide, MeshLambertMaterial, Vector3} from "three";
-import FavComment from "./FavComment";
-import Display from "./Display";
-import PopUpGallery from "./PopUpGallery";
+import {MeshLambertMaterial, Vector3} from "three";
+import VotingCard from "./VotingCard";
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -19,34 +17,19 @@ const Model = () => {
 };
 
 export default function Scene({handleCameraChange}) {
-    const [comments, setComments] = useState([]);
-    const addComment = (newComment) => {
-        setComments([...comments, newComment]);
-    };
 
     const camera = useThree((state) => state.camera);
-    const raycaster = useThree((state) => state.raycaster);
     const scene = useThree((state) => state.scene);
     const [highlightedIDs, setHighlightedIDs] = useState([]);
 
     useFrame(() => {
         if (camera) {
-            handleCameraChange({position: camera.position, direction: camera.getWorldDirection(new Vector3())});
+            handleCameraChange({
+                position: camera.position,
+                direction: camera.position.clone().add(camera.getWorldDirection(new Vector3()).multiplyScalar(100))
+            });
         }
     });
-
-
-    useEffect(() => {
-        let comments =
-            [{likes: "test", text: "test", username: "test", commentPosition: [-4.5, 3.6, -3]}, {
-                likes: "test",
-                text: "test",
-                username: "test",
-                commentPosition: [-4.5, 10.6, -3]
-            }];
-        setComments(comments);
-    }, []);
-
 
     const mesh = useRef();
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
@@ -62,7 +45,6 @@ export default function Scene({handleCameraChange}) {
     }), []);
 
     useEffect(() => {
-        console.log("highlightedIDs", highlightedIDs);
         const manager = ifc.ifcManager;
         manager.createSubset({
             modelID: 0,
@@ -113,61 +95,36 @@ export default function Scene({handleCameraChange}) {
             <pointLight position={[0, 400, -400]} intensity={0.4} color="white"/>
             <pointLight position={[0, 400, 400]} intensity={0.2} color="white"/>
             <Suspense fallback={null}>
-                <primitive object={ifc} onDoubleClick={(e) => {
-                    const intersected = raycaster.intersectObject(e.eventObject);
-                    const pointVector = intersected[0].point;
-                    const cameraVector = camera.position;
-                    addComment({
-                        likes: "test",
-                        text: "test",
-                        username: "test",
-                        commentPosition: pointVector,
-                        cameraPosition: cameraVector
-                    })
-                }}/>
-
-                {/*<group>
+                <group>
                     {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
                         <primitive key={index} object={value}
                                    onDoubleClick={(e) => {
-                                       ifc.ifcManager.getItemProperties(0, value.id).then((value)=> console.log(value))
+                                       ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
                                        setHighlightedIDs([value.id]);
                                        console.log(value.id)
                                    }}
                         />
                     )}
-                </group>*/}
-
+                </group>
                 <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
-                {comments.map((comment, index) => <Annotation key={index} comment={comment}/>, [])}
+                <Annotation position={[-4.5, 3.6, -3]}/>
             </Suspense>
         </>
     )
 }
 
-function Annotation({comment, children, ...props}) {
-    const {commentPosition} = comment;
+function Annotation({position, ...props}) {
     return (
         <Html
             {...props}
-            position={commentPosition}
+            position={position}
             occlude
             castShadow
             receiveShadow
             transform
-            geometry={
-                <roundedPlaneGeometry args={[1.66, 0.47, 0.24]}/>
-            }
             scale={0.5}
-            material={
-                <meshPhysicalMaterial
-                    side={DoubleSide}
-                    opacity={0.1}
-                />
-            }
         >
-            <FavComment comment={comment}>
-            </FavComment>
+            <VotingCard/>
         </Html>
     )
 }

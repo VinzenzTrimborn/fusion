@@ -15,10 +15,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   justify-content: flex-start;
   align-items: center;
-  max-height: 1600px;
   min-width: 0;
   flex-shrink: 0;
   padding: 4% 4% 1%;

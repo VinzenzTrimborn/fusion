@@ -847,7 +847,7 @@
   height: 100%;
   max-width: 100%;
   min-height: 0;
-  padding: 10px 15px 15px;
+  padding: 0px 15px 15px;
 }
 .freeBox__sAt9C > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -882,43 +882,43 @@
   top: 0px;
   z-index: 1;
   position: sticky;
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
   min-height: 0;
   border-radius: 20px;
   padding: 15px;
 }
 .answerBoxanswers_x {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__2 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__3 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__4 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__5 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__6 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__7 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__8 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__9 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__10 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .answerBoxanswers__11 {
-  margin-top: calc(0px + 10px) !important;
+  margin-top: calc(10px + 10px) !important;
 }
 .text___0Uzpd {
   position: relative;

@@ -72,10 +72,9 @@
   max-width: 100%;
   min-width: 0;
   min-height: 0;
-  padding: 0px 8px 8px;
+  padding: 8px;
 }
 .freeBox__vxEdt {
-  display: flex;
   position: relative;
   flex-direction: row;
   align-items: center;
@@ -83,6 +82,7 @@
   width: auto;
   height: auto;
   max-width: 100%;
+  display: none;
   padding: 0px;
 }
 .username {
@@ -264,21 +264,4 @@
   max-width: 100%;
   height: 1em;
   flex-shrink: 0;
-}
-.threedots {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  color: #000;
-  transform: scale(1.000000499999875, 0.999999500000375)
-    rotate(179.94270423958343deg) skew(-0.05729570311883569deg, 0deg)
-    translate(0.06099999999997863px, 0.47093900000000133px);
-  width: 15px;
-  height: 15px;
-  display: block;
-  top: auto;
-  left: auto;
-  cursor: pointer;
-  flex-shrink: 0;
-  margin: 0px;
 }

@@ -26,7 +26,6 @@ import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU
 import sty from "./PlasmicComment.module.css"; // plasmic-import: FjjS-KWqLu0p/css
 import LikeSvgrepoComsvgIcon from "./icons/PlasmicIcon__LikeSvgrepoComsvg"; // plasmic-import: fk0APNR9z8Wz/icon
 import LocationArrowSvgrepoComsvgIcon from "./icons/PlasmicIcon__LocationArrowSvgrepoComsvg"; // plasmic-import: DXlzMsobazwr/icon
-import IcMoreVertBlack24PxIcon from "./icons/PlasmicIcon__IcMoreVertBlack24Px"; // plasmic-import: f0QTkUbbBeM7/icon
 
 createPlasmicElementProxy;
 
@@ -199,47 +198,6 @@ function PlasmicComment__RenderFunc(props) {
                   role={"img"}
                 />
               </div>
-              <IcMoreVertBlack24PxIcon
-                data-plasmic-name={"threedots"}
-                data-plasmic-override={overrides.threedots}
-                className={classNames(projectcss.all, sty.threedots)}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateModalOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["modal", "open"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-                          p.set(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateModalOpen"] != null &&
-                    typeof $steps["updateModalOpen"] === "object" &&
-                    typeof $steps["updateModalOpen"].then === "function"
-                  ) {
-                    $steps["updateModalOpen"] = await $steps["updateModalOpen"];
-                  }
-                }}
-                role={"img"}
-              />
             </div>
           </p.Stack>
         </div>
@@ -256,8 +214,7 @@ const PlasmicDescendants = {
     "modal",
     "likeButton",
     "likes",
-    "showLocation",
-    "threedots"
+    "showLocation"
   ],
 
   username: ["username"],
@@ -265,8 +222,7 @@ const PlasmicDescendants = {
   modal: ["modal"],
   likeButton: ["likeButton"],
   likes: ["likes"],
-  showLocation: ["showLocation"],
-  threedots: ["threedots"]
+  showLocation: ["showLocation"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -307,7 +263,6 @@ export const PlasmicComment = Object.assign(
     likeButton: makeNodeComponent("likeButton"),
     likes: makeNodeComponent("likes"),
     showLocation: makeNodeComponent("showLocation"),
-    threedots: makeNodeComponent("threedots"),
     // Metadata about props expected for PlasmicComment
     internalVariantProps: PlasmicComment__VariantProps,
     internalArgProps: PlasmicComment__ArgProps
