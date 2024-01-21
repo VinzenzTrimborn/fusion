@@ -29,33 +29,53 @@ function ParticipationArea_(props, ref) {
     }, []);
 
     //ToDo Koray: get comments from DB
-    const getCommentsFromDB = useCallback(() => {
-        //ToDo Koray: After getting the comments likedByUser should be set to true if the user liked the comment
-        return [
-            {
-                likes: 45,
-                text: "Hi there!",
-                username: "Vinzenz",
-                cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0},
-                likedByUser: false
-            },
-            {
-                likes: 23,
-                text: "Koray is the best!",
-                username: "Koray",
-                cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0},
-                likedByUser: true
-            }
-        ];
-    }, []);
+    const getCommentsFromDB = async () => {
+        try {
+          // Make a request to the get_comments PostgreSQL function
+          const { data, error } = await supabase.rpc('get_comments');
+      
+          if (error) {
+            console.error("Error getting comments from DB:", error.message);
+            return [];
+          }
+      
+          // Map the data to the expected format
+          const comments = data.map(comment => ({
+            likes: comment.likesCount,
+            text: comment.commentText,
+            username: comment.createdByUserId, // Replace with the actual field containing usernames
+            cameraPosition: comment.modelLocation, // Replace with the actual field containing camera positions
+            commentPosition: comment.modelLocation, // Replace with the actual field containing comment positions
+            likedByUser: false // You may need to implement this based on user likes
+          }));
+      
+          return comments;
+        } catch (error) {
+          console.error("Error:", error.message);
+          return [];
+        }
+      };
 
-    //ToDo Koray: add comment to DB
-    const addCommentDB = useCallback((newComment) => {
-
-        setComments([...comments, newComment]);
-    }, [comments]);
+      const addCommentToDB = async (createdByUserId, commentText, modelLocation) => {
+        try {
+          // Make a request to the PostgreSQL function add_comment
+          const { data, error } = await supabase.rpc('add_comment', {
+            p_created_by_user_id: createdByUserId,
+            p_comment_text: commentText,
+            p_model_location: modelLocation,
+          });
+      
+          if (error) {
+            console.error("Error adding comment to DB:", error.message);
+          } else {
+            console.log("Comment added successfully:", data);
+            return data; // You might want to return the added comment or its ID
+          }
+        } catch (error) {
+          console.error("Error:", error.message);
+          return null;
+        }
+      }
 
     const changeLike = useCallback((comment) => {
         //ToDo Koray: increase or decrease likes in DB
@@ -177,3 +197,4 @@ function ParticipationArea_(props, ref) {
 const ParticipationArea = React.forwardRef(ParticipationArea_);
 
 export default ParticipationArea;
+
