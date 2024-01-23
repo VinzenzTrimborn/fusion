@@ -6,6 +6,8 @@ import {useCallback, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
+import supabaseClient from '../supabaseClient';
+import { SupabaseClient } from "@supabase/supabase-js";
 
 function ParticipationArea_(props, ref) {
     const [comments, setComments] = useState([]);
@@ -32,7 +34,7 @@ function ParticipationArea_(props, ref) {
     const getCommentsFromDB = async () => {
         try {
           // Make a request to the get_comments PostgreSQL function
-          const { data, error } = await supabase.rpc('get_comments');
+          const { data, error } = await supabaseClient.rpc('get_comments');
       
           if (error) {
             console.error("Error getting comments from DB:", error.message);
@@ -43,8 +45,7 @@ function ParticipationArea_(props, ref) {
           const comments = data.map(comment => ({
             likes: comment.likesCount,
             text: comment.commentText,
-            username: comment.createdByUserId, // Replace with the actual field containing usernames
-            cameraPosition: comment.modelLocation, // Replace with the actual field containing camera positions
+            username: comment.userId, // Replace with the actual field containing usernames
             commentPosition: comment.modelLocation, // Replace with the actual field containing comment positions
             likedByUser: false // You may need to implement this based on user likes
           }));
@@ -56,10 +57,10 @@ function ParticipationArea_(props, ref) {
         }
       };
 
-      const addCommentToDB = async (createdByUserId, commentText, modelLocation) => {
+    const addCommentToDB = async (createdByUserId, commentText, modelLocation) => {
         try {
           // Make a request to the PostgreSQL function add_comment
-          const { data, error } = await supabase.rpc('add_comment', {
+          const { data, error } = await SupabaseClient.rpc('add_comment', {
             p_created_by_user_id: createdByUserId,
             p_comment_text: commentText,
             p_model_location: modelLocation,
@@ -75,7 +76,7 @@ function ParticipationArea_(props, ref) {
           console.error("Error:", error.message);
           return null;
         }
-      }
+    }
 
     const changeLike = useCallback((comment) => {
         //ToDo Koray: increase or decrease likes in DB
@@ -91,9 +92,19 @@ function ParticipationArea_(props, ref) {
     }, [comments]);
 
     useEffect(() => {
-        let comments = getCommentsFromDB();
-        setComments(comments);
-    }, [getCommentsFromDB]);
+        const fetchData = async () => {
+            try {
+                const comments = await getCommentsFromDB();
+                setComments(comments);
+            } catch (error) {
+                console.error("Error fetching comments:", error);
+                setComments([]); // Set an empty array or handle the error accordingly
+            }
+        };
+    
+        fetchData();
+    }, []); // Empty dependency array
+    
 
     return (
         <PlasmicParticipationArea
@@ -132,7 +143,7 @@ function ParticipationArea_(props, ref) {
                             z: currentCameraDirection.z
                         }
                     }
-                    addCommentDB(newComment);
+                    addCommentToDB(newComment);
                     setInput("");
                 }
             }}
