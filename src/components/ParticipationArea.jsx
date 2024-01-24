@@ -7,7 +7,7 @@ import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
 import supabaseClient from '../supabaseClient';
-import { SupabaseClient } from "@supabase/supabase-js";
+//import { SupabaseClient } from "@supabase/supabase-js";
 
 function ParticipationArea_(props, ref) {
     const [comments, setComments] = useState([]);
@@ -60,7 +60,7 @@ function ParticipationArea_(props, ref) {
     const addCommentToDB = async (createdByUserId, commentText, modelLocation) => {
         try {
           // Make a request to the PostgreSQL function add_comment
-          const { data, error } = await SupabaseClient.rpc('add_comment', {
+          const { data, error } = await supabaseClient.rpc('add_comment', {
             p_created_by_user_id: createdByUserId,
             p_comment_text: commentText,
             p_model_location: modelLocation,
