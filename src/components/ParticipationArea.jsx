@@ -1,19 +1,28 @@
 import * as React from "react";
 import {PlasmicParticipationArea} from "./plasmic/fusion_lab/PlasmicParticipationArea";
-import {Controllers, Hands, TeleportationPlane, VRButton, XR} from "@react-three/xr";
+import {ARButton, Controllers, Hands, TeleportationPlane, VRButton, XR} from "@react-three/xr";
 import {Canvas} from "@react-three/fiber";
 import {useCallback, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
+import {Environment, Loader} from "@react-three/drei";
 
 function ParticipationArea_(props, ref) {
     const [comments, setComments] = useState([]);
     const [input, setInput] = useState("");
 
     //ToDo Mohammad: set initial camera position and direction so that the user is looking at the bridge
-    const [cameraPosition, setCameraPosition] = useState({x: 0, y: 2, z: 0});
-    const [cameraDirection, setCameraDirection] = useState({x: 0, y: 2, z: 0});
+    const [cameraPosition, setCameraPosition] = useState({
+        x: 436.244272848507,
+        y: 3.800000000000114,
+        z: -850.2200189272153
+    });
+    const [cameraDirection, setCameraDirection] = useState({
+        x: 466.2775224746772,
+        y: -10.26822693003901,
+        z: -755.879736396702
+    });
 
     const [currentCameraPosition, setCurrentCameraPosition] = useState(null);
     const [currentCameraDirection, setCurrentCameraDirection] = useState(null);
@@ -34,7 +43,7 @@ function ParticipationArea_(props, ref) {
         return [
             {
                 likes: 45,
-                text: "Hi there!",
+                text: "I really like the boldering walls under the bridge!",
                 username: "Vinzenz",
                 cameraPosition: {x: 0, y: 2, z: 0},
                 commentPosition: {x: 0, y: 2, z: 0},
@@ -42,7 +51,7 @@ function ParticipationArea_(props, ref) {
             },
             {
                 likes: 23,
-                text: "Koray is the best!",
+                text: "With so less parking I have to search for a parking spot for hours!",
                 username: "Koray",
                 cameraPosition: {x: 0, y: 2, z: 0},
                 commentPosition: {x: 0, y: 2, z: 0},
@@ -62,7 +71,7 @@ function ParticipationArea_(props, ref) {
         const newComments = comments.map((c) => {
             if (c === comment && !c.likedByUser) {
                 return {...c, likes: c.likes + 1, likedByUser: true};
-            }else if(c === comment && c.likedByUser){
+            } else if (c === comment && c.likedByUser) {
                 return {...c, likes: c.likes - 1, likedByUser: false};
             }
             return c;
@@ -132,6 +141,7 @@ function ParticipationArea_(props, ref) {
                                 />
                                 <Scene handleCameraChange={handleCameraChange}/>
                                 <Control lookAt={cameraDirection} position={cameraPosition}/>
+                                <Environment preset="sunset"/>
                             </XR>
                         </Canvas>
                     </>

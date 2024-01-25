@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
-import {Html, Sky} from "@react-three/drei";
+import {AdaptiveDpr, AdaptiveEvents, BakeShadows, Html, Loader, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {Suspense, useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
@@ -33,7 +33,7 @@ export default function Scene({handleCameraChange}) {
 
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
     // ToDo Koray: instead of using the ifc file from the public folder, use the ifc file from the database
-    const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_01.ifc", (ifcLoader) => {
+    const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_02.ifc", (ifcLoader) => {
         ifcLoader.ifcManager.setWasmPath("../../wasm/");
     });
     const highlightedMaterial = useMemo(() => new MeshLambertMaterial({
@@ -105,15 +105,23 @@ export default function Scene({handleCameraChange}) {
                                        ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
                                        setHighlightedIDs([value.id]);
                                        console.log(value.id)
+                                       console.log({
+                                           position: camera.position,
+                                           direction: camera.position.clone().add(camera.getWorldDirection(new Vector3()).multiplyScalar(100))
+                                       })
                                    }}
                         />
                     )}
                 </group>
+                <BakeShadows/>
+                <AdaptiveDpr pixelated/>
+                <AdaptiveEvents/>
                 <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
                 <Annotation position={[-4.5, 13.6, -60]}/>
             </Suspense>
+            <Loader/>
         </>
-    )
+    );
 }
 
 function Annotation({position, ...props}) {
