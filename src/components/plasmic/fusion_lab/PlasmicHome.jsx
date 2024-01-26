@@ -19,10 +19,10 @@ import {
 import Navbar from "../../Navbar"; // plasmic-import: lwEnvYluELlC/component
 import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
 import QuestionsForm from "../../QuestionsForm"; // plasmic-import: Uk8ghP4bFAyL/component
+import ProjectInformation from "../../ProjectInformation"; // plasmic-import: HF0vnKWastHz/component
 import ParticipationArea from "../../ParticipationArea"; // plasmic-import: clPh1NSkBPaO/component
-import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
-import GalleryDisplay from "../../GalleryDisplay"; // plasmic-import: v_wMKsIXVD_E/component
 import FaqSection from "../../FaqSection"; // plasmic-import: Qhhf4YZ2QDy9/component
+import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
 import Team from "../../Team"; // plasmic-import: SnzWAy89iw5m/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -127,7 +127,7 @@ function PlasmicHome__RenderFunc(props) {
                 )}
               >
                 {
-                  "Help to choose the right design and contribute your idea and feedback"
+                  "Help us finetune the new design based on your needs and opinion"
                 }
               </div>
               <div className={classNames(projectcss.all, sty.freeBox__qn852)}>
@@ -149,28 +149,28 @@ function PlasmicHome__RenderFunc(props) {
               className={classNames("__wab_instance", sty.questions)}
             />
           </p.Stack>
+          <ProjectInformation
+            data-plasmic-name={"projectInformation"}
+            data-plasmic-override={overrides.projectInformation}
+            className={classNames("__wab_instance", sty.projectInformation)}
+          />
+
           <ParticipationArea
             data-plasmic-name={"participationArea"}
             data-plasmic-override={overrides.participationArea}
             className={classNames("__wab_instance", sty.participationArea)}
           />
 
-          <AboutUs
-            data-plasmic-name={"aboutUs"}
-            data-plasmic-override={overrides.aboutUs}
-            className={classNames("__wab_instance", sty.aboutUs)}
-          />
-
-          <GalleryDisplay
-            data-plasmic-name={"galleryDisplay"}
-            data-plasmic-override={overrides.galleryDisplay}
-            className={classNames("__wab_instance", sty.galleryDisplay)}
-          />
-
           <FaqSection
             data-plasmic-name={"faqSection"}
             data-plasmic-override={overrides.faqSection}
             className={classNames("__wab_instance", sty.faqSection)}
+          />
+
+          <AboutUs
+            data-plasmic-name={"aboutUs"}
+            data-plasmic-override={overrides.aboutUs}
+            className={classNames("__wab_instance", sty.aboutUs)}
           />
 
           <Team
@@ -194,10 +194,10 @@ const PlasmicDescendants = {
     "header",
     "participateButton",
     "questions",
+    "projectInformation",
     "participationArea",
-    "aboutUs",
-    "galleryDisplay",
     "faqSection",
+    "aboutUs",
     "team"
   ],
 
@@ -221,10 +221,10 @@ const PlasmicDescendants = {
   header: ["header", "participateButton", "questions"],
   participateButton: ["participateButton"],
   questions: ["questions"],
+  projectInformation: ["projectInformation"],
   participationArea: ["participationArea"],
-  aboutUs: ["aboutUs"],
-  galleryDisplay: ["galleryDisplay"],
   faqSection: ["faqSection"],
+  aboutUs: ["aboutUs"],
   team: ["team"]
 };
 
@@ -270,10 +270,10 @@ export const PlasmicHome = Object.assign(
     header: makeNodeComponent("header"),
     participateButton: makeNodeComponent("participateButton"),
     questions: makeNodeComponent("questions"),
+    projectInformation: makeNodeComponent("projectInformation"),
     participationArea: makeNodeComponent("participationArea"),
-    aboutUs: makeNodeComponent("aboutUs"),
-    galleryDisplay: makeNodeComponent("galleryDisplay"),
     faqSection: makeNodeComponent("faqSection"),
+    aboutUs: makeNodeComponent("aboutUs"),
     team: makeNodeComponent("team"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Plus+Jakarta+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Poppins%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Kumbh+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=Roboto%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C700&family=Bangers%3Aital%2Cwght%400%2C400&display=swap");
 
 .plasmic_tokens {
+  --token-pFNndDszcIks: #ffffff38;
+  --plasmic-token-unnamed-style-token: var(--token-pFNndDszcIks);
+}
+
+.plasmic_tokens {
   --plsmc-standard-width: 800px;
   --plsmc-wide-width: 1280px;
   --plsmc-viewport-gap: 16px;

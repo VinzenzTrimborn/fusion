@@ -127,29 +127,30 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             loading={"lazy"}
             onClick={async event => {
               const $steps = {};
-              $steps["updatePopUpVariants"] = true
+              $steps["goToProjectDetails"] = true
                 ? (() => {
-                    const actionArgs = {
-                      vgroup: "popUpVariants",
-                      operation: 1,
-                      value: "activity1"
-                    };
-                    return (({ vgroup, value }) => {
-                      if (typeof value === "string") {
-                        value = [value];
+                    const actionArgs = { destination: `/project_details` };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        location.assign(destination);
                       }
-                      p.set($state, vgroup, undefined);
-                      return undefined;
                     })?.apply(null, [actionArgs]);
                   })()
                 : undefined;
               if (
-                $steps["updatePopUpVariants"] != null &&
-                typeof $steps["updatePopUpVariants"] === "object" &&
-                typeof $steps["updatePopUpVariants"].then === "function"
+                $steps["goToProjectDetails"] != null &&
+                typeof $steps["goToProjectDetails"] === "object" &&
+                typeof $steps["goToProjectDetails"].then === "function"
               ) {
-                $steps["updatePopUpVariants"] = await $steps[
-                  "updatePopUpVariants"
+                $steps["goToProjectDetails"] = await $steps[
+                  "goToProjectDetails"
                 ];
               }
             }}
@@ -161,7 +162,9 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             }}
           />
         </div>
-        <div
+        <p.Stack
+          as={"div"}
+          hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__vWrtT, {
             [sty.freeBoxpopUpVariants_activity1__vWrtTlPvvs]: hasVariant(
               $state,
@@ -174,13 +177,29 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             data-plasmic-name={"leftArrow"}
             data-plasmic-override={overrides.leftArrow}
             alt={""}
-            className={classNames(sty.leftArrow)}
+            className={classNames(sty.leftArrow, {
+              [sty.leftArrowpopUpVariants_activity1]: hasVariant(
+                $state,
+                "popUpVariants",
+                "activity1"
+              ),
+              [sty.leftArrowpopUpVariants_activity2]: hasVariant(
+                $state,
+                "popUpVariants",
+                "activity2"
+              ),
+              [sty.leftArrowpopUpVariants_activity3]: hasVariant(
+                $state,
+                "popUpVariants",
+                "activity3"
+              )
+            })}
             displayHeight={"56px"}
             displayMaxHeight={"none"}
-            displayMaxWidth={"100%"}
+            displayMaxWidth={"auto"}
             displayMinHeight={"0"}
             displayMinWidth={"0"}
-            displayWidth={"47px"}
+            displayWidth={"auto"}
             loading={"lazy"}
             onClick={async event => {
               const $steps = {};
@@ -189,7 +208,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
                     const actionArgs = {
                       vgroup: "popUpVariants",
                       operation: 0,
-                      value: []
+                      value: "activity2"
                     };
                     return (({ vgroup, value }) => {
                       if (typeof value === "string") {
@@ -275,7 +294,11 @@ function PlasmicPopUpGallery__RenderFunc(props) {
                 }
                 className={classNames(
                   projectcss.all,
-                  sty.extendingFromTheSkateParkUsersWillFlowFromRampsToAnOpenAreaAdornedWithGraffitiCoveredColumnsHereOneCanRelaxWhileLookingAtTheArtOrIndulgeInClimbingConvenientlyCloseToHomeTheClimbingWallIntegratedOntoReinforcedWallsSupportingRampsMaintainsPrivacyWithCoveredUpperSidesAndAllowsNaturalLightThroughCarefullyPlacedOpeningsWellLitForNighttimeUseTheSpaceIncludesAFewParkingSpotsWithPowerStationsForElectricVehiclesEnhancingAccessibilityAndConvenience
+                  sty.extendingFromTheSkateParkUsersWillFlowFromRampsToAnOpenAreaAdornedWithGraffitiCoveredColumnsHereOneCanRelaxWhileLookingAtTheArtOrIndulgeInClimbingConvenientlyCloseToHomeTheClimbingWallIntegratedOntoReinforcedWallsSupportingRampsMaintainsPrivacyWithCoveredUpperSidesAndAllowsNaturalLightThroughCarefullyPlacedOpeningsWellLitForNighttimeUseTheSpaceIncludesAFewParkingSpotsWithPowerStationsForElectricVehiclesEnhancingAccessibilityAndConvenience,
+                  {
+                    [sty.extendingFromTheSkateParkUsersWillFlowFromRampsToAnOpenAreaAdornedWithGraffitiCoveredColumnsHereOneCanRelaxWhileLookingAtTheArtOrIndulgeInClimbingConvenientlyCloseToHomeTheClimbingWallIntegratedOntoReinforcedWallsSupportingRampsMaintainsPrivacyWithCoveredUpperSidesAndAllowsNaturalLightThroughCarefullyPlacedOpeningsWellLitForNighttimeUseTheSpaceIncludesAFewParkingSpotsWithPowerStationsForElectricVehiclesEnhancingAccessibilityAndConveniencepopUpVariants_activity4]:
+                      hasVariant($state, "popUpVariants", "activity4")
+                  }
                 )}
               >
                 <div
@@ -415,6 +438,11 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             data-plasmic-override={overrides.rightArrow}
             alt={""}
             className={classNames(sty.rightArrow, {
+              [sty.rightArrowpopUpVariants_activity1]: hasVariant(
+                $state,
+                "popUpVariants",
+                "activity1"
+              ),
               [sty.rightArrowpopUpVariants_activity2]: hasVariant(
                 $state,
                 "popUpVariants",
@@ -440,7 +468,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
                     const actionArgs = {
                       vgroup: "popUpVariants",
                       operation: 0,
-                      value: []
+                      value: "activity4"
                     };
                     return (({ vgroup, value }) => {
                       if (typeof value === "string") {
@@ -468,6 +496,47 @@ function PlasmicPopUpGallery__RenderFunc(props) {
               aspectRatio: 0.839286
             }}
           />
+        </p.Stack>
+        <div
+          data-plasmic-name={"vottingButton"}
+          data-plasmic-override={overrides.vottingButton}
+          className={classNames(projectcss.all, sty.vottingButton)}
+          onClick={async event => {
+            const $steps = {};
+            $steps["updateStateVariable"] = true
+              ? (() => {
+                  const actionArgs = {};
+                  return (({ variable, value, startIndex, deleteCount }) => {
+                    if (!variable) {
+                      return;
+                    }
+                    const { objRoot, variablePath } = variable;
+                    undefined;
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["updateStateVariable"] != null &&
+              typeof $steps["updateStateVariable"] === "object" &&
+              typeof $steps["updateStateVariable"].then === "function"
+            ) {
+              $steps["updateStateVariable"] = await $steps[
+                "updateStateVariable"
+              ];
+            }
+          }}
+        >
+          <div
+            data-plasmic-name={"leaveAComment"}
+            data-plasmic-override={overrides.leaveAComment}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.leaveAComment
+            )}
+          >
+            {"Leave a comment"}
+          </div>
         </div>
       </div>
     </div>
@@ -492,7 +561,9 @@ const PlasmicDescendants = {
     "maskGroup4",
     "image4",
     "caption",
-    "rightArrow"
+    "rightArrow",
+    "vottingButton",
+    "leaveAComment"
   ],
 
   lightboxDisplay: [
@@ -511,7 +582,9 @@ const PlasmicDescendants = {
     "maskGroup4",
     "image4",
     "caption",
-    "rightArrow"
+    "rightArrow",
+    "vottingButton",
+    "leaveAComment"
   ],
 
   img: ["img"],
@@ -553,7 +626,9 @@ const PlasmicDescendants = {
   maskGroup4: ["maskGroup4", "image4"],
   image4: ["image4"],
   caption: ["caption"],
-  rightArrow: ["rightArrow"]
+  rightArrow: ["rightArrow"],
+  vottingButton: ["vottingButton", "leaveAComment"],
+  leaveAComment: ["leaveAComment"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -607,6 +682,8 @@ export const PlasmicPopUpGallery = Object.assign(
     image4: makeNodeComponent("image4"),
     caption: makeNodeComponent("caption"),
     rightArrow: makeNodeComponent("rightArrow"),
+    vottingButton: makeNodeComponent("vottingButton"),
+    leaveAComment: makeNodeComponent("leaveAComment"),
     // Metadata about props expected for PlasmicPopUpGallery
     internalVariantProps: PlasmicPopUpGallery__VariantProps,
     internalArgProps: PlasmicPopUpGallery__ArgProps

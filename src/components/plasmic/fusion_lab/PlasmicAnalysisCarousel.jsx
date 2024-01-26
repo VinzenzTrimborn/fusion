@@ -150,7 +150,7 @@ function PlasmicAnalysisCarousel__RenderFunc(props) {
             const $steps = {};
             $steps["goToGallery"] = true
               ? (() => {
-                  const actionArgs = { destination: `/gallery` };
+                  const actionArgs = { destination: `/project_details` };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&

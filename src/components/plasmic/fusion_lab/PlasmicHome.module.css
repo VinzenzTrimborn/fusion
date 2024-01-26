@@ -20,37 +20,41 @@
   flex-shrink: 0;
 }
 .renderOfTheBridge {
-  width: auto;
+  width: 100%;
   height: 100%;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: sticky;
+  top: 0px;
+  left: 0px;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  right: 0;
+  z-index: 1;
+  min-width: 0;
   min-height: 0;
 }
 .dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2 {
   background: linear-gradient(#ffffffcc, #ffffffcc),
     url("./images/oig2Jpeg.jpg") center center / cover no-repeat;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: 800px;
   display: block;
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  min-height: 0;
+  left: 0px;
+  top: 0px;
+  z-index: -10;
+  max-width: 100%;
+  align-self: stretch;
+  min-width: 0;
+  flex-shrink: 0;
 }
 .navbar:global(.__wab_instance) {
   max-width: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   right: 0;
 }
 .header {
@@ -143,21 +147,17 @@
   max-width: 100%;
   position: relative;
 }
+.projectInformation:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  height: 505px;
+  flex-shrink: 0;
+}
 .participationArea:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   height: auto;
   min-width: 0;
-}
-.aboutUs:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.galleryDisplay:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-  margin-top: 70px;
-  display: none;
 }
 .faqSection:global(.__wab_instance) {
   max-width: 100%;
@@ -166,6 +166,10 @@
   width: auto;
   margin-left: 0px;
   margin-right: 0px;
+}
+.aboutUs:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
 }
 .team:global(.__wab_instance) {
   max-width: 100%;

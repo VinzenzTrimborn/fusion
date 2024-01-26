@@ -145,10 +145,11 @@
   flex-shrink: 0;
   padding: 8px;
 }
-.select:global(.__wab_instance) {
+.select2:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: 250px;
+  width: 100%;
+  min-width: 0;
 }
 .howOftenBox {
   display: flex;
@@ -171,7 +172,8 @@
 .howOften:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: 350px;
+  width: 100%;
+  min-width: 0;
 }
 .bridgeUseBox {
   display: flex;
@@ -191,7 +193,8 @@
 .bridgeUse:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: 350px;
+  width: 100%;
+  min-width: 0;
 }
 .commuteBox {
   display: flex;
@@ -211,7 +214,8 @@
 .commute:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: 350px;
+  width: 100%;
+  min-width: 0;
 }
 .bridgeActivitiesBox {
   display: flex;
@@ -228,10 +232,29 @@
 .text___78JRn {
   padding-bottom: 10px;
 }
-.bridgeActivities:global(.__wab_instance) {
+.checkbox:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
-  width: 350px;
+}
+.checkbox2:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.checkbox3:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.checkbox4:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.checkbox6:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.checkbox7:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
 }
 .button___64Ewy:global(.__wab_instance) {
   max-width: 100%;
@@ -306,7 +329,7 @@
   width: 100%;
   min-width: 0;
 }
-.svg___8J5T8 {
+.svg__eoxQy {
   position: relative;
   object-fit: cover;
   width: auto;
@@ -316,7 +339,55 @@
   text-align: justify;
   padding-right: 0px;
 }
-.svg__tyYeL {
+.svg__ckBcr {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__yPCiO {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__swKqm {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__paf9A {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__ohGaz {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__tgdXm {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__fQztN {
   position: relative;
   object-fit: cover;
   width: auto;

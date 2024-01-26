@@ -47,7 +47,8 @@ export const PlasmicSelect__ArgProps = new Array(
   "name",
   "aria-label",
   "aria-labelledby",
-  "options"
+  "options",
+  "onChange"
 );
 
 const PlasmicSelectContext = React.createContext(undefined);

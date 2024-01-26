@@ -79,6 +79,33 @@ function PlasmicActionButton__RenderFunc(props) {
           [sty.rootoptions_sVersion]: hasVariant($state, "options", "sVersion")
         }
       )}
+      onClick={async event => {
+        const $steps = {};
+        $steps["goToQuestionnaire"] = true
+          ? (() => {
+              const actionArgs = { destination: `/questionnaire` };
+              return (({ destination }) => {
+                if (
+                  typeof destination === "string" &&
+                  destination.startsWith("#")
+                ) {
+                  document
+                    .getElementById(destination.substr(1))
+                    .scrollIntoView({ behavior: "smooth" });
+                } else {
+                  location.assign(destination);
+                }
+              })?.apply(null, [actionArgs]);
+            })()
+          : undefined;
+        if (
+          $steps["goToQuestionnaire"] != null &&
+          typeof $steps["goToQuestionnaire"] === "object" &&
+          typeof $steps["goToQuestionnaire"].then === "function"
+        ) {
+          $steps["goToQuestionnaire"] = await $steps["goToQuestionnaire"];
+        }
+      }}
     >
       <div
         data-plasmic-name={"freeBox"}

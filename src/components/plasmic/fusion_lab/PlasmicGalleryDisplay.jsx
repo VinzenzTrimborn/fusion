@@ -17,7 +17,17 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
+import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
+import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
+import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
+import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { Video } from "@plasmicpkgs/plasmic-basic-components";
+import ActivityQuestions from "../../ActivityQuestions"; // plasmic-import: BOUoKYlWFZly/component
+import LikeButton from "../../LikeButton"; // plasmic-import: jLuEuaSOhZq9/component
+import Button from "../../Button"; // plasmic-import: apXgE63BR30L/component
 import PopUpGallery from "../../PopUpGallery"; // plasmic-import: lKMH_lDVGHXv/component
 import RenderingsCarousel from "../../RenderingsCarousel"; // plasmic-import: Jj6Wy6mGqjeW/component
 import SketchesCarousel from "../../SketchesCarousel"; // plasmic-import: SJ9BZMm9j-BB/component
@@ -27,6 +37,14 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU29zJd9uLGW9TewABBsV/projectcss
 import sty from "./PlasmicGalleryDisplay.module.css"; // plasmic-import: v_wMKsIXVD_E/css
+import CloseSvgrepoComsvgIcon from "./icons/PlasmicIcon__CloseSvgrepoComsvg"; // plasmic-import: naIJz5VNedYp/icon
+import layout3PopUppngPQuGwnoEoieY from "./images/layout3PopUppng.png"; // plasmic-import: pQuGwnoEoieY/picture
+import rectangle3185Cy33Bese3Vn from "./images/rectangle3185.png"; // plasmic-import: Cy_33BESE3VN/picture
+import rectangle3173JHnSZtXoqzEu from "./images/rectangle3173.jpg"; // plasmic-import: jHnSZtXoqzEu/picture
+import layoutPopUp2PngRvBzf5OSPi3J from "./images/layoutPopUp2Png.png"; // plasmic-import: rvBZF5oSPi3j/picture
+import layout1PopUppngI0WjXKLs7G0 from "./images/layout1PopUppng.png"; // plasmic-import: i0WjX-KLs7g0/picture
+import layout5PopUppngYXLuFbMe0L4B from "./images/layout5PopUppng.png"; // plasmic-import: yXLuFbMe0l4B/picture
+import layout4PopUppngQhe8Xvd1ZBjL from "./images/layout4PopUppng.png"; // plasmic-import: QHE8XVD1zBjL/picture
 
 createPlasmicElementProxy;
 
@@ -85,6 +103,138 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      },
+      {
+        path: "textarea.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "We would like you to explore our project's details. Please choose in the navigation bar what you would like to see. Leave an opinion here and feel free to give us suggestions."
+      },
+      {
+        path: "form.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        refName: "form",
+        onMutate: p.generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        refName: "form",
+        onMutate: p.generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "bridgePlat.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          hasVariant($state, "variants2", "activities") ? false : false
+      },
+      {
+        path: "form2.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        refName: "form2",
+        onMutate: p.generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form2.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        refName: "form2",
+        onMutate: p.generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "climbs.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "form4.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        refName: "form4",
+        onMutate: p.generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form4.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        refName: "form4",
+        onMutate: p.generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "openAct.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "form3.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        refName: "form3",
+        onMutate: p.generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form3.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        refName: "form3",
+        onMutate: p.generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "dayMkt.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "skaPark.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          hasVariant($state, "variants2", "activities") ? false : false
+      },
+      {
+        path: "form7.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        refName: "form7",
+        onMutate: p.generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form7.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        refName: "form7",
+        onMutate: p.generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "bridgePlat3.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          hasVariant($state, "variants2", "activities") ? false : false
+      },
+      {
+        path: "variable2",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -243,87 +393,87 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
     >
       <p.Stack
         as={"div"}
-        data-plasmic-name={"gallery01"}
-        data-plasmic-override={overrides.gallery01}
+        data-plasmic-name={"activities"}
+        data-plasmic-override={overrides.activities}
         hasGap={true}
-        className={classNames(projectcss.all, sty.gallery01, {
-          [sty.gallery01groupOfPopUpVariants2_analysisPopUp1]: hasVariant(
+        className={classNames(projectcss.all, sty.activities, {
+          [sty.activitiesgroupOfPopUpVariants2_analysisPopUp1]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
             "analysisPopUp1"
           ),
-          [sty.gallery01groupOfPopUpVariants2_analysisPopUp3]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants2_analysisPopUp3]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
             "analysisPopUp3"
           ),
-          [sty.gallery01groupOfPopUpVariants2_analysisPopUp4]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants2_analysisPopUp4]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
             "analysisPopUp4"
           ),
-          [sty.gallery01groupOfPopUpVariants2_sketch1PopUp]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants2_sketch1PopUp]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
             "sketch1PopUp"
           ),
-          [sty.gallery01groupOfPopUpVariants2_sketch2PopUp]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants2_sketch2PopUp]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
             "sketch2PopUp"
           ),
-          [sty.gallery01groupOfPopUpVariants2_sketch3PopUp]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants2_sketch3PopUp]: hasVariant(
             $state,
             "groupOfPopUpVariants2",
             "sketch3PopUp"
           ),
-          [sty.gallery01groupOfPopUpVariants_activityPopUp1]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_activityPopUp1]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "activityPopUp1"
           ),
-          [sty.gallery01groupOfPopUpVariants_activityPopUp2]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_activityPopUp2]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "activityPopUp2"
           ),
-          [sty.gallery01groupOfPopUpVariants_activityPopUp4]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_activityPopUp4]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "activityPopUp4"
           ),
-          [sty.gallery01groupOfPopUpVariants_activityPopUp5]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_activityPopUp5]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "activityPopUp5"
           ),
-          [sty.gallery01groupOfPopUpVariants_renderingPopUp1]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_renderingPopUp1]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "renderingPopUp1"
           ),
-          [sty.gallery01groupOfPopUpVariants_renderingPopUp2]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_renderingPopUp2]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "renderingPopUp2"
           ),
-          [sty.gallery01groupOfPopUpVariants_renderingPopUp3]: hasVariant(
+          [sty.activitiesgroupOfPopUpVariants_renderingPopUp3]: hasVariant(
             $state,
             "groupOfPopUpVariants",
             "renderingPopUp3"
           ),
-          [sty.gallery01popUp2]: hasVariant($state, "popUp2", "popUp2"),
-          [sty.gallery01variants2_activities]: hasVariant(
+          [sty.activitiespopUp2]: hasVariant($state, "popUp2", "popUp2"),
+          [sty.activitiesvariants2_activities]: hasVariant(
             $state,
             "variants2",
             "activities"
           ),
-          [sty.gallery01variants2_analysis]: hasVariant(
+          [sty.activitiesvariants2_analysis]: hasVariant(
             $state,
             "variants2",
             "analysis"
           ),
-          [sty.gallery01variants2_renderings]: hasVariant(
+          [sty.activitiesvariants2_renderings]: hasVariant(
             $state,
             "variants2",
             "renderings"
@@ -334,6 +484,16 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
           data-plasmic-name={"description"}
           data-plasmic-override={overrides.description}
           className={classNames(projectcss.all, sty.description, {
+            [sty.descriptionvariants2_activities]: hasVariant(
+              $state,
+              "variants2",
+              "activities"
+            ),
+            [sty.descriptionvariants2_analysis]: hasVariant(
+              $state,
+              "variants2",
+              "analysis"
+            ),
             [sty.descriptionvariants2_renderings]: hasVariant(
               $state,
               "variants2",
@@ -345,33 +505,67 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text__goGpD
+              sty.text__goGpD,
+              {
+                [sty.textvariants2_activities__goGpDoy1JL]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                )
+              }
             )}
           >
-            {"Information about the Bridge and it\u2019s Design"}
+            {"Get to know the Project"}
           </div>
           <div
-            data-plasmic-name={
-              "inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving"
-            }
-            data-plasmic-override={
-              overrides.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving
-            }
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving
-            )}
+            className={classNames(projectcss.all, sty.freeBox___6Pbzu, {
+              [sty.freeBoxvariants2_activities___6Pbzuoy1JL]: hasVariant(
+                $state,
+                "variants2",
+                "activities"
+              )
+            })}
           >
-            {
-              "\nIn conceiving the design for the Donnersberger Bridge, our inspiration was drawn from Munich's architectural essence. Our aim was simple: create a bridge that harmonizes with the city's identity and surroundings. Positioned as a symbolic gateway, it pays homage to Munich's historic gates, offering guests a warm welcome and panoramic views of the city and sunset over the railway tracks.\n\nBeyond aesthetics, our design addresses practical challenges of a bustling traffic hub, incorporating noise cancellation to mirror the dynamic flow of the traffic. The bridge's innovation extends to its structure, where arches supporting the main section double as functional elements. A platform connecting the arches provides a unique viewpoint and activates areas beneath the bridge, transforming parking lots into engaging spaces.\nAs we present this vision, we invite citizens to explore and share insights. Your perspectives are vital in shaping the Donnersberger Bridge, ensuring it stands not only as a structural marvel but also as a community-centric landmark. Join us in envisioning a bridge that reflects Munich's spirit and enhances urban living.\n\n"
-            }
+            <div
+              data-plasmic-name={
+                "inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving"
+              }
+              data-plasmic-override={
+                overrides.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving
+              }
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving,
+                {
+                  [sty.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLivingvariants2_activities]:
+                    hasVariant($state, "variants2", "activities"),
+                  [sty.inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLivingvariants2_analysis]:
+                    hasVariant($state, "variants2", "analysis")
+                }
+              )}
+            >
+              {
+                "\nIn conceiving the design for the Donnersberger Bridge, our inspiration was drawn from Munich's architectural essence. Our aim was simple: create a bridge that harmonizes with the city's identity and surroundings. Positioned as a symbolic gateway, it pays homage to Munich's historic gates, offering guests a warm welcome and panoramic views of the city and sunset over the railway tracks.\n\nBeyond aesthetics, our design addresses practical challenges of a bustling traffic hub, incorporating noise cancellation to mirror the dynamic flow of the traffic. The bridge's innovation extends to its structure, where arches supporting the main section double as functional elements. A platform connecting the arches provides a unique viewpoint and activates areas beneath the bridge, transforming parking lots into engaging spaces.\nAs we present this vision, we invite citizens to explore and share insights. Your perspectives are vital in shaping the Donnersberger Bridge, ensuring it stands not only as a structural marvel but also as a community-centric landmark. Join us in envisioning a bridge that reflects Munich's spirit and enhances urban living.\n\n"
+              }
+            </div>
           </div>
         </div>
         <div
           data-plasmic-name={"navBar"}
           data-plasmic-override={overrides.navBar}
-          className={classNames(projectcss.all, sty.navBar)}
+          className={classNames(projectcss.all, sty.navBar, {
+            [sty.navBarvariants2_activities]: hasVariant(
+              $state,
+              "variants2",
+              "activities"
+            ),
+            [sty.navBarvariants2_renderings]: hasVariant(
+              $state,
+              "variants2",
+              "renderings"
+            )
+          })}
         >
           <p.Stack
             as={"div"}
@@ -675,6 +869,378 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
             </div>
           </p.Stack>
         </div>
+        <AntdModal
+          data-plasmic-name={"bridgePlat"}
+          data-plasmic-override={overrides.bridgePlat}
+          className={classNames("__wab_instance", sty.bridgePlat, {
+            [sty.bridgePlatvariants2_activities]: hasVariant(
+              $state,
+              "variants2",
+              "activities"
+            ),
+            [sty.bridgePlatvariants2_analysis]: hasVariant(
+              $state,
+              "variants2",
+              "analysis"
+            )
+          })}
+          defaultStylesClassName={classNames(
+            projectcss.root_reset,
+            projectcss.plasmic_default_styles,
+            projectcss.plasmic_mixins,
+            projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
+            plasmic_plasmic_rich_components_css.plasmic_tokens
+          )}
+          hideFooter={true}
+          modalScopeClassName={sty["bridgePlat__modal"]}
+          onOpenChange={p.generateStateOnChangeProp($state, [
+            "bridgePlat",
+            "open"
+          ])}
+          open={p.generateStateValueProp($state, ["bridgePlat", "open"])}
+          title={
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___7RjNx
+              )}
+            >
+              {
+                "Possible implementation of a platform wall in the current urban areas: "
+              }
+            </div>
+          }
+          trigger={null}
+          width={"900"}
+        >
+          {(() => {
+            const child$Props = {
+              className: classNames("__wab_instance", sty.form2, {
+                [sty.form2variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                )
+              }),
+              extendedOnValuesChange:
+                p.generateStateOnChangePropForCodeComponents(
+                  $state,
+                  "value",
+                  ["form2", "value"],
+                  FormWrapper_Helpers
+                ),
+              formItems: undefined,
+              labelCol: { span: 8, horizontalOnly: true },
+              layout: "vertical",
+              mode: undefined,
+              onIsSubmittingChange:
+                p.generateStateOnChangePropForCodeComponents(
+                  $state,
+                  "isSubmitting",
+                  ["form2", "isSubmitting"],
+                  FormWrapper_Helpers
+                ),
+              ref: ref => {
+                $refs["form2"] = ref;
+              },
+              wrapperCol: { span: 16, horizontalOnly: true }
+            };
+            p.initializeCodeComponentStates(
+              $state,
+              [
+                {
+                  name: "value",
+                  plasmicStateName: "form2.value"
+                },
+                {
+                  name: "isSubmitting",
+                  plasmicStateName: "form2.isSubmitting"
+                }
+              ],
+
+              [],
+              FormWrapper_Helpers ?? {},
+              child$Props
+            );
+            return (
+              <FormWrapper
+                data-plasmic-name={"form2"}
+                data-plasmic-override={overrides.form2}
+                {...child$Props}
+              >
+                <FormItemWrapper
+                  className={classNames("__wab_instance", sty.formField__potoO)}
+                  label={"Name"}
+                  name={"name"}
+                >
+                  <AntdInput
+                    className={classNames("__wab_instance", sty.input___5UioP)}
+                  />
+                </FormItemWrapper>
+                <FormItemWrapper
+                  className={classNames("__wab_instance", sty.formField__tf77S)}
+                  label={"Message"}
+                  name={"message"}
+                >
+                  <AntdTextArea
+                    className={classNames("__wab_instance", sty.textArea__vSvy)}
+                  />
+                </FormItemWrapper>
+                <AntdButton
+                  className={classNames("__wab_instance", sty.button__t0UWk)}
+                  submitsForm={true}
+                  type={"primary"}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__dQ1A6
+                    )}
+                  >
+                    {"Submit"}
+                  </div>
+                </AntdButton>
+              </FormWrapper>
+            );
+          })()}
+          <p.PlasmicImg
+            alt={""}
+            className={classNames(sty.img___0NOyl, {
+              [sty.imgvariants2_activities___0NOyloy1JL]: hasVariant(
+                $state,
+                "variants2",
+                "activities"
+              )
+            })}
+            displayHeight={"100%"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"100%"}
+            loading={"lazy"}
+            src={{
+              src: layout3PopUppngPQuGwnoEoieY,
+              fullWidth: 1023,
+              fullHeight: 1035,
+              aspectRatio: undefined
+            }}
+          />
+        </AntdModal>
+        {(
+          hasVariant($state, "variants2", "analysis")
+            ? true
+            : hasVariant($state, "variants2", "renderings")
+            ? true
+            : false
+        ) ? (
+          <Video
+            data-plasmic-name={"analysisVideo"}
+            data-plasmic-override={overrides.analysisVideo}
+            autoPlay={true}
+            className={classNames("__wab_instance", sty.analysisVideo, {
+              [sty.analysisVideovariants2_analysis]: hasVariant(
+                $state,
+                "variants2",
+                "analysis"
+              ),
+              [sty.analysisVideovariants2_renderings]: hasVariant(
+                $state,
+                "variants2",
+                "renderings"
+              )
+            })}
+            controls={true}
+            loop={true}
+            muted={true}
+            playsInline={false}
+            poster={rectangle3185Cy33Bese3Vn}
+            src={"https://www.youtube.com/watch?v=R28ds2l7e9A"}
+          />
+        ) : null}
+        <Video
+          data-plasmic-name={"renderedVideo"}
+          data-plasmic-override={overrides.renderedVideo}
+          autoPlay={true}
+          className={classNames("__wab_instance", sty.renderedVideo, {
+            [sty.renderedVideovariants2_renderings]: hasVariant(
+              $state,
+              "variants2",
+              "renderings"
+            )
+          })}
+          controls={true}
+          loop={true}
+          muted={true}
+          poster={rectangle3173JHnSZtXoqzEu}
+          src={"https://www.youtube.com/watch?v=3fekaeXh4Kw"}
+        />
+
+        <div
+          className={classNames(projectcss.all, sty.freeBox___3MTkf, {
+            [sty.freeBoxvariants2_activities___3MTkfoy1JL]: hasVariant(
+              $state,
+              "variants2",
+              "activities"
+            ),
+            [sty.freeBoxvariants2_analysis___3MTkfW6Kp]: hasVariant(
+              $state,
+              "variants2",
+              "analysis"
+            ),
+            [sty.freeBoxvariants2_renderings___3MTkfhKtTu]: hasVariant(
+              $state,
+              "variants2",
+              "renderings"
+            ),
+            [sty.freeBoxvariants2_sketches___3MTkfl9NWu]: hasVariant(
+              $state,
+              "variants2",
+              "sketches"
+            )
+          })}
+        >
+          <textarea
+            data-plasmic-name={"textarea"}
+            data-plasmic-override={overrides.textarea}
+            className={classNames(
+              projectcss.all,
+              projectcss.textarea,
+              sty.textarea,
+              {
+                [sty.textareavariants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.textareavariants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.textareavariants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.textareavariants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              }
+            )}
+            disabled={false}
+            onChange={e => {
+              p.generateStateOnChangeProp($state, ["textarea", "value"])(
+                e.target.value
+              );
+            }}
+            ref={ref => {
+              $refs["textarea"] = ref;
+            }}
+            value={
+              p.generateStateValueProp($state, ["textarea", "value"]) ?? ""
+            }
+          />
+        </div>
+        {(
+          hasVariant($state, "variants2", "sketches")
+            ? true
+            : hasVariant($state, "variants2", "analysis")
+            ? true
+            : hasVariant($state, "variants2", "renderings")
+            ? true
+            : hasVariant($state, "variants2", "activities")
+            ? true
+            : false
+        ) ? (
+          <div
+            data-plasmic-name={"map"}
+            data-plasmic-override={overrides.map}
+            className={classNames(projectcss.all, sty.map, {
+              [sty.mapvariants2_activities]: hasVariant(
+                $state,
+                "variants2",
+                "activities"
+              ),
+              [sty.mapvariants2_analysis]: hasVariant(
+                $state,
+                "variants2",
+                "analysis"
+              ),
+              [sty.mapvariants2_renderings]: hasVariant(
+                $state,
+                "variants2",
+                "renderings"
+              ),
+              [sty.mapvariants2_sketches]: hasVariant(
+                $state,
+                "variants2",
+                "sketches"
+              )
+            })}
+          >
+            <div
+              data-plasmic-name={"rectangle3183"}
+              data-plasmic-override={overrides.rectangle3183}
+              className={classNames(projectcss.all, sty.rectangle3183, {
+                [sty.rectangle3183variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.rectangle3183variants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.rectangle3183variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.rectangle3183variants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+            />
+
+            <div
+              className={classNames(projectcss.all, sty.freeBox___1Xuyc, {
+                [sty.freeBoxvariants2_activities___1Xuycoy1JL]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__jSUdx,
+                  {
+                    [sty.textvariants2_activities__jSUdxoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities")
+                  ? "Map of the areas designed on top and under the bridge "
+                  : "Daylight Open Market"}
+              </div>
+            </div>
+          </div>
+        ) : null}
         <p.Stack
           as={"div"}
           hasGap={true}
@@ -701,421 +1267,6 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
             )
           })}
         >
-          <div
-            className={classNames(projectcss.all, sty.freeBox__hh4Lb, {
-              [sty.freeBoxvariants2_activities__hh4LBoy1JL]: hasVariant(
-                $state,
-                "variants2",
-                "activities"
-              ),
-              [sty.freeBoxvariants2_analysis__hh4Lbw6Kp]: hasVariant(
-                $state,
-                "variants2",
-                "analysis"
-              ),
-              [sty.freeBoxvariants2_renderings__hh4LBhKtTu]: hasVariant(
-                $state,
-                "variants2",
-                "renderings"
-              ),
-              [sty.freeBoxvariants2_sketches__hh4LBl9NWu]: hasVariant(
-                $state,
-                "variants2",
-                "sketches"
-              )
-            })}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateUnnamedGroupOfVariants3"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: "groupOfPopUpVariants",
-                      operation: 0,
-                      value: "activityPopUp3"
-                    };
-                    return (({ vgroup, value }) => {
-                      if (typeof value === "string") {
-                        value = [value];
-                      }
-                      p.set($state, vgroup, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateUnnamedGroupOfVariants3"] != null &&
-                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
-                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
-                  "function"
-              ) {
-                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
-                  "updateUnnamedGroupOfVariants3"
-                ];
-              }
-            }}
-          >
-            <div
-              data-plasmic-name={"rectangle3178"}
-              data-plasmic-override={overrides.rectangle3178}
-              className={classNames(projectcss.all, sty.rectangle3178, {
-                [sty.rectangle3178variants2_activities]: hasVariant(
-                  $state,
-                  "variants2",
-                  "activities"
-                ),
-                [sty.rectangle3178variants2_renderings]: hasVariant(
-                  $state,
-                  "variants2",
-                  "renderings"
-                )
-              })}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__n9Xw0,
-                {
-                  [sty.textvariants2_activities__n9Xw0Oy1JL]: hasVariant(
-                    $state,
-                    "variants2",
-                    "activities"
-                  )
-                }
-              )}
-            >
-              {"Over the bridge platform"}
-            </div>
-          </div>
-          <div
-            className={classNames(projectcss.all, sty.freeBox__uttHp, {
-              [sty.freeBoxvariants2_activities__uttHpoy1JL]: hasVariant(
-                $state,
-                "variants2",
-                "activities"
-              ),
-              [sty.freeBoxvariants2_analysis__uttHpW6Kp]: hasVariant(
-                $state,
-                "variants2",
-                "analysis"
-              ),
-              [sty.freeBoxvariants2_renderings__uttHphKtTu]: hasVariant(
-                $state,
-                "variants2",
-                "renderings"
-              ),
-              [sty.freeBoxvariants2_sketches__uttHpl9NWu]: hasVariant(
-                $state,
-                "variants2",
-                "sketches"
-              )
-            })}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateUnnamedGroupOfVariants3"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: "groupOfPopUpVariants",
-                      operation: 0,
-                      value: "activityPopUp2"
-                    };
-                    return (({ vgroup, value }) => {
-                      if (typeof value === "string") {
-                        value = [value];
-                      }
-                      p.set($state, vgroup, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateUnnamedGroupOfVariants3"] != null &&
-                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
-                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
-                  "function"
-              ) {
-                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
-                  "updateUnnamedGroupOfVariants3"
-                ];
-              }
-            }}
-          >
-            <div
-              data-plasmic-name={"rectangle3177"}
-              data-plasmic-override={overrides.rectangle3177}
-              className={classNames(projectcss.all, sty.rectangle3177, {
-                [sty.rectangle3177variants2_activities]: hasVariant(
-                  $state,
-                  "variants2",
-                  "activities"
-                ),
-                [sty.rectangle3177variants2_renderings]: hasVariant(
-                  $state,
-                  "variants2",
-                  "renderings"
-                ),
-                [sty.rectangle3177variants2_sketches]: hasVariant(
-                  $state,
-                  "variants2",
-                  "sketches"
-                )
-              })}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___3Yz3T,
-                {
-                  [sty.textvariants2_activities___3Yz3Toy1JL]: hasVariant(
-                    $state,
-                    "variants2",
-                    "activities"
-                  )
-                }
-              )}
-            >
-              {"Skate-park area"}
-            </div>
-          </div>
-          <div
-            className={classNames(projectcss.all, sty.freeBox__lPps, {
-              [sty.freeBoxvariants2_activities__lPpsoy1JL]: hasVariant(
-                $state,
-                "variants2",
-                "activities"
-              ),
-              [sty.freeBoxvariants2_analysis__lPpsW6Kp]: hasVariant(
-                $state,
-                "variants2",
-                "analysis"
-              ),
-              [sty.freeBoxvariants2_renderings__lPpshKtTu]: hasVariant(
-                $state,
-                "variants2",
-                "renderings"
-              ),
-              [sty.freeBoxvariants2_sketches__lPpsl9NWu]: hasVariant(
-                $state,
-                "variants2",
-                "sketches"
-              )
-            })}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateUnnamedGroupOfVariants3"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: "groupOfPopUpVariants",
-                      operation: 0,
-                      value: "activityPopUp1"
-                    };
-                    return (({ vgroup, value }) => {
-                      if (typeof value === "string") {
-                        value = [value];
-                      }
-                      p.set($state, vgroup, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateUnnamedGroupOfVariants3"] != null &&
-                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
-                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
-                  "function"
-              ) {
-                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
-                  "updateUnnamedGroupOfVariants3"
-                ];
-              }
-            }}
-          >
-            <div
-              data-plasmic-name={"rectangle3179"}
-              data-plasmic-override={overrides.rectangle3179}
-              className={classNames(projectcss.all, sty.rectangle3179, {
-                [sty.rectangle3179variants2_activities]: hasVariant(
-                  $state,
-                  "variants2",
-                  "activities"
-                ),
-                [sty.rectangle3179variants2_renderings]: hasVariant(
-                  $state,
-                  "variants2",
-                  "renderings"
-                )
-              })}
-            />
-
-            <div
-              data-plasmic-name={"climbingWall"}
-              data-plasmic-override={overrides.climbingWall}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.climbingWall,
-                {
-                  [sty.climbingWallvariants2_activities]: hasVariant(
-                    $state,
-                    "variants2",
-                    "activities"
-                  )
-                }
-              )}
-            >
-              {"Climbing wall "}
-            </div>
-          </div>
-          <div
-            className={classNames(projectcss.all, sty.freeBox__nzUej, {
-              [sty.freeBoxvariants2_analysis__nzUejW6Kp]: hasVariant(
-                $state,
-                "variants2",
-                "analysis"
-              ),
-              [sty.freeBoxvariants2_renderings__nzUejhKtTu]: hasVariant(
-                $state,
-                "variants2",
-                "renderings"
-              ),
-              [sty.freeBoxvariants2_sketches__nzUejl9NWu]: hasVariant(
-                $state,
-                "variants2",
-                "sketches"
-              )
-            })}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateUnnamedGroupOfVariants3"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: "groupOfPopUpVariants",
-                      operation: 0,
-                      value: "activityPopUp5"
-                    };
-                    return (({ vgroup, value }) => {
-                      if (typeof value === "string") {
-                        value = [value];
-                      }
-                      p.set($state, vgroup, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateUnnamedGroupOfVariants3"] != null &&
-                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
-                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
-                  "function"
-              ) {
-                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
-                  "updateUnnamedGroupOfVariants3"
-                ];
-              }
-            }}
-          >
-            <div
-              data-plasmic-name={"rectangle3181"}
-              data-plasmic-override={overrides.rectangle3181}
-              className={classNames(projectcss.all, sty.rectangle3181, {
-                [sty.rectangle3181variants2_analysis]: hasVariant(
-                  $state,
-                  "variants2",
-                  "analysis"
-                )
-              })}
-            />
-
-            <div
-              data-plasmic-name={"openActivitiesOnTheNorth"}
-              data-plasmic-override={overrides.openActivitiesOnTheNorth}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.openActivitiesOnTheNorth,
-                {
-                  [sty.openActivitiesOnTheNorthvariants2_activities]:
-                    hasVariant($state, "variants2", "activities")
-                }
-              )}
-            >
-              {"Open activities on the north "}
-            </div>
-          </div>
-          <div
-            className={classNames(projectcss.all, sty.freeBox__cqgce, {
-              [sty.freeBoxvariants2_analysis__cqgceW6Kp]: hasVariant(
-                $state,
-                "variants2",
-                "analysis"
-              ),
-              [sty.freeBoxvariants2_renderings__cqgcehKtTu]: hasVariant(
-                $state,
-                "variants2",
-                "renderings"
-              ),
-              [sty.freeBoxvariants2_sketches__cqgcel9NWu]: hasVariant(
-                $state,
-                "variants2",
-                "sketches"
-              )
-            })}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateUnnamedGroupOfVariants3"] = true
-                ? (() => {
-                    const actionArgs = {
-                      vgroup: "groupOfPopUpVariants",
-                      operation: 0,
-                      value: "activityPopUp4"
-                    };
-                    return (({ vgroup, value }) => {
-                      if (typeof value === "string") {
-                        value = [value];
-                      }
-                      p.set($state, vgroup, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateUnnamedGroupOfVariants3"] != null &&
-                typeof $steps["updateUnnamedGroupOfVariants3"] === "object" &&
-                typeof $steps["updateUnnamedGroupOfVariants3"].then ===
-                  "function"
-              ) {
-                $steps["updateUnnamedGroupOfVariants3"] = await $steps[
-                  "updateUnnamedGroupOfVariants3"
-                ];
-              }
-            }}
-          >
-            <div
-              data-plasmic-name={"rectangle3180"}
-              data-plasmic-override={overrides.rectangle3180}
-              className={classNames(projectcss.all, sty.rectangle3180)}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__p0BCx,
-                {
-                  [sty.textvariants2_activities__p0BCxoy1JL]: hasVariant(
-                    $state,
-                    "variants2",
-                    "activities"
-                  )
-                }
-              )}
-            >
-              {"Daylight Open Market"}
-            </div>
-          </div>
           {(hasVariant($state, "variants2", "renderings") ? true : false) ? (
             <div
               data-plasmic-name={"pics"}
@@ -1444,12 +1595,6 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 />
               </div>
               <div
-                data-plasmic-name={"rectangle3187"}
-                data-plasmic-override={overrides.rectangle3187}
-                className={classNames(projectcss.all, sty.rectangle3187)}
-              />
-
-              <div
                 data-plasmic-name={"rectangle3174"}
                 data-plasmic-override={overrides.rectangle3174}
                 className={classNames(projectcss.all, sty.rectangle3174)}
@@ -1525,6 +1670,11 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
               data-plasmic-name={"pics3"}
               data-plasmic-override={overrides.pics3}
               className={classNames(projectcss.all, sty.pics3, {
+                [sty.pics3variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
                 [sty.pics3variants2_sketches]: hasVariant(
                   $state,
                   "variants2",
@@ -1673,69 +1823,1559 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
               />
             </div>
           ) : null}
-        </p.Stack>
-        <div
-          data-plasmic-name={"map"}
-          data-plasmic-override={overrides.map}
-          className={classNames(projectcss.all, sty.map, {
-            [sty.mapvariants2_analysis]: hasVariant(
-              $state,
-              "variants2",
-              "analysis"
-            ),
-            [sty.mapvariants2_renderings]: hasVariant(
-              $state,
-              "variants2",
-              "renderings"
-            ),
-            [sty.mapvariants2_sketches]: hasVariant(
-              $state,
-              "variants2",
-              "sketches"
-            )
-          })}
-        >
-          <div
-            data-plasmic-name={"rectangle3183"}
-            data-plasmic-override={overrides.rectangle3183}
-            className={classNames(projectcss.all, sty.rectangle3183, {
-              [sty.rectangle3183variants2_analysis]: hasVariant(
-                $state,
-                "variants2",
-                "analysis"
-              ),
-              [sty.rectangle3183variants2_renderings]: hasVariant(
-                $state,
-                "variants2",
-                "renderings"
-              ),
-              [sty.rectangle3183variants2_sketches]: hasVariant(
-                $state,
-                "variants2",
-                "sketches"
-              )
-            })}
-          />
+          {(
+            hasVariant($state, "variants2", "sketches")
+              ? true
+              : hasVariant($state, "variants2", "analysis")
+              ? true
+              : hasVariant($state, "variants2", "renderings")
+              ? true
+              : hasVariant($state, "variants2", "activities")
+              ? true
+              : false
+          ) ? (
+            <div
+              data-plasmic-name={"overTheBridge"}
+              data-plasmic-override={overrides.overTheBridge}
+              className={classNames(projectcss.all, sty.overTheBridge, {
+                [sty.overTheBridgevariants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.overTheBridgevariants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.overTheBridgevariants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.overTheBridgevariants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__aD8Md,
+                  {
+                    [sty.textvariants2_activities__aD8Mdoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities")
+                  ? "1"
+                  : "Over the bridge platform"}
+              </div>
+              <div
+                data-plasmic-name={"overthebridge"}
+                data-plasmic-override={overrides.overthebridge}
+                className={classNames(projectcss.all, sty.overthebridge, {
+                  [sty.overthebridgevariants2_activities]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  ),
+                  [sty.overthebridgevariants2_renderings]: hasVariant(
+                    $state,
+                    "variants2",
+                    "renderings"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateModalOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["bridgePlat", "open"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          p.set(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateModalOpen"] != null &&
+                    typeof $steps["updateModalOpen"] === "object" &&
+                    typeof $steps["updateModalOpen"].then === "function"
+                  ) {
+                    $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  }
+                }}
+              >
+                <AntdModal
+                  data-plasmic-name={"bridgePlat3"}
+                  data-plasmic-override={overrides.bridgePlat3}
+                  className={classNames("__wab_instance", sty.bridgePlat3, {
+                    [sty.bridgePlat3variants2_activities]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  })}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["bridgePlat3__modal"]}
+                  onOpenChange={p.generateStateOnChangeProp($state, [
+                    "bridgePlat3",
+                    "open"
+                  ])}
+                  open={p.generateStateValueProp($state, [
+                    "bridgePlat3",
+                    "open"
+                  ])}
+                  title={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__yz82M,
+                        {
+                          [sty.textvariants2_activities__yz82Moy1JL]:
+                            hasVariant($state, "variants2", "activities")
+                        }
+                      )}
+                    >
+                      {
+                        "Possible implementation of a platform wall in the current urban areas: "
+                      }
+                    </div>
+                  }
+                  trigger={null}
+                  width={
+                    hasVariant($state, "variants2", "activities")
+                      ? "800"
+                      : "900"
+                  }
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__rpEz, {
+                      [sty.freeBoxvariants2_activities__rpEzoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    })}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__tYtw0, {
+                        [sty.imgvariants2_activities__tYtw0Oy1JL]: hasVariant(
+                          $state,
+                          "variants2",
+                          "activities"
+                        )
+                      })}
+                      displayHeight={"100%"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"100%"}
+                      loading={"lazy"}
+                      src={{
+                        src: layout3PopUppngPQuGwnoEoieY,
+                        fullWidth: 1023,
+                        fullHeight: 1035,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </div>
+                </AntdModal>
+              </div>
+              <ActivityQuestions
+                className={classNames(
+                  "__wab_instance",
+                  sty.activityQuestions__hzUzo,
+                  {
+                    [sty.activityQuestionsvariants2_activities__hzUzOoy1JL]:
+                      hasVariant($state, "variants2", "activities")
+                  }
+                )}
+                open={false}
+              />
 
-          <div
-            data-plasmic-name={"mapOfTheAreasDesignedOnTopAndUnderTheBridge"}
-            data-plasmic-override={
-              overrides.mapOfTheAreasDesignedOnTopAndUnderTheBridge
-            }
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.mapOfTheAreasDesignedOnTopAndUnderTheBridge,
-              {
-                [sty.mapOfTheAreasDesignedOnTopAndUnderTheBridgevariants2_activities]:
-                  hasVariant($state, "variants2", "activities")
-              }
-            )}
-          >
-            {"Map of the areas designed on top and under the bridge "}
-          </div>
-        </div>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__qxcnq, {
+                  [sty.freeBoxvariants2_activities__qxcnQoy1JL]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  )
+                })}
+              >
+                <LikeButton
+                  className={classNames(
+                    "__wab_instance",
+                    sty.likeButton__paF77,
+                    {
+                      [sty.likeButtonvariants2_activities__paF77Oy1JL]:
+                        hasVariant($state, "variants2", "activities")
+                    }
+                  )}
+                />
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__yOeV,
+                    {
+                      [sty.textvariants2_activities__yOeVoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    }
+                  )}
+                >
+                  {hasVariant($state, "variants2", "activities")
+                    ? " Bridge platform"
+                    : "Over the bridge platform"}
+                </div>
+              </div>
+            </div>
+          ) : null}
+          {(
+            hasVariant($state, "variants2", "sketches")
+              ? true
+              : hasVariant($state, "variants2", "analysis")
+              ? true
+              : hasVariant($state, "variants2", "renderings")
+              ? true
+              : hasVariant($state, "variants2", "activities")
+              ? true
+              : false
+          ) ? (
+            <div
+              data-plasmic-name={"skatePark"}
+              data-plasmic-override={overrides.skatePark}
+              className={classNames(projectcss.all, sty.skatePark, {
+                [sty.skateParkvariants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.skateParkvariants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.skateParkvariants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.skateParkvariants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__lqZqU,
+                  {
+                    [sty.textvariants2_activities__lqZqUoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities")
+                  ? "6 - 7"
+                  : "Over the bridge platform"}
+              </div>
+              <div
+                data-plasmic-name={"skatepark"}
+                data-plasmic-override={overrides.skatepark}
+                className={classNames(projectcss.all, sty.skatepark, {
+                  [sty.skateparkvariants2_activities]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  ),
+                  [sty.skateparkvariants2_renderings]: hasVariant(
+                    $state,
+                    "variants2",
+                    "renderings"
+                  ),
+                  [sty.skateparkvariants2_sketches]: hasVariant(
+                    $state,
+                    "variants2",
+                    "sketches"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateSkaParkOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["variable2"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          p.set(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateSkaParkOpen"] != null &&
+                    typeof $steps["updateSkaParkOpen"] === "object" &&
+                    typeof $steps["updateSkaParkOpen"].then === "function"
+                  ) {
+                    $steps["updateSkaParkOpen"] = await $steps[
+                      "updateSkaParkOpen"
+                    ];
+                  }
+                }}
+              >
+                <AntdModal
+                  data-plasmic-name={"skaPark"}
+                  data-plasmic-override={overrides.skaPark}
+                  className={classNames("__wab_instance", sty.skaPark, {
+                    [sty.skaParkvariants2_activities]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  })}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["skaPark__modal"]}
+                  onOk={async () => {
+                    const $steps = {};
+                    $steps["updateSkaParkOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["skaPark", "open"]
+                            },
+                            operation: 0,
+                            value: true
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+                            p.set(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateSkaParkOpen"] != null &&
+                      typeof $steps["updateSkaParkOpen"] === "object" &&
+                      typeof $steps["updateSkaParkOpen"].then === "function"
+                    ) {
+                      $steps["updateSkaParkOpen"] = await $steps[
+                        "updateSkaParkOpen"
+                      ];
+                    }
+                  }}
+                  onOpenChange={p.generateStateOnChangeProp($state, [
+                    "skaPark",
+                    "open"
+                  ])}
+                  open={p.generateStateValueProp($state, ["skaPark", "open"])}
+                  title={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__w3X48
+                      )}
+                    >
+                      {
+                        "Possible implementation of a skating area in the current bridge "
+                      }
+                    </div>
+                  }
+                  trigger={null}
+                  width={"900"}
+                >
+                  {(() => {
+                    const child$Props = {
+                      className: classNames("__wab_instance", sty.form7, {
+                        [sty.form7variants2_activities]: hasVariant(
+                          $state,
+                          "variants2",
+                          "activities"
+                        )
+                      }),
+                      extendedOnValuesChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "value",
+                          ["form7", "value"],
+                          FormWrapper_Helpers
+                        ),
+                      formItems: undefined,
+                      labelCol: { span: 8, horizontalOnly: true },
+                      layout: "vertical",
+                      mode: undefined,
+                      onIsSubmittingChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "isSubmitting",
+                          ["form7", "isSubmitting"],
+                          FormWrapper_Helpers
+                        ),
+                      ref: ref => {
+                        $refs["form7"] = ref;
+                      },
+                      wrapperCol: { span: 16, horizontalOnly: true }
+                    };
+                    p.initializeCodeComponentStates(
+                      $state,
+                      [
+                        {
+                          name: "value",
+                          plasmicStateName: "form7.value"
+                        },
+                        {
+                          name: "isSubmitting",
+                          plasmicStateName: "form7.isSubmitting"
+                        }
+                      ],
+
+                      [],
+                      FormWrapper_Helpers ?? {},
+                      child$Props
+                    );
+                    return (
+                      <FormWrapper
+                        data-plasmic-name={"form7"}
+                        data-plasmic-override={overrides.form7}
+                        {...child$Props}
+                      >
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField__jMXbm
+                          )}
+                          label={"Name"}
+                          name={"name"}
+                        >
+                          <AntdInput
+                            className={classNames(
+                              "__wab_instance",
+                              sty.input___5S8It
+                            )}
+                          />
+                        </FormItemWrapper>
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField__mpENa
+                          )}
+                          label={"Message"}
+                          name={"message"}
+                        >
+                          <AntdTextArea
+                            className={classNames(
+                              "__wab_instance",
+                              sty.textArea__cthS0
+                            )}
+                          />
+                        </FormItemWrapper>
+                        <AntdButton
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__f8D3
+                          )}
+                          submitsForm={true}
+                          type={"primary"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__m8LzT
+                            )}
+                          >
+                            {"Submit"}
+                          </div>
+                        </AntdButton>
+                      </FormWrapper>
+                    );
+                  })()}
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__wFspU, {
+                      [sty.imgvariants2_activities__wFspUoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    })}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={{
+                      src: layoutPopUp2PngRvBzf5OSPi3J,
+                      fullWidth: 1023,
+                      fullHeight: 1035,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </AntdModal>
+              </div>
+              <ActivityQuestions
+                activity={"skateParkArea"}
+                className={classNames(
+                  "__wab_instance",
+                  sty.activityQuestions__jtvSy,
+                  {
+                    [sty.activityQuestionsvariants2_activities__jtvSYoy1JL]:
+                      hasVariant($state, "variants2", "activities")
+                  }
+                )}
+                open={false}
+              />
+
+              <div
+                className={classNames(projectcss.all, sty.freeBox___6PoW, {
+                  [sty.freeBoxvariants2_activities___6PoWOy1JL]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  )
+                })}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__y4GlW,
+                    {
+                      [sty.textvariants2_activities__y4GlWoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    }
+                  )}
+                >
+                  {"Skate-park area"}
+                </div>
+              </div>
+            </div>
+          ) : null}
+          {(
+            hasVariant($state, "variants2", "sketches")
+              ? true
+              : hasVariant($state, "variants2", "analysis")
+              ? true
+              : hasVariant($state, "variants2", "renderings")
+              ? true
+              : hasVariant($state, "variants2", "activities")
+              ? true
+              : false
+          ) ? (
+            <div
+              data-plasmic-name={"climbingWall2"}
+              data-plasmic-override={overrides.climbingWall2}
+              className={classNames(projectcss.all, sty.climbingWall2, {
+                [sty.climbingWall2variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.climbingWall2variants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.climbingWall2variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.climbingWall2variants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+            >
+              <div
+                data-plasmic-name={"climbBox"}
+                data-plasmic-override={overrides.climbBox}
+                className={classNames(projectcss.all, sty.climbBox, {
+                  [sty.climbBoxvariants2_activities]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  ),
+                  [sty.climbBoxvariants2_renderings]: hasVariant(
+                    $state,
+                    "variants2",
+                    "renderings"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateClimbsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["climbs", "open"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          p.set(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateClimbsOpen"] != null &&
+                    typeof $steps["updateClimbsOpen"] === "object" &&
+                    typeof $steps["updateClimbsOpen"].then === "function"
+                  ) {
+                    $steps["updateClimbsOpen"] = await $steps[
+                      "updateClimbsOpen"
+                    ];
+                  }
+                }}
+              >
+                <AntdModal
+                  data-plasmic-name={"climbs"}
+                  data-plasmic-override={overrides.climbs}
+                  className={classNames("__wab_instance", sty.climbs, {
+                    [sty.climbsvariants2_activities]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  })}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["climbs__modal"]}
+                  onOpenChange={p.generateStateOnChangeProp($state, [
+                    "climbs",
+                    "open"
+                  ])}
+                  open={p.generateStateValueProp($state, ["climbs", "open"])}
+                  title={
+                    "Possible implementation of a climbing wall in the current urban areas"
+                  }
+                  trigger={null}
+                  width={"800px"}
+                >
+                  {(() => {
+                    const child$Props = {
+                      className: classNames("__wab_instance", sty.form4, {
+                        [sty.form4variants2_activities]: hasVariant(
+                          $state,
+                          "variants2",
+                          "activities"
+                        )
+                      }),
+                      extendedOnValuesChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "value",
+                          ["form4", "value"],
+                          FormWrapper_Helpers
+                        ),
+                      formItems: undefined,
+                      labelCol: { span: 8, horizontalOnly: true },
+                      layout: "vertical",
+                      mode: undefined,
+                      onIsSubmittingChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "isSubmitting",
+                          ["form4", "isSubmitting"],
+                          FormWrapper_Helpers
+                        ),
+                      ref: ref => {
+                        $refs["form4"] = ref;
+                      },
+                      wrapperCol: { span: 16, horizontalOnly: true }
+                    };
+                    p.initializeCodeComponentStates(
+                      $state,
+                      [
+                        {
+                          name: "value",
+                          plasmicStateName: "form4.value"
+                        },
+                        {
+                          name: "isSubmitting",
+                          plasmicStateName: "form4.isSubmitting"
+                        }
+                      ],
+
+                      [],
+                      FormWrapper_Helpers ?? {},
+                      child$Props
+                    );
+                    return (
+                      <FormWrapper
+                        data-plasmic-name={"form4"}
+                        data-plasmic-override={overrides.form4}
+                        {...child$Props}
+                      >
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField__s4Qhr
+                          )}
+                          label={"Name"}
+                          name={"name"}
+                        >
+                          <AntdInput
+                            className={classNames(
+                              "__wab_instance",
+                              sty.input__hh4Sz
+                            )}
+                          />
+                        </FormItemWrapper>
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField__neY7A
+                          )}
+                          label={"Message"}
+                          name={"message"}
+                        >
+                          <AntdTextArea
+                            className={classNames(
+                              "__wab_instance",
+                              sty.textArea___2F1GU
+                            )}
+                          />
+                        </FormItemWrapper>
+                        <AntdButton
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__mg6Ww
+                          )}
+                          submitsForm={true}
+                          type={"primary"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___2Cn67
+                            )}
+                          >
+                            {"Submit"}
+                          </div>
+                        </AntdButton>
+                      </FormWrapper>
+                    );
+                  })()}
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__dZmUf, {
+                      [sty.imgvariants2_activities__dZmUfoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    })}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={{
+                      src: layout1PopUppngI0WjXKLs7G0,
+                      fullWidth: 1023,
+                      fullHeight: 1035,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </AntdModal>
+              </div>
+              <ActivityQuestions
+                activity={"climbingWall"}
+                className={classNames(
+                  "__wab_instance",
+                  sty.activityQuestions__eM0Zv,
+                  {
+                    [sty.activityQuestionsvariants2_activities__eM0ZVoy1JL]:
+                      hasVariant($state, "variants2", "activities")
+                  }
+                )}
+                open={false}
+              />
+
+              <div
+                className={classNames(projectcss.all, sty.freeBox__no5Ys, {
+                  [sty.freeBoxvariants2_activities__no5Ysoy1JL]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  )
+                })}
+              >
+                <div
+                  data-plasmic-name={"climbingWall"}
+                  data-plasmic-override={overrides.climbingWall}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.climbingWall,
+                    {
+                      [sty.climbingWallvariants2_activities]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    }
+                  )}
+                >
+                  {"Climbing wall "}
+                </div>
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__aVxfV,
+                  {
+                    [sty.textvariants2_activities__aVxfVoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities")
+                  ? "8 "
+                  : "Over the bridge platform"}
+              </div>
+            </div>
+          ) : null}
+          {(
+            hasVariant($state, "variants2", "sketches")
+              ? true
+              : hasVariant($state, "variants2", "analysis")
+              ? true
+              : hasVariant($state, "variants2", "renderings")
+              ? true
+              : hasVariant($state, "variants2", "activities")
+              ? true
+              : false
+          ) ? (
+            <div
+              data-plasmic-name={"activitiesCard4"}
+              data-plasmic-override={overrides.activitiesCard4}
+              className={classNames(projectcss.all, sty.activitiesCard4, {
+                [sty.activitiesCard4variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.activitiesCard4variants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.activitiesCard4variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.activitiesCard4variants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__zAw8A,
+                  {
+                    [sty.textvariants2_activities__zAw8Aoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities")
+                  ? "9 - 10"
+                  : "Over the bridge platform"}
+              </div>
+              <div
+                data-plasmic-name={"openActivities"}
+                data-plasmic-override={overrides.openActivities}
+                className={classNames(projectcss.all, sty.openActivities, {
+                  [sty.openActivitiesvariants2_analysis]: hasVariant(
+                    $state,
+                    "variants2",
+                    "analysis"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateOpenActOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["openAct", "open"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          p.set(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateOpenActOpen"] != null &&
+                    typeof $steps["updateOpenActOpen"] === "object" &&
+                    typeof $steps["updateOpenActOpen"].then === "function"
+                  ) {
+                    $steps["updateOpenActOpen"] = await $steps[
+                      "updateOpenActOpen"
+                    ];
+                  }
+                }}
+              >
+                <AntdModal
+                  data-plasmic-name={"openAct"}
+                  data-plasmic-override={overrides.openAct}
+                  className={classNames("__wab_instance", sty.openAct, {
+                    [sty.openActvariants2_activities]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    ),
+                    [sty.openActvariants2_renderings]: hasVariant(
+                      $state,
+                      "variants2",
+                      "renderings"
+                    )
+                  })}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["openAct__modal"]}
+                  onOpenChange={p.generateStateOnChangeProp($state, [
+                    "openAct",
+                    "open"
+                  ])}
+                  open={p.generateStateValueProp($state, ["openAct", "open"])}
+                  title={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__tlZFr,
+                        {
+                          [sty.freeBoxvariants2_activities__tlZFroy1JL]:
+                            hasVariant($state, "variants2", "activities")
+                        }
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___9VgNt
+                        )}
+                      >
+                        {
+                          "Possible implementation of the activities in the north"
+                        }
+                      </div>
+                      <CloseSvgrepoComsvgIcon
+                        data-plasmic-name={"svg"}
+                        data-plasmic-override={overrides.svg}
+                        className={classNames(projectcss.all, sty.svg, {
+                          [sty.svgvariants2_activities]: hasVariant(
+                            $state,
+                            "variants2",
+                            "activities"
+                          )
+                        })}
+                        role={"img"}
+                      />
+                    </div>
+                  }
+                  trigger={null}
+                  width={"800px"}
+                >
+                  {(() => {
+                    const child$Props = {
+                      className: classNames("__wab_instance", sty.form3, {
+                        [sty.form3variants2_activities]: hasVariant(
+                          $state,
+                          "variants2",
+                          "activities"
+                        )
+                      }),
+                      extendedOnValuesChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "value",
+                          ["form3", "value"],
+                          FormWrapper_Helpers
+                        ),
+                      formItems: undefined,
+                      labelCol: { span: 8, horizontalOnly: true },
+                      layout: "vertical",
+                      mode: undefined,
+                      onIsSubmittingChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "isSubmitting",
+                          ["form3", "isSubmitting"],
+                          FormWrapper_Helpers
+                        ),
+                      ref: ref => {
+                        $refs["form3"] = ref;
+                      },
+                      wrapperCol: { span: 16, horizontalOnly: true }
+                    };
+                    p.initializeCodeComponentStates(
+                      $state,
+                      [
+                        {
+                          name: "value",
+                          plasmicStateName: "form3.value"
+                        },
+                        {
+                          name: "isSubmitting",
+                          plasmicStateName: "form3.isSubmitting"
+                        }
+                      ],
+
+                      [],
+                      FormWrapper_Helpers ?? {},
+                      child$Props
+                    );
+                    return (
+                      <FormWrapper
+                        data-plasmic-name={"form3"}
+                        data-plasmic-override={overrides.form3}
+                        {...child$Props}
+                      >
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField__dSiD
+                          )}
+                          label={"Name"}
+                          name={"name"}
+                        >
+                          <AntdInput
+                            className={classNames(
+                              "__wab_instance",
+                              sty.input__eeZPr
+                            )}
+                          />
+                        </FormItemWrapper>
+                        <FormItemWrapper
+                          className={classNames(
+                            "__wab_instance",
+                            sty.formField___9TxA
+                          )}
+                          label={"Message"}
+                          name={"message"}
+                        >
+                          <AntdTextArea
+                            className={classNames(
+                              "__wab_instance",
+                              sty.textArea__fvGA
+                            )}
+                          />
+                        </FormItemWrapper>
+                        <AntdButton
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__vnobu
+                          )}
+                          submitsForm={true}
+                          type={"primary"}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__i1JBx
+                            )}
+                          >
+                            {"Submit"}
+                          </div>
+                        </AntdButton>
+                      </FormWrapper>
+                    );
+                  })()}
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__jgtWf, {
+                      [sty.imgvariants2_activities__jgtWFoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    })}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={{
+                      src: layout5PopUppngYXLuFbMe0L4B,
+                      fullWidth: 1023,
+                      fullHeight: 1035,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </AntdModal>
+              </div>
+              <ActivityQuestions
+                activity={"openActivitiesNorth"}
+                className={classNames(
+                  "__wab_instance",
+                  sty.activityQuestions__yobR,
+                  {
+                    [sty.activityQuestionsvariants2_activities__yobRoy1JL]:
+                      hasVariant($state, "variants2", "activities")
+                  }
+                )}
+                open={false}
+              />
+
+              <div
+                className={classNames(projectcss.all, sty.freeBox__paQu, {
+                  [sty.freeBoxvariants2_activities__paQuoy1JL]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  )
+                })}
+              >
+                <div
+                  data-plasmic-name={"openActivitiesOnTheNorth"}
+                  data-plasmic-override={overrides.openActivitiesOnTheNorth}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.openActivitiesOnTheNorth,
+                    {
+                      [sty.openActivitiesOnTheNorthvariants2_activities]:
+                        hasVariant($state, "variants2", "activities")
+                    }
+                  )}
+                >
+                  {hasVariant($state, "variants2", "activities")
+                    ? "Open activities"
+                    : "Open activities on the north "}
+                </div>
+              </div>
+            </div>
+          ) : null}
+          {(
+            hasVariant($state, "variants2", "sketches")
+              ? true
+              : hasVariant($state, "variants2", "analysis")
+              ? true
+              : hasVariant($state, "variants2", "renderings")
+              ? true
+              : hasVariant($state, "variants2", "activities")
+              ? true
+              : false
+          ) ? (
+            <div
+              data-plasmic-name={"activitiesCard5"}
+              data-plasmic-override={overrides.activitiesCard5}
+              className={classNames(projectcss.all, sty.activitiesCard5, {
+                [sty.activitiesCard5variants2_activities]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                ),
+                [sty.activitiesCard5variants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                ),
+                [sty.activitiesCard5variants2_renderings]: hasVariant(
+                  $state,
+                  "variants2",
+                  "renderings"
+                ),
+                [sty.activitiesCard5variants2_sketches]: hasVariant(
+                  $state,
+                  "variants2",
+                  "sketches"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+              }}
+            >
+              <div
+                data-plasmic-name={"dayMarket"}
+                data-plasmic-override={overrides.dayMarket}
+                className={classNames(projectcss.all, sty.dayMarket, {
+                  [sty.dayMarketvariants2_activities]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateDayMktOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["dayMkt", "open"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          p.set(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateDayMktOpen"] != null &&
+                    typeof $steps["updateDayMktOpen"] === "object" &&
+                    typeof $steps["updateDayMktOpen"].then === "function"
+                  ) {
+                    $steps["updateDayMktOpen"] = await $steps[
+                      "updateDayMktOpen"
+                    ];
+                  }
+                }}
+              >
+                <AntdModal
+                  data-plasmic-name={"dayMkt"}
+                  data-plasmic-override={overrides.dayMkt}
+                  className={classNames("__wab_instance", sty.dayMkt, {
+                    [sty.dayMktvariants2_activities]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    ),
+                    [sty.dayMktvariants2_renderings]: hasVariant(
+                      $state,
+                      "variants2",
+                      "renderings"
+                    )
+                  })}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalContentClassName={classNames({
+                    [sty["pcls_38AugLXtxh41"]]: true
+                  })}
+                  modalScopeClassName={sty["dayMkt__modal"]}
+                  onOpenChange={p.generateStateOnChangeProp($state, [
+                    "dayMkt",
+                    "open"
+                  ])}
+                  open={p.generateStateValueProp($state, ["dayMkt", "open"])}
+                  title={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___61Nd1
+                      )}
+                    >
+                      {"Possible implementation of the activities in the south"}
+                    </div>
+                  }
+                  trigger={null}
+                  width={"80%"}
+                >
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__vHaX9, {
+                      [sty.imgvariants2_activities__vHaX9Oy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    })}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={{
+                      src: layout4PopUppngQhe8Xvd1ZBjL,
+                      fullWidth: 1023,
+                      fullHeight: 1035,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </AntdModal>
+              </div>
+              <ActivityQuestions
+                activity={"openActivitiesSouth"}
+                className={classNames(
+                  "__wab_instance",
+                  sty.activityQuestions___5Ect,
+                  {
+                    [sty.activityQuestionsvariants2_activities___5EctOy1JL]:
+                      hasVariant($state, "variants2", "activities")
+                  }
+                )}
+                open={false}
+              />
+
+              <div
+                className={classNames(projectcss.all, sty.freeBox__ieGsT, {
+                  [sty.freeBoxvariants2_activities__ieGsToy1JL]: hasVariant(
+                    $state,
+                    "variants2",
+                    "activities"
+                  )
+                })}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__gk3C0,
+                    {
+                      [sty.textvariants2_activities__gk3C0Oy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    }
+                  )}
+                >
+                  {"Daylight Open Market"}
+                </div>
+                <LikeButton
+                  className={classNames(
+                    "__wab_instance",
+                    sty.likeButton___3Oh8S,
+                    {
+                      [sty.likeButtonvariants2_activities___3Oh8Soy1JL]:
+                        hasVariant($state, "variants2", "activities")
+                    }
+                  )}
+                />
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___2XPpk,
+                  {
+                    [sty.textvariants2_activities___2XPpkoy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities")
+                  ? "4 - 5 - 6"
+                  : "Over the bridge platform"}
+              </div>
+            </div>
+          ) : null}
+        </p.Stack>
       </p.Stack>
+      <Button
+        className={classNames("__wab_instance", sty.button__iynbL, {
+          [sty.buttonvariants2_activities__iynbLoy1JL]: hasVariant(
+            $state,
+            "variants2",
+            "activities"
+          )
+        })}
+        onClick={async event => {
+          const $steps = {};
+          $steps["updateVariable"] = true
+            ? (() => {
+                const actionArgs = {
+                  variable: {
+                    objRoot: $state,
+                    variablePath: ["variable"]
+                  },
+                  operation: 0
+                };
+                return (({ variable, value, startIndex, deleteCount }) => {
+                  if (!variable) {
+                    return;
+                  }
+                  const { objRoot, variablePath } = variable;
+                  p.set(objRoot, variablePath, value);
+                  return value;
+                })?.apply(null, [actionArgs]);
+              })()
+            : undefined;
+          if (
+            $steps["updateVariable"] != null &&
+            typeof $steps["updateVariable"] === "object" &&
+            typeof $steps["updateVariable"].then === "function"
+          ) {
+            $steps["updateVariable"] = await $steps["updateVariable"];
+          }
+        }}
+      >
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text___8Um95
+          )}
+        >
+          <React.Fragment>
+            <span
+              className={"plasmic_default__all plasmic_default__span"}
+              style={{ fontWeight: 700, color: "#FFFFFF" }}
+            >
+              {"Give Your Opinion about these Activities"}
+            </span>
+          </React.Fragment>
+        </div>
+      </Button>
       <PopUpGallery
         className={classNames("__wab_instance", sty.popUpGallery__bVuN, {
           [sty.popUpGallerypopUp2__bVuNaS23]: hasVariant(
@@ -1913,6 +3553,125 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
             hasVariant($state, "groupOfPopUpVariants2", "analysisPopUp4")
         })}
       />
+
+      {(() => {
+        const child$Props = {
+          className: classNames("__wab_instance", sty.form, {
+            [sty.formvariants2_activities]: hasVariant(
+              $state,
+              "variants2",
+              "activities"
+            )
+          }),
+          extendedOnValuesChange: p.generateStateOnChangePropForCodeComponents(
+            $state,
+            "value",
+            ["form", "value"],
+            FormWrapper_Helpers
+          ),
+          formItems: undefined,
+          labelCol: { span: 8, horizontalOnly: true },
+          layout: "vertical",
+          mode: undefined,
+          onIsSubmittingChange: p.generateStateOnChangePropForCodeComponents(
+            $state,
+            "isSubmitting",
+            ["form", "isSubmitting"],
+            FormWrapper_Helpers
+          ),
+          ref: ref => {
+            $refs["form"] = ref;
+          },
+          wrapperCol: { span: 16, horizontalOnly: true }
+        };
+        p.initializeCodeComponentStates(
+          $state,
+          [
+            {
+              name: "value",
+              plasmicStateName: "form.value"
+            },
+            {
+              name: "isSubmitting",
+              plasmicStateName: "form.isSubmitting"
+            }
+          ],
+
+          [],
+          FormWrapper_Helpers ?? {},
+          child$Props
+        );
+        return (
+          <FormWrapper
+            data-plasmic-name={"form"}
+            data-plasmic-override={overrides.form}
+            {...child$Props}
+          >
+            <FormItemWrapper
+              className={classNames("__wab_instance", sty.formField__rxeN3)}
+              label={"Name"}
+              name={"name"}
+            >
+              <AntdInput
+                className={classNames("__wab_instance", sty.input__luVa)}
+              />
+            </FormItemWrapper>
+            <FormItemWrapper
+              className={classNames("__wab_instance", sty.formField__vAQqN)}
+              label={"Message"}
+              name={"message"}
+            >
+              <AntdTextArea
+                className={classNames("__wab_instance", sty.textArea__soB5O)}
+              />
+            </FormItemWrapper>
+            <Button
+              className={classNames("__wab_instance", sty.button__ofOcM, {
+                [sty.buttonvariants2_activities__ofOcMoy1JL]: hasVariant(
+                  $state,
+                  "variants2",
+                  "activities"
+                )
+              })}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__df5A4,
+                  {
+                    [sty.textvariants2_activities__df5A4Oy1JL]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    )
+                  }
+                )}
+              >
+                {hasVariant($state, "variants2", "activities") ? (
+                  <React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ fontWeight: 700, color: "#FFFFFF" }}
+                    >
+                      {"Leave a Comment"}
+                    </span>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ fontWeight: 700, color: "#FFFFFF" }}
+                    >
+                      {"Give your Opinion"}
+                    </span>
+                  </React.Fragment>
+                )}
+              </div>
+            </Button>
+          </FormWrapper>
+        );
+      })()}
     </div>
   );
 }
@@ -1920,7 +3679,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "gallery01",
+    "activities",
     "description",
     "inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving",
     "navBar",
@@ -1928,13 +3687,13 @@ const PlasmicDescendants = {
     "_3DRenderings",
     "analysis",
     "sketches",
-    "rectangle3178",
-    "rectangle3177",
-    "rectangle3179",
-    "climbingWall",
-    "rectangle3181",
-    "openActivitiesOnTheNorth",
-    "rectangle3180",
+    "bridgePlat",
+    "form2",
+    "analysisVideo",
+    "renderedVideo",
+    "textarea",
+    "map",
+    "rectangle3183",
     "pics",
     "rectangle3182",
     "rectangle3184",
@@ -1945,7 +3704,6 @@ const PlasmicDescendants = {
     "pics2",
     "rectangle3186",
     "htmlVideo",
-    "rectangle3187",
     "rectangle3174",
     "rectangle3175",
     "pics3",
@@ -1953,13 +3711,32 @@ const PlasmicDescendants = {
     "rectangle3189",
     "rectangle3190",
     "rectangle3191",
-    "map",
-    "rectangle3183",
-    "mapOfTheAreasDesignedOnTopAndUnderTheBridge"
+    "overTheBridge",
+    "overthebridge",
+    "bridgePlat3",
+    "skatePark",
+    "skatepark",
+    "skaPark",
+    "form7",
+    "climbingWall2",
+    "climbBox",
+    "climbs",
+    "form4",
+    "climbingWall",
+    "activitiesCard4",
+    "openActivities",
+    "openAct",
+    "form3",
+    "svg",
+    "openActivitiesOnTheNorth",
+    "activitiesCard5",
+    "dayMarket",
+    "dayMkt",
+    "form"
   ],
 
-  gallery01: [
-    "gallery01",
+  activities: [
+    "activities",
     "description",
     "inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving",
     "navBar",
@@ -1967,13 +3744,13 @@ const PlasmicDescendants = {
     "_3DRenderings",
     "analysis",
     "sketches",
-    "rectangle3178",
-    "rectangle3177",
-    "rectangle3179",
-    "climbingWall",
-    "rectangle3181",
-    "openActivitiesOnTheNorth",
-    "rectangle3180",
+    "bridgePlat",
+    "form2",
+    "analysisVideo",
+    "renderedVideo",
+    "textarea",
+    "map",
+    "rectangle3183",
     "pics",
     "rectangle3182",
     "rectangle3184",
@@ -1984,7 +3761,6 @@ const PlasmicDescendants = {
     "pics2",
     "rectangle3186",
     "htmlVideo",
-    "rectangle3187",
     "rectangle3174",
     "rectangle3175",
     "pics3",
@@ -1992,9 +3768,27 @@ const PlasmicDescendants = {
     "rectangle3189",
     "rectangle3190",
     "rectangle3191",
-    "map",
-    "rectangle3183",
-    "mapOfTheAreasDesignedOnTopAndUnderTheBridge"
+    "overTheBridge",
+    "overthebridge",
+    "bridgePlat3",
+    "skatePark",
+    "skatepark",
+    "skaPark",
+    "form7",
+    "climbingWall2",
+    "climbBox",
+    "climbs",
+    "form4",
+    "climbingWall",
+    "activitiesCard4",
+    "openActivities",
+    "openAct",
+    "form3",
+    "svg",
+    "openActivitiesOnTheNorth",
+    "activitiesCard5",
+    "dayMarket",
+    "dayMkt"
   ],
 
   description: [
@@ -2012,13 +3806,13 @@ const PlasmicDescendants = {
   _3DRenderings: ["_3DRenderings"],
   analysis: ["analysis"],
   sketches: ["sketches"],
-  rectangle3178: ["rectangle3178"],
-  rectangle3177: ["rectangle3177"],
-  rectangle3179: ["rectangle3179"],
-  climbingWall: ["climbingWall"],
-  rectangle3181: ["rectangle3181"],
-  openActivitiesOnTheNorth: ["openActivitiesOnTheNorth"],
-  rectangle3180: ["rectangle3180"],
+  bridgePlat: ["bridgePlat", "form2"],
+  form2: ["form2"],
+  analysisVideo: ["analysisVideo"],
+  renderedVideo: ["renderedVideo"],
+  textarea: ["textarea"],
+  map: ["map", "rectangle3183"],
+  rectangle3183: ["rectangle3183"],
   pics: [
     "pics",
     "rectangle3182",
@@ -2039,14 +3833,12 @@ const PlasmicDescendants = {
     "pics2",
     "rectangle3186",
     "htmlVideo",
-    "rectangle3187",
     "rectangle3174",
     "rectangle3175"
   ],
 
   rectangle3186: ["rectangle3186", "htmlVideo"],
   htmlVideo: ["htmlVideo"],
-  rectangle3187: ["rectangle3187"],
   rectangle3174: ["rectangle3174"],
   rectangle3175: ["rectangle3175"],
   pics3: [
@@ -2061,11 +3853,43 @@ const PlasmicDescendants = {
   rectangle3189: ["rectangle3189"],
   rectangle3190: ["rectangle3190"],
   rectangle3191: ["rectangle3191"],
-  map: ["map", "rectangle3183", "mapOfTheAreasDesignedOnTopAndUnderTheBridge"],
-  rectangle3183: ["rectangle3183"],
-  mapOfTheAreasDesignedOnTopAndUnderTheBridge: [
-    "mapOfTheAreasDesignedOnTopAndUnderTheBridge"
-  ]
+  overTheBridge: ["overTheBridge", "overthebridge", "bridgePlat3"],
+  overthebridge: ["overthebridge", "bridgePlat3"],
+  bridgePlat3: ["bridgePlat3"],
+  skatePark: ["skatePark", "skatepark", "skaPark", "form7"],
+  skatepark: ["skatepark", "skaPark", "form7"],
+  skaPark: ["skaPark", "form7"],
+  form7: ["form7"],
+  climbingWall2: [
+    "climbingWall2",
+    "climbBox",
+    "climbs",
+    "form4",
+    "climbingWall"
+  ],
+
+  climbBox: ["climbBox", "climbs", "form4"],
+  climbs: ["climbs", "form4"],
+  form4: ["form4"],
+  climbingWall: ["climbingWall"],
+  activitiesCard4: [
+    "activitiesCard4",
+    "openActivities",
+    "openAct",
+    "form3",
+    "svg",
+    "openActivitiesOnTheNorth"
+  ],
+
+  openActivities: ["openActivities", "openAct", "form3", "svg"],
+  openAct: ["openAct", "form3", "svg"],
+  form3: ["form3"],
+  svg: ["svg"],
+  openActivitiesOnTheNorth: ["openActivitiesOnTheNorth"],
+  activitiesCard5: ["activitiesCard5", "dayMarket", "dayMkt"],
+  dayMarket: ["dayMarket", "dayMkt"],
+  dayMkt: ["dayMkt"],
+  form: ["form"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -2100,7 +3924,7 @@ export const PlasmicGalleryDisplay = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    gallery01: makeNodeComponent("gallery01"),
+    activities: makeNodeComponent("activities"),
     description: makeNodeComponent("description"),
     inConceivingTheDesignForTheDonnersbergerBridgeOurInspirationWasDrawnFromMunichsArchitecturalEssenceOurAimWasSimpleCreateABridgeThatHarmonizesWithTheCitysIdentityAndSurroundingsPositionedAsASymbolicGatewayItPaysHomageToMunichsHistoricGatesOfferingGuestsAWarmWelcomeAndPanoramicViewsOfTheCityAndSunsetOverTheRailwayTracksBeyondAestheticsOurDesignAddressesPracticalChallengesOfABustlingTrafficHubIncorporatingNoiseCancellationToMirrorTheDynamicFlowOfTheTrafficTheBridgesInnovationExtendsToItsStructureWhereArchesSupportingTheMainSectionDoubleAsFunctionalElementsAPlatformConnectingTheArchesProvidesAUniqueViewpointAndActivatesAreasBeneathTheBridgeTransformingParkingLotsIntoEngagingSpacesAsWePresentThisVisionWeInviteCitizensToExploreAndShareInsightsYourPerspectivesAreVitalInShapingTheDonnersbergerBridgeEnsuringItStandsNotOnlyAsAStructuralMarvelButAlsoAsACommunityCentricLandmarkJoinUsInEnvisioningABridgeThatReflectsMunichsSpiritAndEnhancesUrbanLiving:
       makeNodeComponent(
@@ -2111,13 +3935,13 @@ export const PlasmicGalleryDisplay = Object.assign(
     _3DRenderings: makeNodeComponent("_3DRenderings"),
     analysis: makeNodeComponent("analysis"),
     sketches: makeNodeComponent("sketches"),
-    rectangle3178: makeNodeComponent("rectangle3178"),
-    rectangle3177: makeNodeComponent("rectangle3177"),
-    rectangle3179: makeNodeComponent("rectangle3179"),
-    climbingWall: makeNodeComponent("climbingWall"),
-    rectangle3181: makeNodeComponent("rectangle3181"),
-    openActivitiesOnTheNorth: makeNodeComponent("openActivitiesOnTheNorth"),
-    rectangle3180: makeNodeComponent("rectangle3180"),
+    bridgePlat: makeNodeComponent("bridgePlat"),
+    form2: makeNodeComponent("form2"),
+    analysisVideo: makeNodeComponent("analysisVideo"),
+    renderedVideo: makeNodeComponent("renderedVideo"),
+    textarea: makeNodeComponent("textarea"),
+    map: makeNodeComponent("map"),
+    rectangle3183: makeNodeComponent("rectangle3183"),
     pics: makeNodeComponent("pics"),
     rectangle3182: makeNodeComponent("rectangle3182"),
     rectangle3184: makeNodeComponent("rectangle3184"),
@@ -2128,7 +3952,6 @@ export const PlasmicGalleryDisplay = Object.assign(
     pics2: makeNodeComponent("pics2"),
     rectangle3186: makeNodeComponent("rectangle3186"),
     htmlVideo: makeNodeComponent("htmlVideo"),
-    rectangle3187: makeNodeComponent("rectangle3187"),
     rectangle3174: makeNodeComponent("rectangle3174"),
     rectangle3175: makeNodeComponent("rectangle3175"),
     pics3: makeNodeComponent("pics3"),
@@ -2136,11 +3959,28 @@ export const PlasmicGalleryDisplay = Object.assign(
     rectangle3189: makeNodeComponent("rectangle3189"),
     rectangle3190: makeNodeComponent("rectangle3190"),
     rectangle3191: makeNodeComponent("rectangle3191"),
-    map: makeNodeComponent("map"),
-    rectangle3183: makeNodeComponent("rectangle3183"),
-    mapOfTheAreasDesignedOnTopAndUnderTheBridge: makeNodeComponent(
-      "mapOfTheAreasDesignedOnTopAndUnderTheBridge"
-    ),
+    overTheBridge: makeNodeComponent("overTheBridge"),
+    overthebridge: makeNodeComponent("overthebridge"),
+    bridgePlat3: makeNodeComponent("bridgePlat3"),
+    skatePark: makeNodeComponent("skatePark"),
+    skatepark: makeNodeComponent("skatepark"),
+    skaPark: makeNodeComponent("skaPark"),
+    form7: makeNodeComponent("form7"),
+    climbingWall2: makeNodeComponent("climbingWall2"),
+    climbBox: makeNodeComponent("climbBox"),
+    climbs: makeNodeComponent("climbs"),
+    form4: makeNodeComponent("form4"),
+    climbingWall: makeNodeComponent("climbingWall"),
+    activitiesCard4: makeNodeComponent("activitiesCard4"),
+    openActivities: makeNodeComponent("openActivities"),
+    openAct: makeNodeComponent("openAct"),
+    form3: makeNodeComponent("form3"),
+    svg: makeNodeComponent("svg"),
+    openActivitiesOnTheNorth: makeNodeComponent("openActivitiesOnTheNorth"),
+    activitiesCard5: makeNodeComponent("activitiesCard5"),
+    dayMarket: makeNodeComponent("dayMarket"),
+    dayMkt: makeNodeComponent("dayMkt"),
+    form: makeNodeComponent("form"),
     // Metadata about props expected for PlasmicGalleryDisplay
     internalVariantProps: PlasmicGalleryDisplay__VariantProps,
     internalArgProps: PlasmicGalleryDisplay__ArgProps

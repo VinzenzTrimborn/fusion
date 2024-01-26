@@ -6,7 +6,7 @@ import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {Suspense, useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
 import {MeshLambertMaterial, Vector3} from "three";
-import PopUpGallery from "./PopUpGallery";
+import _3DViewerAnnotation from "./_3DViewerAnnotation";
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -33,7 +33,7 @@ export default function Scene({handleCameraChange}) {
 
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
     // ToDo Koray: instead of using the ifc file from the public folder, use the ifc file from the database
-    const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_02.ifc", (ifcLoader) => {
+    const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_01.ifc", (ifcLoader) => {
         ifcLoader.ifcManager.setWasmPath("../../wasm/");
     });
     const highlightedMaterial = useMemo(() => new MeshLambertMaterial({
@@ -117,7 +117,7 @@ export default function Scene({handleCameraChange}) {
                 <AdaptiveDpr pixelated/>
                 <AdaptiveEvents/>
                 <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
-                <Annotation position={[-4.5, 13.6, -60]}/>
+                <Annotation position={[440.244272848507, 3.800000000000114, -854.2200189272153]}/>
             </Suspense>
             <Loader/>
         </>
@@ -136,7 +136,7 @@ function Annotation({position, ...props}) {
             transform
             scale={0.5}
         >
-            <PopUpGallery/>
+            <_3DViewerAnnotation/>
         </Html>
     )
 }

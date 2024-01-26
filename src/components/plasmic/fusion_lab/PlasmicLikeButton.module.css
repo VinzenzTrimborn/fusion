@@ -1,0 +1,43 @@
+.likeButton {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.text {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 50%;
+  font-size: 45px;
+}
+.img__qfHd7 {
+  position: relative;
+  object-fit: cover;
+  max-width: 35%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.img__qfHd7 > picture > img {
+  object-fit: cover;
+}
+.imglikedState__qfHd7G04Gk {
+  display: none !important;
+}
+.img__d5Mut {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  margin-left: 10px;
+}
+.img__d5Mut > picture > img {
+  object-fit: cover;
+}
+.imglikedState__d5Mutg04Gk {
+  cursor: pointer;
+  max-width: 35%;
+}

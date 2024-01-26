@@ -42,7 +42,8 @@ export const PlasmicCheckbox__ArgProps = new Array(
   "name",
   "value",
   "aria-label",
-  "aria-labelledby"
+  "aria-labelledby",
+  "onChange"
 );
 
 const $$ = {};

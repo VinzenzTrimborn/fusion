@@ -1,12 +1,12 @@
 import * as React from "react";
 import {PlasmicParticipationArea} from "./plasmic/fusion_lab/PlasmicParticipationArea";
-import {ARButton, Controllers, Hands, TeleportationPlane, VRButton, XR} from "@react-three/xr";
+import {Controllers, Hands, TeleportationPlane, VRButton, XR} from "@react-three/xr";
 import {Canvas} from "@react-three/fiber";
 import {useCallback, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
-import {Environment, Loader} from "@react-three/drei";
+import {Environment} from "@react-three/drei";
 
 function ParticipationArea_(props, ref) {
     const [comments, setComments] = useState([]);

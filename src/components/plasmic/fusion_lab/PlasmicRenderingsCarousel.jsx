@@ -138,7 +138,13 @@ function PlasmicRenderingsCarousel__RenderFunc(props) {
       >
         <p.PlasmicImg
           alt={""}
-          className={classNames(sty.img__mOyQt)}
+          className={classNames(sty.img__mOyQt, {
+            [sty.imgrenders_render3__mOyQtp0Dp7]: hasVariant(
+              $state,
+              "renders",
+              "render3"
+            )
+          })}
           displayHeight={"36px"}
           displayMaxHeight={"none"}
           displayMaxWidth={"100%"}
@@ -150,7 +156,7 @@ function PlasmicRenderingsCarousel__RenderFunc(props) {
             const $steps = {};
             $steps["goToGallery"] = true
               ? (() => {
-                  const actionArgs = { destination: `/gallery` };
+                  const actionArgs = { destination: `/project_details` };
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&

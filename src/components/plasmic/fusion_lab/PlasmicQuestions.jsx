@@ -18,6 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
 import Select from "../../Select"; // plasmic-import: YbzHlcQNiy51/component
+import Checkbox from "../../Checkbox"; // plasmic-import: QYHJ3nGLufw1/component
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import Button from "../../Button"; // plasmic-import: apXgE63BR30L/component
@@ -62,12 +63,6 @@ function PlasmicQuestions__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "select.value",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
         path: "howOften.value",
         type: "private",
         variableType: "text",
@@ -86,9 +81,45 @@ function PlasmicQuestions__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "bridgeActivities.value",
+        path: "select2.value",
         type: "private",
         variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "option1"
+      },
+      {
+        path: "checkbox.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "checkbox2.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "checkbox3.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "checkbox4.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "checkbox6.isChecked",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "checkbox7.isChecked",
+        type: "private",
+        variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
@@ -206,22 +237,32 @@ function PlasmicQuestions__RenderFunc(props) {
                     sty.text__hCdoE
                   )}
                 >
-                  {"Country"}
+                  {"Place of Residence"}
                 </div>
                 <Select
-                  data-plasmic-name={"select"}
-                  data-plasmic-override={overrides.select}
-                  className={classNames("__wab_instance", sty.select)}
+                  data-plasmic-name={"select2"}
+                  data-plasmic-override={overrides.select2}
+                  className={classNames("__wab_instance", sty.select2)}
                   onChange={(...eventArgs) => {
-                    p.generateStateOnChangeProp($state, ["select", "value"])(
+                    p.generateStateOnChangeProp($state, ["select2", "value"])(
                       eventArgs[0]
                     );
                   }}
-                  options={[
-                    { value: "option1", label: "Option 1" },
-                    { value: "option2", label: "Option 2" }
-                  ]}
-                  value={p.generateStateValueProp($state, ["select", "value"])}
+                  options={(() => {
+                    const __composite = [
+                      { value: null, label: null },
+                      { value: null, label: null },
+                      { value: null }
+                    ];
+
+                    __composite["0"]["value"] = "Munich";
+                    __composite["0"]["label"] = "Munich";
+                    __composite["1"]["value"] = "Other Cities in Bavaria";
+                    __composite["1"]["label"] = "Other Cities in Bavaria";
+                    __composite["2"]["value"] = "Other";
+                    return __composite;
+                  })()}
+                  value={p.generateStateValueProp($state, ["select2", "value"])}
                 />
               </div>
             </div>
@@ -238,7 +279,7 @@ function PlasmicQuestions__RenderFunc(props) {
                 )}
               >
                 {
-                  "How often do you use the Donnersberger Bridge Station (Bus or S-Bahn)?"
+                  "How often do you use the Donnersberger Bridge Station (Bus or S-Bahn) per Week?"
                 }
               </div>
               <Select
@@ -250,10 +291,20 @@ function PlasmicQuestions__RenderFunc(props) {
                     eventArgs[0]
                   );
                 }}
-                options={[
-                  { value: "option1", label: "Option 1" },
-                  { value: "option2", label: "Option 2" }
-                ]}
+                options={(() => {
+                  const __composite = [
+                    { value: null, label: null },
+                    { value: null, label: null },
+                    { value: null }
+                  ];
+
+                  __composite["0"]["value"] = "Twice or Less";
+                  __composite["0"]["label"] = "Twice or Less";
+                  __composite["1"]["value"] = "Weekdays";
+                  __composite["1"]["label"] = "Weekdays";
+                  __composite["2"]["value"] = "The Whole Week";
+                  return __composite;
+                })()}
                 value={p.generateStateValueProp($state, ["howOften", "value"])}
               />
             </div>
@@ -280,10 +331,20 @@ function PlasmicQuestions__RenderFunc(props) {
                     eventArgs[0]
                   );
                 }}
-                options={[
-                  { value: "option1", label: "Option 1" },
-                  { value: "option2", label: "Option 2" }
-                ]}
+                options={(() => {
+                  const __composite = [
+                    { value: null, label: null },
+                    { value: null, label: null },
+                    { value: null }
+                  ];
+
+                  __composite["0"]["value"] = "Commute to Work";
+                  __composite["0"]["label"] = "Commute to Work";
+                  __composite["1"]["value"] = "Leisure";
+                  __composite["1"]["label"] = "Leisure";
+                  __composite["2"]["value"] = "Other";
+                  return __composite;
+                })()}
                 value={p.generateStateValueProp($state, ["bridgeUse", "value"])}
               />
             </div>
@@ -310,10 +371,22 @@ function PlasmicQuestions__RenderFunc(props) {
                     eventArgs[0]
                   );
                 }}
-                options={[
-                  { value: "option1", label: "Option 1" },
-                  { value: "option2", label: "Option 2" }
-                ]}
+                options={(() => {
+                  const __composite = [
+                    { value: null, label: null },
+                    { value: null, label: null },
+                    { value: null },
+                    { value: null }
+                  ];
+
+                  __composite["0"]["value"] = "Bus";
+                  __composite["0"]["label"] = "Bus";
+                  __composite["1"]["value"] = "Car";
+                  __composite["1"]["label"] = "Car";
+                  __composite["2"]["value"] = "S-Bahn";
+                  __composite["3"]["value"] = "Walking or Cycling";
+                  return __composite;
+                })()}
                 value={p.generateStateValueProp($state, ["commute", "value"])}
               />
             </div>
@@ -329,27 +402,122 @@ function PlasmicQuestions__RenderFunc(props) {
                   sty.text___78JRn
                 )}
               >
-                {"What kind of Bridge activities would spark your interest?"}
+                {
+                  "Which of the Bridge's leasure areas proposed in the project is your favorite?"
+                }
               </div>
-              <Select
-                data-plasmic-name={"bridgeActivities"}
-                data-plasmic-override={overrides.bridgeActivities}
-                className={classNames("__wab_instance", sty.bridgeActivities)}
+              <Checkbox
+                data-plasmic-name={"checkbox"}
+                data-plasmic-override={overrides.checkbox}
+                className={classNames("__wab_instance", sty.checkbox)}
+                isChecked={
+                  p.generateStateValueProp($state, ["checkbox", "isChecked"]) ??
+                  false
+                }
                 onChange={(...eventArgs) => {
                   p.generateStateOnChangeProp($state, [
-                    "bridgeActivities",
-                    "value"
+                    "checkbox",
+                    "isChecked"
                   ])(eventArgs[0]);
                 }}
-                options={[
-                  { value: "option1", label: "Option 1" },
-                  { value: "option2", label: "Option 2" }
-                ]}
-                value={p.generateStateValueProp($state, [
-                  "bridgeActivities",
-                  "value"
-                ])}
-              />
+              >
+                {"Platform View"}
+              </Checkbox>
+              <Checkbox
+                data-plasmic-name={"checkbox2"}
+                data-plasmic-override={overrides.checkbox2}
+                className={classNames("__wab_instance", sty.checkbox2)}
+                isChecked={
+                  p.generateStateValueProp($state, [
+                    "checkbox2",
+                    "isChecked"
+                  ]) ?? false
+                }
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, [
+                    "checkbox2",
+                    "isChecked"
+                  ])(eventArgs[0]);
+                }}
+              >
+                {"Skate Park"}
+              </Checkbox>
+              <Checkbox
+                data-plasmic-name={"checkbox3"}
+                data-plasmic-override={overrides.checkbox3}
+                className={classNames("__wab_instance", sty.checkbox3)}
+                isChecked={
+                  p.generateStateValueProp($state, [
+                    "checkbox3",
+                    "isChecked"
+                  ]) ?? false
+                }
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, [
+                    "checkbox3",
+                    "isChecked"
+                  ])(eventArgs[0]);
+                }}
+              >
+                {"Climbing Wall"}
+              </Checkbox>
+              <Checkbox
+                data-plasmic-name={"checkbox4"}
+                data-plasmic-override={overrides.checkbox4}
+                className={classNames("__wab_instance", sty.checkbox4)}
+                isChecked={
+                  p.generateStateValueProp($state, [
+                    "checkbox4",
+                    "isChecked"
+                  ]) ?? false
+                }
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, [
+                    "checkbox4",
+                    "isChecked"
+                  ])(eventArgs[0]);
+                }}
+              >
+                {"Park Area"}
+              </Checkbox>
+              <Checkbox
+                data-plasmic-name={"checkbox6"}
+                data-plasmic-override={overrides.checkbox6}
+                className={classNames("__wab_instance", sty.checkbox6)}
+                isChecked={
+                  p.generateStateValueProp($state, [
+                    "checkbox6",
+                    "isChecked"
+                  ]) ?? false
+                }
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, [
+                    "checkbox6",
+                    "isChecked"
+                  ])(eventArgs[0]);
+                }}
+              >
+                {"Open Market"}
+              </Checkbox>
+              <Checkbox
+                data-plasmic-name={"checkbox7"}
+                data-plasmic-override={overrides.checkbox7}
+                className={classNames("__wab_instance", sty.checkbox7)}
+                isChecked={
+                  p.generateStateValueProp($state, [
+                    "checkbox7",
+                    "isChecked"
+                  ]) ?? false
+                }
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, [
+                    "checkbox7",
+                    "isChecked"
+                  ])(eventArgs[0]);
+                }}
+              >
+                {"Coffe-to-Go Area"}
+              </Checkbox>
             </div>
           </div>
         </div>
@@ -538,7 +706,7 @@ const PlasmicDescendants = {
     "postalCodeBox",
     "postalCode",
     "countryBox",
-    "select",
+    "select2",
     "howOftenBox",
     "howOften",
     "bridgeUseBox",
@@ -546,7 +714,12 @@ const PlasmicDescendants = {
     "commuteBox",
     "commute",
     "bridgeActivitiesBox",
-    "bridgeActivities",
+    "checkbox",
+    "checkbox2",
+    "checkbox3",
+    "checkbox4",
+    "checkbox6",
+    "checkbox7",
     "modal",
     "icon",
     "img",
@@ -562,7 +735,7 @@ const PlasmicDescendants = {
     "postalCodeBox",
     "postalCode",
     "countryBox",
-    "select",
+    "select2",
     "howOftenBox",
     "howOften",
     "bridgeUseBox",
@@ -570,7 +743,12 @@ const PlasmicDescendants = {
     "commuteBox",
     "commute",
     "bridgeActivitiesBox",
-    "bridgeActivities"
+    "checkbox",
+    "checkbox2",
+    "checkbox3",
+    "checkbox4",
+    "checkbox6",
+    "checkbox7"
   ],
 
   textGroup: ["textGroup"],
@@ -581,7 +759,7 @@ const PlasmicDescendants = {
     "postalCodeBox",
     "postalCode",
     "countryBox",
-    "select",
+    "select2",
     "howOftenBox",
     "howOften",
     "bridgeUseBox",
@@ -589,7 +767,12 @@ const PlasmicDescendants = {
     "commuteBox",
     "commute",
     "bridgeActivitiesBox",
-    "bridgeActivities"
+    "checkbox",
+    "checkbox2",
+    "checkbox3",
+    "checkbox4",
+    "checkbox6",
+    "checkbox7"
   ],
 
   formColumn: [
@@ -598,7 +781,7 @@ const PlasmicDescendants = {
     "postalCodeBox",
     "postalCode",
     "countryBox",
-    "select",
+    "select2",
     "howOftenBox",
     "howOften",
     "bridgeUseBox",
@@ -606,22 +789,48 @@ const PlasmicDescendants = {
     "commuteBox",
     "commute",
     "bridgeActivitiesBox",
-    "bridgeActivities"
+    "checkbox",
+    "checkbox2",
+    "checkbox3",
+    "checkbox4",
+    "checkbox6",
+    "checkbox7"
   ],
 
-  firstRow: ["firstRow", "postalCodeBox", "postalCode", "countryBox", "select"],
+  firstRow: [
+    "firstRow",
+    "postalCodeBox",
+    "postalCode",
+    "countryBox",
+    "select2"
+  ],
+
   postalCodeBox: ["postalCodeBox", "postalCode"],
   postalCode: ["postalCode"],
-  countryBox: ["countryBox", "select"],
-  select: ["select"],
+  countryBox: ["countryBox", "select2"],
+  select2: ["select2"],
   howOftenBox: ["howOftenBox", "howOften"],
   howOften: ["howOften"],
   bridgeUseBox: ["bridgeUseBox", "bridgeUse"],
   bridgeUse: ["bridgeUse"],
   commuteBox: ["commuteBox", "commute"],
   commute: ["commute"],
-  bridgeActivitiesBox: ["bridgeActivitiesBox", "bridgeActivities"],
-  bridgeActivities: ["bridgeActivities"],
+  bridgeActivitiesBox: [
+    "bridgeActivitiesBox",
+    "checkbox",
+    "checkbox2",
+    "checkbox3",
+    "checkbox4",
+    "checkbox6",
+    "checkbox7"
+  ],
+
+  checkbox: ["checkbox"],
+  checkbox2: ["checkbox2"],
+  checkbox3: ["checkbox3"],
+  checkbox4: ["checkbox4"],
+  checkbox6: ["checkbox6"],
+  checkbox7: ["checkbox7"],
   modal: ["modal", "icon", "img", "thanks"],
   icon: ["icon", "img"],
   img: ["img"],
@@ -668,7 +877,7 @@ export const PlasmicQuestions = Object.assign(
     postalCodeBox: makeNodeComponent("postalCodeBox"),
     postalCode: makeNodeComponent("postalCode"),
     countryBox: makeNodeComponent("countryBox"),
-    select: makeNodeComponent("select"),
+    select2: makeNodeComponent("select2"),
     howOftenBox: makeNodeComponent("howOftenBox"),
     howOften: makeNodeComponent("howOften"),
     bridgeUseBox: makeNodeComponent("bridgeUseBox"),
@@ -676,7 +885,12 @@ export const PlasmicQuestions = Object.assign(
     commuteBox: makeNodeComponent("commuteBox"),
     commute: makeNodeComponent("commute"),
     bridgeActivitiesBox: makeNodeComponent("bridgeActivitiesBox"),
-    bridgeActivities: makeNodeComponent("bridgeActivities"),
+    checkbox: makeNodeComponent("checkbox"),
+    checkbox2: makeNodeComponent("checkbox2"),
+    checkbox3: makeNodeComponent("checkbox3"),
+    checkbox4: makeNodeComponent("checkbox4"),
+    checkbox6: makeNodeComponent("checkbox6"),
+    checkbox7: makeNodeComponent("checkbox7"),
     modal: makeNodeComponent("modal"),
     icon: makeNodeComponent("icon"),
     img: makeNodeComponent("img"),
