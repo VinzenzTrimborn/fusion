@@ -1213,130 +1213,164 @@ function PlasmicFaqSection__RenderFunc(props) {
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__sAt9C)}
           >
-            <div
-              data-plasmic-name={"answerBox"}
-              data-plasmic-override={overrides.answerBox}
-              className={classNames(projectcss.all, sty.answerBox, {
-                [sty.answerBoxanswers__10]: hasVariant(
-                  $state,
-                  "answers",
-                  "_10"
-                ),
-                [sty.answerBoxanswers__11]: hasVariant(
-                  $state,
-                  "answers",
-                  "_11"
-                ),
-                [sty.answerBoxanswers__2]: hasVariant($state, "answers", "_2"),
-                [sty.answerBoxanswers__3]: hasVariant($state, "answers", "_3"),
-                [sty.answerBoxanswers__4]: hasVariant($state, "answers", "_4"),
-                [sty.answerBoxanswers__5]: hasVariant($state, "answers", "_5"),
-                [sty.answerBoxanswers__6]: hasVariant($state, "answers", "_6"),
-                [sty.answerBoxanswers__7]: hasVariant($state, "answers", "_7"),
-                [sty.answerBoxanswers__8]: hasVariant($state, "answers", "_8"),
-                [sty.answerBoxanswers__9]: hasVariant($state, "answers", "_9"),
-                [sty.answerBoxanswers_x]: hasVariant($state, "answers", "x")
-              })}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__aygZf)}>
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___0Uzpd,
-                  {
-                    [sty.textanswers__10___0UzpdRmuR4]: hasVariant(
-                      $state,
-                      "answers",
-                      "_10"
-                    ),
-                    [sty.textanswers__2___0Uzpdmlkfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "_2"
-                    ),
-                    [sty.textanswers__3___0Uzpd3L9Fx]: hasVariant(
-                      $state,
-                      "answers",
-                      "_3"
-                    ),
-                    [sty.textanswers__4___0UzpdjrPol]: hasVariant(
-                      $state,
-                      "answers",
-                      "_4"
-                    ),
-                    [sty.textanswers__5___0Uzpd4GKjS]: hasVariant(
-                      $state,
-                      "answers",
-                      "_5"
-                    ),
-                    [sty.textanswers__6___0Uzpddayq8]: hasVariant(
-                      $state,
-                      "answers",
-                      "_6"
-                    ),
-                    [sty.textanswers__7___0UzpdaIuc3]: hasVariant(
-                      $state,
-                      "answers",
-                      "_7"
-                    ),
-                    [sty.textanswers__8___0UzpdCwtP]: hasVariant(
-                      $state,
-                      "answers",
-                      "_8"
-                    ),
-                    [sty.textanswers__9___0UzpdsSeH]: hasVariant(
-                      $state,
-                      "answers",
-                      "_9"
-                    ),
-                    [sty.textanswers_x___0UzpdFbPfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "x"
-                    )
-                  }
-                )}
+                data-plasmic-name={"answerBox"}
+                data-plasmic-override={overrides.answerBox}
+                className={classNames(projectcss.all, sty.answerBox, {
+                  [sty.answerBoxanswers__10]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  ),
+                  [sty.answerBoxanswers__11]: hasVariant(
+                    $state,
+                    "answers",
+                    "_11"
+                  ),
+                  [sty.answerBoxanswers__2]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.answerBoxanswers__3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_3"
+                  ),
+                  [sty.answerBoxanswers__4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  ),
+                  [sty.answerBoxanswers__5]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  ),
+                  [sty.answerBoxanswers__6]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  ),
+                  [sty.answerBoxanswers__7]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  ),
+                  [sty.answerBoxanswers__8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  ),
+                  [sty.answerBoxanswers__9]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  ),
+                  [sty.answerBoxanswers_x]: hasVariant($state, "answers", "x")
+                })}
               >
-                {hasVariant($state, "answers", "_10")
-                  ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
-                  : hasVariant($state, "answers", "_9")
-                  ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
-                  : hasVariant($state, "answers", "_8")
-                  ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
-                  : hasVariant($state, "answers", "_7")
-                  ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
-                  : hasVariant($state, "answers", "_6")
-                  ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
-                  : hasVariant($state, "answers", "_5")
-                  ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
-                  : hasVariant($state, "answers", "_4")
-                  ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
-                  : hasVariant($state, "answers", "_3")
-                  ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
-                  : hasVariant($state, "answers", "_2")
-                  ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
-                  : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
-              </div>
-              {(hasVariant($state, "answers", "_11") ? true : false) ? (
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__kFcYp,
+                    sty.text___0Uzpd,
                     {
-                      [sty.textanswers__11__kFcYpYcudh]: hasVariant(
+                      [sty.textanswers__10___0UzpdRmuR4]: hasVariant(
                         $state,
                         "answers",
-                        "_11"
+                        "_10"
+                      ),
+                      [sty.textanswers__2___0Uzpdmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers__3___0Uzpd3L9Fx]: hasVariant(
+                        $state,
+                        "answers",
+                        "_3"
+                      ),
+                      [sty.textanswers__4___0UzpdjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      ),
+                      [sty.textanswers__5___0Uzpd4GKjS]: hasVariant(
+                        $state,
+                        "answers",
+                        "_5"
+                      ),
+                      [sty.textanswers__6___0Uzpddayq8]: hasVariant(
+                        $state,
+                        "answers",
+                        "_6"
+                      ),
+                      [sty.textanswers__7___0UzpdaIuc3]: hasVariant(
+                        $state,
+                        "answers",
+                        "_7"
+                      ),
+                      [sty.textanswers__8___0UzpdCwtP]: hasVariant(
+                        $state,
+                        "answers",
+                        "_8"
+                      ),
+                      [sty.textanswers__9___0UzpdsSeH]: hasVariant(
+                        $state,
+                        "answers",
+                        "_9"
+                      ),
+                      [sty.textanswers_x___0UzpdFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
                       )
                     }
                   )}
                 >
-                  {
-                    "The bridge is being redesigned to address structural \r\ndeficiencies, enhance overall safety and functionality\r\n and create a new icon for the city.\r\n"
-                  }
+                  {hasVariant($state, "answers", "_10")
+                    ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                    : hasVariant($state, "answers", "_9")
+                    ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                    : hasVariant($state, "answers", "_8")
+                    ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                    : hasVariant($state, "answers", "_7")
+                    ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                    : hasVariant($state, "answers", "_6")
+                    ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                    : hasVariant($state, "answers", "_5")
+                    ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                    : hasVariant($state, "answers", "_4")
+                    ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                    : hasVariant($state, "answers", "_3")
+                    ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                    : hasVariant($state, "answers", "_2")
+                    ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                    : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
                 </div>
-              ) : null}
+                {(hasVariant($state, "answers", "_11") ? true : false) ? (
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__kFcYp,
+                      {
+                        [sty.textanswers__11__kFcYpYcudh]: hasVariant(
+                          $state,
+                          "answers",
+                          "_11"
+                        )
+                      }
+                    )}
+                  >
+                    {
+                      "The bridge is being redesigned to address structural \r\ndeficiencies, enhance overall safety and functionality\r\n and create a new icon for the city.\r\n"
+                    }
+                  </div>
+                ) : null}
+              </div>
             </div>
             <div
               data-plasmic-name={"answerPic"}

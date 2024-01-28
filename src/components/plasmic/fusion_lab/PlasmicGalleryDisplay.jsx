@@ -971,25 +971,28 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 {...child$Props}
               >
                 <FormItemWrapper
-                  className={classNames("__wab_instance", sty.formField__potoO)}
+                  className={classNames("__wab_instance", sty.formField__bjShq)}
                   label={"Name"}
                   name={"name"}
                 >
                   <AntdInput
-                    className={classNames("__wab_instance", sty.input___5UioP)}
+                    className={classNames("__wab_instance", sty.input__hq7U8)}
                   />
                 </FormItemWrapper>
                 <FormItemWrapper
-                  className={classNames("__wab_instance", sty.formField__tf77S)}
+                  className={classNames("__wab_instance", sty.formField__frBnl)}
                   label={"Message"}
                   name={"message"}
                 >
                   <AntdTextArea
-                    className={classNames("__wab_instance", sty.textArea__vSvy)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.textArea__co3ZT
+                    )}
                   />
                 </FormItemWrapper>
                 <AntdButton
-                  className={classNames("__wab_instance", sty.button__t0UWk)}
+                  className={classNames("__wab_instance", sty.button__ypwrb)}
                   submitsForm={true}
                   type={"primary"}
                 >
@@ -997,7 +1000,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__dQ1A6
+                      sty.text__n51Zv
                     )}
                   >
                     {"Submit"}
@@ -2318,7 +2321,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__jMXbm
+                            sty.formField__l9C8E
                           )}
                           label={"Name"}
                           name={"name"}
@@ -2326,14 +2329,14 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                           <AntdInput
                             className={classNames(
                               "__wab_instance",
-                              sty.input___5S8It
+                              sty.input__z08Vq
                             )}
                           />
                         </FormItemWrapper>
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__mpENa
+                            sty.formField__jeti0
                           )}
                           label={"Message"}
                           name={"message"}
@@ -2341,14 +2344,14 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                           <AntdTextArea
                             className={classNames(
                               "__wab_instance",
-                              sty.textArea__cthS0
+                              sty.textArea__zypCe
                             )}
                           />
                         </FormItemWrapper>
                         <AntdButton
                           className={classNames(
                             "__wab_instance",
-                            sty.button__f8D3
+                            sty.button__dmMwQ
                           )}
                           submitsForm={true}
                           type={"primary"}
@@ -2357,7 +2360,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__m8LzT
+                              sty.text__mqvtm
                             )}
                           >
                             {"Submit"}
@@ -2611,7 +2614,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__s4Qhr
+                            sty.formField__zVsqb
                           )}
                           label={"Name"}
                           name={"name"}
@@ -2619,14 +2622,14 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                           <AntdInput
                             className={classNames(
                               "__wab_instance",
-                              sty.input__hh4Sz
+                              sty.input___1Jpad
                             )}
                           />
                         </FormItemWrapper>
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__neY7A
+                            sty.formField__eGwk3
                           )}
                           label={"Message"}
                           name={"message"}
@@ -2634,14 +2637,14 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                           <AntdTextArea
                             className={classNames(
                               "__wab_instance",
-                              sty.textArea___2F1GU
+                              sty.textArea__rKhLs
                             )}
                           />
                         </FormItemWrapper>
                         <AntdButton
                           className={classNames(
                             "__wab_instance",
-                            sty.button__mg6Ww
+                            sty.button___7K5N
                           )}
                           submitsForm={true}
                           type={"primary"}
@@ -2650,7 +2653,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text___2Cn67
+                              sty.text__rjbyF
                             )}
                           >
                             {"Submit"}
@@ -2975,7 +2978,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField__dSiD
+                            sty.formField__hcTRj
                           )}
                           label={"Name"}
                           name={"name"}
@@ -2983,14 +2986,14 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                           <AntdInput
                             className={classNames(
                               "__wab_instance",
-                              sty.input__eeZPr
+                              sty.input__a6Q6T
                             )}
                           />
                         </FormItemWrapper>
                         <FormItemWrapper
                           className={classNames(
                             "__wab_instance",
-                            sty.formField___9TxA
+                            sty.formField__lufNt
                           )}
                           label={"Message"}
                           name={"message"}
@@ -2998,14 +3001,14 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                           <AntdTextArea
                             className={classNames(
                               "__wab_instance",
-                              sty.textArea__fvGA
+                              sty.textArea___3QEkD
                             )}
                           />
                         </FormItemWrapper>
                         <AntdButton
                           className={classNames(
                             "__wab_instance",
-                            sty.button__vnobu
+                            sty.button__wexzG
                           )}
                           submitsForm={true}
                           type={"primary"}
@@ -3014,7 +3017,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__i1JBx
+                              sty.text___6QTgc
                             )}
                           >
                             {"Submit"}
@@ -3608,26 +3611,26 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
             {...child$Props}
           >
             <FormItemWrapper
-              className={classNames("__wab_instance", sty.formField__rxeN3)}
+              className={classNames("__wab_instance", sty.formField__gaSpn)}
               label={"Name"}
               name={"name"}
             >
               <AntdInput
-                className={classNames("__wab_instance", sty.input__luVa)}
+                className={classNames("__wab_instance", sty.input__trZxj)}
               />
             </FormItemWrapper>
             <FormItemWrapper
-              className={classNames("__wab_instance", sty.formField__vAQqN)}
+              className={classNames("__wab_instance", sty.formField__jxp4L)}
               label={"Message"}
               name={"message"}
             >
               <AntdTextArea
-                className={classNames("__wab_instance", sty.textArea__soB5O)}
+                className={classNames("__wab_instance", sty.textArea__vYkXy)}
               />
             </FormItemWrapper>
             <Button
-              className={classNames("__wab_instance", sty.button__ofOcM, {
-                [sty.buttonvariants2_activities__ofOcMoy1JL]: hasVariant(
+              className={classNames("__wab_instance", sty.button___5JcVn, {
+                [sty.buttonvariants2_activities___5JcVNoy1JL]: hasVariant(
                   $state,
                   "variants2",
                   "activities"
@@ -3638,9 +3641,9 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__df5A4,
+                  sty.text__muHda,
                   {
-                    [sty.textvariants2_activities__df5A4Oy1JL]: hasVariant(
+                    [sty.textvariants2_activities__muHdAoy1JL]: hasVariant(
                       $state,
                       "variants2",
                       "activities"

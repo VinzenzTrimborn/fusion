@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
-import {AdaptiveDpr, AdaptiveEvents, BakeShadows, Html, Loader, Sky} from "@react-three/drei";
+import {Html, Loader, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {Suspense, useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
@@ -113,9 +113,6 @@ export default function Scene({handleCameraChange}) {
                         />
                     )}
                 </group>
-                <BakeShadows/>
-                <AdaptiveDpr pixelated/>
-                <AdaptiveEvents/>
                 <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
                 <Annotation position={[440.244272848507, 3.800000000000114, -854.2200189272153]}/>
             </Suspense>
