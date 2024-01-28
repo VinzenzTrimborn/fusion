@@ -6,7 +6,7 @@ import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {Suspense, useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
 import {MeshLambertMaterial, Vector3} from "three";
-import _3DViewerAnnotation from "./_3DViewerAnnotation";
+import ViewerAnnotation from "./ViewerAnnotation";
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -133,7 +133,7 @@ function Annotation({position, ...props}) {
             transform
             scale={0.5}
         >
-            <_3DViewerAnnotation/>
+            <ViewerAnnotation climbingWall={'Picture1'}/>
         </Html>
     )
 }
