@@ -200,7 +200,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
                   )}
                 >
                   {
-                    "Pan: Click and hold Left-click\nOrbit: Click and hold on the mouse wheel\nZoom: Scroll the mouse wheel\nComment: Double Click"
+                    "Scroll & Zoom to move\nW,A,S,D to move around\nQ, E to move up and down\nShift: Increase Speed"
                   }
                 </div>
               </div>

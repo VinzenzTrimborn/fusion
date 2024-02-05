@@ -709,6 +709,141 @@ function PlasmicHome__RenderFunc(props) {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__jtOf)}
                   >
+                    <AntdModal
+                      data-plasmic-name={"modal"}
+                      data-plasmic-override={overrides.modal}
+                      className={classNames("__wab_instance", sty.modal)}
+                      defaultStylesClassName={classNames(
+                        projectcss.root_reset,
+                        projectcss.plasmic_default_styles,
+                        projectcss.plasmic_mixins,
+                        projectcss.plasmic_tokens,
+                        plasmic_antd_5_hostless_css.plasmic_tokens,
+                        plasmic_plasmic_rich_components_css.plasmic_tokens
+                      )}
+                      hideFooter={true}
+                      modalScopeClassName={sty["modal__modal"]}
+                      onOpenChange={generateStateOnChangeProp($state, [
+                        "modal",
+                        "open"
+                      ])}
+                      open={generateStateValueProp($state, ["modal", "open"])}
+                      title={
+                        "Two of our ideas that contribute to sustainability are:"
+                      }
+                      trigger={null}
+                      width={"700"}
+                      wrapClassName={classNames({
+                        [sty["pcls_HgpS5QjfUewr"]]: true
+                      })}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___0NqtK
+                        )}
+                      >
+                        <Stack__
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__dTndH
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__raoTx)}
+                            displayHeight={"217px"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"244px"}
+                            loading={"lazy"}
+                            src={{
+                              src: noiseBarrierjpgWqeI69Rs5Ft,
+                              fullWidth: 639,
+                              fullHeight: 741,
+                              aspectRatio: undefined
+                            }}
+                          />
+
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__dHy6A)}
+                            displayHeight={"223px"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"247px"}
+                            loading={"lazy"}
+                            src={{
+                              src: _91Aa24019464500557C88A8E3458E6D6JpgQekMstDf1Cgu,
+                              fullWidth: 564,
+                              fullHeight: 423,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </Stack__>
+                        <Stack__
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___4U1Mb
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ekZwR
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {"Polycarbonate panels"}
+                              </span>
+                              <React.Fragment>
+                                {
+                                  " are used as sound barrier insulation. It is a lightweight material, easy to install, can reduce noise pollution from road traffic by 50%, without affecting its aesthetics. These sheets are anti-fogging, so they do not limit the view of drivers or residents in a rainy day. Due to their high resistance to impact and weathering, they can last between 15 and 20 years."
+                                }
+                              </React.Fragment>
+                            </React.Fragment>
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__g2GO
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {"Bioswales "}
+                              </span>
+                              <React.Fragment>
+                                {
+                                  "in urban design offer effective stormwater management, enhance water quality, and promote biodiversity. By strategically implementing bioswales along roadways, we mitigate runoff pollution and contribute to sustainable urban environments."
+                                }
+                              </React.Fragment>
+                            </React.Fragment>
+                          </div>
+                        </Stack__>
+                      </div>
+                    </AntdModal>
                     <div
                       className={classNames(projectcss.all, sty.freeBox__dmFlC)}
                       onClick={async event => {
@@ -778,135 +913,6 @@ function PlasmicHome__RenderFunc(props) {
                     </div>
                   </div>
                 </div>
-                <AntdModal
-                  data-plasmic-name={"modal"}
-                  data-plasmic-override={overrides.modal}
-                  className={classNames("__wab_instance", sty.modal)}
-                  defaultStylesClassName={classNames(
-                    projectcss.root_reset,
-                    projectcss.plasmic_default_styles,
-                    projectcss.plasmic_mixins,
-                    projectcss.plasmic_tokens,
-                    plasmic_antd_5_hostless_css.plasmic_tokens,
-                    plasmic_plasmic_rich_components_css.plasmic_tokens
-                  )}
-                  hideFooter={true}
-                  modalScopeClassName={sty["modal__modal"]}
-                  onOpenChange={generateStateOnChangeProp($state, [
-                    "modal",
-                    "open"
-                  ])}
-                  open={generateStateValueProp($state, ["modal", "open"])}
-                  title={
-                    "Two of our ideas that contribute to sustainability are:"
-                  }
-                  trigger={null}
-                  width={"700"}
-                  wrapClassName={classNames({
-                    [sty["pcls_HgpS5QjfUewr"]]: true
-                  })}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___0NqtK)}
-                  >
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__dTndH)}
-                    >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__raoTx)}
-                        displayHeight={"217px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"244px"}
-                        loading={"lazy"}
-                        src={{
-                          src: noiseBarrierjpgWqeI69Rs5Ft,
-                          fullWidth: 639,
-                          fullHeight: 741,
-                          aspectRatio: undefined
-                        }}
-                      />
-
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__dHy6A)}
-                        displayHeight={"223px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"247px"}
-                        loading={"lazy"}
-                        src={{
-                          src: _91Aa24019464500557C88A8E3458E6D6JpgQekMstDf1Cgu,
-                          fullWidth: 564,
-                          fullHeight: 423,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___4U1Mb
-                      )}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ekZwR
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ fontWeight: 700 }}
-                          >
-                            {"Polycarbonate panels"}
-                          </span>
-                          <React.Fragment>
-                            {
-                              " are used as sound barrier insulation. It is a lightweight material, easy to install, can reduce noise pollution from road traffic by 50%, without affecting its aesthetics. These sheets are anti-fogging, so they do not limit the view of drivers or residents in a rainy day. Due to their high resistance to impact and weathering, they can last between 15 and 20 years."
-                            }
-                          </React.Fragment>
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__g2GO
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ fontWeight: 700 }}
-                          >
-                            {"Bioswales "}
-                          </span>
-                          <React.Fragment>
-                            {
-                              "in urban design offer effective stormwater management, enhance water quality, and promote biodiversity. By strategically implementing bioswales along roadways, we mitigate runoff pollution and contribute to sustainable urban environments."
-                            }
-                          </React.Fragment>
-                        </React.Fragment>
-                      </div>
-                    </Stack__>
-                  </div>
-                </AntdModal>
               </div>
             </Stack__>
             <div className={classNames(projectcss.all, sty.freeBox__c0HmH)}>
