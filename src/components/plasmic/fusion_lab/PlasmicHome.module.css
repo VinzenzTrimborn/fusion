@@ -10,8 +10,8 @@
   min-height: 0;
 }
 .freeBox__pRzGd {
-  width: 1440px;
-  height: 849px;
+  width: 100vw;
+  height: 90vh;
   display: flex;
   overflow: hidden;
   position: absolute;
@@ -38,16 +38,15 @@
 .freeBox__t0V8X {
   background: linear-gradient(#ffffffcc, #ffffffcc),
     url("./images/oig2Jpeg.jpg") center center / cover no-repeat;
-  height: 1000px;
+  height: 100%;
   display: flex;
   position: absolute;
   left: 0px;
   top: 0px;
   z-index: -10;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
-  min-width: 0;
-  flex-shrink: 0;
+  min-height: 0;
 }
 .header {
   height: auto;
@@ -99,6 +98,11 @@
   > picture
   > img {
   margin-top: 10px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__kVxWg {
+    margin-top: calc(160px + 0px) !important;
+  }
 }
 .text__tbQo {
   width: auto;
