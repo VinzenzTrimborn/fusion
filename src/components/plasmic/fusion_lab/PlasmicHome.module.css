@@ -1042,6 +1042,11 @@
   margin-top: 40px;
   min-width: 0;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .participationArea:global(.__wab_instance) {
+    display: none;
+  }
+}
 .faqSection:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
