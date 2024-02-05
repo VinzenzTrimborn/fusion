@@ -1220,7 +1220,7 @@ function PlasmicFaqSection__RenderFunc(props) {
             <React.Fragment>
               <span
                 className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#535353" }}
+                style={{ color: "#000000" }}
               >
                 {"Answers"}
               </span>

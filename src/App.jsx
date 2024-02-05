@@ -1,12 +1,14 @@
 import Home from './components/Home';
-// import SupabaseContext from './SupabaseContext';
-// import supabase from './supabaseClient';
+import MyProvider from "./MyProvider";
+import {PlasmicRootProvider} from '@plasmicapp/react-web';
 
 function App() {
     return (
-        // <SupabaseContext.Provider value={supabase}>
-            <Home/>
-        // </SupabaseContext.Provider>
+        <PlasmicRootProvider>
+            <MyProvider>
+                <Home/>
+            </MyProvider>
+        </PlasmicRootProvider>
     );
 }
 

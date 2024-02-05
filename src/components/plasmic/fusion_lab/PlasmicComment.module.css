@@ -20,6 +20,9 @@
   border-radius: 10px;
   border: 1px solid #f0f0f0;
 }
+.freeBoxliked__t0ZTdFe6S {
+  height: auto;
+}
 .freeBox__p7Sb1 {
   width: 100%;
   height: 100%;
@@ -30,6 +33,9 @@
   flex-direction: column;
   min-width: 0;
   min-height: 0;
+}
+.freeBoxliked__p7Sb1DFe6S {
+  height: auto;
 }
 .freeBox___0CtHj {
   display: flex;
@@ -61,6 +67,9 @@
   > img {
   margin-left: 8px;
 }
+.freeBoxliked___0CtHjdFe6S {
+  height: auto;
+}
 .freeBox___9CRnq {
   display: flex;
   position: relative;
@@ -74,6 +83,11 @@
   min-height: 0;
   padding: 8px;
 }
+.freeBoxliked___9CRnqdFe6S {
+  height: auto;
+  width: 100%;
+  min-width: 0;
+}
 .freeBox__vxEdt {
   position: relative;
   flex-direction: row;
@@ -84,6 +98,9 @@
   max-width: 100%;
   display: none;
   padding: 0px;
+}
+.freeBoxliked__vxEdtdFe6S {
+  display: none;
 }
 .username {
   display: block;
@@ -296,6 +313,10 @@
   max-width: 100%;
   min-width: 0;
   padding: 0px;
+}
+.freeBoxliked__xpSoVdFe6S {
+  width: 100px;
+  flex-shrink: 0;
 }
 .likeButton {
   display: flex;

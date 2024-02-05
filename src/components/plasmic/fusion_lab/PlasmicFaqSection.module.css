@@ -109,7 +109,7 @@
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 63.984px;
-  color: #535353;
+  color: #000000;
   width: 504px;
   margin-bottom: 25px;
 }
@@ -856,7 +856,7 @@
   max-width: 100%;
   top: auto;
   left: auto;
-  padding: 5px;
+  padding: 5px 5px 0px;
 }
 .stackAnswersanswers_x {
   display: none;
@@ -868,7 +868,7 @@
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 63.984px;
-  color: rgba(51, 51, 51, 1);
+  color: #000000;
   width: 100%;
   position: relative;
   left: auto;
@@ -885,7 +885,7 @@
   height: 100%;
   max-width: 100%;
   min-height: 0;
-  padding: 0px 15px 15px;
+  padding: 0px 15px;
 }
 .freeBox__sAt9C > :global(.__wab_flex-container) {
   flex-direction: column;
@@ -917,7 +917,7 @@
   top: 0px;
   left: 0px;
   z-index: 1;
-  margin-top: calc(10px + 10px) !important;
+  margin-top: calc(0px + 10px) !important;
   min-width: 0;
   min-height: 0;
   padding: 8px;

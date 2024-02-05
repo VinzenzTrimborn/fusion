@@ -768,7 +768,7 @@
   top: 0px;
   z-index: 1;
   font-size: 40px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: #ffffff;
   margin: 15px;
 }
 .topModal:global(.__wab_instance) {
@@ -908,7 +908,7 @@
   top: 0px;
   z-index: 1;
   font-size: 40px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: #ffffff;
   margin: 15px;
 }
 .modal:global(.__wab_instance) {
@@ -1112,7 +1112,7 @@
   top: 0px;
   z-index: 1;
   font-size: 40px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: #ffffff;
   margin: 15px;
 }
 .activitiesCard4 {
@@ -1165,7 +1165,7 @@
   top: 0px;
   z-index: 1;
   font-size: 40px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: #ffffff;
   margin: 15px;
 }
 .openAct:global(.__wab_instance) {
@@ -1394,6 +1394,6 @@
   top: 0px;
   z-index: 1;
   font-size: 40px;
-  color: var(--token-zy6xhYnWF8Y7);
+  color: #ffffff;
   margin: 15px;
 }

@@ -16,6 +16,8 @@ import {
   deriveRenderOpts,
   generateStateOnChangeProp,
   generateStateValueProp,
+  get as $stateGet,
+  set as $stateSet,
   useCurrentUser,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -24,8 +26,8 @@ import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
 import Select from "../../Select"; // plasmic-import: YbzHlcQNiy51/component
 import Checkbox from "../../Checkbox"; // plasmic-import: QYHJ3nGLufw1/component
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -164,7 +166,63 @@ function PlasmicQuestions__RenderFunc(props) {
           plasmic_antd_5_hostless_css.plasmic_tokens,
           plasmic_plasmic_rich_components_css.plasmic_tokens
         )}
-        hideFooter={true}
+        footer={
+          <AntdButton
+            data-plasmic-name={"submitButton"}
+            data-plasmic-override={overrides.submitButton}
+            className={classNames("__wab_instance", sty.submitButton)}
+            onClick={async () => {
+              const $steps = {};
+              $steps["updateModalOpen"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["modal", "open"]
+                      },
+                      operation: 4
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+                      const oldValue = $stateGet(objRoot, variablePath);
+                      $stateSet(objRoot, variablePath, !oldValue);
+                      return !oldValue;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateModalOpen"] != null &&
+                typeof $steps["updateModalOpen"] === "object" &&
+                typeof $steps["updateModalOpen"].then === "function"
+              ) {
+                $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+              }
+            }}
+            submitsForm={false}
+            type={"primary"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__tbYx5
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700 }}
+                >
+                  {"Submit"}
+                </span>
+              </React.Fragment>
+            </div>
+          </AntdButton>
+        }
+        hideFooter={false}
         modalScopeClassName={sty["modal__modal"]}
         onOpenChange={generateStateOnChangeProp($state, ["modal", "open"])}
         open={generateStateValueProp($state, ["modal", "open"])}
@@ -206,11 +264,7 @@ function PlasmicQuestions__RenderFunc(props) {
           </ActionButton>
         }
       >
-        <form
-          data-plasmic-name={"form"}
-          data-plasmic-override={overrides.form}
-          className={classNames(projectcss.all, sty.form)}
-        >
+        <div className={classNames(projectcss.all, sty.freeBox__ryXBc)}>
           <div className={classNames(projectcss.all, sty.freeBox__w0S32)}>
             <div className={classNames(projectcss.all, sty.freeBox___2Zbv)}>
               <div
@@ -248,6 +302,7 @@ function PlasmicQuestions__RenderFunc(props) {
               <Select
                 data-plasmic-name={"countrySelect"}
                 data-plasmic-override={overrides.countrySelect}
+                aria-label={"contry select"}
                 className={classNames("__wab_instance", sty.countrySelect)}
                 onChange={(...eventArgs) => {
                   generateStateOnChangeProp($state, ["countrySelect", "value"])(
@@ -290,6 +345,7 @@ function PlasmicQuestions__RenderFunc(props) {
             <Select
               data-plasmic-name={"howOften"}
               data-plasmic-override={overrides.howOften}
+              aria-label={"frequency select"}
               className={classNames("__wab_instance", sty.howOften)}
               onChange={(...eventArgs) => {
                 generateStateOnChangeProp($state, ["howOften", "value"])(
@@ -326,6 +382,7 @@ function PlasmicQuestions__RenderFunc(props) {
             <Select
               data-plasmic-name={"bridgeUse"}
               data-plasmic-override={overrides.bridgeUse}
+              aria-label={"usage kind"}
               className={classNames("__wab_instance", sty.bridgeUse)}
               onChange={(...eventArgs) => {
                 generateStateOnChangeProp($state, ["bridgeUse", "value"])(
@@ -362,6 +419,7 @@ function PlasmicQuestions__RenderFunc(props) {
             <Select
               data-plasmic-name={"commute"}
               data-plasmic-override={overrides.commute}
+              aria-label={"commute select"}
               className={classNames("__wab_instance", sty.commute)}
               onChange={(...eventArgs) => {
                 generateStateOnChangeProp($state, ["commute", "value"])(
@@ -500,31 +558,7 @@ function PlasmicQuestions__RenderFunc(props) {
               {"Coffe-to-Go Area"}
             </Checkbox>
           </div>
-          <AntdButton
-            data-plasmic-name={"submitButton"}
-            data-plasmic-override={overrides.submitButton}
-            className={classNames("__wab_instance", sty.submitButton)}
-            submitsForm={false}
-            type={"primary"}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__tbYx5
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"Submit"}
-                </span>
-              </React.Fragment>
-            </div>
-          </AntdButton>
-        </form>
+        </div>
       </AntdModal>
     </div>
   );
@@ -534,7 +568,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "modal",
-    "form",
     "postalCode",
     "countrySelect",
     "howOften",
@@ -547,13 +580,12 @@ const PlasmicDescendants = {
     "checkbox4",
     "checkbox6",
     "checkbox7",
-    "submitButton",
-    "actionButton"
+    "actionButton",
+    "submitButton"
   ],
 
   modal: [
     "modal",
-    "form",
     "postalCode",
     "countrySelect",
     "howOften",
@@ -566,24 +598,7 @@ const PlasmicDescendants = {
     "checkbox4",
     "checkbox6",
     "checkbox7",
-    "submitButton",
-    "actionButton"
-  ],
-
-  form: [
-    "form",
-    "postalCode",
-    "countrySelect",
-    "howOften",
-    "bridgeUse",
-    "commute",
-    "bridgeActivitiesBox",
-    "checkbox",
-    "checkbox2",
-    "checkbox3",
-    "checkbox4",
-    "checkbox6",
-    "checkbox7",
+    "actionButton",
     "submitButton"
   ],
 
@@ -608,8 +623,8 @@ const PlasmicDescendants = {
   checkbox4: ["checkbox4"],
   checkbox6: ["checkbox6"],
   checkbox7: ["checkbox7"],
-  submitButton: ["submitButton"],
-  actionButton: ["actionButton"]
+  actionButton: ["actionButton"],
+  submitButton: ["submitButton"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -645,7 +660,6 @@ export const PlasmicQuestions = Object.assign(
   {
     // Helper components rendering sub-elements
     modal: makeNodeComponent("modal"),
-    form: makeNodeComponent("form"),
     postalCode: makeNodeComponent("postalCode"),
     countrySelect: makeNodeComponent("countrySelect"),
     howOften: makeNodeComponent("howOften"),
@@ -658,8 +672,8 @@ export const PlasmicQuestions = Object.assign(
     checkbox4: makeNodeComponent("checkbox4"),
     checkbox6: makeNodeComponent("checkbox6"),
     checkbox7: makeNodeComponent("checkbox7"),
-    submitButton: makeNodeComponent("submitButton"),
     actionButton: makeNodeComponent("actionButton"),
+    submitButton: makeNodeComponent("submitButton"),
     // Metadata about props expected for PlasmicQuestions
     internalVariantProps: PlasmicQuestions__VariantProps,
     internalArgProps: PlasmicQuestions__ArgProps

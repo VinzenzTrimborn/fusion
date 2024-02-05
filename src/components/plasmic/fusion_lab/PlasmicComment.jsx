@@ -88,38 +88,81 @@ function PlasmicComment__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        { [sty.rootliked]: hasVariant($state, "liked", "liked") }
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__t0ZT)}>
-        <div className={classNames(projectcss.all, sty.freeBox__p7Sb1)}>
+      <div
+        className={classNames(projectcss.all, sty.freeBox__t0ZT, {
+          [sty.freeBoxliked__t0ZTdFe6S]: hasVariant($state, "liked", "liked")
+        })}
+      >
+        <div
+          className={classNames(projectcss.all, sty.freeBox__p7Sb1, {
+            [sty.freeBoxliked__p7Sb1DFe6S]: hasVariant($state, "liked", "liked")
+          })}
+        >
           <Stack__
             as={"div"}
             hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___0CtHj)}
+            className={classNames(projectcss.all, sty.freeBox___0CtHj, {
+              [sty.freeBoxliked___0CtHjdFe6S]: hasVariant(
+                $state,
+                "liked",
+                "liked"
+              )
+            })}
           >
-            <div className={classNames(projectcss.all, sty.freeBox___9CRnq)}>
-              <div className={classNames(projectcss.all, sty.freeBox__vxEdt)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox___9CRnq, {
+                [sty.freeBoxliked___9CRnqdFe6S]: hasVariant(
+                  $state,
+                  "liked",
+                  "liked"
+                )
+              })}
+            >
+              <div
+                className={classNames(projectcss.all, sty.freeBox__vxEdt, {
+                  [sty.freeBoxliked__vxEdtdFe6S]: hasVariant(
+                    $state,
+                    "liked",
+                    "liked"
+                  )
+                })}
+              >
                 <div
                   data-plasmic-name={"username"}
                   data-plasmic-override={overrides.username}
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.username
+                    sty.username,
+                    {
+                      [sty.usernameliked]: hasVariant($state, "liked", "liked")
+                    }
                   )}
                 >
-                  {"notoyrobots"}
+                  {"Anonymous"}
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__d5Jt9)}>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__d5Jt9, {
+                  [sty.freeBoxliked__d5Jt9DFe6S]: hasVariant(
+                    $state,
+                    "liked",
+                    "liked"
+                  )
+                })}
+              >
                 <div
                   data-plasmic-name={"text"}
                   data-plasmic-override={overrides.text}
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text
+                    sty.text,
+                    { [sty.textliked]: hasVariant($state, "liked", "liked") }
                   )}
                 >
                   {"Group C is the best!"}
@@ -162,7 +205,15 @@ function PlasmicComment__RenderFunc(props) {
                 </div>
               </AntdModal>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__xpSoV)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__xpSoV, {
+                [sty.freeBoxliked__xpSoVdFe6S]: hasVariant(
+                  $state,
+                  "liked",
+                  "liked"
+                )
+              })}
+            >
               <div
                 data-plasmic-name={"likeButton"}
                 data-plasmic-override={overrides.likeButton}

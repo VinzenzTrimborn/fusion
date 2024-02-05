@@ -1044,6 +1044,7 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                   />
                 </AntdModal>
                 <ActivityQuestions
+                  activity={"bridgePlatform"}
                   className={classNames(
                     "__wab_instance",
                     sty.activityQuestions__hzUzo,

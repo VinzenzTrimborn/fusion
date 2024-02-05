@@ -16,7 +16,9 @@ import {
   deriveRenderOpts,
   generateStateOnChangeProp,
   generateStateValueProp,
+  get as $stateGet,
   hasVariant,
+  set as $stateSet,
   useCurrentUser,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -36,7 +38,7 @@ createPlasmicElementProxy;
 
 export const PlasmicActivityQuestions__VariantProps = new Array("activity");
 
-export const PlasmicActivityQuestions__ArgProps = new Array("open");
+export const PlasmicActivityQuestions__ArgProps = new Array("open", "variant");
 
 const $$ = {};
 
@@ -69,25 +71,25 @@ function PlasmicActivityQuestions__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props["open"]
       },
       {
-        path: "numberInput.value",
+        path: "grade.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "textarea.value",
+        path: "improvementComment.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
       },
       {
-        path: "textarea2.value",
+        path: "notLikeComment.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ``
       },
       {
-        path: "select.value",
+        path: "often.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -160,6 +162,11 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             $state,
             "activity",
             "climbingWall"
+          ),
+          [sty.modalactivity_openActivitiesNorth]: hasVariant(
+            $state,
+            "activity",
+            "openActivitiesNorth"
           )
         })}
         defaultStylesClassName={classNames(
@@ -171,8 +178,86 @@ function PlasmicActivityQuestions__RenderFunc(props) {
           plasmic_plasmic_rich_components_css.plasmic_tokens
         )}
         footer={
-          <div className={classNames(projectcss.all, sty.freeBox__wxuMq)}>
-            <Button className={classNames("__wab_instance", sty.button__ppvOk)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__wxuMq, {
+              [sty.freeBoxactivity_bridgePlatform__wxuMq5LLv2]: hasVariant(
+                $state,
+                "activity",
+                "bridgePlatform"
+              ),
+              [sty.freeBoxactivity_openActivitiesSouth__wxuMqTaom]: hasVariant(
+                $state,
+                "activity",
+                "openActivitiesSouth"
+              )
+            })}
+          >
+            <Button
+              data-plasmic-name={"climbingSubmit"}
+              data-plasmic-override={overrides.climbingSubmit}
+              className={classNames("__wab_instance", sty.climbingSubmit, {
+                [sty.climbingSubmitactivity_bridgePlatform]: hasVariant(
+                  $state,
+                  "activity",
+                  "bridgePlatform"
+                ),
+                [sty.climbingSubmitactivity_climbingWall]: hasVariant(
+                  $state,
+                  "activity",
+                  "climbingWall"
+                ),
+                [sty.climbingSubmitactivity_openActivitiesNorth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesNorth"
+                ),
+                [sty.climbingSubmitactivity_openActivitiesSouth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesSouth"
+                ),
+                [sty.climbingSubmitactivity_skateParkArea]: hasVariant(
+                  $state,
+                  "activity",
+                  "skateParkArea"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateModalOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["modal", "open"]
+                        },
+                        operation: 4
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        const oldValue = $stateGet(objRoot, variablePath);
+                        $stateSet(objRoot, variablePath, !oldValue);
+                        return !oldValue;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateModalOpen"] != null &&
+                  typeof $steps["updateModalOpen"] === "object" &&
+                  typeof $steps["updateModalOpen"].then === "function"
+                ) {
+                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                }
+              }}
+            >
               <div
                 className={classNames(
                   projectcss.all,
@@ -190,6 +275,304 @@ function PlasmicActivityQuestions__RenderFunc(props) {
                 </React.Fragment>
               </div>
             </Button>
+            <Button
+              data-plasmic-name={"platformSubmit"}
+              data-plasmic-override={overrides.platformSubmit}
+              className={classNames("__wab_instance", sty.platformSubmit, {
+                [sty.platformSubmitactivity_bridgePlatform]: hasVariant(
+                  $state,
+                  "activity",
+                  "bridgePlatform"
+                ),
+                [sty.platformSubmitactivity_openActivitiesNorth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesNorth"
+                ),
+                [sty.platformSubmitactivity_openActivitiesSouth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesSouth"
+                ),
+                [sty.platformSubmitactivity_skateParkArea]: hasVariant(
+                  $state,
+                  "activity",
+                  "skateParkArea"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateModalOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["modal", "open"]
+                        },
+                        operation: 4
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        const oldValue = $stateGet(objRoot, variablePath);
+                        $stateSet(objRoot, variablePath, !oldValue);
+                        return !oldValue;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateModalOpen"] != null &&
+                  typeof $steps["updateModalOpen"] === "object" &&
+                  typeof $steps["updateModalOpen"].then === "function"
+                ) {
+                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__hU3Y
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700, color: "#FFFFFF" }}
+                  >
+                    {"Submit"}
+                  </span>
+                </React.Fragment>
+              </div>
+            </Button>
+            <Button
+              data-plasmic-name={"skateSubmit"}
+              data-plasmic-override={overrides.skateSubmit}
+              className={classNames("__wab_instance", sty.skateSubmit, {
+                [sty.skateSubmitactivity_openActivitiesNorth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesNorth"
+                ),
+                [sty.skateSubmitactivity_openActivitiesSouth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesSouth"
+                ),
+                [sty.skateSubmitactivity_skateParkArea]: hasVariant(
+                  $state,
+                  "activity",
+                  "skateParkArea"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateModalOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["modal", "open"]
+                        },
+                        operation: 4
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        const oldValue = $stateGet(objRoot, variablePath);
+                        $stateSet(objRoot, variablePath, !oldValue);
+                        return !oldValue;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateModalOpen"] != null &&
+                  typeof $steps["updateModalOpen"] === "object" &&
+                  typeof $steps["updateModalOpen"].then === "function"
+                ) {
+                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__djZlE
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700, color: "#FFFFFF" }}
+                  >
+                    {"Submit"}
+                  </span>
+                </React.Fragment>
+              </div>
+            </Button>
+            <Button
+              data-plasmic-name={"openNorthSubmit"}
+              data-plasmic-override={overrides.openNorthSubmit}
+              className={classNames("__wab_instance", sty.openNorthSubmit, {
+                [sty.openNorthSubmitactivity_openActivitiesNorth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesNorth"
+                ),
+                [sty.openNorthSubmitactivity_openActivitiesSouth]: hasVariant(
+                  $state,
+                  "activity",
+                  "openActivitiesSouth"
+                ),
+                [sty.openNorthSubmitactivity_skateParkArea]: hasVariant(
+                  $state,
+                  "activity",
+                  "skateParkArea"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateModalOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["modal", "open"]
+                        },
+                        operation: 4
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        const oldValue = $stateGet(objRoot, variablePath);
+                        $stateSet(objRoot, variablePath, !oldValue);
+                        return !oldValue;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateModalOpen"] != null &&
+                  typeof $steps["updateModalOpen"] === "object" &&
+                  typeof $steps["updateModalOpen"].then === "function"
+                ) {
+                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__weI08
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700, color: "#FFFFFF" }}
+                  >
+                    {"Submit"}
+                  </span>
+                </React.Fragment>
+              </div>
+            </Button>
+            {(
+              hasVariant($state, "activity", "openActivitiesSouth")
+                ? true
+                : false
+            ) ? (
+              <Button
+                data-plasmic-name={"openSouthSubmit"}
+                data-plasmic-override={overrides.openSouthSubmit}
+                className={classNames("__wab_instance", sty.openSouthSubmit, {
+                  [sty.openSouthSubmitactivity_openActivitiesNorth]: hasVariant(
+                    $state,
+                    "activity",
+                    "openActivitiesNorth"
+                  ),
+                  [sty.openSouthSubmitactivity_openActivitiesSouth]: hasVariant(
+                    $state,
+                    "activity",
+                    "openActivitiesSouth"
+                  )
+                })}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateModalOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["modal", "open"]
+                          },
+                          operation: 4
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, !oldValue);
+                          return !oldValue;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateModalOpen"] != null &&
+                    typeof $steps["updateModalOpen"] === "object" &&
+                    typeof $steps["updateModalOpen"].then === "function"
+                  ) {
+                    $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  }
+                }}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___0Bs8R
+                  )}
+                >
+                  <React.Fragment>
+                    <span
+                      className={"plasmic_default__all plasmic_default__span"}
+                      style={{ fontWeight: 700, color: "#FFFFFF" }}
+                    >
+                      {"Submit"}
+                    </span>
+                  </React.Fragment>
+                </div>
+              </Button>
+            ) : null}
           </div>
         }
         modalScopeClassName={sty["modal__modal"]}
@@ -208,7 +591,9 @@ function PlasmicActivityQuestions__RenderFunc(props) {
         }
         trigger={
           <AntdButton
-            className={classNames("__wab_instance", sty.button__zHqam)}
+            data-plasmic-name={"button"}
+            data-plasmic-override={overrides.button}
+            className={classNames("__wab_instance", sty.button)}
             type={"primary"}
           >
             <div
@@ -238,20 +623,17 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             {"On a scale from 1 (best) to 6 how do you like this idea?"}
           </div>
           <AntdInputNumber
-            data-plasmic-name={"numberInput"}
-            data-plasmic-override={overrides.numberInput}
-            className={classNames("__wab_instance", sty.numberInput)}
+            data-plasmic-name={"grade"}
+            data-plasmic-override={overrides.grade}
+            className={classNames("__wab_instance", sty.grade)}
             controls={true}
             max={6}
             min={1}
-            onChange={generateStateOnChangeProp($state, [
-              "numberInput",
-              "value"
-            ])}
+            onChange={generateStateOnChangeProp($state, ["grade", "value"])}
             placeholder={"Grade"}
             step={1}
             type={"number"}
-            value={generateStateValueProp($state, ["numberInput", "value"])}
+            value={generateStateValueProp($state, ["grade", "value"])}
           />
         </Stack__>
         <Stack__
@@ -269,11 +651,12 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             {"How often would you use this area?"}
           </div>
           <Select
-            data-plasmic-name={"select"}
-            data-plasmic-override={overrides.select}
-            className={classNames("__wab_instance", sty.select)}
+            data-plasmic-name={"often"}
+            data-plasmic-override={overrides.often}
+            aria-label={"Select Usage"}
+            className={classNames("__wab_instance", sty.often)}
             onChange={(...eventArgs) => {
-              generateStateOnChangeProp($state, ["select", "value"])(
+              generateStateOnChangeProp($state, ["often", "value"])(
                 eventArgs[0]
               );
             }}
@@ -292,7 +675,7 @@ function PlasmicActivityQuestions__RenderFunc(props) {
               __composite["2"]["label"] = "More";
               return __composite;
             })()}
-            value={generateStateValueProp($state, ["select", "value"])}
+            value={generateStateValueProp($state, ["often", "value"])}
           />
         </Stack__>
         <Stack__
@@ -310,23 +693,26 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             {"What do you not like about the current idea?"}
           </div>
           <textarea
-            data-plasmic-name={"textarea2"}
-            data-plasmic-override={overrides.textarea2}
+            data-plasmic-name={"notLikeComment"}
+            data-plasmic-override={overrides.notLikeComment}
+            aria-label={"Dislike field"}
             className={classNames(
               projectcss.all,
               projectcss.textarea,
-              sty.textarea2
+              sty.notLikeComment
             )}
             onChange={e => {
-              generateStateOnChangeProp($state, ["textarea2", "value"])(
+              generateStateOnChangeProp($state, ["notLikeComment", "value"])(
                 e.target.value
               );
             }}
             placeholder={"Describe what you do not like..."}
             ref={ref => {
-              $refs["textarea2"] = ref;
+              $refs["notLikeComment"] = ref;
             }}
-            value={generateStateValueProp($state, ["textarea2", "value"]) ?? ""}
+            value={
+              generateStateValueProp($state, ["notLikeComment", "value"]) ?? ""
+            }
           />
         </Stack__>
         <Stack__
@@ -344,23 +730,28 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             {"What would you like to improve about this idea?"}
           </div>
           <textarea
-            data-plasmic-name={"textarea"}
-            data-plasmic-override={overrides.textarea}
+            data-plasmic-name={"improvementComment"}
+            data-plasmic-override={overrides.improvementComment}
+            aria-label={"recommendation field"}
             className={classNames(
               projectcss.all,
               projectcss.textarea,
-              sty.textarea
+              sty.improvementComment
             )}
             onChange={e => {
-              generateStateOnChangeProp($state, ["textarea", "value"])(
-                e.target.value
-              );
+              generateStateOnChangeProp($state, [
+                "improvementComment",
+                "value"
+              ])(e.target.value);
             }}
             placeholder={"Describe what you would improve..."}
             ref={ref => {
-              $refs["textarea"] = ref;
+              $refs["improvementComment"] = ref;
             }}
-            value={generateStateValueProp($state, ["textarea", "value"]) ?? ""}
+            value={
+              generateStateValueProp($state, ["improvementComment", "value"]) ??
+              ""
+            }
           />
         </Stack__>
       </AntdModal>
@@ -369,12 +760,45 @@ function PlasmicActivityQuestions__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "modal", "numberInput", "select", "textarea2", "textarea"],
-  modal: ["modal", "numberInput", "select", "textarea2", "textarea"],
-  numberInput: ["numberInput"],
-  select: ["select"],
-  textarea2: ["textarea2"],
-  textarea: ["textarea"]
+  root: [
+    "root",
+    "modal",
+    "grade",
+    "often",
+    "notLikeComment",
+    "improvementComment",
+    "button",
+    "climbingSubmit",
+    "platformSubmit",
+    "skateSubmit",
+    "openNorthSubmit",
+    "openSouthSubmit"
+  ],
+
+  modal: [
+    "modal",
+    "grade",
+    "often",
+    "notLikeComment",
+    "improvementComment",
+    "button",
+    "climbingSubmit",
+    "platformSubmit",
+    "skateSubmit",
+    "openNorthSubmit",
+    "openSouthSubmit"
+  ],
+
+  grade: ["grade"],
+  often: ["often"],
+  notLikeComment: ["notLikeComment"],
+  improvementComment: ["improvementComment"],
+  button: ["button"],
+  climbingSubmit: ["climbingSubmit"],
+  platformSubmit: ["platformSubmit"],
+  skateSubmit: ["skateSubmit"],
+  openNorthSubmit: ["openNorthSubmit"],
+  openSouthSubmit: ["openSouthSubmit"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -410,10 +834,16 @@ export const PlasmicActivityQuestions = Object.assign(
   {
     // Helper components rendering sub-elements
     modal: makeNodeComponent("modal"),
-    numberInput: makeNodeComponent("numberInput"),
-    select: makeNodeComponent("select"),
-    textarea2: makeNodeComponent("textarea2"),
-    textarea: makeNodeComponent("textarea"),
+    grade: makeNodeComponent("grade"),
+    often: makeNodeComponent("often"),
+    notLikeComment: makeNodeComponent("notLikeComment"),
+    improvementComment: makeNodeComponent("improvementComment"),
+    button: makeNodeComponent("button"),
+    climbingSubmit: makeNodeComponent("climbingSubmit"),
+    platformSubmit: makeNodeComponent("platformSubmit"),
+    skateSubmit: makeNodeComponent("skateSubmit"),
+    openNorthSubmit: makeNodeComponent("openNorthSubmit"),
+    openSouthSubmit: makeNodeComponent("openSouthSubmit"),
     // Metadata about props expected for PlasmicActivityQuestions
     internalVariantProps: PlasmicActivityQuestions__VariantProps,
     internalArgProps: PlasmicActivityQuestions__ArgProps

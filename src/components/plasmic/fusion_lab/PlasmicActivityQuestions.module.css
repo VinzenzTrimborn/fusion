@@ -41,7 +41,7 @@
   > img {
   margin-left: 10px;
 }
-.numberInput:global(.__wab_instance) {
+.grade:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   position: relative;
@@ -79,7 +79,7 @@
   width: 100%;
   min-width: 0;
 }
-.select:global(.__wab_instance) {
+.often:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
   width: 100%;
@@ -114,7 +114,7 @@
   > img {
   margin-top: 10px;
 }
-.textarea2 {
+.notLikeComment {
   position: relative;
   width: 100%;
   height: auto;
@@ -151,7 +151,7 @@
   > img {
   margin-top: 10px;
 }
-.textarea {
+.improvementComment {
   position: relative;
   width: 100%;
   height: auto;
@@ -159,7 +159,7 @@
   min-width: 0;
   border-radius: 5px;
 }
-.button__zHqam:global(.__wab_instance) {
+.button:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -182,8 +182,20 @@
   min-width: 0;
   padding: 8px;
 }
-.button__ppvOk:global(.__wab_instance) {
+.climbingSubmit:global(.__wab_instance) {
   max-width: 100%;
+}
+.climbingSubmitactivity_bridgePlatform:global(.__wab_instance) {
+  display: none;
+}
+.climbingSubmitactivity_skateParkArea:global(.__wab_instance) {
+  display: none;
+}
+.climbingSubmitactivity_openActivitiesNorth:global(.__wab_instance) {
+  display: none;
+}
+.climbingSubmitactivity_openActivitiesSouth:global(.__wab_instance) {
+  display: none;
 }
 .svg__dbEaz {
   position: relative;
@@ -253,6 +265,343 @@
   min-height: 0;
 }
 .svg__iXk7B {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.platformSubmit:global(.__wab_instance) {
+  max-width: 100%;
+  display: none;
+}
+.platformSubmitactivity_bridgePlatform:global(.__wab_instance) {
+  display: flex;
+}
+.platformSubmitactivity_skateParkArea:global(.__wab_instance) {
+  display: none;
+}
+.platformSubmitactivity_openActivitiesNorth:global(.__wab_instance) {
+  display: none;
+}
+.platformSubmitactivity_openActivitiesSouth:global(.__wab_instance) {
+  display: none;
+}
+.svg__y7B4B {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__hU3Y {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  margin-right: 0px;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__rHxug {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__uSyUn {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__wJgG2 {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg___7SieI {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__xAdb0 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__pHDsX {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__xoFVf {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.skateSubmit:global(.__wab_instance) {
+  max-width: 100%;
+  display: none;
+}
+.skateSubmitactivity_skateParkArea:global(.__wab_instance) {
+  display: flex;
+}
+.skateSubmitactivity_openActivitiesNorth:global(.__wab_instance) {
+  display: none;
+}
+.skateSubmitactivity_openActivitiesSouth:global(.__wab_instance) {
+  display: none;
+}
+.svg__cOeJr {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__djZlE {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  margin-right: 0px;
+  min-width: 0;
+  min-height: 0;
+}
+.svg___1NPY {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__t3Xyj {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__oyQaa {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__rjz8E {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__tCgdq {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__k32To {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__wy1 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.openNorthSubmit:global(.__wab_instance) {
+  max-width: 100%;
+  display: none;
+}
+.openNorthSubmitactivity_skateParkArea:global(.__wab_instance) {
+  display: none;
+}
+.openNorthSubmitactivity_openActivitiesNorth:global(.__wab_instance) {
+  display: flex;
+}
+.openNorthSubmitactivity_openActivitiesSouth:global(.__wab_instance) {
+  display: none;
+}
+.svg__ny5Gq {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__weI08 {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  margin-right: 0px;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__bph6Z {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__jxVe4 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__ofa1O {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__rtJyc {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__m5Gib {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text___9DjVk {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__xcUpx {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.openSouthSubmit:global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__k2LlC {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text___0Bs8R {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  margin-right: 0px;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__o4RB5 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__phIp {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text___7QEjq {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__du6Y0 {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__rkYxu {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.text__gakFv {
+  color: var(--token-jgohepLVeKvh);
+  padding-right: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding-left: 5px;
+  background: none;
+  min-width: 0;
+  min-height: 0;
+}
+.svg__pYm4Q {
   position: relative;
   object-fit: cover;
   width: auto;

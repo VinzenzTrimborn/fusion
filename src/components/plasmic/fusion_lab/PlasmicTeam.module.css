@@ -80,6 +80,7 @@
   left: auto;
   top: auto;
   position: relative;
+  cursor: pointer;
   flex-shrink: 0;
   margin: 10px;
 }
@@ -100,6 +101,7 @@
   left: auto;
   width: auto;
   height: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .boxTina {
@@ -123,6 +125,7 @@
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
   flex-shrink: 0;
   margin: 10px;
 }
@@ -143,6 +146,11 @@
   left: auto;
   width: auto;
   height: auto;
+  transition-property: all;
+  transition-duration: 1s;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
   margin: 10px;
 }
 .boxMohammad {
@@ -162,6 +170,7 @@
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
   flex-shrink: 0;
   margin: 10px;
 }
@@ -182,6 +191,7 @@
   left: auto;
   width: auto;
   height: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .boxVinzenz {
@@ -204,6 +214,7 @@
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
   flex-shrink: 0;
   margin: 10px;
 }
@@ -224,6 +235,7 @@
   left: auto;
   width: auto;
   height: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .boxKoray {
@@ -247,6 +259,7 @@
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .photoKoray > picture > img {
@@ -266,5 +279,6 @@
   left: auto;
   width: auto;
   height: auto;
+  cursor: pointer;
   margin: 10px;
 }

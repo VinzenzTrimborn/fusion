@@ -2,13 +2,16 @@ import * as React from "react";
 import {PlasmicParticipationArea} from "./plasmic/fusion_lab/PlasmicParticipationArea";
 import {Controllers, Hands, TeleportationPlane, VRButton, XR} from "@react-three/xr";
 import {Canvas} from "@react-three/fiber";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useContext, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
 import {Environment} from "@react-three/drei";
+import MyContext from "../MyContext";
 
 function ParticipationArea_(props, ref) {
+    const {state, updateState} = useContext(MyContext);
+
     const [comments, setComments] = useState([]);
     const [input, setInput] = useState("");
 
@@ -39,12 +42,10 @@ function ParticipationArea_(props, ref) {
 
     //ToDo Koray: get comments from DB
     const getCommentsFromDB = useCallback(() => {
-        //ToDo Koray: After getting the comments likedByUser should be set to true if the user liked the comment
         return [
             {
                 likes: 45,
                 text: "I really like the boldering walls under the bridge!",
-                username: "Vinzenz",
                 cameraPosition: {x: 0, y: 2, z: 0},
                 commentPosition: {x: 0, y: 2, z: 0},
                 likedByUser: false
@@ -52,7 +53,6 @@ function ParticipationArea_(props, ref) {
             {
                 likes: 23,
                 text: "With so less parking I have to search for a parking spot for hours!",
-                username: "Koray",
                 cameraPosition: {x: 0, y: 2, z: 0},
                 commentPosition: {x: 0, y: 2, z: 0},
                 likedByUser: true
@@ -60,14 +60,21 @@ function ParticipationArea_(props, ref) {
         ];
     }, []);
 
+    const getLikesFromDB = () => {
+        //ToDo Koray: After getting the comments likedByUser should be set to true if the user liked the comment
+        state.userID && console.log("User ID: " + state.userID);
+        setComments(comments);
+    };
+
     //ToDo Koray: add comment to DB
     const addCommentDB = useCallback((newComment) => {
-
+        state.userID && console.log("User ID: " + state.userID);
         setComments([...comments, newComment]);
-    }, [comments]);
+    }, [comments, state.userID]);
 
     const changeLike = useCallback((comment) => {
         //ToDo Koray: increase or decrease likes in DB
+        state.userID && console.log("User ID: " + state.userID);
         const newComments = comments.map((c) => {
             if (c === comment && !c.likedByUser) {
                 return {...c, likes: c.likes + 1, likedByUser: true};
@@ -77,7 +84,7 @@ function ParticipationArea_(props, ref) {
             return c;
         });
         setComments(newComments);
-    }, [comments]);
+    }, [comments, state.userID]);
 
     useEffect(() => {
         let comments = getCommentsFromDB();
@@ -109,7 +116,6 @@ function ParticipationArea_(props, ref) {
                     const newComment = {
                         likes: 0,
                         text: input,
-                        username: "test",
                         cameraPosition: {
                             x: currentCameraPosition.x,
                             y: currentCameraPosition.y,
