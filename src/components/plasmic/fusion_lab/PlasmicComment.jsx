@@ -9,14 +9,18 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: FjjS-KWqLu0p
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  hasVariant,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import Button from "../../Button"; // plasmic-import: apXgE63BR30L/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -42,10 +46,10 @@ function PlasmicComment__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -64,7 +68,7 @@ function PlasmicComment__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -89,7 +93,7 @@ function PlasmicComment__RenderFunc(props) {
     >
       <div className={classNames(projectcss.all, sty.freeBox__t0ZT)}>
         <div className={classNames(projectcss.all, sty.freeBox__p7Sb1)}>
-          <p.Stack
+          <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox___0CtHj)}
@@ -135,11 +139,11 @@ function PlasmicComment__RenderFunc(props) {
                 )}
                 hideFooter={true}
                 modalScopeClassName={sty["modal__modal"]}
-                onOpenChange={p.generateStateOnChangeProp($state, [
+                onOpenChange={generateStateOnChangeProp($state, [
                   "modal",
                   "open"
                 ])}
-                open={p.generateStateValueProp($state, ["modal", "open"])}
+                open={generateStateValueProp($state, ["modal", "open"])}
                 title={"Comment Options"}
                 trigger={null}
                 width={"1200"}
@@ -199,7 +203,7 @@ function PlasmicComment__RenderFunc(props) {
                 />
               </div>
             </div>
-          </p.Stack>
+          </Stack__>
         </div>
       </div>
     </div>

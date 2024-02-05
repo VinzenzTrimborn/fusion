@@ -9,13 +9,15 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: SnzWAy89iw5m
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  PlasmicImg as PlasmicImg__,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useCurrentUser
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -42,12 +44,12 @@ function PlasmicTeam__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   return (
-    <p.Stack
+    <Stack__
       as={"div"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
@@ -76,396 +78,391 @@ function PlasmicTeam__RenderFunc(props) {
           {"Team"}
         </div>
       </div>
-      <p.Stack
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__mcGsO)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox___4BVv)}>
         <div
-          data-plasmic-name={"firstRoll"}
-          data-plasmic-override={overrides.firstRoll}
-          className={classNames(projectcss.all, sty.firstRoll)}
+          data-plasmic-name={"boxLelino"}
+          data-plasmic-override={overrides.boxLelino}
+          className={classNames(projectcss.all, sty.boxLelino)}
+          onClick={async event => {
+            const $steps = {};
+            $steps["goToHttpswwwlinkedincominlelinoGomes92B7B0A9"] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination:
+                      "https://www.linkedin.com/in/lelino-gomes-92b7b0a9/"
+                  };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      location.assign(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["goToHttpswwwlinkedincominlelinoGomes92B7B0A9"] != null &&
+              typeof $steps["goToHttpswwwlinkedincominlelinoGomes92B7B0A9"] ===
+                "object" &&
+              typeof $steps["goToHttpswwwlinkedincominlelinoGomes92B7B0A9"]
+                .then === "function"
+            ) {
+              $steps["goToHttpswwwlinkedincominlelinoGomes92B7B0A9"] =
+                await $steps["goToHttpswwwlinkedincominlelinoGomes92B7B0A9"];
+            }
+          }}
         >
+          <PlasmicImg__
+            data-plasmic-name={"photoLelino"}
+            data-plasmic-override={overrides.photoLelino}
+            alt={""}
+            className={classNames(sty.photoLelino)}
+            displayHeight={"150px"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"none"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"150px"}
+            loading={"lazy"}
+            src={{
+              src: ellipse94Pwwq9GinLkcJ,
+              fullWidth: 331,
+              fullHeight: 331,
+              aspectRatio: 1
+            }}
+          />
+
           <div
-            data-plasmic-name={"boxLelino"}
-            data-plasmic-override={overrides.boxLelino}
-            className={classNames(projectcss.all, sty.boxLelino)}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text___144B0
+            )}
           >
-            <p.PlasmicImg
-              data-plasmic-name={"photoLelino"}
-              data-plasmic-override={overrides.photoLelino}
-              alt={""}
-              className={classNames(sty.photoLelino)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"80%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: ellipse94Pwwq9GinLkcJ,
-                fullWidth: 331,
-                fullHeight: 331,
-                aspectRatio: 1
-              }}
-            />
-
-            <a
-              data-plasmic-name={"linkedinLelino"}
-              data-plasmic-override={overrides.linkedinLelino}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.linkedinLelino
-              )}
-              href={"https://www.linkedin.com/in/lelino-gomes-92b7b0a9/"}
-              onClick={async event => {
-                const $steps = {};
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___144B0
-              )}
-            >
-              {"Lelino\nGomes"}
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"boxTina"}
-            data-plasmic-override={overrides.boxTina}
-            className={classNames(projectcss.all, sty.boxTina)}
-          >
-            <p.PlasmicImg
-              data-plasmic-name={"photoTina"}
-              data-plasmic-override={overrides.photoTina}
-              alt={""}
-              className={classNames(sty.photoTina)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"80%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: ellipse96VqRzDp9T50Mu,
-                fullWidth: 331,
-                fullHeight: 331,
-                aspectRatio: 1
-              }}
-            />
-
-            <a
-              data-plasmic-name={"linkedinTina"}
-              data-plasmic-override={overrides.linkedinTina}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.linkedinTina
-              )}
-              href={
-                "https://www.linkedin.com/in/%C3%A7eltina-balaj-3141592653589793238/"
-              }
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToPage"] = true
-                  ? (() => {
-                      const actionArgs = {};
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          location.assign(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToPage"] != null &&
-                  typeof $steps["goToPage"] === "object" &&
-                  typeof $steps["goToPage"].then === "function"
-                ) {
-                  $steps["goToPage"] = await $steps["goToPage"];
-                }
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__rxhKp
-              )}
-            >
-              {"Celtina\nBalaj"}
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"boxMohammad"}
-            data-plasmic-override={overrides.boxMohammad}
-            className={classNames(projectcss.all, sty.boxMohammad)}
-          >
-            <p.PlasmicImg
-              data-plasmic-name={"photoMohammad"}
-              data-plasmic-override={overrides.photoMohammad}
-              alt={""}
-              className={classNames(sty.photoMohammad)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"80%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: ellipse98HNxjJfqdv0Ot,
-                fullWidth: 331,
-                fullHeight: 331,
-                aspectRatio: 1
-              }}
-            />
-
-            <a
-              data-plasmic-name={"linkedinMohammad"}
-              data-plasmic-override={overrides.linkedinMohammad}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.linkedinMohammad
-              )}
-              href={"https://www.linkedin.com/in/mohammad-alrabab-h-a00a72104/"}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToPage"] = true
-                  ? (() => {
-                      const actionArgs = {};
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          location.assign(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToPage"] != null &&
-                  typeof $steps["goToPage"] === "object" &&
-                  typeof $steps["goToPage"].then === "function"
-                ) {
-                  $steps["goToPage"] = await $steps["goToPage"];
-                }
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__nwz1W
-              )}
-            >
-              {"Mohammad Alrabab\u2019h"}
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"boxVinzenz"}
-            data-plasmic-override={overrides.boxVinzenz}
-            className={classNames(projectcss.all, sty.boxVinzenz)}
-          >
-            <p.PlasmicImg
-              data-plasmic-name={"photoVinzenz"}
-              data-plasmic-override={overrides.photoVinzenz}
-              alt={""}
-              className={classNames(sty.photoVinzenz)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"80%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: ellipse95Z1FcWs93Tz,
-                fullWidth: 331,
-                fullHeight: 331,
-                aspectRatio: 1
-              }}
-            />
-
-            <a
-              data-plasmic-name={"linkedinVinzenz"}
-              data-plasmic-override={overrides.linkedinVinzenz}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.linkedinVinzenz
-              )}
-              href={"https://www.linkedin.com/in/vinzenz-trimborn/"}
-              onClick={async event => {
-                const $steps = {};
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__sVNtH
-              )}
-            >
-              {"Vinzenz\nTrimborn"}
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"boxKoray"}
-            data-plasmic-override={overrides.boxKoray}
-            className={classNames(projectcss.all, sty.boxKoray)}
-          >
-            <p.PlasmicImg
-              data-plasmic-name={"photoKoray"}
-              data-plasmic-override={overrides.photoKoray}
-              alt={""}
-              className={classNames(sty.photoKoray)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"80%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: ellipse97WXYy61HktYmm,
-                fullWidth: 331,
-                fullHeight: 331,
-                aspectRatio: 1
-              }}
-            />
-
-            <a
-              data-plasmic-name={"linkedinKoray"}
-              data-plasmic-override={overrides.linkedinKoray}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.linkedinKoray
-              )}
-              href={"https://www.linkedin.com/in/koray-inal/"}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToPage"] = true
-                  ? (() => {
-                      const actionArgs = {};
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          location.assign(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToPage"] != null &&
-                  typeof $steps["goToPage"] === "object" &&
-                  typeof $steps["goToPage"].then === "function"
-                ) {
-                  $steps["goToPage"] = await $steps["goToPage"];
-                }
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__o2J8N
-              )}
-            >
-              {"Koray\nInal"}
-            </div>
+            {"Lelino\nGomes"}
           </div>
         </div>
-      </p.Stack>
-    </p.Stack>
+        <div
+          data-plasmic-name={"boxTina"}
+          data-plasmic-override={overrides.boxTina}
+          className={classNames(projectcss.all, sty.boxTina)}
+          onClick={async event => {
+            const $steps = {};
+            $steps[
+              "goToHttpswwwlinkedincominC3A7EltinaBalaj3141592653589793238"
+            ] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination:
+                      "https://www.linkedin.com/in/%C3%A7eltina-balaj-3141592653589793238/"
+                  };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      location.assign(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps[
+                "goToHttpswwwlinkedincominC3A7EltinaBalaj3141592653589793238"
+              ] != null &&
+              typeof $steps[
+                "goToHttpswwwlinkedincominC3A7EltinaBalaj3141592653589793238"
+              ] === "object" &&
+              typeof $steps[
+                "goToHttpswwwlinkedincominC3A7EltinaBalaj3141592653589793238"
+              ].then === "function"
+            ) {
+              $steps[
+                "goToHttpswwwlinkedincominC3A7EltinaBalaj3141592653589793238"
+              ] = await $steps[
+                "goToHttpswwwlinkedincominC3A7EltinaBalaj3141592653589793238"
+              ];
+            }
+          }}
+        >
+          <PlasmicImg__
+            data-plasmic-name={"photoTina"}
+            data-plasmic-override={overrides.photoTina}
+            alt={""}
+            className={classNames(sty.photoTina)}
+            displayHeight={"150px"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"none"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"150px"}
+            loading={"lazy"}
+            src={{
+              src: ellipse96VqRzDp9T50Mu,
+              fullWidth: 331,
+              fullHeight: 331,
+              aspectRatio: 1
+            }}
+          />
+
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__rxhKp
+            )}
+          >
+            {"Celtina\nBalaj"}
+          </div>
+        </div>
+        <div
+          data-plasmic-name={"boxMohammad"}
+          data-plasmic-override={overrides.boxMohammad}
+          className={classNames(projectcss.all, sty.boxMohammad)}
+          onClick={async event => {
+            const $steps = {};
+            $steps["goToHttpswwwlinkedincominmohammadAlrababHA00A72104"] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination:
+                      "https://www.linkedin.com/in/mohammad-alrabab-h-a00a72104/"
+                  };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      location.assign(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["goToHttpswwwlinkedincominmohammadAlrababHA00A72104"] !=
+                null &&
+              typeof $steps[
+                "goToHttpswwwlinkedincominmohammadAlrababHA00A72104"
+              ] === "object" &&
+              typeof $steps[
+                "goToHttpswwwlinkedincominmohammadAlrababHA00A72104"
+              ].then === "function"
+            ) {
+              $steps["goToHttpswwwlinkedincominmohammadAlrababHA00A72104"] =
+                await $steps[
+                  "goToHttpswwwlinkedincominmohammadAlrababHA00A72104"
+                ];
+            }
+          }}
+        >
+          <PlasmicImg__
+            data-plasmic-name={"photoMohammad"}
+            data-plasmic-override={overrides.photoMohammad}
+            alt={""}
+            className={classNames(sty.photoMohammad)}
+            displayHeight={"150px"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"none"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"150px"}
+            loading={"lazy"}
+            src={{
+              src: ellipse98HNxjJfqdv0Ot,
+              fullWidth: 331,
+              fullHeight: 331,
+              aspectRatio: 1
+            }}
+          />
+
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__nwz1W
+            )}
+          >
+            {"Mohammad\n Alrabab\u2019h"}
+          </div>
+        </div>
+        <div
+          data-plasmic-name={"boxVinzenz"}
+          data-plasmic-override={overrides.boxVinzenz}
+          className={classNames(projectcss.all, sty.boxVinzenz)}
+          onClick={async event => {
+            const $steps = {};
+            $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination: "https://www.linkedin.com/in/vinzenz-trimborn/"
+                  };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      location.assign(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] != null &&
+              typeof $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] ===
+                "object" &&
+              typeof $steps["goToHttpswwwlinkedincominvinzenzTrimborn"].then ===
+                "function"
+            ) {
+              $steps["goToHttpswwwlinkedincominvinzenzTrimborn"] = await $steps[
+                "goToHttpswwwlinkedincominvinzenzTrimborn"
+              ];
+            }
+          }}
+        >
+          <PlasmicImg__
+            data-plasmic-name={"photoVinzenz"}
+            data-plasmic-override={overrides.photoVinzenz}
+            alt={""}
+            className={classNames(sty.photoVinzenz)}
+            displayHeight={"150px"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"none"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"150px"}
+            loading={"lazy"}
+            src={{
+              src: ellipse95Z1FcWs93Tz,
+              fullWidth: 331,
+              fullHeight: 331,
+              aspectRatio: 1
+            }}
+          />
+
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__sVNtH
+            )}
+          >
+            {"Vinzenz\nTrimborn"}
+          </div>
+        </div>
+        <div
+          data-plasmic-name={"boxKoray"}
+          data-plasmic-override={overrides.boxKoray}
+          className={classNames(projectcss.all, sty.boxKoray)}
+          onClick={async event => {
+            const $steps = {};
+            $steps["goToHttpswwwlinkedincominkorayInal"] = true
+              ? (() => {
+                  const actionArgs = {
+                    destination: "https://www.linkedin.com/in/koray-inal/"
+                  };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      location.assign(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["goToHttpswwwlinkedincominkorayInal"] != null &&
+              typeof $steps["goToHttpswwwlinkedincominkorayInal"] ===
+                "object" &&
+              typeof $steps["goToHttpswwwlinkedincominkorayInal"].then ===
+                "function"
+            ) {
+              $steps["goToHttpswwwlinkedincominkorayInal"] = await $steps[
+                "goToHttpswwwlinkedincominkorayInal"
+              ];
+            }
+          }}
+        >
+          <PlasmicImg__
+            data-plasmic-name={"photoKoray"}
+            data-plasmic-override={overrides.photoKoray}
+            alt={""}
+            className={classNames(sty.photoKoray)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"150%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"150px"}
+            loading={"lazy"}
+            src={{
+              src: ellipse97WXYy61HktYmm,
+              fullWidth: 331,
+              fullHeight: 331,
+              aspectRatio: 1
+            }}
+          />
+
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__o2J8N
+            )}
+          >
+            {"Koray\nInal"}
+          </div>
+        </div>
+      </div>
+    </Stack__>
   );
 }
 
 const PlasmicDescendants = {
   root: [
     "root",
-    "firstRoll",
     "boxLelino",
     "photoLelino",
-    "linkedinLelino",
     "boxTina",
     "photoTina",
-    "linkedinTina",
     "boxMohammad",
     "photoMohammad",
-    "linkedinMohammad",
     "boxVinzenz",
     "photoVinzenz",
-    "linkedinVinzenz",
     "boxKoray",
-    "photoKoray",
-    "linkedinKoray"
+    "photoKoray"
   ],
 
-  firstRoll: [
-    "firstRoll",
-    "boxLelino",
-    "photoLelino",
-    "linkedinLelino",
-    "boxTina",
-    "photoTina",
-    "linkedinTina",
-    "boxMohammad",
-    "photoMohammad",
-    "linkedinMohammad",
-    "boxVinzenz",
-    "photoVinzenz",
-    "linkedinVinzenz",
-    "boxKoray",
-    "photoKoray",
-    "linkedinKoray"
-  ],
-
-  boxLelino: ["boxLelino", "photoLelino", "linkedinLelino"],
+  boxLelino: ["boxLelino", "photoLelino"],
   photoLelino: ["photoLelino"],
-  linkedinLelino: ["linkedinLelino"],
-  boxTina: ["boxTina", "photoTina", "linkedinTina"],
+  boxTina: ["boxTina", "photoTina"],
   photoTina: ["photoTina"],
-  linkedinTina: ["linkedinTina"],
-  boxMohammad: ["boxMohammad", "photoMohammad", "linkedinMohammad"],
+  boxMohammad: ["boxMohammad", "photoMohammad"],
   photoMohammad: ["photoMohammad"],
-  linkedinMohammad: ["linkedinMohammad"],
-  boxVinzenz: ["boxVinzenz", "photoVinzenz", "linkedinVinzenz"],
+  boxVinzenz: ["boxVinzenz", "photoVinzenz"],
   photoVinzenz: ["photoVinzenz"],
-  linkedinVinzenz: ["linkedinVinzenz"],
-  boxKoray: ["boxKoray", "photoKoray", "linkedinKoray"],
-  photoKoray: ["photoKoray"],
-  linkedinKoray: ["linkedinKoray"]
+  boxKoray: ["boxKoray", "photoKoray"],
+  photoKoray: ["photoKoray"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -500,22 +497,16 @@ export const PlasmicTeam = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    firstRoll: makeNodeComponent("firstRoll"),
     boxLelino: makeNodeComponent("boxLelino"),
     photoLelino: makeNodeComponent("photoLelino"),
-    linkedinLelino: makeNodeComponent("linkedinLelino"),
     boxTina: makeNodeComponent("boxTina"),
     photoTina: makeNodeComponent("photoTina"),
-    linkedinTina: makeNodeComponent("linkedinTina"),
     boxMohammad: makeNodeComponent("boxMohammad"),
     photoMohammad: makeNodeComponent("photoMohammad"),
-    linkedinMohammad: makeNodeComponent("linkedinMohammad"),
     boxVinzenz: makeNodeComponent("boxVinzenz"),
     photoVinzenz: makeNodeComponent("photoVinzenz"),
-    linkedinVinzenz: makeNodeComponent("linkedinVinzenz"),
     boxKoray: makeNodeComponent("boxKoray"),
     photoKoray: makeNodeComponent("photoKoray"),
-    linkedinKoray: makeNodeComponent("linkedinKoray"),
     // Metadata about props expected for PlasmicTeam
     internalVariantProps: PlasmicTeam__VariantProps,
     internalArgProps: PlasmicTeam__ArgProps

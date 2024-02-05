@@ -9,14 +9,16 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: CBJOAaymFywq
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import ActivityQuestions from "../../ActivityQuestions"; // plasmic-import: BOUoKYlWFZly/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -39,10 +41,10 @@ function PlasmicViewerAnnotation__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -55,7 +57,7 @@ function PlasmicViewerAnnotation__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -152,7 +154,7 @@ function PlasmicViewerAnnotation__RenderFunc(props) {
           })}
         />
       </div>
-      <p.Stack
+      <Stack__
         as={"div"}
         hasGap={true}
         className={classNames(projectcss.all, sty.freeBox__akV5D, {
@@ -206,7 +208,7 @@ function PlasmicViewerAnnotation__RenderFunc(props) {
           className={classNames("__wab_instance", sty.activityQuestions)}
           open={false}
         />
-      </p.Stack>
+      </Stack__>
     </div>
   );
 }

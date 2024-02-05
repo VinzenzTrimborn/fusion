@@ -9,14 +9,18 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: lKMH_lDVGHXv
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  PlasmicImg as PlasmicImg__,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -41,10 +45,10 @@ function PlasmicPopUpGallery__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -57,7 +61,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -113,7 +117,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
         className={classNames(projectcss.all, sty.lightboxDisplay)}
       >
         <div className={classNames(projectcss.all, sty.freeBox__qUZjT)}>
-          <p.PlasmicImg
+          <PlasmicImg__
             data-plasmic-name={"img"}
             data-plasmic-override={overrides.img}
             alt={""}
@@ -129,7 +133,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
               const $steps = {};
               $steps["goToProjectDetails"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/project_details` };
+                    const actionArgs = {};
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -162,7 +166,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             }}
           />
         </div>
-        <p.Stack
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__vWrtT, {
@@ -173,7 +177,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
             )
           })}
         >
-          <p.PlasmicImg
+          <PlasmicImg__
             data-plasmic-name={"leftArrow"}
             data-plasmic-override={overrides.leftArrow}
             alt={""}
@@ -214,7 +218,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -433,7 +437,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
                 : "over the bridge \nplatform"}
             </div>
           </div>
-          <p.PlasmicImg
+          <PlasmicImg__
             data-plasmic-name={"rightArrow"}
             data-plasmic-override={overrides.rightArrow}
             alt={""}
@@ -474,7 +478,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -496,7 +500,7 @@ function PlasmicPopUpGallery__RenderFunc(props) {
               aspectRatio: 0.839286
             }}
           />
-        </p.Stack>
+        </Stack__>
         <div
           data-plasmic-name={"vottingButton"}
           data-plasmic-override={overrides.vottingButton}

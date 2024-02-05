@@ -11,6 +11,20 @@
   min-width: 0;
   padding: 8px;
 }
+.text__ks7IC {
+  display: block;
+  font-size: 34px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: #000000;
+  width: 1017px;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-bottom: 32px;
+}
 .freeBox__mnvTp {
   display: flex;
   flex-direction: column;
@@ -20,7 +34,7 @@
   align-items: center;
   min-width: 0;
   flex-shrink: 0;
-  padding: 4% 4% 1%;
+  padding: 0% 4%;
 }
 .freeBox__vAye7 {
   display: flex;
@@ -263,10 +277,6 @@
   position: relative;
 }
 .comment__bbf8W:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.userAuth:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
 }

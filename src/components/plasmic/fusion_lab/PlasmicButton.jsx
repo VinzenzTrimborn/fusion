@@ -9,16 +9,19 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: apXgE63BR30L
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-import * as pp from "@plasmicapp/react-web";
 import {
-  hasVariant,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  useTrigger,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  renderPlasmicSlot,
+  useCurrentUser,
+  useDollarState,
+  useTrigger
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import * as pp from "@plasmicapp/react-web";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -62,10 +65,10 @@ function PlasmicButton__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -108,7 +111,7 @@ function PlasmicButton__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -122,7 +125,7 @@ function PlasmicButton__RenderFunc(props) {
     focusVisibleWithin_root: isRootFocusVisibleWithin
   };
   return (
-    <p.Stack
+    <Stack__
       as={"button"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
@@ -219,7 +222,7 @@ function PlasmicButton__RenderFunc(props) {
             )
           })}
         >
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: (
               <ChecksvgIcon
                 className={classNames(projectcss.all, sty.svg__kMgHp)}
@@ -311,7 +314,7 @@ function PlasmicButton__RenderFunc(props) {
           )
         })}
       >
-        {p.renderPlasmicSlot({
+        {renderPlasmicSlot({
           defaultContents: (
             <div
               className={classNames(
@@ -453,7 +456,7 @@ function PlasmicButton__RenderFunc(props) {
         })}
       >
         {false
-          ? p.renderPlasmicSlot({
+          ? renderPlasmicSlot({
               defaultContents: (
                 <IconIcon
                   className={classNames(projectcss.all, sty.svg___3OQp)}
@@ -518,7 +521,7 @@ function PlasmicButton__RenderFunc(props) {
           : null}
       </div>
       {false ? (
-        <p.Stack
+        <Stack__
           as={"button"}
           hasGap={true}
           className={classNames(
@@ -683,7 +686,7 @@ function PlasmicButton__RenderFunc(props) {
                 )
               })}
             >
-              {p.renderPlasmicSlot({
+              {renderPlasmicSlot({
                 defaultContents: (
                   <ChecksvgIcon
                     className={classNames(projectcss.all, sty.svg__wXmXb)}
@@ -775,7 +778,7 @@ function PlasmicButton__RenderFunc(props) {
               )
             })}
           >
-            {p.renderPlasmicSlot({
+            {renderPlasmicSlot({
               defaultContents: (
                 <div
                   className={classNames(
@@ -917,7 +920,7 @@ function PlasmicButton__RenderFunc(props) {
             })}
           >
             {false
-              ? p.renderPlasmicSlot({
+              ? renderPlasmicSlot({
                   defaultContents: (
                     <IconIcon
                       className={classNames(projectcss.all, sty.svg__czOv7)}
@@ -981,10 +984,10 @@ function PlasmicButton__RenderFunc(props) {
                 })
               : null}
           </div>
-        </p.Stack>
+        </Stack__>
       ) : null}
       {false ? (
-        <p.Stack
+        <Stack__
           as={"button"}
           hasGap={true}
           className={classNames(
@@ -1149,7 +1152,7 @@ function PlasmicButton__RenderFunc(props) {
                 )
               })}
             >
-              {p.renderPlasmicSlot({
+              {renderPlasmicSlot({
                 defaultContents: (
                   <ChecksvgIcon
                     className={classNames(projectcss.all, sty.svg__ueUQ)}
@@ -1241,7 +1244,7 @@ function PlasmicButton__RenderFunc(props) {
               )
             })}
           >
-            {p.renderPlasmicSlot({
+            {renderPlasmicSlot({
               defaultContents: (
                 <div
                   className={classNames(
@@ -1383,7 +1386,7 @@ function PlasmicButton__RenderFunc(props) {
             })}
           >
             {false
-              ? p.renderPlasmicSlot({
+              ? renderPlasmicSlot({
                   defaultContents: (
                     <IconIcon
                       className={classNames(projectcss.all, sty.svg__nz7Gl)}
@@ -1447,9 +1450,9 @@ function PlasmicButton__RenderFunc(props) {
                 })
               : null}
           </div>
-        </p.Stack>
+        </Stack__>
       ) : null}
-    </p.Stack>
+    </Stack__>
   );
 }
 

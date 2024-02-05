@@ -9,14 +9,16 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: x_Fghcos84Ui
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  renderPlasmicSlot,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -38,10 +40,10 @@ function PlasmicActionButton__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -54,7 +56,7 @@ function PlasmicActionButton__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -79,33 +81,6 @@ function PlasmicActionButton__RenderFunc(props) {
           [sty.rootoptions_sVersion]: hasVariant($state, "options", "sVersion")
         }
       )}
-      onClick={async event => {
-        const $steps = {};
-        $steps["goToQuestionnaire"] = true
-          ? (() => {
-              const actionArgs = { destination: `/questionnaire` };
-              return (({ destination }) => {
-                if (
-                  typeof destination === "string" &&
-                  destination.startsWith("#")
-                ) {
-                  document
-                    .getElementById(destination.substr(1))
-                    .scrollIntoView({ behavior: "smooth" });
-                } else {
-                  location.assign(destination);
-                }
-              })?.apply(null, [actionArgs]);
-            })()
-          : undefined;
-        if (
-          $steps["goToQuestionnaire"] != null &&
-          typeof $steps["goToQuestionnaire"] === "object" &&
-          typeof $steps["goToQuestionnaire"].then === "function"
-        ) {
-          $steps["goToQuestionnaire"] = await $steps["goToQuestionnaire"];
-        }
-      }}
     >
       <div
         data-plasmic-name={"freeBox"}
@@ -118,7 +93,7 @@ function PlasmicActionButton__RenderFunc(props) {
           )
         })}
       >
-        {p.renderPlasmicSlot({
+        {renderPlasmicSlot({
           defaultContents: "Participate & Give Feedback",
           value: args.children,
           className: classNames(sty.slotTargetChildren, {

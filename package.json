@@ -6,7 +6,7 @@
     "@ant-design/icons": "^5.2.6",
     "@ant-design/pro-components": "^2.6.4",
     "@plasmicapp/cli": "^0.1.325",
-    "@plasmicapp/react-web": "^0.2.315",
+    "@plasmicapp/react-web": "^0.2.318",
     "@plasmicpkgs/antd5": "^0.0.210",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.207",
     "@plasmicpkgs/plasmic-nav": "^0.0.158",

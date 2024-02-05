@@ -9,16 +9,20 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: QYHJ3nGLufw1
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-import * as pp from "@plasmicapp/react-web";
 import {
-  hasVariant,
+  PlasmicIcon as PlasmicIcon__,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  useTrigger,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  renderPlasmicSlot,
+  useCurrentUser,
+  useDollarState,
+  useTrigger
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import * as pp from "@plasmicapp/react-web";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -55,10 +59,10 @@ function PlasmicCheckbox__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -90,7 +94,7 @@ function PlasmicCheckbox__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -104,7 +108,7 @@ function PlasmicCheckbox__RenderFunc(props) {
     focusVisibleWithin_root: isRootFocusVisibleWithin
   };
   return (
-    <p.Stack
+    <Stack__
       as={"div"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
@@ -153,7 +157,7 @@ function PlasmicCheckbox__RenderFunc(props) {
           [sty.freeBoxnoLabel]: hasVariant($state, "noLabel", "noLabel")
         })}
       >
-        <p.PlasmicIcon
+        <PlasmicIcon__
           data-plasmic-name={"svg"}
           data-plasmic-override={overrides.svg}
           PlasmicIconType={
@@ -196,7 +200,7 @@ function PlasmicCheckbox__RenderFunc(props) {
             )
           })}
         >
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: "Enter some text",
             value: args.children,
             className: classNames(sty.slotTargetChildren, {
@@ -226,7 +230,7 @@ function PlasmicCheckbox__RenderFunc(props) {
           })}
         </div>
       ) : null}
-    </p.Stack>
+    </Stack__>
   );
 }
 

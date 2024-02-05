@@ -9,14 +9,18 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: BOUoKYlWFZly
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  hasVariant,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { AntdInputNumber } from "@plasmicpkgs/antd5/skinny/registerInput";
 import Select from "../../Select"; // plasmic-import: YbzHlcQNiy51/component
@@ -52,10 +56,10 @@ function PlasmicActivityQuestions__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -98,7 +102,7 @@ function PlasmicActivityQuestions__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -189,8 +193,8 @@ function PlasmicActivityQuestions__RenderFunc(props) {
           </div>
         }
         modalScopeClassName={sty["modal__modal"]}
-        onOpenChange={p.generateStateOnChangeProp($state, ["modal", "open"])}
-        open={p.generateStateValueProp($state, ["modal", "open"])}
+        onOpenChange={generateStateOnChangeProp($state, ["modal", "open"])}
+        open={generateStateValueProp($state, ["modal", "open"])}
         title={
           hasVariant($state, "activity", "openActivitiesSouth")
             ? "What is your opinion of the open activities south?"
@@ -219,7 +223,7 @@ function PlasmicActivityQuestions__RenderFunc(props) {
           </AntdButton>
         }
       >
-        <p.Stack
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox___6TkBw)}
@@ -240,17 +244,17 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             controls={true}
             max={6}
             min={1}
-            onChange={p.generateStateOnChangeProp($state, [
+            onChange={generateStateOnChangeProp($state, [
               "numberInput",
               "value"
             ])}
             placeholder={"Grade"}
             step={1}
             type={"number"}
-            value={p.generateStateValueProp($state, ["numberInput", "value"])}
+            value={generateStateValueProp($state, ["numberInput", "value"])}
           />
-        </p.Stack>
-        <p.Stack
+        </Stack__>
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox___5UVn6)}
@@ -269,7 +273,7 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             data-plasmic-override={overrides.select}
             className={classNames("__wab_instance", sty.select)}
             onChange={(...eventArgs) => {
-              p.generateStateOnChangeProp($state, ["select", "value"])(
+              generateStateOnChangeProp($state, ["select", "value"])(
                 eventArgs[0]
               );
             }}
@@ -288,10 +292,10 @@ function PlasmicActivityQuestions__RenderFunc(props) {
               __composite["2"]["label"] = "More";
               return __composite;
             })()}
-            value={p.generateStateValueProp($state, ["select", "value"])}
+            value={generateStateValueProp($state, ["select", "value"])}
           />
-        </p.Stack>
-        <p.Stack
+        </Stack__>
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__oIb3)}
@@ -314,7 +318,7 @@ function PlasmicActivityQuestions__RenderFunc(props) {
               sty.textarea2
             )}
             onChange={e => {
-              p.generateStateOnChangeProp($state, ["textarea2", "value"])(
+              generateStateOnChangeProp($state, ["textarea2", "value"])(
                 e.target.value
               );
             }}
@@ -322,12 +326,10 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             ref={ref => {
               $refs["textarea2"] = ref;
             }}
-            value={
-              p.generateStateValueProp($state, ["textarea2", "value"]) ?? ""
-            }
+            value={generateStateValueProp($state, ["textarea2", "value"]) ?? ""}
           />
-        </p.Stack>
-        <p.Stack
+        </Stack__>
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__sguF9)}
@@ -350,7 +352,7 @@ function PlasmicActivityQuestions__RenderFunc(props) {
               sty.textarea
             )}
             onChange={e => {
-              p.generateStateOnChangeProp($state, ["textarea", "value"])(
+              generateStateOnChangeProp($state, ["textarea", "value"])(
                 e.target.value
               );
             }}
@@ -358,11 +360,9 @@ function PlasmicActivityQuestions__RenderFunc(props) {
             ref={ref => {
               $refs["textarea"] = ref;
             }}
-            value={
-              p.generateStateValueProp($state, ["textarea", "value"]) ?? ""
-            }
+            value={generateStateValueProp($state, ["textarea", "value"]) ?? ""}
           />
-        </p.Stack>
+        </Stack__>
       </AntdModal>
     </div>
   );

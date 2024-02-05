@@ -9,16 +9,20 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: clPh1NSkBPaO
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import Comment from "../../Comment"; // plasmic-import: FjjS-KWqLu0p/component
-import UserAuth from "../../UserAuth"; // plasmic-import: zv2IqcCjwXro/component
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -42,10 +46,10 @@ function PlasmicParticipationArea__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -64,7 +68,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -87,6 +91,15 @@ function PlasmicParticipationArea__RenderFunc(props) {
         sty.root
       )}
     >
+      <div
+        className={classNames(
+          projectcss.all,
+          projectcss.__wab_text,
+          sty.text__ks7IC
+        )}
+      >
+        {"Explore the 3D Model Yourself"}
+      </div>
       <div className={classNames(projectcss.all, sty.freeBox__mnvTp)}>
         <div className={classNames(projectcss.all, sty.freeBox__vAye7)}>
           <div
@@ -126,7 +139,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
                           return;
                         }
                         const { objRoot, variablePath } = variable;
-                        p.set(objRoot, variablePath, value);
+                        $stateSet(objRoot, variablePath, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -156,11 +169,11 @@ function PlasmicParticipationArea__RenderFunc(props) {
               )}
               hideFooter={true}
               modalScopeClassName={sty["modal__modal"]}
-              onOpenChange={p.generateStateOnChangeProp($state, [
+              onOpenChange={generateStateOnChangeProp($state, [
                 "modal",
                 "open"
               ])}
-              open={p.generateStateValueProp($state, ["modal", "open"])}
+              open={generateStateValueProp($state, ["modal", "open"])}
               title={
                 <div
                   className={classNames(
@@ -193,12 +206,12 @@ function PlasmicParticipationArea__RenderFunc(props) {
               </div>
             </AntdModal>
           </div>
-          <p.Stack
+          <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__nw8Q1)}
           >
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__diJG)}
@@ -212,7 +225,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
                   sty.newCommentText
                 )}
                 onChange={e => {
-                  p.generateStateOnChangeProp($state, [
+                  generateStateOnChangeProp($state, [
                     "newCommentText",
                     "value"
                   ])(e.target.value);
@@ -222,10 +235,8 @@ function PlasmicParticipationArea__RenderFunc(props) {
                   $refs["newCommentText"] = ref;
                 }}
                 value={
-                  p.generateStateValueProp($state, [
-                    "newCommentText",
-                    "value"
-                  ]) ?? ""
+                  generateStateValueProp($state, ["newCommentText", "value"]) ??
+                  ""
                 }
               />
 
@@ -244,8 +255,8 @@ function PlasmicParticipationArea__RenderFunc(props) {
                   {"Leave Comment"}
                 </div>
               </div>
-            </p.Stack>
-            <p.Stack
+            </Stack__>
+            <Stack__
               as={"div"}
               data-plasmic-name={"commentSidebar"}
               data-plasmic-override={overrides.commentSidebar}
@@ -275,18 +286,11 @@ function PlasmicParticipationArea__RenderFunc(props) {
               <Comment
                 className={classNames("__wab_instance", sty.comment__bbf8W)}
               />
-            </p.Stack>
-          </p.Stack>
+            </Stack__>
+          </Stack__>
         </div>
       </div>
-      <UserAuth
-        data-plasmic-name={"userAuth"}
-        data-plasmic-override={overrides.userAuth}
-        className={classNames("__wab_instance", sty.userAuth)}
-        open={false}
-      />
-
-      <p.Stack
+      <Stack__
         as={"div"}
         hasGap={true}
         className={classNames(projectcss.all, sty.freeBox__p0MIh)}
@@ -366,7 +370,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
             {"View 5"}
           </div>
         </AntdButton>
-      </p.Stack>
+      </Stack__>
     </div>
   );
 }
@@ -382,7 +386,6 @@ const PlasmicDescendants = {
     "newCommentText",
     "sendButton",
     "commentSidebar",
-    "userAuth",
     "viewButton1",
     "viewButton2",
     "viewButton3",
@@ -398,7 +401,6 @@ const PlasmicDescendants = {
   newCommentText: ["newCommentText"],
   sendButton: ["sendButton"],
   commentSidebar: ["commentSidebar"],
-  userAuth: ["userAuth"],
   viewButton1: ["viewButton1"],
   viewButton2: ["viewButton2"],
   viewButton3: ["viewButton3"],
@@ -446,7 +448,6 @@ export const PlasmicParticipationArea = Object.assign(
     newCommentText: makeNodeComponent("newCommentText"),
     sendButton: makeNodeComponent("sendButton"),
     commentSidebar: makeNodeComponent("commentSidebar"),
-    userAuth: makeNodeComponent("userAuth"),
     viewButton1: makeNodeComponent("viewButton1"),
     viewButton2: makeNodeComponent("viewButton2"),
     viewButton3: makeNodeComponent("viewButton3"),

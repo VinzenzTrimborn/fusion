@@ -9,16 +9,19 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: YbzHlcQNiy51
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-import * as pp from "@plasmicapp/react-web";
 import {
-  hasVariant,
+  PlasmicIcon as PlasmicIcon__,
   classNames,
   createPlasmicElementProxy,
-  useTrigger,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  renderPlasmicSlot,
+  useCurrentUser,
+  useDollarState,
+  useTrigger
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import * as pp from "@plasmicapp/react-web";
 import Select__Overlay from "../../Select__Overlay"; // plasmic-import: XBkijaWkHdy5/component
 import Select__Option from "../../Select__Option"; // plasmic-import: ke75249KxUU3/component
 import Select__OptionGroup from "../../Select__OptionGroup"; // plasmic-import: ZkFEZxJlkbzP/component
@@ -62,10 +65,10 @@ function PlasmicSelect__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -103,7 +106,7 @@ function PlasmicSelect__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -257,7 +260,7 @@ function PlasmicSelect__RenderFunc(props) {
                 ? false
                 : true
             )
-              ? p.renderPlasmicSlot({
+              ? renderPlasmicSlot({
                   defaultContents: "Selected",
                   value: args.selectedContent,
                   className: classNames(sty.slotTargetSelectedContent, {
@@ -336,7 +339,7 @@ function PlasmicSelect__RenderFunc(props) {
                     }
                   })()
             )
-              ? p.renderPlasmicSlot({
+              ? renderPlasmicSlot({
                   defaultContents: "Select\u2026",
                   value: args.placeholder,
                   className: classNames(sty.slotTargetPlaceholder, {
@@ -399,7 +402,7 @@ function PlasmicSelect__RenderFunc(props) {
                 })
               : null}
           </div>
-          <p.PlasmicIcon
+          <PlasmicIcon__
             data-plasmic-name={"dropdownIcon"}
             data-plasmic-override={overrides.dropdownIcon}
             PlasmicIconType={
@@ -485,7 +488,7 @@ function PlasmicSelect__RenderFunc(props) {
                 )
               })}
             >
-              {p.renderPlasmicSlot({
+              {renderPlasmicSlot({
                 defaultContents: null,
                 value: args.children
               })}
