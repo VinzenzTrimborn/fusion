@@ -134,7 +134,6 @@ function ParticipationArea_(props, ref) {
             canvas={{
                 render: () => (
                     <>
-                        <VRButton/>
                         <Canvas>
                             <XR>
                                 <Controllers/>
