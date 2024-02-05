@@ -356,12 +356,12 @@ function PlasmicHome__RenderFunc(props) {
                       <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__qnQep)}
-                        displayHeight={"421px"}
+                        displayHeight={"100%"}
                         displayMaxHeight={"none"}
                         displayMaxWidth={"100%"}
                         displayMinHeight={"0"}
                         displayMinWidth={"0"}
-                        displayWidth={"244px"}
+                        displayWidth={"100%"}
                         loading={"lazy"}
                         src={{
                           src: oigXzteUNbLakGyrjpegLzmdTxtKfDTq,
