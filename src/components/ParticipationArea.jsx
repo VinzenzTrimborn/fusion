@@ -1,12 +1,12 @@
 import * as React from "react";
 import {PlasmicParticipationArea} from "./plasmic/fusion_lab/PlasmicParticipationArea";
-import {Controllers, Hands, TeleportationPlane, VRButton, XR} from "@react-three/xr";
+import {ARButton, Controllers, XR} from "@react-three/xr";
 import {Canvas} from "@react-three/fiber";
-import {useCallback, useContext, useEffect, useState} from "react";
+import {Suspense, useCallback, useContext, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
-import {Environment} from "@react-three/drei";
+import {Environment, Loader} from "@react-three/drei";
 import MyContext from "../MyContext";
 
 function ParticipationArea_(props, ref) {
@@ -134,21 +134,18 @@ function ParticipationArea_(props, ref) {
             canvas={{
                 render: () => (
                     <>
-                        <Canvas>
-                            <XR>
-                                <Controllers/>
-                                <Hands/>
-                                <TeleportationPlane
-                                    leftHand={true}
-                                    rightHand={false}
-                                    maxDistance={10}
-                                    size={0.25}
-                                />
-                                <Scene handleCameraChange={handleCameraChange}/>
-                                <Control lookAt={cameraDirection} position={cameraPosition}/>
-                                <Environment preset="sunset"/>
-                            </XR>
-                        </Canvas>
+                        <ARButton />
+                        <Suspense fallback={<span>loading...</span>}>
+                            <Canvas>
+                                <XR referenceSpace="local">
+                                    <Controllers/>
+                                    <Scene handleCameraChange={handleCameraChange}/>
+                                    <Control lookAt={cameraDirection} position={cameraPosition}/>
+                                    <Environment preset="sunset"/>
+                                </XR>
+                            </Canvas>
+                        </Suspense>
+                        <Loader/>
                     </>
                 )
             }}

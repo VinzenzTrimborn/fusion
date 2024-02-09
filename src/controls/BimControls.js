@@ -11,7 +11,7 @@ const _spherical = new Spherical();
 const _target = new Vector3();
 const _PI_2 = Math.PI / 2;
 
-export default class BimmyControls {
+export default class BimControls {
     constructor(object, domElement) {
         this.object = object;
         this.domElement = domElement;
@@ -36,7 +36,8 @@ export default class BimmyControls {
         };
 
         // internals
-        this.movementSpeed = 4.5 * 0.01;
+        this.movementSpeed = 6 * 0.1;
+        this.supermanSpeed = 3;
         this.minPolarAngle = 0; // radians
         this.maxPolarAngle = Math.PI; // radians
         this.mouseInScene = true;
@@ -238,7 +239,7 @@ export default class BimmyControls {
 
         this.update = function () {
             if (!this.mouseInScene || !this.enabled) return false;
-            const actualMoveSpeed = this.movementSpeed * (this.superman ? 20 : 10);
+            const actualMoveSpeed = this.movementSpeed * (this.superman ? this.supermanSpeed : 1);
 
             if (this.moveForward) this.moveForwardFunc(actualMoveSpeed)
             if (this.moveBackward) this.moveForwardFunc(-actualMoveSpeed);

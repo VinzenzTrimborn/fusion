@@ -1,12 +1,13 @@
 import * as React from "react";
 import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
-import {Html, Loader, Sky} from "@react-three/drei";
+import {Html, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {Suspense, useEffect, useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
 import {MeshLambertMaterial, Vector3} from "three";
 import ViewerAnnotation from "./ViewerAnnotation";
+import {GLTFExporter} from 'three/examples/jsm/exporters/GLTFExporter';
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -97,23 +98,21 @@ export default function Scene({handleCameraChange}) {
             <pointLight position={[-400, 400, 0]} intensity={0.3} color="white"/>
             <pointLight position={[0, 400, -400]} intensity={0.4} color="white"/>
             <pointLight position={[0, 400, 400]} intensity={0.2} color="white"/>
-            <Suspense fallback={<Loader/>}>
-                <group>
-                    {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
-                        <primitive key={index} object={value}
-                                   onDoubleClick={(e) => {
-                                       ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
-                                       setHighlightedIDs([value.id]);
-                                       console.log(value.id)
-                                       console.log({
-                                           position: camera.position,
-                                           direction: camera.position.clone().add(camera.getWorldDirection(new Vector3()).multiplyScalar(100))
-                                       })
-                                   }}
-                        />
-                    )}
-                </group>
-            </Suspense>
+            <group>
+                {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
+                    <primitive key={index} object={value}
+                               onDoubleClick={(e) => {
+                                   ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
+                                   setHighlightedIDs([value.id]);
+                                   console.log(value.id)
+                                   console.log({
+                                       position: camera.position,
+                                       direction: camera.position.clone().add(camera.getWorldDirection(new Vector3()).multiplyScalar(100))
+                                   })
+                               }}
+                    />
+                )}
+            </group>
             <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
             <Annotation position={[440.244272848507, 3.800000000000114, -854.2200189272153]}/>
         </>
@@ -122,7 +121,7 @@ export default function Scene({handleCameraChange}) {
 
 function Annotation({position, ...props}) {
     return (
-        // ToDo Mohammad: You can play aroud  with the annotations here. Let them throw a shadow or transform.
+        // ToDo Mohammad: You can play around  with the annotations here. Let them throw a shadow or transform.
         <Html
             {...props}
             position={position}
