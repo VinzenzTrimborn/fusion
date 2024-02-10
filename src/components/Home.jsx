@@ -5,6 +5,11 @@ function Home_(props, ref) {
 
     return <PlasmicHome
         root={{ref}}
+        header={{
+            onClick: () => {
+                console.log("header clicked");
+            }
+        }}
         {...props}
     />;
 }
