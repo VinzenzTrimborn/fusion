@@ -804,7 +804,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                 }
               )}
             >
-              {"Which methods were used for the design phase?"}
+              {"Which methods were used during the design phase?"}
             </div>
           </div>
           <div
@@ -896,9 +896,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                 sty.text__timqg
               )}
             >
-              {
-                "What types of activities are available for public contribution?"
-              }
+              {"What types of activities are available to the public?"}
             </div>
           </div>
           <div

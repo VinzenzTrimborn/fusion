@@ -193,11 +193,91 @@ function PlasmicComment__RenderFunc(props) {
               >
                 <div className={classNames(projectcss.all, sty.freeBox__d3Fcb)}>
                   <Button
+                    children2={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__uhdRv
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
+                    children3={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___7YRct
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
                     className={classNames("__wab_instance", sty.button__sIvBb)}
                   >
                     {"Edit Comment"}
                   </Button>
                   <Button
+                    children2={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mh0V4
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
+                    children3={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__zQVuq
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
                     className={classNames("__wab_instance", sty.button__yb73)}
                   >
                     {"Delete Comment"}

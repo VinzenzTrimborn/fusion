@@ -525,6 +525,11 @@
   margin-left: 0px;
   margin-top: 60px;
 }
+.freeBoxvariants2_analysis__t4VclW6Kp {
+  margin-bottom: 0px;
+  height: auto;
+  margin-top: 24px;
+}
 .rederingPics {
   width: 767px;
   height: 1258px;
@@ -625,7 +630,7 @@
 }
 .analysisPics {
   width: 767px;
-  height: 770px;
+  height: 446px;
   display: block;
   flex-shrink: 0;
 }
@@ -633,26 +638,26 @@
   display: none;
 }
 .freeBox__muoOk {
-  background: url("./images/rectangle3185.png") center center / cover no-repeat,
-    rgba(195, 195, 195, 1);
-  width: 366px;
-  height: 420px;
+  background: rgba(195, 195, 195, 1);
+  width: 506px;
+  height: 380px;
   display: block;
   position: absolute;
-  top: 0px;
-  left: 1px;
-  padding-bottom: 72px;
+  top: -7px;
+  left: -139px;
+  margin-bottom: 0px;
   border-radius: 24px;
+  padding: 0px;
 }
 .freeBox__adgEi {
   background: url("./images/rectangle3174.jpg") center center / cover no-repeat,
     rgba(195, 195, 195, 1);
-  width: 366px;
-  height: 273px;
+  width: 539px;
+  height: 381px;
   display: block;
   position: absolute;
-  top: 456px;
-  left: 0px;
+  top: -3px;
+  left: 395px;
   border-radius: 24px;
 }
 .freeBox__ozwX8 {
@@ -665,6 +670,9 @@
   top: 56px;
   left: 398px;
   border-radius: 24px;
+}
+.freeBoxvariants2_analysis__ozwX8W6Kp {
+  display: none;
 }
 .sketches2 {
   width: 767px;
@@ -1396,4 +1404,748 @@
   font-size: 40px;
   color: #ffffff;
   margin: 15px;
+}
+.container1 {
+  width: 1920px;
+  height: 835px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.headingsParagraph {
+  transform: translate(-0.19999999999998863px, 0px);
+  height: 320px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  flex-shrink: 0;
+}
+.right {
+  transform: translate(-0.41100000000000136px, 0px);
+  height: 320px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 394px;
+  right: 0px;
+}
+.button {
+  transform: translate(0px, 0.18999999999999773px);
+  width: 1181px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  top: 262px;
+  left: 0px;
+}
+.heading1AboutInvestments {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  width: 164px;
+  height: 23px;
+  transform: translate(0px, 0.25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heading1AboutInvestments2 {
+  display: block;
+  font-size: 18px;
+  font-family: "Aeonik";
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+}
+.heading1AboutInvestments2variants2_analysis {
+  display: none;
+}
+.link {
+  transform: translate(0.16900000000001114px, 0px);
+  width: 57px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 182px;
+  border-radius: 28.5px;
+}
+.linkvariants2_analysis {
+  display: none;
+}
+._ {
+  position: absolute;
+  top: 19px;
+  left: 21px;
+  width: 10px;
+  height: 23px;
+  transform: translate(-0.23100000000000165px, 0.25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__up9M {
+  display: block;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+}
+.heading2 {
+  width: 941px;
+  height: 206px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion {
+  display: block;
+  font-size: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 938px;
+  height: 206px;
+}
+.freeBox__nvIt1 {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 107px;
+  height: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__kNfLp {
+  display: block;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+  width: 100%;
+  height: auto;
+  max-width: 133px;
+  padding-right: 0px;
+  padding-left: 60px;
+  position: fixed;
+  left: 74px;
+  top: 0;
+  z-index: 1;
+  right: -76px;
+  margin-left: 121px;
+  min-width: 0;
+}
+.images {
+  transform: translate(-0.19999999999998863px, 0.18999999999999773px);
+  height: 447px;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  right: auto;
+  flex-shrink: 0;
+}
+.analysis1 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  flex-direction: column;
+  cursor: pointer;
+}
+.analysis1variants2_activities {
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 4px 16px 0px rgba(83, 83, 83, 0.45);
+  border-radius: 20px;
+}
+.analysis1variants2_renderings {
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+.analysis1variants2_analysis {
+  left: 0px;
+  top: 0px;
+}
+.analysis1variants2_sketches {
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+.dayMkt2:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.img__t9FBe {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+.img__t9FBe > picture > img {
+  object-fit: cover;
+}
+.text__lFk3A {
+  padding-left: 0px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9 {
+  background: url("./images/lineOfSightWestPathpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  position: relative;
+  left: auto;
+  top: auto;
+  border-radius: 20px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9variants2_analysis {
+  left: auto;
+  top: auto;
+}
+.freeBox__rJqp6 {
+  background: url("./images/oig9Jpeg.jpg") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
+  width: 320px;
+  height: 350px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-bottom: 10px;
+  border-radius: 24px;
+}
+.freeBoxvariants2_activities__rJqp6Oy1JL {
+  left: auto;
+  top: auto;
+}
+.freeBoxvariants2_analysis__rJqp6W6Kp {
+  display: none;
+}
+.activityQuestions__ng2Q0:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.activityQuestionsvariants2_analysis__ng2Q0W6Kp:global(.__wab_instance) {
+  display: none;
+}
+.freeBox__xdpbn {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  align-self: center;
+  padding: 0px 8px 8px;
+}
+.text___12K97 {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+}
+.textvariants2_activities___12K97Oy1JL {
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.text__oioUu {
+  display: block;
+  font-size: 25px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+}
+.textvariants2_activities__oioUUoy1JL {
+  font-weight: 600;
+  font-family: "Bangers";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  font-size: 40px;
+  color: #ffffff;
+  margin: 15px;
+}
+.textvariants2_analysis__oioUuw6Kp {
+  display: none;
+}
+.cover2 {
+  height: 100%;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  overflow: hidden;
+  flex-direction: row;
+  width: auto;
+  min-height: 0;
+}
+.cover2variants2_analysis {
+  display: none;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png {
+  background: url("./images/picture6Png.png") center center / cover no-repeat;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  overflow: hidden;
+}
+.cover1 {
+  transform: translate(-0.41100000000000136px, 0px);
+  height: 100%;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  overflow: hidden;
+  flex-direction: column;
+  width: auto;
+  min-height: 0;
+}
+.cover1variants2_analysis {
+  display: none;
+}
+._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg {
+  background: url("./images/picture5Png2.png") center center / cover no-repeat;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  overflow: hidden;
+  padding-bottom: 0px;
+}
+.freeBox__fq7Q {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+.freeBoxvariants2_analysis__fq7Qw6Kp {
+  display: none;
+}
+.freeBox___2J6Lo {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2 {
+  background: url("./images/lineOfSightWestPathpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2variants2_analysis {
+  display: none;
+}
+.freeBox__vReq1 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3 {
+  background: url("./images/lineOfSightPlatformpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4 {
+  background: url("./images/lineOfSightEastPathpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+.container2 {
+  width: 1920px;
+  height: 835px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.headingsParagraph2 {
+  transform: translate(-0.19999999999998863px, 0px);
+  height: 320px;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  flex-shrink: 0;
+}
+.right2 {
+  transform: translate(-0.41100000000000136px, 0px);
+  height: 320px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 394px;
+  right: 0px;
+}
+.button2 {
+  transform: translate(0px, 0.18999999999999773px);
+  width: 1181px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  top: 262px;
+  left: 0px;
+}
+.button2variants2_analysis {
+  display: none;
+}
+.heading1AboutInvestments3 {
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  width: 164px;
+  height: 23px;
+  transform: translate(0px, 0.25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heading1AboutInvestments4 {
+  display: block;
+  font-size: 18px;
+  font-family: "Aeonik";
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+}
+.heading1AboutInvestments4variants2_analysis {
+  display: none;
+}
+.link2 {
+  transform: translate(0.16900000000001114px, 0px);
+  width: 57px;
+  height: 57px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 182px;
+  border-radius: 28.5px;
+}
+.link2variants2_analysis {
+  display: none;
+}
+._2 {
+  position: absolute;
+  top: 19px;
+  left: 21px;
+  width: 10px;
+  height: 23px;
+  transform: translate(-0.23100000000000165px, 0.25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__yNmLu {
+  display: block;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+}
+.heading3 {
+  width: 941px;
+  height: 206px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2 {
+  display: block;
+  font-size: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: auto;
+  height: 206px;
+  padding-left: 0px;
+}
+.freeBox__pW4T1 {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 107px;
+  height: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__cOkrc {
+  display: block;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+  width: 100%;
+  height: auto;
+  max-width: 133px;
+  padding-right: 0px;
+  padding-left: 60px;
+  position: fixed;
+  left: 74px;
+  top: 0;
+  z-index: 1;
+  right: -76px;
+  margin-left: 121px;
+  min-width: 0;
+}
+.images2 {
+  transform: translate(-0.19999999999998863px, 0.18999999999999773px);
+  height: 447px;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  right: auto;
+  flex-shrink: 0;
+}
+.cover3 {
+  height: 100%;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  overflow: hidden;
+  flex-direction: row;
+  width: auto;
+  min-height: 0;
+}
+.cover3variants2_analysis {
+  display: none;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5 {
+  background: url("./images/picture6Png.png") center center / cover no-repeat;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  overflow: hidden;
+}
+.cover4 {
+  transform: translate(-0.41100000000000136px, 0px);
+  height: 100%;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  overflow: hidden;
+  flex-direction: column;
+  width: auto;
+  min-height: 0;
+}
+.cover4variants2_analysis {
+  display: none;
+}
+._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2 {
+  background: url("./images/picture5Png2.png") center center / cover no-repeat;
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  overflow: hidden;
+  padding-bottom: 0px;
+}
+.freeBox__rt8G {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+.freeBoxvariants2_analysis__rt8Gw6Kp {
+  display: none;
+}
+.freeBox___3LfcO {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6 {
+  background: url("./images/viewshedPlatformpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+.freeBox__nLzEt {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7 {
+  background: url("./images/viewshedHackerbruckepng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3 {
+  display: block;
+  font-size: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  position: absolute;
+  top: 469px;
+  left: -536px;
+  width: 1602px;
+  height: 70px;
+  padding-left: 0px;
+  margin-top: 0px;
+  flex-shrink: 0;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8 {
+  background: url("./images/viewshedTunnelpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
 }

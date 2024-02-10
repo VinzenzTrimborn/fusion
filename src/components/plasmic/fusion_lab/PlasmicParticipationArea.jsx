@@ -200,7 +200,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
                   )}
                 >
                   {
-                    "Scroll & Zoom to move\nW,A,S,D to move around\nQ, E to move up and down\nShift: Increase Speed"
+                    "Scroll & Zoom to move\nW,A,S,D or Arrow Keys to move around\nQ, E to move up and down\nShift: Increase Speed"
                   }
                 </div>
               </div>
@@ -230,7 +230,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
                     "value"
                   ])(e.target.value);
                 }}
-                placeholder={"Type in comment here..."}
+                placeholder={"Type your comment here..."}
                 ref={ref => {
                   $refs["newCommentText"] = ref;
                 }}
@@ -252,7 +252,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
                     sty.text__kmLsl
                   )}
                 >
-                  {"Leave Comment"}
+                  {"Leave a Comment"}
                 </div>
               </div>
             </Stack__>
@@ -307,7 +307,14 @@ function PlasmicParticipationArea__RenderFunc(props) {
               sty.text__jWhYk
             )}
           >
-            {"View 1"}
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#000000" }}
+              >
+                {"Platfrom"}
+              </span>
+            </React.Fragment>
           </div>
         </AntdButton>
         <AntdButton
@@ -322,7 +329,14 @@ function PlasmicParticipationArea__RenderFunc(props) {
               sty.text__iy8Eb
             )}
           >
-            {"View 2"}
+            <React.Fragment>
+              <span
+                className={"plasmic_default__all plasmic_default__span"}
+                style={{ color: "#000000" }}
+              >
+                {"Skatepark"}
+              </span>
+            </React.Fragment>
           </div>
         </AntdButton>
         <AntdButton
@@ -337,7 +351,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
               sty.text___6C9Ky
             )}
           >
-            {"View 3"}
+            {"Climbing Area"}
           </div>
         </AntdButton>
         <AntdButton
@@ -352,7 +366,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
               sty.text__dbbOx
             )}
           >
-            {"View 4"}
+            {"Open Area"}
           </div>
         </AntdButton>
         <AntdButton
@@ -367,7 +381,7 @@ function PlasmicParticipationArea__RenderFunc(props) {
               sty.text__pcs4K
             )}
           >
-            {"View 5"}
+            {"Market"}
           </div>
         </AntdButton>
       </Stack__>

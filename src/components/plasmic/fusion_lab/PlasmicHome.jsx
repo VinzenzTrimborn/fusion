@@ -908,7 +908,7 @@ function PlasmicHome__RenderFunc(props) {
                       )}
                     >
                       {
-                        "see how the new bridge was conceive based on sustainable principles"
+                        "see how the new bridge was conceived based on sustainable principles"
                       }
                     </div>
                   </div>

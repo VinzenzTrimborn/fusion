@@ -10,7 +10,7 @@
 // Component: CBJOAaymFywq
 import * as React from "react";
 import {
-  Stack as Stack__,
+  PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -19,16 +19,20 @@ import {
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import ActivityQuestions from "../../ActivityQuestions"; // plasmic-import: BOUoKYlWFZly/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU29zJd9uLGW9TewABBsV/projectcss
 import sty from "./PlasmicViewerAnnotation.module.css"; // plasmic-import: CBJOAaymFywq/css
+import layout3PopUppngPQuGwnoEoieY from "./images/layout3PopUppng.png"; // plasmic-import: pQuGwnoEoieY/picture
+import layoutPopUp2PngRvBzf5OSPi3J from "./images/layoutPopUp2Png.png"; // plasmic-import: rvBZF5oSPi3j/picture
+import layout1PopUppngI0WjXKLs7G0 from "./images/layout1PopUppng.png"; // plasmic-import: i0WjX-KLs7g0/picture
+import layout5PopUppngYXLuFbMe0L4B from "./images/layout5PopUppng.png"; // plasmic-import: yXLuFbMe0l4B/picture
+import layout4PopUppngQhe8Xvd1ZBjL from "./images/layout4PopUppng.png"; // plasmic-import: QHE8XVD1zBjL/picture
 
 createPlasmicElementProxy;
 
-export const PlasmicViewerAnnotation__VariantProps = new Array("climbingWall");
+export const PlasmicViewerAnnotation__VariantProps = new Array("activities");
 
 export const PlasmicViewerAnnotation__ArgProps = new Array();
 
@@ -48,10 +52,10 @@ function PlasmicViewerAnnotation__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "climbingWall",
+        path: "activities",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.climbingWall
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.activities
       }
     ],
 
@@ -77,147 +81,78 @@ function PlasmicViewerAnnotation__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root,
-        {
-          [sty.rootclimbingWall_picture1]: hasVariant(
-            $state,
-            "climbingWall",
-            "picture1"
-          ),
-          [sty.rootclimbingWall_picture2]: hasVariant(
-            $state,
-            "climbingWall",
-            "picture2"
-          ),
-          [sty.rootclimbingWall_text]: hasVariant(
-            $state,
-            "climbingWall",
-            "text"
-          )
-        }
+        sty.root
       )}
     >
-      <div
-        className={classNames(projectcss.all, sty.freeBox__caHy4, {
-          [sty.freeBoxclimbingWall_picture2__caHy4BGfZg]: hasVariant(
+      <PlasmicImg__
+        data-plasmic-name={"img"}
+        data-plasmic-override={overrides.img}
+        alt={""}
+        className={classNames(sty.img, {
+          [sty.imgactivities_climbing]: hasVariant(
             $state,
-            "climbingWall",
-            "picture2"
+            "activities",
+            "climbing"
           ),
-          [sty.freeBoxclimbingWall_text__caHy41Grg1]: hasVariant(
+          [sty.imgactivities_market]: hasVariant(
             $state,
-            "climbingWall",
-            "text"
-          )
-        })}
-      >
-        <div
-          data-plasmic-name={"image5"}
-          data-plasmic-override={overrides.image5}
-          className={classNames(projectcss.all, sty.image5, {
-            [sty.image5climbingWall_picture2]: hasVariant(
-              $state,
-              "climbingWall",
-              "picture2"
-            ),
-            [sty.image5climbingWall_text]: hasVariant(
-              $state,
-              "climbingWall",
-              "text"
-            )
-          })}
-        />
-      </div>
-      <div
-        className={classNames(projectcss.all, sty.freeBox__fl4Fe, {
-          [sty.freeBoxclimbingWall_picture1__fl4FeYpj5B]: hasVariant(
-            $state,
-            "climbingWall",
-            "picture1"
+            "activities",
+            "market"
           ),
-          [sty.freeBoxclimbingWall_text__fl4Fe1Grg1]: hasVariant(
-            $state,
-            "climbingWall",
-            "text"
-          )
+          [sty.imgactivities_open]: hasVariant($state, "activities", "open"),
+          [sty.imgactivities_skate]: hasVariant($state, "activities", "skate")
         })}
-      >
-        <div
-          data-plasmic-name={"image6"}
-          data-plasmic-override={overrides.image6}
-          className={classNames(projectcss.all, sty.image6, {
-            [sty.image6climbingWall_picture1]: hasVariant(
-              $state,
-              "climbingWall",
-              "picture1"
-            )
-          })}
-        />
-      </div>
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__akV5D, {
-          [sty.freeBoxclimbingWall_picture1__akV5Dypj5B]: hasVariant(
-            $state,
-            "climbingWall",
-            "picture1"
-          ),
-          [sty.freeBoxclimbingWall_picture2__akV5DbGfZg]: hasVariant(
-            $state,
-            "climbingWall",
-            "picture2"
-          )
-        })}
-      >
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text___7WLol
-          )}
-        >
-          {"Climbing Wall"}
-        </div>
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text___11RJ6,
-            {
-              [sty.textclimbingWall_picture1___11RJ6Ypj5B]: hasVariant(
-                $state,
-                "climbingWall",
-                "picture1"
-              ),
-              [sty.textclimbingWall_text___11RJ61Grg1]: hasVariant(
-                $state,
-                "climbingWall",
-                "text"
-              )
-            }
-          )}
-        >
-          {
-            "Extending from the skate park, users will flow from ramps to an open area adorned with graffiti-covered columns. Here, one can relax while looking at the art or indulge in climbing, conveniently close to home. The climbing wall, integrated onto reinforced walls supporting ramps, maintains privacy with covered upper sides and allows natural light through carefully placed openings. Well-lit for nighttime use, the space includes a few parking spots with power stations for electric vehicles, enhancing accessibility and convenience."
-          }
-        </div>
-        <ActivityQuestions
-          data-plasmic-name={"activityQuestions"}
-          data-plasmic-override={overrides.activityQuestions}
-          className={classNames("__wab_instance", sty.activityQuestions)}
-          open={false}
-        />
-      </Stack__>
+        displayHeight={"auto"}
+        displayMaxHeight={"none"}
+        displayMaxWidth={"100%"}
+        displayMinHeight={"0"}
+        displayMinWidth={"0"}
+        displayWidth={"auto"}
+        loading={"lazy"}
+        src={
+          hasVariant($state, "activities", "market")
+            ? {
+                src: layout4PopUppngQhe8Xvd1ZBjL,
+                fullWidth: 1023,
+                fullHeight: 1035,
+                aspectRatio: undefined
+              }
+            : hasVariant($state, "activities", "open")
+            ? {
+                src: layout5PopUppngYXLuFbMe0L4B,
+                fullWidth: 1023,
+                fullHeight: 1035,
+                aspectRatio: undefined
+              }
+            : hasVariant($state, "activities", "climbing")
+            ? {
+                src: layout1PopUppngI0WjXKLs7G0,
+                fullWidth: 1023,
+                fullHeight: 1035,
+                aspectRatio: undefined
+              }
+            : hasVariant($state, "activities", "skate")
+            ? {
+                src: layoutPopUp2PngRvBzf5OSPi3J,
+                fullWidth: 1023,
+                fullHeight: 1035,
+                aspectRatio: undefined
+              }
+            : {
+                src: layout3PopUppngPQuGwnoEoieY,
+                fullWidth: 1023,
+                fullHeight: 1035,
+                aspectRatio: undefined
+              }
+        }
+      />
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "image5", "image6", "activityQuestions"],
-  image5: ["image5"],
-  image6: ["image6"],
-  activityQuestions: ["activityQuestions"]
+  root: ["root", "img"],
+  img: ["img"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -252,9 +187,7 @@ export const PlasmicViewerAnnotation = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    image5: makeNodeComponent("image5"),
-    image6: makeNodeComponent("image6"),
-    activityQuestions: makeNodeComponent("activityQuestions"),
+    img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicViewerAnnotation
     internalVariantProps: PlasmicViewerAnnotation__VariantProps,
     internalArgProps: PlasmicViewerAnnotation__ArgProps

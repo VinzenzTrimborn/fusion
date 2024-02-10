@@ -36,8 +36,8 @@ export default class BimControls {
         };
 
         // internals
-        this.movementSpeed = 6 * 0.1;
-        this.supermanSpeed = 3;
+        this.movementSpeed = 0.1;
+        this.supermanSpeed = 4;
         this.minPolarAngle = 0; // radians
         this.maxPolarAngle = Math.PI; // radians
         this.mouseInScene = true;

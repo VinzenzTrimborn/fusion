@@ -107,7 +107,13 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
         path: "topModal.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "dayMkt2.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -234,6 +240,11 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                     $state,
                     "variants2",
                     "renderings"
+                  ),
+                  [sty.textvariants2_sketches__tn1HOl9NWu]: hasVariant(
+                    $state,
+                    "variants2",
+                    "sketches"
                   )
                 }
               )}
@@ -887,7 +898,13 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 />
 
                 <div
-                  className={classNames(projectcss.all, sty.freeBox__ozwX8)}
+                  className={classNames(projectcss.all, sty.freeBox__ozwX8, {
+                    [sty.freeBoxvariants2_analysis__ozwX8W6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
                 />
               </div>
             ) : null}
@@ -1810,6 +1827,748 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
               </div>
             ) : null}
           </Stack__>
+          {(hasVariant($state, "variants2", "analysis") ? true : false) ? (
+            <div
+              data-plasmic-name={"container1"}
+              data-plasmic-override={overrides.container1}
+              className={classNames(projectcss.all, sty.container1, {
+                [sty.container1variants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                )
+              })}
+            >
+              <div
+                data-plasmic-name={"headingsParagraph"}
+                data-plasmic-override={overrides.headingsParagraph}
+                className={classNames(projectcss.all, sty.headingsParagraph)}
+              >
+                <div
+                  data-plasmic-name={"right"}
+                  data-plasmic-override={overrides.right}
+                  className={classNames(projectcss.all, sty.right)}
+                >
+                  <div
+                    data-plasmic-name={"button"}
+                    data-plasmic-override={overrides.button}
+                    className={classNames(projectcss.all, sty.button)}
+                  >
+                    <div
+                      data-plasmic-name={"heading1AboutInvestments"}
+                      data-plasmic-override={overrides.heading1AboutInvestments}
+                      className={classNames(
+                        projectcss.all,
+                        sty.heading1AboutInvestments
+                      )}
+                    >
+                      <div
+                        data-plasmic-name={"heading1AboutInvestments2"}
+                        data-plasmic-override={
+                          overrides.heading1AboutInvestments2
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.heading1AboutInvestments2,
+                          {
+                            [sty.heading1AboutInvestments2variants2_analysis]:
+                              hasVariant($state, "variants2", "analysis")
+                          }
+                        )}
+                      >
+                        {"About architecture"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"link"}
+                      data-plasmic-override={overrides.link}
+                      className={classNames(projectcss.all, sty.link, {
+                        [sty.linkvariants2_analysis]: hasVariant(
+                          $state,
+                          "variants2",
+                          "analysis"
+                        )
+                      })}
+                    >
+                      <div
+                        data-plasmic-name={"_"}
+                        data-plasmic-override={overrides._}
+                        className={classNames(projectcss.all, sty._)}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__up9M
+                          )}
+                        >
+                          {"\u2197"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"heading2"}
+                    data-plasmic-override={overrides.heading2}
+                    className={classNames(projectcss.all, sty.heading2)}
+                  >
+                    <div
+                      data-plasmic-name={
+                        "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion"
+                      }
+                      data-plasmic-override={
+                        overrides.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion
+                      )}
+                    >
+                      {
+                        "Starting with the Line of Sight visibility analysis, we wanted to check if different points of interest are visible in the neighborhood around the bridge. We checked that from the platform on top of the bridge and also from both pedestrian paths on each side. We can see that high-rise buildings surrounding the bridge are preventing the visual access to many areas yet it is still possible to see the roofs and rooftop level of most average heigh buildings as shown in the view shed analysis from the platform. This means that our bridge will provide a beautiful scenery to any visitor who\u00a0goes\u00a0on\u00a0top."
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__nvIt1)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__kNfLp
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 800 }}
+                      >
+                        {"Line of Sight "}
+                      </span>
+                    </React.Fragment>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"images"}
+                data-plasmic-override={overrides.images}
+                className={classNames(projectcss.all, sty.images)}
+              >
+                <div
+                  data-plasmic-name={"analysis1"}
+                  data-plasmic-override={overrides.analysis1}
+                  className={classNames(projectcss.all, sty.analysis1, {
+                    [sty.analysis1variants2_activities]: hasVariant(
+                      $state,
+                      "variants2",
+                      "activities"
+                    ),
+                    [sty.analysis1variants2_analysis]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    ),
+                    [sty.analysis1variants2_renderings]: hasVariant(
+                      $state,
+                      "variants2",
+                      "renderings"
+                    ),
+                    [sty.analysis1variants2_sketches]: hasVariant(
+                      $state,
+                      "variants2",
+                      "sketches"
+                    )
+                  })}
+                  onClick={async event => {
+                    const $steps = {};
+                  }}
+                >
+                  <AntdModal
+                    data-plasmic-name={"dayMkt2"}
+                    data-plasmic-override={overrides.dayMkt2}
+                    className={classNames("__wab_instance", sty.dayMkt2, {
+                      [sty.dayMkt2variants2_activities]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      ),
+                      [sty.dayMkt2variants2_renderings]: hasVariant(
+                        $state,
+                        "variants2",
+                        "renderings"
+                      )
+                    })}
+                    defaultStylesClassName={classNames(
+                      projectcss.root_reset,
+                      projectcss.plasmic_default_styles,
+                      projectcss.plasmic_mixins,
+                      projectcss.plasmic_tokens,
+                      plasmic_antd_5_hostless_css.plasmic_tokens,
+                      plasmic_plasmic_rich_components_css.plasmic_tokens
+                    )}
+                    hideFooter={true}
+                    modalContentClassName={classNames({
+                      [sty["pcls_cr_bWP39aaNz"]]: true
+                    })}
+                    modalScopeClassName={sty["dayMkt2__modal"]}
+                    onOpenChange={generateStateOnChangeProp($state, [
+                      "dayMkt2",
+                      "open"
+                    ])}
+                    open={generateStateValueProp($state, ["dayMkt2", "open"])}
+                    title={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__lFk3A
+                        )}
+                      >
+                        {
+                          "Possible implementation of the activities in the south"
+                        }
+                      </div>
+                    }
+                    trigger={
+                      <React.Fragment>
+                        <div
+                          data-plasmic-name={
+                            "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9"
+                          }
+                          data-plasmic-override={
+                            overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9,
+                            {
+                              [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9variants2_analysis]:
+                                hasVariant($state, "variants2", "analysis")
+                            }
+                          )}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__rJqp6,
+                            {
+                              [sty.freeBoxvariants2_activities__rJqp6Oy1JL]:
+                                hasVariant($state, "variants2", "activities"),
+                              [sty.freeBoxvariants2_analysis__rJqp6W6Kp]:
+                                hasVariant($state, "variants2", "analysis")
+                            }
+                          )}
+                        />
+                      </React.Fragment>
+                    }
+                    width={``}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__t9FBe, {
+                        [sty.imgvariants2_activities__t9FBEoy1JL]: hasVariant(
+                          $state,
+                          "variants2",
+                          "activities"
+                        )
+                      })}
+                      displayHeight={"100%"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"100%"}
+                      loading={"lazy"}
+                      src={{
+                        src: layout4PopUppngQhe8Xvd1ZBjL,
+                        fullWidth: 1023,
+                        fullHeight: 1035,
+                        aspectRatio: undefined
+                      }}
+                    />
+                  </AntdModal>
+                  <ActivityQuestions
+                    activity={"openActivitiesSouth"}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.activityQuestions__ng2Q0,
+                      {
+                        [sty.activityQuestionsvariants2_activities__ng2Q0Oy1JL]:
+                          hasVariant($state, "variants2", "activities"),
+                        [sty.activityQuestionsvariants2_analysis__ng2Q0W6Kp]:
+                          hasVariant($state, "variants2", "analysis")
+                      }
+                    )}
+                    open={false}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xdpbn, {
+                      [sty.freeBoxvariants2_activities__xdpbNoy1JL]: hasVariant(
+                        $state,
+                        "variants2",
+                        "activities"
+                      )
+                    })}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___12K97,
+                        {
+                          [sty.textvariants2_activities___12K97Oy1JL]:
+                            hasVariant($state, "variants2", "activities")
+                        }
+                      )}
+                    >
+                      {"Daylight Open Market"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__oioUu,
+                      {
+                        [sty.textvariants2_activities__oioUUoy1JL]: hasVariant(
+                          $state,
+                          "variants2",
+                          "activities"
+                        ),
+                        [sty.textvariants2_analysis__oioUuw6Kp]: hasVariant(
+                          $state,
+                          "variants2",
+                          "analysis"
+                        )
+                      }
+                    )}
+                  >
+                    {hasVariant($state, "variants2", "activities")
+                      ? "4 - 5 - 6"
+                      : "Over the bridge platform"}
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"cover2"}
+                  data-plasmic-override={overrides.cover2}
+                  className={classNames(projectcss.all, sty.cover2, {
+                    [sty.cover2variants2_analysis]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png"
+                    }
+                    data-plasmic-override={
+                      overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png
+                    )}
+                  />
+                </div>
+                <div
+                  data-plasmic-name={"cover1"}
+                  data-plasmic-override={overrides.cover1}
+                  className={classNames(projectcss.all, sty.cover1, {
+                    [sty.cover1variants2_analysis]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg"
+                    }
+                    data-plasmic-override={
+                      overrides._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg
+                    )}
+                  />
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__fq7Q, {
+                    [sty.freeBoxvariants2_analysis__fq7Qw6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                />
+
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___2J6Lo, {
+                    [sty.freeBoxvariants2_analysis___2J6Low6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2"
+                    }
+                    data-plasmic-override={
+                      overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2,
+                      {
+                        [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2variants2_analysis]:
+                          hasVariant($state, "variants2", "analysis")
+                      }
+                    )}
+                  />
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__vReq1, {
+                    [sty.freeBoxvariants2_analysis__vReq1W6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3"
+                    }
+                    data-plasmic-override={
+                      overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3,
+                      {
+                        [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3variants2_analysis]:
+                          hasVariant($state, "variants2", "analysis")
+                      }
+                    )}
+                  />
+                </div>
+                <div
+                  data-plasmic-name={
+                    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4"
+                  }
+                  data-plasmic-override={
+                    overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4,
+                    {
+                      [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4variants2_analysis]:
+                        hasVariant($state, "variants2", "analysis")
+                    }
+                  )}
+                />
+              </div>
+            </div>
+          ) : null}
+          {(hasVariant($state, "variants2", "analysis") ? true : false) ? (
+            <div
+              data-plasmic-name={"container2"}
+              data-plasmic-override={overrides.container2}
+              className={classNames(projectcss.all, sty.container2, {
+                [sty.container2variants2_analysis]: hasVariant(
+                  $state,
+                  "variants2",
+                  "analysis"
+                )
+              })}
+            >
+              <div
+                data-plasmic-name={"headingsParagraph2"}
+                data-plasmic-override={overrides.headingsParagraph2}
+                className={classNames(projectcss.all, sty.headingsParagraph2)}
+              >
+                <div
+                  data-plasmic-name={"right2"}
+                  data-plasmic-override={overrides.right2}
+                  className={classNames(projectcss.all, sty.right2)}
+                >
+                  <div
+                    data-plasmic-name={"button2"}
+                    data-plasmic-override={overrides.button2}
+                    className={classNames(projectcss.all, sty.button2, {
+                      [sty.button2variants2_analysis]: hasVariant(
+                        $state,
+                        "variants2",
+                        "analysis"
+                      )
+                    })}
+                  >
+                    <div
+                      data-plasmic-name={"heading1AboutInvestments3"}
+                      data-plasmic-override={
+                        overrides.heading1AboutInvestments3
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        sty.heading1AboutInvestments3
+                      )}
+                    >
+                      <div
+                        data-plasmic-name={"heading1AboutInvestments4"}
+                        data-plasmic-override={
+                          overrides.heading1AboutInvestments4
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.heading1AboutInvestments4,
+                          {
+                            [sty.heading1AboutInvestments4variants2_analysis]:
+                              hasVariant($state, "variants2", "analysis")
+                          }
+                        )}
+                      >
+                        {"About architecture"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"link2"}
+                      data-plasmic-override={overrides.link2}
+                      className={classNames(projectcss.all, sty.link2, {
+                        [sty.link2variants2_analysis]: hasVariant(
+                          $state,
+                          "variants2",
+                          "analysis"
+                        )
+                      })}
+                    >
+                      <div
+                        data-plasmic-name={"_2"}
+                        data-plasmic-override={overrides._2}
+                        className={classNames(projectcss.all, sty._2)}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__yNmLu
+                          )}
+                        >
+                          {"\u2197"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"heading3"}
+                    data-plasmic-override={overrides.heading3}
+                    className={classNames(projectcss.all, sty.heading3)}
+                  >
+                    <div
+                      data-plasmic-name={
+                        "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
+                      }
+                      data-plasmic-override={
+                        overrides.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2
+                      )}
+                    >
+                      {
+                        "The second viewshed analysis from the starting point of Arnulfsteg and a point further to the east resembling the view from Hackerbr\u00fccke show that the bridge will add to the iconic scenery during sunset times without obstructing the views to to it light and\u00a0elegant\u00a0design. \nThe third viewshed analysis from the end of the tunnel to the south is to ensure that our bridge works as a gateway to Munich and is visible the moment a vehicle leaves the tunnel to get\u00a0into\u00a0the\u00a0city"
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__pW4T1)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__cOkrc
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ fontWeight: 800 }}
+                      >
+                        {"Viewshed"}
+                      </span>
+                    </React.Fragment>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"images2"}
+                data-plasmic-override={overrides.images2}
+                className={classNames(projectcss.all, sty.images2)}
+              >
+                <div
+                  data-plasmic-name={"cover3"}
+                  data-plasmic-override={overrides.cover3}
+                  className={classNames(projectcss.all, sty.cover3, {
+                    [sty.cover3variants2_analysis]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5"
+                    }
+                    data-plasmic-override={
+                      overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5
+                    )}
+                  />
+                </div>
+                <div
+                  data-plasmic-name={"cover4"}
+                  data-plasmic-override={overrides.cover4}
+                  className={classNames(projectcss.all, sty.cover4, {
+                    [sty.cover4variants2_analysis]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2"
+                    }
+                    data-plasmic-override={
+                      overrides._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2
+                    )}
+                  />
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__rt8G, {
+                    [sty.freeBoxvariants2_analysis__rt8Gw6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                />
+
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___3LfcO, {
+                    [sty.freeBoxvariants2_analysis___3LfcOw6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6"
+                    }
+                    data-plasmic-override={
+                      overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6,
+                      {
+                        [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6variants2_analysis]:
+                          hasVariant($state, "variants2", "analysis")
+                      }
+                    )}
+                  />
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__nLzEt, {
+                    [sty.freeBoxvariants2_analysis__nLzEtW6Kp]: hasVariant(
+                      $state,
+                      "variants2",
+                      "analysis"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={
+                      "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7"
+                    }
+                    data-plasmic-override={
+                      overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7,
+                      {
+                        [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7variants2_analysis]:
+                          hasVariant($state, "variants2", "analysis")
+                      }
+                    )}
+                  />
+
+                  <div
+                    data-plasmic-name={
+                      "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3"
+                    }
+                    data-plasmic-override={
+                      overrides.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3
+                    }
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3,
+                      {
+                        [sty.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3variants2_analysis]:
+                          hasVariant($state, "variants2", "analysis")
+                      }
+                    )}
+                  >
+                    {
+                      "It's design gets clearer the closer a person gets when more details and elements are shown, but the main arches are visible from\u00a0the\u00a0get-go."
+                    }
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={
+                    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8"
+                  }
+                  data-plasmic-override={
+                    overrides._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8,
+                    {
+                      [sty._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8variants2_analysis]:
+                        hasVariant($state, "variants2", "analysis")
+                    }
+                  )}
+                />
+              </div>
+            </div>
+          ) : null}
         </div>
       </Stack__>
     </div>
@@ -1840,7 +2599,47 @@ const PlasmicDescendants = {
     "openAct",
     "svg",
     "activitiesCard5",
-    "dayMkt"
+    "dayMkt",
+    "container1",
+    "headingsParagraph",
+    "right",
+    "button",
+    "heading1AboutInvestments",
+    "heading1AboutInvestments2",
+    "link",
+    "_",
+    "heading2",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion",
+    "images",
+    "analysis1",
+    "dayMkt2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9",
+    "cover2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png",
+    "cover1",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4",
+    "container2",
+    "headingsParagraph2",
+    "right2",
+    "button2",
+    "heading1AboutInvestments3",
+    "heading1AboutInvestments4",
+    "link2",
+    "_2",
+    "heading3",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2",
+    "images2",
+    "cover3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5",
+    "cover4",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8"
   ],
 
   description: ["description"],
@@ -1864,7 +2663,256 @@ const PlasmicDescendants = {
   openAct: ["openAct", "svg"],
   svg: ["svg"],
   activitiesCard5: ["activitiesCard5", "dayMkt"],
-  dayMkt: ["dayMkt"]
+  dayMkt: ["dayMkt"],
+  container1: [
+    "container1",
+    "headingsParagraph",
+    "right",
+    "button",
+    "heading1AboutInvestments",
+    "heading1AboutInvestments2",
+    "link",
+    "_",
+    "heading2",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion",
+    "images",
+    "analysis1",
+    "dayMkt2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9",
+    "cover2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png",
+    "cover1",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4"
+  ],
+
+  headingsParagraph: [
+    "headingsParagraph",
+    "right",
+    "button",
+    "heading1AboutInvestments",
+    "heading1AboutInvestments2",
+    "link",
+    "_",
+    "heading2",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion"
+  ],
+
+  right: [
+    "right",
+    "button",
+    "heading1AboutInvestments",
+    "heading1AboutInvestments2",
+    "link",
+    "_",
+    "heading2",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion"
+  ],
+
+  button: [
+    "button",
+    "heading1AboutInvestments",
+    "heading1AboutInvestments2",
+    "link",
+    "_"
+  ],
+
+  heading1AboutInvestments: [
+    "heading1AboutInvestments",
+    "heading1AboutInvestments2"
+  ],
+
+  heading1AboutInvestments2: ["heading1AboutInvestments2"],
+  link: ["link", "_"],
+  _: ["_"],
+  heading2: [
+    "heading2",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion"
+  ],
+
+  fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion:
+    [
+      "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion"
+    ],
+
+  images: [
+    "images",
+    "analysis1",
+    "dayMkt2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9",
+    "cover2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png",
+    "cover1",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4"
+  ],
+
+  analysis1: [
+    "analysis1",
+    "dayMkt2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9"
+  ],
+
+  dayMkt2: [
+    "dayMkt2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9"
+  ],
+
+  cover2: [
+    "cover2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png"
+  ],
+
+  cover1: [
+    "cover1",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg"
+  ],
+
+  _60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg: [
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4"
+  ],
+
+  container2: [
+    "container2",
+    "headingsParagraph2",
+    "right2",
+    "button2",
+    "heading1AboutInvestments3",
+    "heading1AboutInvestments4",
+    "link2",
+    "_2",
+    "heading3",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2",
+    "images2",
+    "cover3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5",
+    "cover4",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8"
+  ],
+
+  headingsParagraph2: [
+    "headingsParagraph2",
+    "right2",
+    "button2",
+    "heading1AboutInvestments3",
+    "heading1AboutInvestments4",
+    "link2",
+    "_2",
+    "heading3",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
+  ],
+
+  right2: [
+    "right2",
+    "button2",
+    "heading1AboutInvestments3",
+    "heading1AboutInvestments4",
+    "link2",
+    "_2",
+    "heading3",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
+  ],
+
+  button2: [
+    "button2",
+    "heading1AboutInvestments3",
+    "heading1AboutInvestments4",
+    "link2",
+    "_2"
+  ],
+
+  heading1AboutInvestments3: [
+    "heading1AboutInvestments3",
+    "heading1AboutInvestments4"
+  ],
+
+  heading1AboutInvestments4: ["heading1AboutInvestments4"],
+  link2: ["link2", "_2"],
+  _2: ["_2"],
+  heading3: [
+    "heading3",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
+  ],
+
+  fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2:
+    [
+      "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
+    ],
+
+  images2: [
+    "images2",
+    "cover3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5",
+    "cover4",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7",
+    "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8"
+  ],
+
+  cover3: [
+    "cover3",
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5"
+  ],
+
+  cover4: [
+    "cover4",
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2"
+  ],
+
+  _60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2: [
+    "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6"
+  ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7"
+  ],
+
+  fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3:
+    [
+      "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3"
+    ],
+
+  _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8: [
+    "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8"
+  ]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1921,6 +2969,88 @@ export const PlasmicGalleryDisplay = Object.assign(
     svg: makeNodeComponent("svg"),
     activitiesCard5: makeNodeComponent("activitiesCard5"),
     dayMkt: makeNodeComponent("dayMkt"),
+    container1: makeNodeComponent("container1"),
+    headingsParagraph: makeNodeComponent("headingsParagraph"),
+    right: makeNodeComponent("right"),
+    button: makeNodeComponent("button"),
+    heading1AboutInvestments: makeNodeComponent("heading1AboutInvestments"),
+    heading1AboutInvestments2: makeNodeComponent("heading1AboutInvestments2"),
+    link: makeNodeComponent("link"),
+    _: makeNodeComponent("_"),
+    heading2: makeNodeComponent("heading2"),
+    fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion:
+      makeNodeComponent(
+        "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion"
+      ),
+    images: makeNodeComponent("images"),
+    analysis1: makeNodeComponent("analysis1"),
+    dayMkt2: makeNodeComponent("dayMkt2"),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9"
+      ),
+    cover2: makeNodeComponent("cover2"),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png"
+      ),
+    cover1: makeNodeComponent("cover1"),
+    _60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg:
+      makeNodeComponent(
+        "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg"
+      ),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2"
+      ),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3"
+      ),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4"
+      ),
+    container2: makeNodeComponent("container2"),
+    headingsParagraph2: makeNodeComponent("headingsParagraph2"),
+    right2: makeNodeComponent("right2"),
+    button2: makeNodeComponent("button2"),
+    heading1AboutInvestments3: makeNodeComponent("heading1AboutInvestments3"),
+    heading1AboutInvestments4: makeNodeComponent("heading1AboutInvestments4"),
+    link2: makeNodeComponent("link2"),
+    _2: makeNodeComponent("_2"),
+    heading3: makeNodeComponent("heading3"),
+    fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2:
+      makeNodeComponent(
+        "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
+      ),
+    images2: makeNodeComponent("images2"),
+    cover3: makeNodeComponent("cover3"),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5"
+      ),
+    cover4: makeNodeComponent("cover4"),
+    _60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2:
+      makeNodeComponent(
+        "_60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2"
+      ),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6"
+      ),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7"
+      ),
+    fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3:
+      makeNodeComponent(
+        "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3"
+      ),
+    _635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8:
+      makeNodeComponent(
+        "_635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8"
+      ),
     // Metadata about props expected for PlasmicGalleryDisplay
     internalVariantProps: PlasmicGalleryDisplay__VariantProps,
     internalArgProps: PlasmicGalleryDisplay__ArgProps

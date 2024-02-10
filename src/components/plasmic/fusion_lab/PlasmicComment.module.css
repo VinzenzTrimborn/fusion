@@ -7,16 +7,15 @@
   justify-content: center;
   align-items: center;
   justify-self: flex-start;
-  background: #ffffff;
+  background: none;
 }
 .freeBox__t0ZT {
   width: 350px;
-  height: 82px;
+  height: auto;
   display: flex;
   box-shadow: none;
   flex-direction: row;
-  background: none;
-  flex-shrink: 0;
+  background: #ffffff;
   border-radius: 10px;
   border: 1px solid #f0f0f0;
 }
@@ -25,14 +24,13 @@
 }
 .freeBox__p7Sb1 {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   position: relative;
   left: auto;
   top: auto;
   flex-direction: column;
   min-width: 0;
-  min-height: 0;
 }
 .freeBoxliked__p7Sb1DFe6S {
   height: auto;
@@ -42,18 +40,16 @@
   position: relative;
   flex-direction: row;
   width: auto;
-  height: 100%;
+  height: auto;
   max-width: 100%;
   top: auto;
   left: auto;
-  min-height: 0;
   padding: 8px;
 }
 .freeBox___0CtHj > :global(.__wab_flex-container) {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 0;
   margin-left: calc(0px - 8px);
   width: calc(100% + 8px);
 }
@@ -77,10 +73,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 100%;
   min-width: 0;
-  min-height: 0;
   padding: 8px;
 }
 .freeBoxliked___9CRnqdFe6S {
@@ -308,10 +303,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
+  width: 100px;
   height: auto;
   max-width: 100%;
-  min-width: 0;
+  flex-shrink: 0;
   padding: 0px;
 }
 .freeBoxliked__xpSoVdFe6S {
@@ -337,6 +332,7 @@
   max-width: 100%;
   width: 16px;
   height: 16px;
+  color: #000000;
   flex-shrink: 0;
 }
 .svgliked__prLvbdFe6S {

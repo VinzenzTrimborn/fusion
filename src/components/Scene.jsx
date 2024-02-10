@@ -108,7 +108,12 @@ export default function Scene({handleCameraChange}) {
                 )}
             </group>
             <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
-            <Annotation position={[440.244272848507, 3.800000000000114, -854.2200189272153]}/>
+            <Annotation position={[411.6319091532528, 38.90000000000015, -539.2609510078722]}/>
+            <Annotation position={[421.21850526825716, 2.6000000000000245, -733.6117650596663]}/>
+            <Annotation position={[440.44495690238534, 2.600000000000029, -824.0734942079337]}/>
+            <Annotation position={[464.5228597414705, 2.600000000000029, -883.2301522631742]}/>
+            <Annotation position={[419.2881558593361, 2.6000000000001116, -342.1737582146491]}/>
+
         </>
     );
 }
@@ -118,13 +123,11 @@ function Annotation({position, ...props}) {
         <Html
             {...props}
             position={position}
-            occlude
-            castShadow
-            receiveShadow
+
             transform
-            scale={0.5}
+            scale={0.2}
         >
-            <ViewerAnnotation climbingWall={'Picture1'}/>
+            <ViewerAnnotation activities={'Skate'}/>
         </Html>
     )
 }
