@@ -7,7 +7,9 @@ function Home_(props, ref) {
         root={{ref}}
         header={{
             onClick: () => {
+                const usdzFile = `${window.location.protocol}//${window.location.host}/asset.usdz`;
                 console.log("header clicked");
+                window.location.href = usdzFile;
             }
         }}
         {...props}
