@@ -108,11 +108,11 @@ export default function Scene({handleCameraChange}) {
                 )}
             </group>
             <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
-            <Annotation activity={'Platform'} position={[411.6319091532528, 38.90000000000015, -539.2609510078722]}/>
-            <Annotation activity={'Skate'} position={[421.21850526825716, 2.6000000000000245, -733.6117650596663]}/>
-            <Annotation activity={'Climbing'} position={[440.44495690238534, 2.600000000000029, -824.0734942079337]}/>
-            <Annotation activity={'Open'} position={[464.5228597414705, 2.600000000000029, -883.2301522631742]}/>
-            <Annotation activity={'Market'} position={[419.2881558593361, 2.6000000000001116, -342.1737582146491]}/>
+            <Annotation activity={'platform'} position={[411.6319091532528, 38.90000000000015, -539.2609510078722]}/>
+            <Annotation activity={'skate'} position={[421.21850526825716, 2.6000000000000245, -733.6117650596663]}/>
+            <Annotation activity={'climbing'} position={[440.44495690238534, 2.600000000000029, -824.0734942079337]}/>
+            <Annotation activity={'open'} position={[464.5228597414705, 2.600000000000029, -883.2301522631742]}/>
+            <Annotation activity={'market'} position={[419.2881558593361, 2.6000000000001116, -342.1737582146491]}/>
 
         </>
     );
