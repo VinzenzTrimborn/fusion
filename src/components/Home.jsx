@@ -5,13 +5,6 @@ function Home_(props, ref) {
 
     return <PlasmicHome
         root={{ref}}
-        header={{
-            onClick: () => {
-                const usdzFile = `${window.location.protocol}//${window.location.host}/asset.usdz`;
-                console.log("header clicked");
-                window.location.href = usdzFile;
-            }
-        }}
         {...props}
     />;
 }

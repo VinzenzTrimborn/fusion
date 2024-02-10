@@ -1077,6 +1077,19 @@
   max-width: 100%;
   position: relative;
 }
+.arView:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 57px;
+  margin-right: 0px;
+  margin-left: 0px;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .arView:global(.__wab_instance) {
+    display: flex;
+  }
+}
 .team:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
