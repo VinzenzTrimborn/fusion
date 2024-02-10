@@ -155,7 +155,7 @@ function ParticipationArea_(props, ref) {
                     <>
                         <ARButton/>
                         <Suspense fallback={<span>loading...</span>}>
-                            <Canvas>
+                            <Canvas frameloop="demand">
                                 <XR referenceSpace="local">
                                     <Controllers/>
                                     <Scene handleCameraChange={handleCameraChange}/>
