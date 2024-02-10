@@ -1,5 +1,3 @@
-// supabaseClient.js
-//ToDo Koray: Supabase URL und Key eintragen
 import { createClient } from '@supabase/supabase-js';
 
 // ToDo Koray: Supabase URL und Key eintragen

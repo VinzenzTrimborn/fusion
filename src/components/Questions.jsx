@@ -4,7 +4,7 @@ import MyContext from "../MyContext";
 import {useContext} from "react";
 
 function Questions_(props, ref) {
-    const {state, updateState} = useContext(MyContext);
+    const {state} = useContext(MyContext);
 
     const [postCode, setPostCode] = React.useState("");
     const [country, setCountry] = React.useState("");
@@ -54,13 +54,10 @@ function Questions_(props, ref) {
                     commute: commute
                 };
                 console.log(object);
-                if (state.userID) {
-                    //ToDo Koray: Save the data in the database and associate it with the userID
-                } else {
-                    //ToDo Koray: Save the data in the database and return a userID
-                    const newValue = "1234";
-                    updateState({ userID: newValue });
-                }
+                console.log(state.userID)
+                //ToDo Koray: Save the answers in the database and associate it with the userID
+
+                // Reset the form
                 setPostCode("");
                 setCountry("");
                 setHowOften("");

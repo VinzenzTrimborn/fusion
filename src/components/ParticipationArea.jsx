@@ -10,7 +10,7 @@ import {Environment, Loader} from "@react-three/drei";
 import MyContext from "../MyContext";
 
 function ParticipationArea_(props, ref) {
-    const {state, updateState} = useContext(MyContext);
+    const {state} = useContext(MyContext);
 
     const [comments, setComments] = useState([]);
     const [input, setInput] = useState("");
@@ -40,41 +40,57 @@ function ParticipationArea_(props, ref) {
         setCameraDirection(direction);
     }, []);
 
-    //ToDo Koray: get comments from DB
     const getCommentsFromDB = useCallback(() => {
+        //ToDo Koray: get comments from DB
         return [
             {
+                id: 1,
                 likes: 45,
                 text: "I really like the boldering walls under the bridge!",
                 cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0},
-                likedByUser: false
+                commentPosition: {x: 0, y: 2, z: 0}
             },
             {
+                id: 2,
                 likes: 23,
                 text: "With so less parking I have to search for a parking spot for hours!",
                 cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0},
-                likedByUser: true
+                commentPosition: {x: 0, y: 2, z: 0}
             }
         ];
     }, []);
 
-    const getLikesFromDB = () => {
-        //ToDo Koray: After getting the comments likedByUser should be set to true if the user liked the comment
-        state.userID && console.log("User ID: " + state.userID);
-        setComments(comments);
-    };
+    const getLikesFromDB = useCallback((comments, userID) => {
+        console.log("User ID: " + userID);
+        //ToDo Koray: Get the liked comments of userID from the DB
+        const likedCommentsIDs = [1, 2];
 
-    //ToDo Koray: add comment to DB
+        return comments.map((c) => {
+            if (likedCommentsIDs.includes(c.id)) {
+                return {...c, likedByUser: true};
+            }
+            return {...c, likedByUser: false};
+        });
+    }, []);
+
     const addCommentDB = useCallback((newComment) => {
-        state.userID && console.log("User ID: " + state.userID);
-        setComments([...comments, newComment]);
+        console.log("User ID: " + state.userID);
+        //ToDo Koray: add comment to DB and associate it with the userID and return the comment ID
+        // Set the comment ID here
+        newComment.id = comments.length + 1;
+
+        // Update comments in the frontend
+        setComments([newComment, ...comments]);
     }, [comments, state.userID]);
 
     const changeLike = useCallback((comment) => {
         //ToDo Koray: increase or decrease likes in DB
-        state.userID && console.log("User ID: " + state.userID);
+        console.log("User ID: " + state.userID);
+        console.log("Comment ID: " + comment.id);
+        // If the comment was liked by the user, then decrease the likes, else increase the likes
+        console.log("Liked by user: " + comment.likedByUser);
+
+        // Update like in the frontend
         const newComments = comments.map((c) => {
             if (c === comment && !c.likedByUser) {
                 return {...c, likes: c.likes + 1, likedByUser: true};
@@ -87,9 +103,12 @@ function ParticipationArea_(props, ref) {
     }, [comments, state.userID]);
 
     useEffect(() => {
-        let comments = getCommentsFromDB();
-        setComments(comments);
-    }, [getCommentsFromDB]);
+        if (state.userID) {
+            let comments = getCommentsFromDB();
+            comments = getLikesFromDB(comments, state.userID);
+            setComments(comments);
+        }
+    }, [getCommentsFromDB, state.userID, getLikesFromDB]);
 
     return (
         <PlasmicParticipationArea
@@ -134,7 +153,7 @@ function ParticipationArea_(props, ref) {
             canvas={{
                 render: () => (
                     <>
-                        <ARButton />
+                        <ARButton/>
                         <Suspense fallback={<span>loading...</span>}>
                             <Canvas>
                                 <XR referenceSpace="local">

@@ -11,7 +11,7 @@ function ActivityQuestions_(props, ref) {
     const [notLike, setNotLike] = React.useState("");
     const [improvementComment, setImprovementComment] = React.useState("");
 
-    const {state, updateState} = useContext(MyContext);
+    const {state} = useContext(MyContext);
 
     const sendToServer = (e, activityName) => {
         e.preventDefault();
@@ -23,15 +23,8 @@ function ActivityQuestions_(props, ref) {
         }
         console.log(object);
         console.log(activityName);
-
-        if (state.userID) {
-            //ToDo Koray: Save the data in the database and associate it with the userID
-            console.log("User ID: " + state.userID);
-        }else {
-            //ToDo Koray: Save the data in the database and return a userID
-            const newValue = "1234";
-            updateState({ userID: newValue });
-        }
+        console.log("User ID: " + state.userID);
+        //ToDo Koray: Save the answers in the database and associate it with the userID
 
         //clear the form
         setGrade("");

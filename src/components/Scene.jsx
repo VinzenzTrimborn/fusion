@@ -7,7 +7,6 @@ import {useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
 import {MeshLambertMaterial, Vector3} from "three";
 import ViewerAnnotation from "./ViewerAnnotation";
-import {GLTFExporter} from 'three/examples/jsm/exporters/GLTFExporter';
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -33,7 +32,6 @@ export default function Scene({handleCameraChange}) {
     });
 
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
-    // ToDo Koray: instead of using the ifc file from the public folder, use the ifc file from the database
     const ifc = useLoader(IFCLoader, "/main.ifc", (ifcLoader) => {
         ifcLoader.ifcManager.setWasmPath("../../wasm/");
     });
@@ -88,10 +86,6 @@ export default function Scene({handleCameraChange}) {
 
     }, [ifc, scene]);
 
-    //ToDo Mohammad: Choose nice lights. Maybe add a sun. Maybe add a skybox.
-    // Maybe add a ground. Maybe add a background. Maybe add a fog.
-    // For the different IFC Categories you can use different materials.
-    // Choose nice positions for Tinas Annotations
     return (
         <>
             <pointLight position={[400, 400, 0]} intensity={0.5} color="white"/>
@@ -121,7 +115,6 @@ export default function Scene({handleCameraChange}) {
 
 function Annotation({position, ...props}) {
     return (
-        // ToDo Mohammad: You can play around  with the annotations here. Let them throw a shadow or transform.
         <Html
             {...props}
             position={position}
