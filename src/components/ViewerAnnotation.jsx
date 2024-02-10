@@ -8,7 +8,7 @@ function ViewerAnnotation_(props, ref) {
     return <PlasmicViewerAnnotation
         root={{ref}}
         {...props}
-        test={true}
+        activities={activities}
     />;
 }
 
