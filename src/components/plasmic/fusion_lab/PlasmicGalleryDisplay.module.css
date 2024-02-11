@@ -1734,7 +1734,7 @@
 }
 .images {
   transform: translate(-0.19999999999998863px, 0.18999999999999773px);
-  height: 447px;
+  height: auto;
   display: flex;
   position: relative;
   top: auto;
@@ -1742,9 +1742,9 @@
   width: auto;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   right: auto;
-  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 .cover2 {
   height: 100%;
@@ -2049,7 +2049,7 @@
 }
 .images3 {
   transform: translate(-0.19999999999998863px, 0.18999999999999773px);
-  height: 447px;
+  height: auto;
   display: flex;
   position: relative;
   top: auto;
@@ -2057,9 +2057,9 @@
   width: auto;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   right: auto;
-  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 .cover5 {
   height: 100%;
