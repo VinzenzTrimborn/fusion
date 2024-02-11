@@ -16,7 +16,8 @@ The project is structured as follows:
 
 ## Getting Started
 
-Install the dependencies and run the project:
+Install the dependencies and run the project. We have to use --force since ifc.js is not compatible with the current version of r3f. 
+Since ifc.js is using wasm files and switched into "that open company" we could not update the package to the latest version.
 
 ```bash
 npm install --force
