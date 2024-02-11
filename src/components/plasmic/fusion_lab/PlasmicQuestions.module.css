@@ -31,14 +31,14 @@
 }
 .freeBox__w0S32 {
   display: flex;
-  width: 468px;
-  height: 100px;
+  width: 100%;
+  height: auto;
   max-width: 100%;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
-  flex-shrink: 0;
+  min-width: 0;
   padding: 8px;
 }
 .freeBox___2Zbv {
@@ -48,7 +48,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: auto;
-  height: 100px;
+  height: auto;
   max-width: auto;
   left: auto;
   top: auto;
@@ -67,7 +67,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 230px;
-  height: 100px;
+  height: auto;
   max-width: auto;
   left: auto;
   top: auto;
@@ -86,10 +86,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 450px;
+  width: 100%;
   height: auto;
   max-width: 100%;
   margin-top: 0px;
+  min-width: 0;
   padding: 8px;
 }
 .text___7ANih {
@@ -110,10 +111,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 450px;
+  width: 100%;
   height: auto;
   max-width: 100%;
   margin-top: 0px;
+  min-width: 0;
   padding: 8px;
 }
 .text__nTn1 {
