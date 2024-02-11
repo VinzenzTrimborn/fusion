@@ -30,8 +30,8 @@ import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/c
 import GalleryDisplay from "../../GalleryDisplay"; // plasmic-import: v_wMKsIXVD_E/component
 import ParticipationArea from "../../ParticipationArea"; // plasmic-import: clPh1NSkBPaO/component
 import FaqSection from "../../FaqSection"; // plasmic-import: Qhhf4YZ2QDy9/component
-import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
 import ArView from "../../ArView"; // plasmic-import: 9bh6WWKdnqfi/component
+import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
 import Team from "../../Team"; // plasmic-import: SnzWAy89iw5m/component
 import { useScreenVariants as useScreenVariants_4UI21YsnkmYr } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 4uI21ysnkmYR/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -1006,16 +1006,16 @@ function PlasmicHome__RenderFunc(props) {
             className={classNames("__wab_instance", sty.faqSection)}
           />
 
-          <AboutUs
-            data-plasmic-name={"aboutUs"}
-            data-plasmic-override={overrides.aboutUs}
-            className={classNames("__wab_instance", sty.aboutUs)}
-          />
-
           <ArView
             data-plasmic-name={"arView"}
             data-plasmic-override={overrides.arView}
             className={classNames("__wab_instance", sty.arView)}
+          />
+
+          <AboutUs
+            data-plasmic-name={"aboutUs"}
+            data-plasmic-override={overrides.aboutUs}
+            className={classNames("__wab_instance", sty.aboutUs)}
           />
 
           <Team
@@ -1046,8 +1046,8 @@ const PlasmicDescendants = {
     "galleryDisplay",
     "participationArea",
     "faqSection",
-    "aboutUs",
     "arView",
+    "aboutUs",
     "team"
   ],
 
@@ -1065,8 +1065,8 @@ const PlasmicDescendants = {
   galleryDisplay: ["galleryDisplay"],
   participationArea: ["participationArea"],
   faqSection: ["faqSection"],
-  aboutUs: ["aboutUs"],
   arView: ["arView"],
+  aboutUs: ["aboutUs"],
   team: ["team"]
 };
 
@@ -1116,8 +1116,8 @@ export const PlasmicHome = Object.assign(
     galleryDisplay: makeNodeComponent("galleryDisplay"),
     participationArea: makeNodeComponent("participationArea"),
     faqSection: makeNodeComponent("faqSection"),
-    aboutUs: makeNodeComponent("aboutUs"),
     arView: makeNodeComponent("arView"),
+    aboutUs: makeNodeComponent("aboutUs"),
     team: makeNodeComponent("team"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

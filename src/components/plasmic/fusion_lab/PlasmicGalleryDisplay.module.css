@@ -114,6 +114,9 @@
   height: auto;
   min-width: 0;
 }
+.textvariants2_analysis__tn1How6Kp {
+  color: #5d5d5d;
+}
 .freeBox___8HY32 {
   display: flex;
   position: relative;
@@ -421,20 +424,282 @@
 .renderedVideovariants2_renderings:global(.__wab_instance) {
   display: flex;
 }
+.freeBox__xHBol {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+  margin: 10px;
+}
+.freeBoxvariants2_analysis__xHBolW6Kp {
+  justify-content: center;
+  align-items: flex-start;
+}
+.freeBox__j13Gx {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBoxvariants2_analysis__j13GxW6Kp {
+  width: auto;
+}
 .analysisVideo:global(.__wab_instance) {
-  width: 758px;
+  width: 1165px;
   height: auto;
   max-width: 100%;
   object-fit: cover;
-  position: relative;
   display: none;
-  margin: 10px;
 }
 .analysisVideovariants2_renderings:global(.__wab_instance) {
   display: none;
 }
 .analysisVideovariants2_analysis:global(.__wab_instance) {
   display: flex;
+}
+.headingsParagraph2 {
+  transform: translate(-0.19999999999998863px, 0px);
+  height: 320px;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  flex-shrink: 0;
+}
+.headingsParagraph2variants2_analysis {
+  left: auto;
+  top: auto;
+  right: auto;
+  height: auto;
+  margin: 20px;
+}
+.freeBox__lJ8LX {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+.freeBox__io0QS {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+  margin: 0px 10px 0px 0px;
+}
+.text___7OSzu {
+  display: block;
+  font-size: 35px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+  width: auto;
+  height: auto;
+  max-width: 244px;
+  padding: 0px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2 {
+  display: block;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  width: 938px;
+  height: auto;
+  flex-shrink: 0;
+}
+.freeBox__hJz4 {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  right: auto;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__hJz4 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 0;
+}
+.freeBoxvariants2_analysis__hJz4W6Kp {
+  top: auto;
+  left: auto;
+  right: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+.freeBoxvariants2_analysis__hJz4W6Kp > :global(.__wab_flex-container) {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: calc(0px - 0px);
+  width: calc(100% + 0px);
+  margin-top: calc(0px - 0px);
+  height: calc(100% + 0px);
+}
+.freeBoxvariants2_analysis__hJz4W6Kp > :global(.__wab_flex-container) > *,
+.freeBoxvariants2_analysis__hJz4W6Kp
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > *,
+.freeBoxvariants2_analysis__hJz4W6Kp
+  > :global(.__wab_flex-container)
+  > picture
+  > img,
+.freeBoxvariants2_analysis__hJz4W6Kp
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.headingsParagraph4 {
+  transform: translate(-0.19999999999998863px, 0px);
+  height: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+}
+.headingsParagraph4variants2_analysis {
+  height: auto;
+}
+.freeBox__lfEsT {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+.freeBox__ym18V {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  margin: 0px 10px 0px 0px;
+}
+.text__lo7QV {
+  display: block;
+  font-size: 35px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 28.5px;
+  color: rgba(21, 21, 21, 1);
+  width: 100%;
+  height: auto;
+  max-width: 171px;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox__iPT5 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.text___5Nn5Z {
+  position: relative;
+  max-width: 888px;
+  width: 100%;
+  min-width: 0;
+}
+.freeBox__adgEi {
+  background: url("./images/rectangle3174.jpg") center center / cover no-repeat,
+    rgba(195, 195, 195, 1);
+  width: 539px;
+  height: 381px;
+  display: block;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.freeBoxvariants2_analysis__adgEiW6Kp {
+  height: 324px;
+  width: 967px;
+  flex-shrink: 0;
+}
+.freeBox__aQo7N {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3 {
+  display: block;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  width: 918px;
+  height: auto;
+  padding-top: 5px;
+  padding-left: 25px;
+}
+.ol {
+  display: flex;
+  flex-direction: column;
 }
 .freeBox__t4Vcl {
   display: flex;
@@ -478,6 +743,7 @@
   top: auto;
   padding-bottom: 30px;
   padding-top: 10px;
+  display: flex;
 }
 .freeBoxvariants2_activities__t4Vcloy1JL > :global(.__wab_flex-container) {
   margin-left: calc(0px - 20px);
@@ -501,6 +767,9 @@
   > img {
   margin-left: 20px;
   margin-top: 20px;
+}
+.freeBoxvariants2_renderings__t4VclhKtTu {
+  display: flex;
 }
 .freeBoxvariants2_renderings__t4VclhKtTu > :global(.__wab_flex-container) {
   margin-left: calc(0px - 0px);
@@ -529,6 +798,12 @@
   margin-bottom: 0px;
   height: auto;
   margin-top: 24px;
+  width: 100%;
+  min-width: 0;
+  display: none;
+}
+.freeBoxvariants2_analysis__t4VclW6Kp > :global(.__wab_flex-container) {
+  min-width: 0;
 }
 .rederingPics {
   width: 767px;
@@ -637,6 +912,9 @@
 .analysisPicsvariants2_renderings {
   display: none;
 }
+.analysisPicsvariants2_analysis {
+  display: none;
+}
 .freeBox__muoOk {
   background: rgba(195, 195, 195, 1);
   width: 506px;
@@ -649,16 +927,8 @@
   border-radius: 24px;
   padding: 0px;
 }
-.freeBox__adgEi {
-  background: url("./images/rectangle3174.jpg") center center / cover no-repeat,
-    rgba(195, 195, 195, 1);
-  width: 539px;
-  height: 381px;
-  display: block;
-  position: absolute;
-  top: -3px;
-  left: 395px;
-  border-radius: 24px;
+.freeBoxvariants2_analysis__muoOkW6Kp {
+  display: none;
 }
 .freeBox__ozwX8 {
   background: url("./images/rectangle3175.png") center center / cover no-repeat,
@@ -1406,147 +1676,61 @@
   margin: 15px;
 }
 .container1 {
-  width: 1920px;
-  height: 835px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  padding-bottom: 53px;
+  min-width: 0;
 }
 .headingsParagraph {
   transform: translate(-0.19999999999998863px, 0px);
-  height: 320px;
-  display: block;
+  height: auto;
+  display: flex;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
-  flex-shrink: 0;
-}
-.right {
-  transform: translate(-0.41100000000000136px, 0px);
-  height: 320px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 394px;
-  right: 0px;
-}
-.button {
-  transform: translate(0px, 0.18999999999999773px);
-  width: 1181px;
-  height: 57px;
-  display: block;
-  position: absolute;
-  top: 262px;
-  left: 0px;
-}
-.heading1AboutInvestments {
-  position: absolute;
-  top: 16px;
-  left: 0px;
-  width: 164px;
-  height: 23px;
-  transform: translate(0px, 0.25px);
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
+  width: auto;
 }
-.heading1AboutInvestments2 {
-  display: block;
-  font-size: 18px;
-  font-family: "Aeonik";
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 28.5px;
-  color: rgba(21, 21, 21, 1);
-}
-.heading1AboutInvestments2variants2_analysis {
-  display: none;
-}
-.link {
-  transform: translate(0.16900000000001114px, 0px);
-  width: 57px;
-  height: 57px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 182px;
-  border-radius: 28.5px;
-}
-.linkvariants2_analysis {
-  display: none;
-}
-._ {
-  position: absolute;
-  top: 19px;
-  left: 21px;
-  width: 10px;
-  height: 23px;
-  transform: translate(-0.23100000000000165px, 0.25px);
+.freeBox__kkec2 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.text__up9M {
-  display: block;
-  font-size: 17px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 28.5px;
-  color: rgba(21, 21, 21, 1);
-}
-.heading2 {
-  width: 941px;
-  height: 206px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion {
-  display: block;
-  font-size: 24px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
-  color: rgba(21, 21, 21, 1);
-  position: absolute;
-  top: -1px;
-  left: 0px;
-  width: 938px;
-  height: 206px;
-}
-.freeBox__nvIt1 {
-  position: absolute;
-  top: 2px;
-  left: 0px;
-  width: 107px;
-  height: 23px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  padding: 8px;
 }
 .text__kNfLp {
   display: block;
-  font-size: 20px;
+  font-size: 35px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 28.5px;
   color: rgba(21, 21, 21, 1);
-  width: 100%;
+  width: auto;
   height: auto;
   max-width: 133px;
-  padding-right: 0px;
-  padding-left: 60px;
-  position: fixed;
-  left: 74px;
-  top: 0;
-  z-index: 1;
-  right: -76px;
-  margin-left: 121px;
-  min-width: 0;
+  padding: 0px;
+  margin: 0px 20px 0px 0px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion {
+  display: block;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  width: 938px;
+  height: auto;
+  flex-shrink: 0;
 }
 .images {
   transform: translate(-0.19999999999998863px, 0.18999999999999773px);
@@ -1561,159 +1745,6 @@
   align-items: flex-start;
   right: auto;
   flex-shrink: 0;
-}
-.analysis1 {
-  width: auto;
-  height: auto;
-  display: flex;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  flex-direction: column;
-  cursor: pointer;
-}
-.analysis1variants2_activities {
-  left: 0px;
-  top: 0px;
-  box-shadow: 0px 4px 16px 0px rgba(83, 83, 83, 0.45);
-  border-radius: 20px;
-}
-.analysis1variants2_renderings {
-  left: 0px;
-  top: 0px;
-  display: none;
-}
-.analysis1variants2_analysis {
-  left: 0px;
-  top: 0px;
-}
-.analysis1variants2_sketches {
-  left: 0px;
-  top: 0px;
-  display: none;
-}
-.dayMkt2:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-}
-.img__t9FBe {
-  position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-}
-.img__t9FBe > picture > img {
-  object-fit: cover;
-}
-.text__lFk3A {
-  padding-left: 0px;
-}
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9 {
-  background: url("./images/lineOfSightWestPathpng.png") center center / cover no-repeat;
-  display: block;
-  overflow: hidden;
-  width: 550px;
-  height: 377px;
-  position: relative;
-  left: auto;
-  top: auto;
-  border-radius: 20px;
-}
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9variants2_analysis {
-  left: auto;
-  top: auto;
-}
-.freeBox__rJqp6 {
-  background: url("./images/oig9Jpeg.jpg") center center / cover no-repeat,
-    rgba(195, 195, 195, 1);
-  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 320px;
-  height: 350px;
-  display: block;
-  position: relative;
-  top: auto;
-  left: auto;
-  margin-bottom: 10px;
-  border-radius: 24px;
-}
-.freeBoxvariants2_activities__rJqp6Oy1JL {
-  left: auto;
-  top: auto;
-}
-.freeBoxvariants2_analysis__rJqp6W6Kp {
-  display: none;
-}
-.activityQuestions__ng2Q0:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.activityQuestionsvariants2_analysis__ng2Q0W6Kp:global(.__wab_instance) {
-  display: none;
-}
-.freeBox__xdpbn {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  top: auto;
-  left: auto;
-  align-self: center;
-  padding: 0px 8px 8px;
-}
-.text___12K97 {
-  display: block;
-  font-size: 25px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 1);
-}
-.textvariants2_activities___12K97Oy1JL {
-  font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.text__oioUu {
-  display: block;
-  font-size: 25px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0em;
-  line-height: 100%;
-  color: rgba(0, 0, 0, 1);
-}
-.textvariants2_activities__oioUUoy1JL {
-  font-weight: 600;
-  font-family: "Bangers";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 1;
-  font-size: 40px;
-  color: #ffffff;
-  margin: 15px;
-}
-.textvariants2_analysis__oioUuw6Kp {
-  display: none;
 }
 .cover2 {
   height: 100%;
@@ -1784,11 +1815,11 @@
 .freeBoxvariants2_analysis__fq7Qw6Kp {
   display: none;
 }
-.freeBox___2J6Lo {
+.freeBox___78QJq {
   display: flex;
   position: relative;
-  flex-direction: row;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   width: auto;
   height: auto;
@@ -1796,6 +1827,19 @@
   top: auto;
   left: auto;
   margin-bottom: 0px;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  padding: 8px;
+}
+.freeBox___2J6Lo {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   padding: 8px;
 }
 ._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2 {
@@ -1807,31 +1851,15 @@
   flex-shrink: 0;
   border-radius: 20px;
 }
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png2variants2_analysis {
-  display: none;
-}
-.freeBox__vReq1 {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
+.text___2Q1X5 {
   width: auto;
   height: auto;
   max-width: 100%;
-  top: auto;
-  left: auto;
-  margin-bottom: 0px;
-  padding: 8px;
-}
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3 {
-  background: url("./images/lineOfSightPlatformpng.png") center center / cover no-repeat;
-  display: block;
-  overflow: hidden;
-  width: 550px;
-  height: 377px;
-  flex-shrink: 0;
-  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding: 0px 22px 0px 26px;
 }
 ._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4 {
   background: url("./images/lineOfSightEastPathpng.png") center center / cover no-repeat;
@@ -1845,154 +1873,181 @@
   flex-shrink: 0;
   border-radius: 20px;
 }
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png4variants2_analysis {
+  display: none;
+}
+.freeBox___4OVrd {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  padding: 8px;
+}
+.freeBoxvariants2_analysis___4OVrdW6Kp {
+  left: auto;
+  top: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+.freeBox___3FXpw {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png9 {
+  background: url("./images/lineOfSightPlatformpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+.text___7XdTp {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding: 0px 22px 0px 26px;
+}
+.freeBox__rKyR0 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  padding: 8px;
+}
+.freeBoxvariants2_analysis__rKyR0W6Kp {
+  left: auto;
+  top: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+.freeBox__l2KIc {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png3 {
+  background: url("./images/lineOfSightEastPathpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+.text__sU0J {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 2px;
+  padding: 0px 22px 0px 26px;
+}
 .container2 {
-  width: 1920px;
-  height: 835px;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
+  padding-bottom: 53px;
+  min-width: 0;
 }
-.headingsParagraph2 {
+.headingsParagraph3 {
   transform: translate(-0.19999999999998863px, 0px);
-  height: 320px;
-  display: block;
+  height: auto;
+  display: flex;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
-  flex-shrink: 0;
-}
-.right2 {
-  transform: translate(-0.41100000000000136px, 0px);
-  height: 320px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 394px;
-  right: 0px;
-}
-.button2 {
-  transform: translate(0px, 0.18999999999999773px);
-  width: 1181px;
-  height: 57px;
-  display: block;
-  position: absolute;
-  top: 262px;
-  left: 0px;
-}
-.button2variants2_analysis {
-  display: none;
-}
-.heading1AboutInvestments3 {
-  position: absolute;
-  top: 16px;
-  left: 0px;
-  width: 164px;
-  height: 23px;
-  transform: translate(0px, 0.25px);
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-}
-.heading1AboutInvestments4 {
-  display: block;
-  font-size: 18px;
-  font-family: "Aeonik";
-  font-weight: 500;
-  letter-spacing: 0em;
-  line-height: 28.5px;
-  color: rgba(21, 21, 21, 1);
-}
-.heading1AboutInvestments4variants2_analysis {
-  display: none;
-}
-.link2 {
-  transform: translate(0.16900000000001114px, 0px);
-  width: 57px;
-  height: 57px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 182px;
-  border-radius: 28.5px;
-}
-.link2variants2_analysis {
-  display: none;
-}
-._2 {
-  position: absolute;
-  top: 19px;
-  left: 21px;
-  width: 10px;
-  height: 23px;
-  transform: translate(-0.23100000000000165px, 0.25px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.text__yNmLu {
-  display: block;
-  font-size: 17px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 28.5px;
-  color: rgba(21, 21, 21, 1);
-}
-.heading3 {
-  width: 941px;
-  height: 206px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2 {
-  display: block;
-  font-size: 24px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
-  color: rgba(21, 21, 21, 1);
-  position: absolute;
-  top: -1px;
-  left: 0px;
+  align-items: flex-start;
   width: auto;
-  height: 206px;
-  padding-left: 0px;
 }
-.freeBox__pW4T1 {
-  position: absolute;
-  top: 2px;
-  left: 0px;
-  width: 107px;
-  height: 23px;
+.freeBox__uo0M {
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
 }
-.text__cOkrc {
+.text__hvFed {
   display: block;
-  font-size: 20px;
+  font-size: 35px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 28.5px;
   color: rgba(21, 21, 21, 1);
-  width: 100%;
+  width: auto;
   height: auto;
-  max-width: 133px;
-  padding-right: 0px;
-  padding-left: 60px;
-  position: fixed;
-  left: 74px;
-  top: 0;
-  z-index: 1;
-  right: -76px;
-  margin-left: 121px;
-  min-width: 0;
+  max-width: 180px;
+  margin-right: 20px;
+  padding: 0px;
 }
-.images2 {
+.freeBox__yxhxc {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion4 {
+  display: block;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(21, 21, 21, 1);
+  width: 938px;
+  height: auto;
+  padding-bottom: 0px;
+}
+.images3 {
   transform: translate(-0.19999999999998863px, 0.18999999999999773px);
   height: 447px;
   display: flex;
@@ -2006,7 +2061,7 @@
   right: auto;
   flex-shrink: 0;
 }
-.cover3 {
+.cover5 {
   height: 100%;
   display: flex;
   position: relative;
@@ -2018,10 +2073,10 @@
   width: auto;
   min-height: 0;
 }
-.cover3variants2_analysis {
+.cover5variants2_analysis {
   display: none;
 }
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png5 {
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png10 {
   background: url("./images/picture6Png.png") center center / cover no-repeat;
   display: block;
   position: relative;
@@ -2031,7 +2086,7 @@
   bottom: auto;
   overflow: hidden;
 }
-.cover4 {
+.cover6 {
   transform: translate(-0.41100000000000136px, 0px);
   height: 100%;
   display: flex;
@@ -2044,10 +2099,10 @@
   width: auto;
   min-height: 0;
 }
-.cover4variants2_analysis {
+.cover6variants2_analysis {
   display: none;
 }
-._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg2 {
+._60C8785783D46E60E89C824D122JohnstonStreet2CCollingwood3P500Jpeg3 {
   background: url("./images/picture5Png2.png") center center / cover no-repeat;
   display: block;
   position: relative;
@@ -2058,7 +2113,7 @@
   overflow: hidden;
   padding-bottom: 0px;
 }
-.freeBox__rt8G {
+.freeBox__syy3E {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -2072,14 +2127,14 @@
   margin-bottom: 0px;
   padding: 8px;
 }
-.freeBoxvariants2_analysis__rt8Gw6Kp {
+.freeBoxvariants2_analysis__syy3EW6Kp {
   display: none;
 }
-.freeBox___3LfcO {
+.freeBox__u9QUz {
   display: flex;
   position: relative;
-  flex-direction: row;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   width: auto;
   height: auto;
@@ -2087,9 +2142,22 @@
   top: auto;
   left: auto;
   margin-bottom: 0px;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
   padding: 8px;
 }
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png6 {
+.freeBox__hyZyv {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png11 {
   background: url("./images/viewshedPlatformpng.png") center center / cover no-repeat;
   display: block;
   overflow: hidden;
@@ -2098,11 +2166,35 @@
   flex-shrink: 0;
   border-radius: 20px;
 }
-.freeBox__nLzEt {
+.text__flKku {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 2px;
+  padding: 0px 22px 0px 26px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png12 {
+  background: url("./images/lineOfSightEastPathpng.png") center center / cover no-repeat;
+  display: block;
+  overflow: hidden;
+  width: 550px;
+  height: 377px;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png12variants2_analysis {
+  display: none;
+}
+.freeBox__qrVd6 {
   display: flex;
   position: relative;
-  flex-direction: row;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-start;
   width: auto;
   height: auto;
@@ -2110,9 +2202,28 @@
   top: auto;
   left: auto;
   margin-bottom: 0px;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
   padding: 8px;
 }
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png7 {
+.freeBoxvariants2_analysis__qrVd6W6Kp {
+  left: auto;
+  top: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+.freeBox__dx7D {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png13 {
   background: url("./images/viewshedHackerbruckepng.png") center center / cover no-repeat;
   display: block;
   overflow: hidden;
@@ -2121,31 +2232,64 @@
   flex-shrink: 0;
   border-radius: 20px;
 }
-.fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion3 {
-  display: block;
-  font-size: 24px;
+.text__zmTFk {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: 20px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
-  color: rgba(21, 21, 21, 1);
-  position: absolute;
-  top: 469px;
-  left: -536px;
-  width: 1602px;
-  height: 70px;
-  padding-left: 0px;
-  margin-top: 0px;
-  flex-shrink: 0;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  padding: 0px 22px 0px 26px;
 }
-._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png8 {
+.freeBox__qVnC6 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  margin-bottom: 0px;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  padding: 8px;
+}
+.freeBoxvariants2_analysis__qVnC6W6Kp {
+  left: auto;
+  top: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+.freeBox__waAlh {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 8px;
+}
+._635225428A13D71F2119Ddd9PetrMageraHuWm7MalJ18UnsplashP500Png14 {
   background: url("./images/viewshedTunnelpng.png") center center / cover no-repeat;
   display: block;
   overflow: hidden;
   width: 550px;
   height: 377px;
-  position: relative;
-  left: auto;
-  top: auto;
   flex-shrink: 0;
   border-radius: 20px;
+}
+.text___72YOp {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 2px;
+  padding: 0px 22px 0px 26px;
 }

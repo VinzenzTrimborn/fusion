@@ -1,6 +1,5 @@
 import * as React from "react";
 import {PlasmicParticipationArea} from "./plasmic/fusion_lab/PlasmicParticipationArea";
-import {ARButton, Controllers, XR} from "@react-three/xr";
 import {Canvas} from "@react-three/fiber";
 import {Suspense, useCallback, useContext, useEffect, useState} from "react";
 import Control from "./Control";
@@ -152,15 +151,11 @@ function ParticipationArea_(props, ref) {
             canvas={{
                 render: () => (
                     <>
-                        <ARButton/>
                         <Suspense fallback={<span>loading...</span>}>
                             <Canvas frameloop="demand">
-                                <XR referenceSpace="local">
-                                    <Controllers/>
-                                    <Scene handleCameraChange={handleCameraChange}/>
-                                    <Control lookAt={cameraDirection} position={cameraPosition}/>
-                                    <Environment preset="sunset"/>
-                                </XR>
+                                <Scene handleCameraChange={handleCameraChange}/>
+                                <Control lookAt={cameraDirection} position={cameraPosition}/>
+                                <Environment preset="sunset"/>
                             </Canvas>
                         </Suspense>
                         <Loader/>

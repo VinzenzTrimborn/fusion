@@ -32,9 +32,14 @@ export default function Scene({handleCameraChange}) {
     });
 
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
-    const ifc = useLoader(IFCLoader, "/main.ifc", (ifcLoader) => {
-        ifcLoader.ifcManager.setWasmPath("../../wasm/");
-    });
+
+
+    const ifc =
+        useLoader(IFCLoader, "/main.ifc", (ifcLoader) => {
+            ifcLoader.ifcManager.setWasmPath("../../wasm/");
+        });
+
+
     const highlightedMaterial = useMemo(() => new MeshLambertMaterial({
         transparent: false,
         opacity: 0.6,

@@ -105,3 +105,16 @@
   width: auto;
   height: 1em;
 }
+.model {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 80vh;
+  max-width: 100%;
+  min-width: 0;
+  flex-shrink: 0;
+  display: none;
+  padding: 8px;
+}

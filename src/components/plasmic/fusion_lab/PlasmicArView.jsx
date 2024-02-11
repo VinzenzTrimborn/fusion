@@ -115,13 +115,21 @@ function PlasmicArView__RenderFunc(props) {
           </React.Fragment>
         </div>
       </Button>
+      <div
+        data-plasmic-name={"model"}
+        data-plasmic-override={overrides.model}
+        className={classNames(projectcss.all, sty.model, {
+          [sty.modelapple]: hasVariant($state, "apple", "apple")
+        })}
+      />
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "ar"],
-  ar: ["ar"]
+  root: ["root", "ar", "model"],
+  ar: ["ar"],
+  model: ["model"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -157,6 +165,7 @@ export const PlasmicArView = Object.assign(
   {
     // Helper components rendering sub-elements
     ar: makeNodeComponent("ar"),
+    model: makeNodeComponent("model"),
     // Metadata about props expected for PlasmicArView
     internalVariantProps: PlasmicArView__VariantProps,
     internalArgProps: PlasmicArView__ArgProps
