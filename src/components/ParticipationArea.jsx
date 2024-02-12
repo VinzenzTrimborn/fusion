@@ -30,7 +30,6 @@ function ParticipationArea_(props, ref) {
         setCameraDirection(direction);
     }, []);
 
-    //ToDo Koray: get comments from DB
     const getCommentsFromDB = async () => {
         try {
           // Make a request to the get_comments PostgreSQL function
