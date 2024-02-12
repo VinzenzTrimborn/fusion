@@ -9,16 +9,20 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: eo06WAQVRF2h
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-import * as pp from "@plasmicapp/react-web";
 import {
-  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  useTrigger,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  hasVariant,
+  renderPlasmicSlot,
+  useCurrentUser,
+  useDollarState,
+  useTrigger
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import * as pp from "@plasmicapp/react-web";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -45,6 +49,7 @@ export const PlasmicTextInput__ArgProps = new Array(
   "required",
   "aria-label",
   "aria-labelledby",
+  "onChange",
   "type",
   "autoFocus"
 );
@@ -67,10 +72,10 @@ function PlasmicTextInput__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -114,7 +119,7 @@ function PlasmicTextInput__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -178,7 +183,7 @@ function PlasmicTextInput__RenderFunc(props) {
           )
         })}
       >
-        {p.renderPlasmicSlot({
+        {renderPlasmicSlot({
           defaultContents: (
             <SearchsvgIcon
               className={classNames(projectcss.all, sty.svg__tmYwS)}
@@ -222,9 +227,7 @@ function PlasmicTextInput__RenderFunc(props) {
         }
         name={args.name}
         onChange={e => {
-          p.generateStateOnChangeProp($state, ["input", "value"])(
-            e.target.value
-          );
+          generateStateOnChangeProp($state, ["input", "value"])(e.target.value);
         }}
         placeholder={args.placeholder}
         ref={ref => {
@@ -232,7 +235,7 @@ function PlasmicTextInput__RenderFunc(props) {
         }}
         required={args.required}
         type={args.type}
-        value={p.generateStateValueProp($state, ["input", "value"]) ?? ""}
+        value={generateStateValueProp($state, ["input", "value"]) ?? ""}
       />
 
       <div
@@ -247,7 +250,7 @@ function PlasmicTextInput__RenderFunc(props) {
           )
         })}
       >
-        {p.renderPlasmicSlot({
+        {renderPlasmicSlot({
           defaultContents: (
             <ChecksvgIcon
               className={classNames(projectcss.all, sty.svg__goztt)}

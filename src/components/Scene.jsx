@@ -3,10 +3,10 @@ import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
 import {Html, Sky} from "@react-three/drei";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {Suspense, useEffect, useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
 import {MeshLambertMaterial, Vector3} from "three";
-import PopUpGallery from "./PopUpGallery";
+import ViewerAnnotation from "./ViewerAnnotation";
 
 const Model = () => {
     const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
@@ -32,10 +32,14 @@ export default function Scene({handleCameraChange}) {
     });
 
     const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
-    // ToDo Koray: instead of using the ifc file from the public folder, use the ifc file from the database
-    const ifc = useLoader(IFCLoader, "/FusionLab_TeamC_01.ifc", (ifcLoader) => {
-        ifcLoader.ifcManager.setWasmPath("../../wasm/");
-    });
+
+
+    const ifc =
+        useLoader(IFCLoader, "/main.ifc", (ifcLoader) => {
+            ifcLoader.ifcManager.setWasmPath("../../wasm/");
+        });
+
+
     const highlightedMaterial = useMemo(() => new MeshLambertMaterial({
         transparent: false,
         opacity: 0.6,
@@ -87,48 +91,47 @@ export default function Scene({handleCameraChange}) {
 
     }, [ifc, scene]);
 
-    //ToDo Mohammad: Choose nice lights. Maybe add a sun. Maybe add a skybox.
-    // Maybe add a ground. Maybe add a background. Maybe add a fog.
-    // For the different IFC Categories you can use different materials.
-    // Choose nice positions for Tinas Annotations
     return (
         <>
             <pointLight position={[400, 400, 0]} intensity={0.5} color="white"/>
             <pointLight position={[-400, 400, 0]} intensity={0.3} color="white"/>
             <pointLight position={[0, 400, -400]} intensity={0.4} color="white"/>
             <pointLight position={[0, 400, 400]} intensity={0.2} color="white"/>
-            <Suspense fallback={null}>
-                <group>
-                    {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
-                        <primitive key={index} object={value}
-                                   onDoubleClick={(e) => {
-                                       ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
-                                       setHighlightedIDs([value.id]);
-                                       console.log(value.id)
-                                   }}
-                        />
-                    )}
-                </group>
-                <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
-                <Annotation position={[-4.5, 13.6, -60]}/>
-            </Suspense>
+            <group>
+                {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
+                    <primitive key={index} object={value}
+                               onDoubleClick={(e) => {
+                                   ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
+                                   setHighlightedIDs([value.id]);
+                                   console.log(value.id)
+                                   console.log({
+                                       position: camera.position,
+                                       direction: camera.position.clone().add(camera.getWorldDirection(new Vector3()).multiplyScalar(100))
+                                   })
+                               }}
+                    />
+                )}
+            </group>
+            <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25}/>
+            <Annotation activity={'platform'} position={[411.6319091532528, 38.90000000000015, -539.2609510078722]}/>
+            <Annotation activity={'skate'} position={[421.21850526825716, 2.6000000000000245, -733.6117650596663]}/>
+            <Annotation activity={'climbing'} position={[440.44495690238534, 2.600000000000029, -824.0734942079337]}/>
+            <Annotation activity={'open'} position={[464.5228597414705, 2.600000000000029, -883.2301522631742]}/>
+            <Annotation activity={'market'} position={[419.2881558593361, 2.6000000000001116, -342.1737582146491]}/>
+
         </>
-    )
+    );
 }
 
-function Annotation({position, ...props}) {
+function Annotation({position, activity, ...props}) {
     return (
-        // ToDo Mohammad: You can play aroud  with the annotations here. Let them throw a shadow or transform.
         <Html
             {...props}
             position={position}
-            occlude
-            castShadow
-            receiveShadow
             transform
-            scale={0.5}
+            scale={0.2}
         >
-            <PopUpGallery/>
+            <ViewerAnnotation activities={activity}/>
         </Html>
     )
 }

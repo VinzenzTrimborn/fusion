@@ -9,14 +9,17 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: Qhhf4YZ2QDy9
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -38,10 +41,10 @@ function PlasmicFaqSection__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -54,14 +57,14 @@ function PlasmicFaqSection__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
     $refs
   });
   return (
-    <p.Stack
+    <Stack__
       as={"div"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
@@ -100,12 +103,12 @@ function PlasmicFaqSection__RenderFunc(props) {
       >
         {"Frequently Asked Questions"}
       </div>
-      <p.Stack
+      <Stack__
         as={"div"}
         hasGap={true}
         className={classNames(projectcss.all, sty.freeBox__fOhLd)}
       >
-        <p.Stack
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__mLyEs, {
@@ -161,7 +164,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -199,6 +202,11 @@ function PlasmicFaqSection__RenderFunc(props) {
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__dnLwG, {
+              [sty.freeBoxanswers__10__dnLwGRmuR4]: hasVariant(
+                $state,
+                "answers",
+                "_10"
+              ),
               [sty.freeBoxanswers__2__dnLwGmlkfn]: hasVariant(
                 $state,
                 "answers",
@@ -223,7 +231,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -243,6 +251,11 @@ function PlasmicFaqSection__RenderFunc(props) {
                 projectcss.__wab_text,
                 sty.text__vPeGy,
                 {
+                  [sty.textanswers__10__vPeGyRmuR4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  ),
                   [sty.textanswers__2__vPeGymlkfn]: hasVariant(
                     $state,
                     "answers",
@@ -292,7 +305,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -357,7 +370,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -421,7 +434,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -490,7 +503,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -531,6 +544,11 @@ function PlasmicFaqSection__RenderFunc(props) {
           ) : null}
           <div
             className={classNames(projectcss.all, sty.freeBox__sx5K0, {
+              [sty.freeBoxanswers__10__sx5K0RmuR4]: hasVariant(
+                $state,
+                "answers",
+                "_10"
+              ),
               [sty.freeBoxanswers__3__sx5K03L9Fx]: hasVariant(
                 $state,
                 "answers",
@@ -555,7 +573,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -607,7 +625,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -659,7 +677,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -706,7 +724,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -758,7 +776,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -786,7 +804,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                 }
               )}
             >
-              {"Which methods were used for the design phase?"}
+              {"Which methods were used during the design phase?"}
             </div>
           </div>
           <div
@@ -810,7 +828,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -857,7 +875,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -878,9 +896,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                 sty.text__timqg
               )}
             >
-              {
-                "What types of activities are available for public contribution?"
-              }
+              {"What types of activities are available to the public?"}
             </div>
           </div>
           <div
@@ -904,7 +920,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -955,7 +971,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -1019,7 +1035,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -1083,7 +1099,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -1147,7 +1163,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -1184,7 +1200,7 @@ function PlasmicFaqSection__RenderFunc(props) {
               </div>
             </div>
           ) : null}
-        </p.Stack>
+        </Stack__>
         <div
           data-plasmic-name={"stackAnswers"}
           data-plasmic-override={overrides.stackAnswers}
@@ -1202,150 +1218,184 @@ function PlasmicFaqSection__RenderFunc(props) {
             <React.Fragment>
               <span
                 className={"plasmic_default__all plasmic_default__span"}
-                style={{ color: "#535353" }}
+                style={{ color: "#000000" }}
               >
                 {"Answers"}
               </span>
             </React.Fragment>
           </div>
-          <p.Stack
+          <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__sAt9C)}
           >
-            <div
-              data-plasmic-name={"answerBox"}
-              data-plasmic-override={overrides.answerBox}
-              className={classNames(projectcss.all, sty.answerBox, {
-                [sty.answerBoxanswers__10]: hasVariant(
-                  $state,
-                  "answers",
-                  "_10"
-                ),
-                [sty.answerBoxanswers__11]: hasVariant(
-                  $state,
-                  "answers",
-                  "_11"
-                ),
-                [sty.answerBoxanswers__2]: hasVariant($state, "answers", "_2"),
-                [sty.answerBoxanswers__3]: hasVariant($state, "answers", "_3"),
-                [sty.answerBoxanswers__4]: hasVariant($state, "answers", "_4"),
-                [sty.answerBoxanswers__5]: hasVariant($state, "answers", "_5"),
-                [sty.answerBoxanswers__6]: hasVariant($state, "answers", "_6"),
-                [sty.answerBoxanswers__7]: hasVariant($state, "answers", "_7"),
-                [sty.answerBoxanswers__8]: hasVariant($state, "answers", "_8"),
-                [sty.answerBoxanswers__9]: hasVariant($state, "answers", "_9"),
-                [sty.answerBoxanswers_x]: hasVariant($state, "answers", "x")
-              })}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__aygZf)}>
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___0Uzpd,
-                  {
-                    [sty.textanswers__10___0UzpdRmuR4]: hasVariant(
-                      $state,
-                      "answers",
-                      "_10"
-                    ),
-                    [sty.textanswers__2___0Uzpdmlkfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "_2"
-                    ),
-                    [sty.textanswers__3___0Uzpd3L9Fx]: hasVariant(
-                      $state,
-                      "answers",
-                      "_3"
-                    ),
-                    [sty.textanswers__4___0UzpdjrPol]: hasVariant(
-                      $state,
-                      "answers",
-                      "_4"
-                    ),
-                    [sty.textanswers__5___0Uzpd4GKjS]: hasVariant(
-                      $state,
-                      "answers",
-                      "_5"
-                    ),
-                    [sty.textanswers__6___0Uzpddayq8]: hasVariant(
-                      $state,
-                      "answers",
-                      "_6"
-                    ),
-                    [sty.textanswers__7___0UzpdaIuc3]: hasVariant(
-                      $state,
-                      "answers",
-                      "_7"
-                    ),
-                    [sty.textanswers__8___0UzpdCwtP]: hasVariant(
-                      $state,
-                      "answers",
-                      "_8"
-                    ),
-                    [sty.textanswers__9___0UzpdsSeH]: hasVariant(
-                      $state,
-                      "answers",
-                      "_9"
-                    ),
-                    [sty.textanswers_x___0UzpdFbPfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "x"
-                    )
-                  }
-                )}
+                data-plasmic-name={"answerBox"}
+                data-plasmic-override={overrides.answerBox}
+                className={classNames(projectcss.all, sty.answerBox, {
+                  [sty.answerBoxanswers__10]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  ),
+                  [sty.answerBoxanswers__11]: hasVariant(
+                    $state,
+                    "answers",
+                    "_11"
+                  ),
+                  [sty.answerBoxanswers__2]: hasVariant(
+                    $state,
+                    "answers",
+                    "_2"
+                  ),
+                  [sty.answerBoxanswers__3]: hasVariant(
+                    $state,
+                    "answers",
+                    "_3"
+                  ),
+                  [sty.answerBoxanswers__4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  ),
+                  [sty.answerBoxanswers__5]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  ),
+                  [sty.answerBoxanswers__6]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  ),
+                  [sty.answerBoxanswers__7]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  ),
+                  [sty.answerBoxanswers__8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  ),
+                  [sty.answerBoxanswers__9]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  ),
+                  [sty.answerBoxanswers_x]: hasVariant($state, "answers", "x")
+                })}
               >
-                {hasVariant($state, "answers", "_10")
-                  ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
-                  : hasVariant($state, "answers", "_9")
-                  ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
-                  : hasVariant($state, "answers", "_8")
-                  ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
-                  : hasVariant($state, "answers", "_7")
-                  ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
-                  : hasVariant($state, "answers", "_6")
-                  ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
-                  : hasVariant($state, "answers", "_5")
-                  ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
-                  : hasVariant($state, "answers", "_4")
-                  ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
-                  : hasVariant($state, "answers", "_3")
-                  ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
-                  : hasVariant($state, "answers", "_2")
-                  ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
-                  : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
-              </div>
-              {(hasVariant($state, "answers", "_11") ? true : false) ? (
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__kFcYp,
+                    sty.text___0Uzpd,
                     {
-                      [sty.textanswers__11__kFcYpYcudh]: hasVariant(
+                      [sty.textanswers__10___0UzpdRmuR4]: hasVariant(
                         $state,
                         "answers",
-                        "_11"
+                        "_10"
+                      ),
+                      [sty.textanswers__2___0Uzpdmlkfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "_2"
+                      ),
+                      [sty.textanswers__3___0Uzpd3L9Fx]: hasVariant(
+                        $state,
+                        "answers",
+                        "_3"
+                      ),
+                      [sty.textanswers__4___0UzpdjrPol]: hasVariant(
+                        $state,
+                        "answers",
+                        "_4"
+                      ),
+                      [sty.textanswers__5___0Uzpd4GKjS]: hasVariant(
+                        $state,
+                        "answers",
+                        "_5"
+                      ),
+                      [sty.textanswers__6___0Uzpddayq8]: hasVariant(
+                        $state,
+                        "answers",
+                        "_6"
+                      ),
+                      [sty.textanswers__7___0UzpdaIuc3]: hasVariant(
+                        $state,
+                        "answers",
+                        "_7"
+                      ),
+                      [sty.textanswers__8___0UzpdCwtP]: hasVariant(
+                        $state,
+                        "answers",
+                        "_8"
+                      ),
+                      [sty.textanswers__9___0UzpdsSeH]: hasVariant(
+                        $state,
+                        "answers",
+                        "_9"
+                      ),
+                      [sty.textanswers_x___0UzpdFbPfn]: hasVariant(
+                        $state,
+                        "answers",
+                        "x"
                       )
                     }
                   )}
                 >
-                  {
-                    "The bridge is being redesigned to address structural \r\ndeficiencies, enhance overall safety and functionality\r\n and create a new icon for the city.\r\n"
-                  }
+                  {hasVariant($state, "answers", "_10")
+                    ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                    : hasVariant($state, "answers", "_9")
+                    ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                    : hasVariant($state, "answers", "_8")
+                    ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                    : hasVariant($state, "answers", "_7")
+                    ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                    : hasVariant($state, "answers", "_6")
+                    ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                    : hasVariant($state, "answers", "_5")
+                    ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                    : hasVariant($state, "answers", "_4")
+                    ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                    : hasVariant($state, "answers", "_3")
+                    ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                    : hasVariant($state, "answers", "_2")
+                    ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                    : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
                 </div>
-              ) : null}
+                {(hasVariant($state, "answers", "_11") ? true : false) ? (
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__kFcYp,
+                      {
+                        [sty.textanswers__11__kFcYpYcudh]: hasVariant(
+                          $state,
+                          "answers",
+                          "_11"
+                        )
+                      }
+                    )}
+                  >
+                    {
+                      "The bridge is being redesigned to address structural \r\ndeficiencies, enhance overall safety and functionality\r\n and create a new icon for the city.\r\n"
+                    }
+                  </div>
+                ) : null}
+              </div>
             </div>
             <div
               data-plasmic-name={"answerPic"}
               data-plasmic-override={overrides.answerPic}
               className={classNames(projectcss.all, sty.answerPic)}
             />
-          </p.Stack>
+          </Stack__>
           {(hasVariant($state, "answers", "x") ? true : false) ? (
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__hsXB, {
@@ -1396,7 +1446,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -1458,7 +1508,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -1527,7 +1577,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -1592,7 +1642,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -1656,7 +1706,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -1729,7 +1779,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                                 if (typeof value === "string") {
                                   value = [value];
                                 }
-                                p.set($state, vgroup, value);
+                                $stateSet($state, vgroup, value);
                                 return value;
                               })?.apply(null, [actionArgs]);
                             })()
@@ -1796,7 +1846,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -1848,7 +1898,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -1900,7 +1950,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -1947,7 +1997,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -1999,7 +2049,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -2044,7 +2094,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -2091,7 +2141,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -2138,7 +2188,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -2189,7 +2239,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -2253,7 +2303,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -2317,7 +2367,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -2381,7 +2431,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -2418,7 +2468,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                   </div>
                 </div>
               ) : null}
-            </p.Stack>
+            </Stack__>
           ) : null}
           {(hasVariant($state, "answers", "x") ? true : false) ? (
             <div
@@ -2444,7 +2494,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                   </span>
                 </React.Fragment>
               </div>
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__cQrmj)}
@@ -2590,141 +2640,73 @@ function PlasmicFaqSection__RenderFunc(props) {
                   data-plasmic-override={overrides.answerPic5}
                   className={classNames(projectcss.all, sty.answerPic5)}
                 />
-              </p.Stack>
+              </Stack__>
             </div>
           ) : null}
         </div>
-      </p.Stack>
-      {(hasVariant($state, "answers", "x") ? true : false) ? (
-        <p.Stack
+      </Stack__>
+      <Stack__
+        as={"div"}
+        hasGap={true}
+        className={classNames(projectcss.all, sty.freeBox__gOvZm, {
+          [sty.freeBoxanswers_x__gOvZmFbPfn]: hasVariant($state, "answers", "x")
+        })}
+      >
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__ecEMk,
+            {
+              [sty.textanswers_x__ecEMkFbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
+              )
+            }
+          )}
+        >
+          {"Frequently Asked Questions"}
+        </div>
+        <Stack__
           as={"div"}
           hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__gOvZm, {
-            [sty.freeBoxanswers_x__gOvZmFbPfn]: hasVariant(
-              $state,
-              "answers",
-              "x"
-            )
-          })}
+          className={classNames(projectcss.all, sty.freeBox__qR6Xw)}
         >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__ecEMk,
-              {
-                [sty.textanswers_x__ecEMkFbPfn]: hasVariant(
-                  $state,
-                  "answers",
-                  "x"
-                )
-              }
-            )}
-          >
-            {"Frequently Asked Questions"}
-          </div>
-          <p.Stack
+          <Stack__
             as={"div"}
             hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__qR6Xw)}
+            className={classNames(projectcss.all, sty.freeBox__xTjhe, {
+              [sty.freeBoxanswers__2__xTjhemlkfn]: hasVariant(
+                $state,
+                "answers",
+                "_2"
+              ),
+              [sty.freeBoxanswers_x__xTjheFbPfn]: hasVariant(
+                $state,
+                "answers",
+                "x"
+              )
+            })}
           >
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__xTjhe, {
-                [sty.freeBoxanswers__2__xTjhemlkfn]: hasVariant(
-                  $state,
-                  "answers",
-                  "_2"
-                ),
-                [sty.freeBoxanswers_x__xTjheFbPfn]: hasVariant(
-                  $state,
-                  "answers",
-                  "x"
-                )
-              })}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___9Az4Z
+              )}
             >
+              {"Questions"}
+            </div>
+            {(hasVariant($state, "answers", "x") ? true : false) ? (
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___9Az4Z
-                )}
-              >
-                {"Questions"}
-              </div>
-              {(hasVariant($state, "answers", "x") ? true : false) ? (
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__g4EG, {
-                    [sty.freeBoxanswers__2__g4EGmlkfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "_2"
-                    ),
-                    [sty.freeBoxanswers_x__g4EGFbPfn]: hasVariant(
-                      $state,
-                      "answers",
-                      "x"
-                    )
-                  })}
-                  onClick={async event => {
-                    const $steps = {};
-                    $steps["updateAnswers"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "answers",
-                            operation: 0,
-                            value: "x"
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            p.set($state, vgroup, value);
-                            return value;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateAnswers"] != null &&
-                      typeof $steps["updateAnswers"] === "object" &&
-                      typeof $steps["updateAnswers"].then === "function"
-                    ) {
-                      $steps["updateAnswers"] = await $steps["updateAnswers"];
-                    }
-                  }}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__pZrcm,
-                      {
-                        [sty.textanswers__2__pZrcMmlkfn]: hasVariant(
-                          $state,
-                          "answers",
-                          "_2"
-                        ),
-                        [sty.textanswers_x__pZrcmFbPfn]: hasVariant(
-                          $state,
-                          "answers",
-                          "x"
-                        )
-                      }
-                    )}
-                  >
-                    {"Why is the Donnersberger Bridge being re-designed?"}
-                  </div>
-                </div>
-              ) : null}
-              <div
-                className={classNames(projectcss.all, sty.freeBox__zsQm0, {
-                  [sty.freeBoxanswers__2__zsQm0Mlkfn]: hasVariant(
+                className={classNames(projectcss.all, sty.freeBox__g4EG, {
+                  [sty.freeBoxanswers__2__g4EGmlkfn]: hasVariant(
                     $state,
                     "answers",
                     "_2"
                   ),
-                  [sty.freeBoxanswers_x__zsQm0FbPfn]: hasVariant(
+                  [sty.freeBoxanswers_x__g4EGFbPfn]: hasVariant(
                     $state,
                     "answers",
                     "x"
@@ -2743,7 +2725,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -2761,14 +2743,14 @@ function PlasmicFaqSection__RenderFunc(props) {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text___9DIb,
+                    sty.text__pZrcm,
                     {
-                      [sty.textanswers__2___9DIbmlkfn]: hasVariant(
+                      [sty.textanswers__2__pZrcMmlkfn]: hasVariant(
                         $state,
                         "answers",
                         "_2"
                       ),
-                      [sty.textanswers_x___9DIbFbPfn]: hasVariant(
+                      [sty.textanswers_x__pZrcmFbPfn]: hasVariant(
                         $state,
                         "answers",
                         "x"
@@ -2779,63 +2761,661 @@ function PlasmicFaqSection__RenderFunc(props) {
                   {"Why is the Donnersberger Bridge being re-designed?"}
                 </div>
               </div>
+            ) : null}
+            <div
+              className={classNames(projectcss.all, sty.freeBox__zsQm0, {
+                [sty.freeBoxanswers__2__zsQm0Mlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__zsQm0FbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "x"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
               <div
-                className={classNames(projectcss.all, sty.freeBox__pa2Af, {
-                  [sty.freeBoxanswers__2__pa2Afmlkfn]: hasVariant(
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___9DIb,
+                  {
+                    [sty.textanswers__2___9DIbmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers_x___9DIbFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {"Why is the Donnersberger Bridge being re-designed?"}
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__pa2Af, {
+                [sty.freeBoxanswers__2__pa2Afmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers_x__pa2AfFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_2"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___397Yw,
+                  {
+                    [sty.textanswers__2___397YWmlkfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "_2"
+                    ),
+                    [sty.textanswers__4___397YWjrPol]: hasVariant(
+                      $state,
+                      "answers",
+                      "_4"
+                    ),
+                    [sty.textanswers_x___397YwFbPfn]: hasVariant(
+                      $state,
+                      "answers",
+                      "x"
+                    )
+                  }
+                )}
+              >
+                {
+                  "What are the main challenges addressed by the reconstruction?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__rYOe, {
+                [sty.freeBoxanswers__3__rYOe3L9Fx]: hasVariant(
+                  $state,
+                  "answers",
+                  "_3"
+                ),
+                [sty.freeBoxanswers_x__rYOeFbPfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "x"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_3"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___0Njcc
+                )}
+              >
+                {
+                  "How long is the projected timeline for the redesign, and what are the key milestones?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__vnbKw, {
+                [sty.freeBoxanswers__2__vnbKWmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers__4__vnbKWjrPol]: hasVariant(
+                  $state,
+                  "answers",
+                  "_4"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_4"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__zkVws
+                )}
+              >
+                {
+                  "Will the new design incorporate sustainable or environmentally friendly features?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__zuJpA, {
+                [sty.freeBoxanswers__2__zuJpAmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers__5__zuJpA4GKjS]: hasVariant(
+                  $state,
+                  "answers",
+                  "_5"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_5"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__aza79
+                )}
+              >
+                {
+                  "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox___2Y75F, {
+                [sty.freeBoxanswers__6___2Y75Fdayq8]: hasVariant(
+                  $state,
+                  "answers",
+                  "_6"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_6"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__hMihV
+                )}
+              >
+                {
+                  "What measures are in place to ensure the safety of pedestrians and cyclists?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__qG56W, {
+                [sty.freeBoxanswers__2__qG56Wmlkfn]: hasVariant(
+                  $state,
+                  "answers",
+                  "_2"
+                ),
+                [sty.freeBoxanswers__7__qG56WaIuc3]: hasVariant(
+                  $state,
+                  "answers",
+                  "_7"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_7"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__kgRc7
+                )}
+              >
+                {"Which methods were used for the design phase?"}
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__mc2I, {
+                [sty.freeBoxanswers__8__mc2ICwtP]: hasVariant(
+                  $state,
+                  "answers",
+                  "_8"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_8"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__hudBn
+                )}
+              >
+                {
+                  "Are there opportunities for the public to actively contribute to the project?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__hdakH, {
+                [sty.freeBoxanswers__9__hdakHsSeH]: hasVariant(
+                  $state,
+                  "answers",
+                  "_9"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_9"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__yLffR
+                )}
+              >
+                {
+                  "What types of activities are available for public contribution?"
+                }
+              </div>
+            </div>
+            <div
+              className={classNames(projectcss.all, sty.freeBox___5IEDd, {
+                [sty.freeBoxanswers__10___5IEDdRmuR4]: hasVariant(
+                  $state,
+                  "answers",
+                  "_10"
+                )
+              })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateAnswers"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        vgroup: "answers",
+                        operation: 0,
+                        value: "_10"
+                      };
+                      return (({ vgroup, value }) => {
+                        if (typeof value === "string") {
+                          value = [value];
+                        }
+                        $stateSet($state, vgroup, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateAnswers"] != null &&
+                  typeof $steps["updateAnswers"] === "object" &&
+                  typeof $steps["updateAnswers"].then === "function"
+                ) {
+                  $steps["updateAnswers"] = await $steps["updateAnswers"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___8Ot1S
+                )}
+              >
+                {"How will the bridge be built?"}
+              </div>
+            </div>
+          </Stack__>
+          <div
+            data-plasmic-name={"stackAnswers2"}
+            data-plasmic-override={overrides.stackAnswers2}
+            className={classNames(projectcss.all, sty.stackAnswers2)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___11Umi
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#535353" }}
+                >
+                  {"Answers"}
+                </span>
+              </React.Fragment>
+            </div>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__nCjdn)}
+            >
+              <div
+                data-plasmic-name={"answerBox2"}
+                data-plasmic-override={overrides.answerBox2}
+                className={classNames(projectcss.all, sty.answerBox2, {
+                  [sty.answerBox2answers__10]: hasVariant(
+                    $state,
+                    "answers",
+                    "_10"
+                  ),
+                  [sty.answerBox2answers__2]: hasVariant(
                     $state,
                     "answers",
                     "_2"
                   ),
-                  [sty.freeBoxanswers_x__pa2AfFbPfn]: hasVariant(
+                  [sty.answerBox2answers__3]: hasVariant(
                     $state,
                     "answers",
-                    "x"
-                  )
+                    "_3"
+                  ),
+                  [sty.answerBox2answers__4]: hasVariant(
+                    $state,
+                    "answers",
+                    "_4"
+                  ),
+                  [sty.answerBox2answers__5]: hasVariant(
+                    $state,
+                    "answers",
+                    "_5"
+                  ),
+                  [sty.answerBox2answers__6]: hasVariant(
+                    $state,
+                    "answers",
+                    "_6"
+                  ),
+                  [sty.answerBox2answers__7]: hasVariant(
+                    $state,
+                    "answers",
+                    "_7"
+                  ),
+                  [sty.answerBox2answers__8]: hasVariant(
+                    $state,
+                    "answers",
+                    "_8"
+                  ),
+                  [sty.answerBox2answers__9]: hasVariant(
+                    $state,
+                    "answers",
+                    "_9"
+                  ),
+                  [sty.answerBox2answers_x]: hasVariant($state, "answers", "x")
                 })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_2"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
               >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text___397Yw,
+                    sty.text___5QqiE,
                     {
-                      [sty.textanswers__2___397YWmlkfn]: hasVariant(
+                      [sty.textanswers__10___5QqiERmuR4]: hasVariant(
+                        $state,
+                        "answers",
+                        "_10"
+                      ),
+                      [sty.textanswers__2___5QqiEmlkfn]: hasVariant(
                         $state,
                         "answers",
                         "_2"
                       ),
-                      [sty.textanswers__4___397YWjrPol]: hasVariant(
+                      [sty.textanswers__3___5QqiE3L9Fx]: hasVariant(
+                        $state,
+                        "answers",
+                        "_3"
+                      ),
+                      [sty.textanswers__4___5QqiEjrPol]: hasVariant(
                         $state,
                         "answers",
                         "_4"
                       ),
-                      [sty.textanswers_x___397YwFbPfn]: hasVariant(
+                      [sty.textanswers__5___5QqiE4GKjS]: hasVariant(
+                        $state,
+                        "answers",
+                        "_5"
+                      ),
+                      [sty.textanswers__6___5QqiEdayq8]: hasVariant(
+                        $state,
+                        "answers",
+                        "_6"
+                      ),
+                      [sty.textanswers__7___5QqiEaIuc3]: hasVariant(
+                        $state,
+                        "answers",
+                        "_7"
+                      ),
+                      [sty.textanswers__8___5QqiECwtP]: hasVariant(
+                        $state,
+                        "answers",
+                        "_8"
+                      ),
+                      [sty.textanswers__9___5QqiEsSeH]: hasVariant(
+                        $state,
+                        "answers",
+                        "_9"
+                      ),
+                      [sty.textanswers_x___5QqiEFbPfn]: hasVariant(
                         $state,
                         "answers",
                         "x"
@@ -2843,578 +3423,38 @@ function PlasmicFaqSection__RenderFunc(props) {
                     }
                   )}
                 >
-                  {
-                    "What are the main challenges addressed by the reconstruction?"
-                  }
+                  {hasVariant($state, "answers", "_10")
+                    ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
+                    : hasVariant($state, "answers", "_9")
+                    ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
+                    : hasVariant($state, "answers", "_8")
+                    ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
+                    : hasVariant($state, "answers", "_7")
+                    ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
+                    : hasVariant($state, "answers", "_6")
+                    ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
+                    : hasVariant($state, "answers", "_5")
+                    ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
+                    : hasVariant($state, "answers", "_4")
+                    ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
+                    : hasVariant($state, "answers", "_3")
+                    ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
+                    : hasVariant($state, "answers", "_2")
+                    ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
+                    : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
                 </div>
               </div>
               <div
-                className={classNames(projectcss.all, sty.freeBox__rYOe, {
-                  [sty.freeBoxanswers__3__rYOe3L9Fx]: hasVariant(
-                    $state,
-                    "answers",
-                    "_3"
-                  ),
-                  [sty.freeBoxanswers_x__rYOeFbPfn]: hasVariant(
-                    $state,
-                    "answers",
-                    "x"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_3"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text___0Njcc
-                  )}
-                >
-                  {
-                    "How long is the projected timeline for the redesign, and what are the key milestones?"
-                  }
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox__vnbKw, {
-                  [sty.freeBoxanswers__2__vnbKWmlkfn]: hasVariant(
-                    $state,
-                    "answers",
-                    "_2"
-                  ),
-                  [sty.freeBoxanswers__4__vnbKWjrPol]: hasVariant(
-                    $state,
-                    "answers",
-                    "_4"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_4"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__zkVws
-                  )}
-                >
-                  {
-                    "Will the new design incorporate sustainable or environmentally friendly features?"
-                  }
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox__zuJpA, {
-                  [sty.freeBoxanswers__2__zuJpAmlkfn]: hasVariant(
-                    $state,
-                    "answers",
-                    "_2"
-                  ),
-                  [sty.freeBoxanswers__5__zuJpA4GKjS]: hasVariant(
-                    $state,
-                    "answers",
-                    "_5"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_5"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__aza79
-                  )}
-                >
-                  {
-                    "Are there any specific engineering or architectural innovations being implemented in the new bridge design?"
-                  }
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox___2Y75F, {
-                  [sty.freeBoxanswers__6___2Y75Fdayq8]: hasVariant(
-                    $state,
-                    "answers",
-                    "_6"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_6"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__hMihV
-                  )}
-                >
-                  {
-                    "What measures are in place to ensure the safety of pedestrians and cyclists?"
-                  }
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox__qG56W, {
-                  [sty.freeBoxanswers__2__qG56Wmlkfn]: hasVariant(
-                    $state,
-                    "answers",
-                    "_2"
-                  ),
-                  [sty.freeBoxanswers__7__qG56WaIuc3]: hasVariant(
-                    $state,
-                    "answers",
-                    "_7"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_7"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__kgRc7
-                  )}
-                >
-                  {"Which methods were used for the design phase?"}
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox__mc2I, {
-                  [sty.freeBoxanswers__8__mc2ICwtP]: hasVariant(
-                    $state,
-                    "answers",
-                    "_8"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_8"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__hudBn
-                  )}
-                >
-                  {
-                    "Are there opportunities for the public to actively contribute to the project?"
-                  }
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox__hdakH, {
-                  [sty.freeBoxanswers__9__hdakHsSeH]: hasVariant(
-                    $state,
-                    "answers",
-                    "_9"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_9"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__yLffR
-                  )}
-                >
-                  {
-                    "What types of activities are available for public contribution?"
-                  }
-                </div>
-              </div>
-              <div
-                className={classNames(projectcss.all, sty.freeBox___5IEDd, {
-                  [sty.freeBoxanswers__10___5IEDdRmuR4]: hasVariant(
-                    $state,
-                    "answers",
-                    "_10"
-                  )
-                })}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateAnswers"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          vgroup: "answers",
-                          operation: 0,
-                          value: "_10"
-                        };
-                        return (({ vgroup, value }) => {
-                          if (typeof value === "string") {
-                            value = [value];
-                          }
-                          p.set($state, vgroup, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAnswers"] != null &&
-                    typeof $steps["updateAnswers"] === "object" &&
-                    typeof $steps["updateAnswers"].then === "function"
-                  ) {
-                    $steps["updateAnswers"] = await $steps["updateAnswers"];
-                  }
-                }}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text___8Ot1S
-                  )}
-                >
-                  {"How will the bridge be built?"}
-                </div>
-              </div>
-            </p.Stack>
-            <div
-              data-plasmic-name={"stackAnswers2"}
-              data-plasmic-override={overrides.stackAnswers2}
-              className={classNames(projectcss.all, sty.stackAnswers2)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___11Umi
-                )}
-              >
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ color: "#535353" }}
-                  >
-                    {"Answers"}
-                  </span>
-                </React.Fragment>
-              </div>
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__nCjdn)}
-              >
-                <div
-                  data-plasmic-name={"answerBox2"}
-                  data-plasmic-override={overrides.answerBox2}
-                  className={classNames(projectcss.all, sty.answerBox2, {
-                    [sty.answerBox2answers__10]: hasVariant(
-                      $state,
-                      "answers",
-                      "_10"
-                    ),
-                    [sty.answerBox2answers__2]: hasVariant(
-                      $state,
-                      "answers",
-                      "_2"
-                    ),
-                    [sty.answerBox2answers__3]: hasVariant(
-                      $state,
-                      "answers",
-                      "_3"
-                    ),
-                    [sty.answerBox2answers__4]: hasVariant(
-                      $state,
-                      "answers",
-                      "_4"
-                    ),
-                    [sty.answerBox2answers__5]: hasVariant(
-                      $state,
-                      "answers",
-                      "_5"
-                    ),
-                    [sty.answerBox2answers__6]: hasVariant(
-                      $state,
-                      "answers",
-                      "_6"
-                    ),
-                    [sty.answerBox2answers__7]: hasVariant(
-                      $state,
-                      "answers",
-                      "_7"
-                    ),
-                    [sty.answerBox2answers__8]: hasVariant(
-                      $state,
-                      "answers",
-                      "_8"
-                    ),
-                    [sty.answerBox2answers__9]: hasVariant(
-                      $state,
-                      "answers",
-                      "_9"
-                    ),
-                    [sty.answerBox2answers_x]: hasVariant(
-                      $state,
-                      "answers",
-                      "x"
-                    )
-                  })}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___5QqiE,
-                      {
-                        [sty.textanswers__10___5QqiERmuR4]: hasVariant(
-                          $state,
-                          "answers",
-                          "_10"
-                        ),
-                        [sty.textanswers__2___5QqiEmlkfn]: hasVariant(
-                          $state,
-                          "answers",
-                          "_2"
-                        ),
-                        [sty.textanswers__3___5QqiE3L9Fx]: hasVariant(
-                          $state,
-                          "answers",
-                          "_3"
-                        ),
-                        [sty.textanswers__4___5QqiEjrPol]: hasVariant(
-                          $state,
-                          "answers",
-                          "_4"
-                        ),
-                        [sty.textanswers__5___5QqiE4GKjS]: hasVariant(
-                          $state,
-                          "answers",
-                          "_5"
-                        ),
-                        [sty.textanswers__6___5QqiEdayq8]: hasVariant(
-                          $state,
-                          "answers",
-                          "_6"
-                        ),
-                        [sty.textanswers__7___5QqiEaIuc3]: hasVariant(
-                          $state,
-                          "answers",
-                          "_7"
-                        ),
-                        [sty.textanswers__8___5QqiECwtP]: hasVariant(
-                          $state,
-                          "answers",
-                          "_8"
-                        ),
-                        [sty.textanswers__9___5QqiEsSeH]: hasVariant(
-                          $state,
-                          "answers",
-                          "_9"
-                        ),
-                        [sty.textanswers_x___5QqiEFbPfn]: hasVariant(
-                          $state,
-                          "answers",
-                          "x"
-                        )
-                      }
-                    )}
-                  >
-                    {hasVariant($state, "answers", "_10")
-                      ? "The bridge will be built with least amount of disturbance to the on going traffic. Lanes will be closed in such an order that the flow of traffic will be unaffacted. The middle portion of the bridge will be built on the side and then it will be moved to its location. We even prepared a video of this! Check it out in our gallery."
-                      : hasVariant($state, "answers", "_9")
-                      ? "We have diverse activities, including tree planting events, art installations, and even unique features like climbing walls integrated into the bridge design."
-                      : hasVariant($state, "answers", "_8")
-                      ? "Yes, we encourage active participation from the community. We have implemented various engagement activities to involve the public in the project."
-                      : hasVariant($state, "answers", "_7")
-                      ? "BIM and Parametrical design tools such as Grasshopper were the main approaches during the design phase."
-                      : hasVariant($state, "answers", "_6")
-                      ? "Safety measures include designated pedestrian and cyclist pathways, well-marked crossings, and the installation of appropriate signage. Construction zones will be secured to minimize risks."
-                      : hasVariant($state, "answers", "_5")
-                      ? "The new bridge design incorporates innovative engineering techniques and architectural features aimed at optimizing structural integrity, traffic flow, and overall aesthetic appeal."
-                      : hasVariant($state, "answers", "_4")
-                      ? "Yes, the new bridge design places a strong emphasis on sustainability, incorporating features such as eco-friendly materials, energy-efficient lighting, and green spaces where possible."
-                      : hasVariant($state, "answers", "_3")
-                      ? "The projected timeline for the bridge redesign is 2 years, which is normal for a project at this scale. Key milestones include planning, approvals, construction, and post-construction evaluations."
-                      : hasVariant($state, "answers", "_2")
-                      ? "The project addresses challenges such as aging infrastructure, increased traffic volumes, and the need for improved safety standards, all of which necessitate a comprehensive reconstruction effort."
-                      : "The bridge is being redesigned to address structural \ndeficiencies, enhance overall safety and functionality\n and create a new icon for the city."}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"answerPic2"}
-                  data-plasmic-override={overrides.answerPic2}
-                  className={classNames(projectcss.all, sty.answerPic2)}
-                />
-              </p.Stack>
-            </div>
-          </p.Stack>
-        </p.Stack>
-      ) : null}
+                data-plasmic-name={"answerPic2"}
+                data-plasmic-override={overrides.answerPic2}
+                className={classNames(projectcss.all, sty.answerPic2)}
+              />
+            </Stack__>
+          </div>
+        </Stack__>
+      </Stack__>
       {(hasVariant($state, "answers", "x") ? true : false) ? (
-        <p.Stack
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__dxQUl, {
@@ -3451,12 +3491,12 @@ function PlasmicFaqSection__RenderFunc(props) {
           >
             {"Frequently Asked Questions"}
           </div>
-          <p.Stack
+          <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__ounJs)}
           >
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox___0MaEi, {
@@ -3508,7 +3548,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -3571,7 +3611,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3633,7 +3673,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3702,7 +3742,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3754,7 +3794,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3806,7 +3846,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3853,7 +3893,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3905,7 +3945,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3950,7 +3990,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -3997,7 +4037,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -4044,7 +4084,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -4068,7 +4108,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                   {"How will the bridge be built?"}
                 </div>
               </div>
-            </p.Stack>
+            </Stack__>
             <div
               data-plasmic-name={"stackAnswers3"}
               data-plasmic-override={overrides.stackAnswers3}
@@ -4090,7 +4130,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                   </span>
                 </React.Fragment>
               </div>
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__gAwQz)}
@@ -4236,11 +4276,11 @@ function PlasmicFaqSection__RenderFunc(props) {
                   data-plasmic-override={overrides.answerPic3}
                   className={classNames(projectcss.all, sty.answerPic3)}
                 />
-              </p.Stack>
+              </Stack__>
             </div>
-          </p.Stack>
+          </Stack__>
           {(hasVariant($state, "answers", "x") ? true : false) ? (
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__jRhPe, {
@@ -4267,12 +4307,12 @@ function PlasmicFaqSection__RenderFunc(props) {
               >
                 {"Frequently Asked Questions"}
               </div>
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__xIjZt)}
               >
-                <p.Stack
+                <Stack__
                   as={"div"}
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__wytpB, {
@@ -4328,7 +4368,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                                 if (typeof value === "string") {
                                   value = [value];
                                 }
-                                p.set($state, vgroup, value);
+                                $stateSet($state, vgroup, value);
                                 return value;
                               })?.apply(null, [actionArgs]);
                             })()
@@ -4393,7 +4433,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4455,7 +4495,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4524,7 +4564,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4576,7 +4616,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4628,7 +4668,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4675,7 +4715,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4727,7 +4767,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4772,7 +4812,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4819,7 +4859,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4866,7 +4906,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                               if (typeof value === "string") {
                                 value = [value];
                               }
-                              p.set($state, vgroup, value);
+                              $stateSet($state, vgroup, value);
                               return value;
                             })?.apply(null, [actionArgs]);
                           })()
@@ -4890,7 +4930,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       {"How will the bridge be built?"}
                     </div>
                   </div>
-                </p.Stack>
+                </Stack__>
                 <div
                   data-plasmic-name={"stackAnswers4"}
                   data-plasmic-override={overrides.stackAnswers4}
@@ -4912,7 +4952,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       </span>
                     </React.Fragment>
                   </div>
-                  <p.Stack
+                  <Stack__
                     as={"div"}
                     hasGap={true}
                     className={classNames(projectcss.all, sty.freeBox__qrF1Q)}
@@ -5058,12 +5098,12 @@ function PlasmicFaqSection__RenderFunc(props) {
                       data-plasmic-override={overrides.answerPic4}
                       className={classNames(projectcss.all, sty.answerPic4)}
                     />
-                  </p.Stack>
+                  </Stack__>
                 </div>
-              </p.Stack>
-            </p.Stack>
+              </Stack__>
+            </Stack__>
           ) : null}
-        </p.Stack>
+        </Stack__>
       ) : null}
       {(hasVariant($state, "answers", "x") ? true : false) ? (
         <div
@@ -5092,7 +5132,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                     if (typeof value === "string") {
                       value = [value];
                     }
-                    p.set($state, vgroup, value);
+                    $stateSet($state, vgroup, value);
                     return value;
                   })?.apply(null, [actionArgs]);
                 })()
@@ -5130,7 +5170,7 @@ function PlasmicFaqSection__RenderFunc(props) {
         </div>
       ) : null}
       {(hasVariant($state, "answers", "x") ? true : false) ? (
-        <p.Stack
+        <Stack__
           as={"div"}
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox__iiyaR, {
@@ -5181,7 +5221,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5243,7 +5283,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5312,7 +5352,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                           if (typeof value === "string") {
                             value = [value];
                           }
-                          p.set($state, vgroup, value);
+                          $stateSet($state, vgroup, value);
                           return value;
                         })?.apply(null, [actionArgs]);
                       })()
@@ -5377,7 +5417,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -5441,7 +5481,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -5510,7 +5550,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                             if (typeof value === "string") {
                               value = [value];
                             }
-                            p.set($state, vgroup, value);
+                            $stateSet($state, vgroup, value);
                             return value;
                           })?.apply(null, [actionArgs]);
                         })()
@@ -5575,7 +5615,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5627,7 +5667,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5679,7 +5719,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5726,7 +5766,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5778,7 +5818,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5823,7 +5863,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5870,7 +5910,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5917,7 +5957,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                       if (typeof value === "string") {
                         value = [value];
                       }
-                      p.set($state, vgroup, value);
+                      $stateSet($state, vgroup, value);
                       return value;
                     })?.apply(null, [actionArgs]);
                   })()
@@ -5968,7 +6008,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -6032,7 +6072,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -6096,7 +6136,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -6160,7 +6200,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                         if (typeof value === "string") {
                           value = [value];
                         }
-                        p.set($state, vgroup, value);
+                        $stateSet($state, vgroup, value);
                         return value;
                       })?.apply(null, [actionArgs]);
                     })()
@@ -6220,7 +6260,7 @@ function PlasmicFaqSection__RenderFunc(props) {
                 </span>
               </React.Fragment>
             </div>
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__j3Jl)}
@@ -6362,9 +6402,9 @@ function PlasmicFaqSection__RenderFunc(props) {
                 data-plasmic-override={overrides.answerPic7}
                 className={classNames(projectcss.all, sty.answerPic7)}
               />
-            </p.Stack>
+            </Stack__>
           </div>
-        </p.Stack>
+        </Stack__>
       ) : null}
       {(hasVariant($state, "answers", "x") ? true : false) ? (
         <div
@@ -6397,7 +6437,7 @@ function PlasmicFaqSection__RenderFunc(props) {
               </span>
             </React.Fragment>
           </div>
-          <p.Stack
+          <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__j2Nvj, {
@@ -6513,10 +6553,10 @@ function PlasmicFaqSection__RenderFunc(props) {
               data-plasmic-override={overrides.answerPic8}
               className={classNames(projectcss.all, sty.answerPic8)}
             />
-          </p.Stack>
+          </Stack__>
         </div>
       ) : null}
-    </p.Stack>
+    </Stack__>
   );
 }
 

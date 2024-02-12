@@ -9,26 +9,41 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: yVO7gSdMDe6r
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  PlasmicImg as PlasmicImg__,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  get as $stateGet,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
-import Navbar from "../../Navbar"; // plasmic-import: lwEnvYluELlC/component
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import Questions from "../../Questions"; // plasmic-import: ua_gmRo83aZu/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import ActionButton from "../../ActionButton"; // plasmic-import: x_Fghcos84Ui/component
-import QuestionsForm from "../../QuestionsForm"; // plasmic-import: Uk8ghP4bFAyL/component
-import ParticipationArea from "../../ParticipationArea"; // plasmic-import: clPh1NSkBPaO/component
-import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
 import GalleryDisplay from "../../GalleryDisplay"; // plasmic-import: v_wMKsIXVD_E/component
+import ParticipationArea from "../../ParticipationArea"; // plasmic-import: clPh1NSkBPaO/component
 import FaqSection from "../../FaqSection"; // plasmic-import: Qhhf4YZ2QDy9/component
+import ArView from "../../ArView"; // plasmic-import: 9bh6WWKdnqfi/component
+import AboutUs from "../../AboutUs"; // plasmic-import: IwB4ixeF6-I9/component
 import Team from "../../Team"; // plasmic-import: SnzWAy89iw5m/component
+import { useScreenVariants as useScreenVariants_4UI21YsnkmYr } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: 4uI21ysnkmYR/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU29zJd9uLGW9TewABBsV/projectcss
 import sty from "./PlasmicHome.module.css"; // plasmic-import: yVO7gSdMDe6r/css
+import oigXzteUNbLakGyrjpegLzmdTxtKfDTq from "./images/oigXzteUNbLakGyrjpeg.jpg"; // plasmic-import: LzmdTxtKfDTq/picture
+import rectangle3173JHnSZtXoqzEu from "./images/rectangle3173.jpg"; // plasmic-import: jHnSZtXoqzEu/picture
+import mapspngZCTzc073FMLq from "./images/mapspng.png"; // plasmic-import: zCTzc073fMLq/picture
+import noiseBarrierjpgWqeI69Rs5Ft from "./images/noiseBarrierjpg.jpg"; // plasmic-import: WqeI69-RS5FT/picture
+import _91Aa24019464500557C88A8E3458E6D6JpgQekMstDf1Cgu from "./images/_91Aa24019464500557C88A8E3458E6D6Jpg.jpg"; // plasmic-import: QEKMstDF1cgu/picture
 
 createPlasmicElementProxy;
 
@@ -45,10 +60,55 @@ function PlasmicHome__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "showMore",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "modal2.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "modal3.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "modal4.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "modal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariants_4UI21YsnkmYr()
+  });
   return (
     <React.Fragment>
       <div className={projectcss.plasmic_page_wrapper}>
@@ -68,47 +128,51 @@ function PlasmicHome__RenderFunc(props) {
             sty.root
           )}
         >
-          <div
-            data-plasmic-name={"intro"}
-            data-plasmic-override={overrides.intro}
-            className={classNames(projectcss.all, sty.intro)}
-          >
-            <div
-              data-plasmic-name={"renderOfTheBridge"}
-              data-plasmic-override={overrides.renderOfTheBridge}
-              className={classNames(projectcss.all, sty.renderOfTheBridge)}
-            >
-              <div
-                data-plasmic-name={
-                  "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
-                }
-                data-plasmic-override={
-                  overrides.dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2
-                }
-                className={classNames(
-                  projectcss.all,
-                  sty.dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2
-                )}
-              />
+          <div className={classNames(projectcss.all, sty.freeBox__pRzGd)}>
+            <div className={classNames(projectcss.all, sty.freeBox__cWxTj)}>
+              <div className={classNames(projectcss.all, sty.freeBox__t0V8X)} />
             </div>
           </div>
-          <Navbar
-            data-plasmic-name={"navbar"}
-            data-plasmic-override={overrides.navbar}
-            className={classNames("__wab_instance", sty.navbar)}
-          />
-
-          <p.Stack
+          <Stack__
             as={"div"}
             data-plasmic-name={"header"}
             data-plasmic-override={overrides.header}
             hasGap={true}
             className={classNames(projectcss.all, sty.header)}
           >
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__kVxWg)}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateStateVariable"] = true
+                  ? (() => {
+                      const actionArgs = {};
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        undefined;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateStateVariable"] != null &&
+                  typeof $steps["updateStateVariable"] === "object" &&
+                  typeof $steps["updateStateVariable"].then === "function"
+                ) {
+                  $steps["updateStateVariable"] = await $steps[
+                    "updateStateVariable"
+                  ];
+                }
+              }}
             >
               <div
                 className={classNames(
@@ -125,52 +189,833 @@ function PlasmicHome__RenderFunc(props) {
                   projectcss.__wab_text,
                   sty.text__r1Z
                 )}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateShowMore"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["showMore"]
+                          },
+                          operation: 0
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateShowMore"] != null &&
+                    typeof $steps["updateShowMore"] === "object" &&
+                    typeof $steps["updateShowMore"].then === "function"
+                  ) {
+                    $steps["updateShowMore"] = await $steps["updateShowMore"];
+                  }
+                }}
               >
                 {
-                  "Help to choose the right design and contribute your idea and feedback"
+                  "Help us finetune the new design based on your needs and opinion"
                 }
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__qn852)}>
-                <ActionButton
-                  data-plasmic-name={"participateButton"}
-                  data-plasmic-override={overrides.participateButton}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.participateButton
+              <Questions
+                data-plasmic-name={"questions"}
+                data-plasmic-override={overrides.questions}
+                className={classNames("__wab_instance", sty.questions)}
+              />
+            </Stack__>
+          </Stack__>
+          <div className={classNames(projectcss.all, sty.freeBox__w1Yp6)}>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___39Scs)}
+            >
+              <div
+                data-plasmic-name={"infoBox1"}
+                data-plasmic-override={overrides.infoBox1}
+                className={classNames(projectcss.all, sty.infoBox1)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__raZw1)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__brFvW)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__jfypX)}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["updateModal2Open"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["modal2", "open"]
+                                },
+                                operation: 0,
+                                value: true
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateModal2Open"] != null &&
+                          typeof $steps["updateModal2Open"] === "object" &&
+                          typeof $steps["updateModal2Open"].then === "function"
+                        ) {
+                          $steps["updateModal2Open"] = await $steps[
+                            "updateModal2Open"
+                          ];
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__lhsBl)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__eJkmH
+                    )}
+                  >
+                    {"Bridge Activities"}
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___9IoX6)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___082MW
+                      )}
+                    >
+                      {
+                        "Take a look at the activities possibilites planned for the new bridge "
+                      }
+                    </div>
+                  </div>
+                </div>
+                <AntdModal
+                  data-plasmic-name={"modal2"}
+                  data-plasmic-override={overrides.modal2}
+                  className={classNames("__wab_instance", sty.modal2)}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
                   )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["modal2__modal"]}
+                  onOpenChange={generateStateOnChangeProp($state, [
+                    "modal2",
+                    "open"
+                  ])}
+                  open={generateStateValueProp($state, ["modal2", "open"])}
+                  title={
+                    "One interesting idea of an under-the-bridge activity is:"
+                  }
+                  trigger={null}
+                  width={"700"}
+                  wrapClassName={classNames({
+                    [sty["pcls_Wl3q-tcCrUYj"]]: true
+                  })}
                 >
-                  {"Tell us how you use the bridge"}
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__whTjc)}
+                  >
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__nrNw0)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__qnQep)}
+                        displayHeight={"100%"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: oigXzteUNbLakGyrjpegLzmdTxtKfDTq,
+                          fullWidth: 1024,
+                          fullHeight: 1024,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </Stack__>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__nNTlN)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__bFaZy
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#1677ff" }}
+                          >
+                            {"Dedicated skating area in the neighborhood"}
+                          </span>
+                          <React.Fragment>
+                            {
+                              "\n \nThe skatepark stands out as one of the few activities that seamlessly blend with the unique environment beneath the bridge. Positioned strategically, it is situated adjacent to the bridge's sidewalks, easily accessible via a carefully placed ramp. Visitors can smoothly transition from the top of the bridge, traversing the ramp while observing skaters in action and admiring the graffiti adorning the columns. The thoughtful placement of the ramp ensures a clear separation from the bicycle lane, allowing cyclists to enjoy a dedicated path that leads under the bridge toward the park in the west."
+                            }
+                          </React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </Stack__>
+                  </div>
+                </AntdModal>
+              </div>
+              <div
+                data-plasmic-name={"infoBox2"}
+                data-plasmic-override={overrides.infoBox2}
+                className={classNames(projectcss.all, sty.infoBox2)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__lyGd)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gew6G)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__rot0T)}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["updateModal3Open"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["modal3", "open"]
+                                },
+                                operation: 0,
+                                value: true
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateModal3Open"] != null &&
+                          typeof $steps["updateModal3Open"] === "object" &&
+                          typeof $steps["updateModal3Open"].then === "function"
+                        ) {
+                          $steps["updateModal3Open"] = await $steps[
+                            "updateModal3Open"
+                          ];
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__zApac)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___79Xtl
+                    )}
+                  >
+                    {"Project Renders"}
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__vPc9C)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__inrJb
+                      )}
+                    >
+                      {"get a sneak peek of what the new bridge will look like"}
+                    </div>
+                  </div>
+                </div>
+                <AntdModal
+                  data-plasmic-name={"modal3"}
+                  data-plasmic-override={overrides.modal3}
+                  className={classNames("__wab_instance", sty.modal3)}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["modal3__modal"]}
+                  onOpenChange={generateStateOnChangeProp($state, [
+                    "modal3",
+                    "open"
+                  ])}
+                  open={generateStateValueProp($state, ["modal3", "open"])}
+                  title={"Here is a view of the newly designed bridge"}
+                  trigger={null}
+                  width={"700"}
+                  wrapClassName={classNames({
+                    [sty["pcls_ZXcucaYpQ3HW"]]: true
+                  })}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__athqO)}
+                  >
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__fPn1I)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__ebCpl)}
+                        displayHeight={"359px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: rectangle3173JHnSZtXoqzEu,
+                          fullWidth: 1920,
+                          fullHeight: 1080,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </Stack__>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___5LudN
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__gY1PV
+                        )}
+                      >
+                        {
+                          "\nIn conceiving the design for the Donnersberger Bridge, our inspiration was drawn from Munich's architectural essence. Positioned as a symbolic gateway, it pays homage to Munich's historic gates, offering guests a warm welcome and panoramic views of the city and sunset over the railway tracks. The bridge's innovation extends to its structure, where arches supporting the main section double as functional elements. A platform connecting the arches provides a unique viewpoint and activates areas beneath the bridge, transforming parking lots into engaging spaces."
+                        }
+                      </div>
+                    </Stack__>
+                  </div>
+                </AntdModal>
+              </div>
+              <div
+                data-plasmic-name={"infoBox3"}
+                data-plasmic-override={overrides.infoBox3}
+                className={classNames(projectcss.all, sty.infoBox3)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__dhsF0)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jfWVj)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__oj6H)}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["updateModal4Open"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["modal4", "open"]
+                                },
+                                operation: 0,
+                                value: true
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateModal4Open"] != null &&
+                          typeof $steps["updateModal4Open"] === "object" &&
+                          typeof $steps["updateModal4Open"].then === "function"
+                        ) {
+                          $steps["updateModal4Open"] = await $steps[
+                            "updateModal4Open"
+                          ];
+                        }
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__ltfGw)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__j5CdZ
+                    )}
+                  >
+                    {"Affected Areas"}
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__v9Btw)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__demhn
+                      )}
+                    >
+                      {"See which areas will be influenced by construction"}
+                    </div>
+                  </div>
+                </div>
+                <AntdModal
+                  data-plasmic-name={"modal4"}
+                  data-plasmic-override={overrides.modal4}
+                  className={classNames("__wab_instance", sty.modal4)}
+                  defaultStylesClassName={classNames(
+                    projectcss.root_reset,
+                    projectcss.plasmic_default_styles,
+                    projectcss.plasmic_mixins,
+                    projectcss.plasmic_tokens,
+                    plasmic_antd_5_hostless_css.plasmic_tokens,
+                    plasmic_plasmic_rich_components_css.plasmic_tokens
+                  )}
+                  hideFooter={true}
+                  modalScopeClassName={sty["modal4__modal"]}
+                  onOpenChange={generateStateOnChangeProp($state, [
+                    "modal4",
+                    "open"
+                  ])}
+                  open={generateStateValueProp($state, ["modal4", "open"])}
+                  title={"Affected Areas"}
+                  trigger={null}
+                  width={"700"}
+                  wrapClassName={classNames({
+                    [sty["pcls_jHnhjk-0w64b"]]: true
+                  })}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__k2Cz8)}
+                  >
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__xeUU)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__kcz0Y)}
+                        displayHeight={"359px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: mapspngZCTzc073FMLq,
+                          fullWidth: 793,
+                          fullHeight: 722,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </Stack__>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__m2HtO)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ccPy
+                        )}
+                      >
+                        {
+                          "During the year of 2025, the bridge will be going through the demolition and reconstruction process, and these neighbourhoods around its area could be affected traffic and noise-wise. However, the construction process was carefully planned to enable the traffic to never fully stop, with always one lane available for transportation. Regarding the noise, the demolition process was considered focusing on each area at a time (over the rail, north and south regions), which means that each one of these regions won't suffer from noise pollution from the demolition from more than one-month at the time."
+                        }
+                      </div>
+                    </Stack__>
+                  </div>
+                </AntdModal>
+              </div>
+              <div
+                data-plasmic-name={"infoBox4"}
+                data-plasmic-override={overrides.infoBox4}
+                className={classNames(projectcss.all, sty.infoBox4)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__iuJga)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__jtOf)}
+                  >
+                    <AntdModal
+                      data-plasmic-name={"modal"}
+                      data-plasmic-override={overrides.modal}
+                      className={classNames("__wab_instance", sty.modal)}
+                      defaultStylesClassName={classNames(
+                        projectcss.root_reset,
+                        projectcss.plasmic_default_styles,
+                        projectcss.plasmic_mixins,
+                        projectcss.plasmic_tokens,
+                        plasmic_antd_5_hostless_css.plasmic_tokens,
+                        plasmic_plasmic_rich_components_css.plasmic_tokens
+                      )}
+                      hideFooter={true}
+                      modalScopeClassName={sty["modal__modal"]}
+                      onOpenChange={generateStateOnChangeProp($state, [
+                        "modal",
+                        "open"
+                      ])}
+                      open={generateStateValueProp($state, ["modal", "open"])}
+                      title={
+                        "Two of our ideas that contribute to sustainability are:"
+                      }
+                      trigger={null}
+                      width={"700"}
+                      wrapClassName={classNames({
+                        [sty["pcls_HgpS5QjfUewr"]]: true
+                      })}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___0NqtK
+                        )}
+                      >
+                        <Stack__
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__dTndH
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__raoTx)}
+                            displayHeight={"217px"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"244px"}
+                            loading={"lazy"}
+                            src={{
+                              src: noiseBarrierjpgWqeI69Rs5Ft,
+                              fullWidth: 639,
+                              fullHeight: 741,
+                              aspectRatio: undefined
+                            }}
+                          />
+
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__dHy6A)}
+                            displayHeight={"223px"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"247px"}
+                            loading={"lazy"}
+                            src={{
+                              src: _91Aa24019464500557C88A8E3458E6D6JpgQekMstDf1Cgu,
+                              fullWidth: 564,
+                              fullHeight: 423,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        </Stack__>
+                        <Stack__
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox___4U1Mb
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__ekZwR
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {"Polycarbonate panels"}
+                              </span>
+                              <React.Fragment>
+                                {
+                                  " are used as sound barrier insulation. It is a lightweight material, easy to install, can reduce noise pollution from road traffic by 50%, without affecting its aesthetics. These sheets are anti-fogging, so they do not limit the view of drivers or residents in a rainy day. Due to their high resistance to impact and weathering, they can last between 15 and 20 years."
+                                }
+                              </React.Fragment>
+                            </React.Fragment>
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__g2GO
+                            )}
+                          >
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ fontWeight: 700 }}
+                              >
+                                {"Bioswales "}
+                              </span>
+                              <React.Fragment>
+                                {
+                                  "in urban design offer effective stormwater management, enhance water quality, and promote biodiversity. By strategically implementing bioswales along roadways, we mitigate runoff pollution and contribute to sustainable urban environments."
+                                }
+                              </React.Fragment>
+                            </React.Fragment>
+                          </div>
+                        </Stack__>
+                      </div>
+                    </AntdModal>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__dmFlC)}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["updateModalOpen"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["modal", "open"]
+                                },
+                                operation: 0,
+                                value: true
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+                                $stateSet(objRoot, variablePath, value);
+                                return value;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateModalOpen"] != null &&
+                          typeof $steps["updateModalOpen"] === "object" &&
+                          typeof $steps["updateModalOpen"].then === "function"
+                        ) {
+                          $steps["updateModalOpen"] = await $steps[
+                            "updateModalOpen"
+                          ];
+                        }
+                      }}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__f39Nv
+                        )}
+                      >
+                        {"Sustainability"}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox___39Dx)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__nvb6E)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___0Cdi
+                      )}
+                    >
+                      {
+                        "see how the new bridge was conceived based on sustainable principles"
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Stack__>
+            <div className={classNames(projectcss.all, sty.freeBox__c0HmH)}>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__waUaN)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateShowMore"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["showMore"]
+                          },
+                          operation: 4
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, !oldValue);
+                          return !oldValue;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateShowMore"] != null &&
+                    typeof $steps["updateShowMore"] === "object" &&
+                    typeof $steps["updateShowMore"].then === "function"
+                  ) {
+                    $steps["updateShowMore"] = await $steps["updateShowMore"];
+                  }
+                }}
+              >
+                <ActionButton
+                  data-plasmic-name={"actionButton"}
+                  data-plasmic-override={overrides.actionButton}
+                  className={classNames("__wab_instance", sty.actionButton)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__kd9X
+                    )}
+                  >
+                    {"See All Ideas & Give Your Opinion"}
+                  </div>
                 </ActionButton>
               </div>
-            </p.Stack>
-            <QuestionsForm
-              data-plasmic-name={"questions"}
-              data-plasmic-override={overrides.questions}
-              className={classNames("__wab_instance", sty.questions)}
+            </div>
+          </div>
+          {(() => {
+            try {
+              return $state.showMore;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return true;
+              }
+              throw e;
+            }
+          })() ? (
+            <GalleryDisplay
+              data-plasmic-name={"galleryDisplay"}
+              data-plasmic-override={overrides.galleryDisplay}
+              className={classNames("__wab_instance", sty.galleryDisplay)}
+              variants2={"activities"}
             />
-          </p.Stack>
+          ) : null}
           <ParticipationArea
             data-plasmic-name={"participationArea"}
             data-plasmic-override={overrides.participationArea}
             className={classNames("__wab_instance", sty.participationArea)}
           />
 
+          <FaqSection
+            data-plasmic-name={"faqSection"}
+            data-plasmic-override={overrides.faqSection}
+            answers={"_11"}
+            className={classNames("__wab_instance", sty.faqSection)}
+          />
+
+          <ArView
+            data-plasmic-name={"arView"}
+            data-plasmic-override={overrides.arView}
+            className={classNames("__wab_instance", sty.arView)}
+          />
+
           <AboutUs
             data-plasmic-name={"aboutUs"}
             data-plasmic-override={overrides.aboutUs}
             className={classNames("__wab_instance", sty.aboutUs)}
-          />
-
-          <GalleryDisplay
-            data-plasmic-name={"galleryDisplay"}
-            data-plasmic-override={overrides.galleryDisplay}
-            className={classNames("__wab_instance", sty.galleryDisplay)}
-          />
-
-          <FaqSection
-            data-plasmic-name={"faqSection"}
-            data-plasmic-override={overrides.faqSection}
-            className={classNames("__wab_instance", sty.faqSection)}
           />
 
           <Team
@@ -187,44 +1032,41 @@ function PlasmicHome__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "intro",
-    "renderOfTheBridge",
-    "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2",
-    "navbar",
     "header",
-    "participateButton",
     "questions",
-    "participationArea",
-    "aboutUs",
+    "infoBox1",
+    "modal2",
+    "infoBox2",
+    "modal3",
+    "infoBox3",
+    "modal4",
+    "infoBox4",
+    "modal",
+    "actionButton",
     "galleryDisplay",
+    "participationArea",
     "faqSection",
+    "arView",
+    "aboutUs",
     "team"
   ],
 
-  intro: [
-    "intro",
-    "renderOfTheBridge",
-    "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
-  ],
-
-  renderOfTheBridge: [
-    "renderOfTheBridge",
-    "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
-  ],
-
-  dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2:
-    [
-      "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
-    ],
-
-  navbar: ["navbar"],
-  header: ["header", "participateButton", "questions"],
-  participateButton: ["participateButton"],
+  header: ["header", "questions"],
   questions: ["questions"],
-  participationArea: ["participationArea"],
-  aboutUs: ["aboutUs"],
+  infoBox1: ["infoBox1", "modal2"],
+  modal2: ["modal2"],
+  infoBox2: ["infoBox2", "modal3"],
+  modal3: ["modal3"],
+  infoBox3: ["infoBox3", "modal4"],
+  modal4: ["modal4"],
+  infoBox4: ["infoBox4", "modal"],
+  modal: ["modal"],
+  actionButton: ["actionButton"],
   galleryDisplay: ["galleryDisplay"],
+  participationArea: ["participationArea"],
   faqSection: ["faqSection"],
+  arView: ["arView"],
+  aboutUs: ["aboutUs"],
   team: ["team"]
 };
 
@@ -260,20 +1102,22 @@ export const PlasmicHome = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    intro: makeNodeComponent("intro"),
-    renderOfTheBridge: makeNodeComponent("renderOfTheBridge"),
-    dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2:
-      makeNodeComponent(
-        "dalle20231228172044AModernBridgeShowcasingContemporaryArchitectureTheBridgeSpansAWideRiverReflectingASleekFuturisticDesign2"
-      ),
-    navbar: makeNodeComponent("navbar"),
     header: makeNodeComponent("header"),
-    participateButton: makeNodeComponent("participateButton"),
     questions: makeNodeComponent("questions"),
-    participationArea: makeNodeComponent("participationArea"),
-    aboutUs: makeNodeComponent("aboutUs"),
+    infoBox1: makeNodeComponent("infoBox1"),
+    modal2: makeNodeComponent("modal2"),
+    infoBox2: makeNodeComponent("infoBox2"),
+    modal3: makeNodeComponent("modal3"),
+    infoBox3: makeNodeComponent("infoBox3"),
+    modal4: makeNodeComponent("modal4"),
+    infoBox4: makeNodeComponent("infoBox4"),
+    modal: makeNodeComponent("modal"),
+    actionButton: makeNodeComponent("actionButton"),
     galleryDisplay: makeNodeComponent("galleryDisplay"),
+    participationArea: makeNodeComponent("participationArea"),
     faqSection: makeNodeComponent("faqSection"),
+    arView: makeNodeComponent("arView"),
+    aboutUs: makeNodeComponent("aboutUs"),
     team: makeNodeComponent("team"),
     // Metadata about props expected for PlasmicHome
     internalVariantProps: PlasmicHome__VariantProps,

@@ -9,14 +9,18 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: FjjS-KWqLu0p
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  hasVariant,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import Button from "../../Button"; // plasmic-import: apXgE63BR30L/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -42,10 +46,10 @@ function PlasmicComment__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -64,7 +68,7 @@ function PlasmicComment__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -84,38 +88,81 @@ function PlasmicComment__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        { [sty.rootliked]: hasVariant($state, "liked", "liked") }
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__t0ZT)}>
-        <div className={classNames(projectcss.all, sty.freeBox__p7Sb1)}>
-          <p.Stack
+      <div
+        className={classNames(projectcss.all, sty.freeBox__t0ZT, {
+          [sty.freeBoxliked__t0ZTdFe6S]: hasVariant($state, "liked", "liked")
+        })}
+      >
+        <div
+          className={classNames(projectcss.all, sty.freeBox__p7Sb1, {
+            [sty.freeBoxliked__p7Sb1DFe6S]: hasVariant($state, "liked", "liked")
+          })}
+        >
+          <Stack__
             as={"div"}
             hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___0CtHj)}
+            className={classNames(projectcss.all, sty.freeBox___0CtHj, {
+              [sty.freeBoxliked___0CtHjdFe6S]: hasVariant(
+                $state,
+                "liked",
+                "liked"
+              )
+            })}
           >
-            <div className={classNames(projectcss.all, sty.freeBox___9CRnq)}>
-              <div className={classNames(projectcss.all, sty.freeBox__vxEdt)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox___9CRnq, {
+                [sty.freeBoxliked___9CRnqdFe6S]: hasVariant(
+                  $state,
+                  "liked",
+                  "liked"
+                )
+              })}
+            >
+              <div
+                className={classNames(projectcss.all, sty.freeBox__vxEdt, {
+                  [sty.freeBoxliked__vxEdtdFe6S]: hasVariant(
+                    $state,
+                    "liked",
+                    "liked"
+                  )
+                })}
+              >
                 <div
                   data-plasmic-name={"username"}
                   data-plasmic-override={overrides.username}
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.username
+                    sty.username,
+                    {
+                      [sty.usernameliked]: hasVariant($state, "liked", "liked")
+                    }
                   )}
                 >
-                  {"notoyrobots"}
+                  {"Anonymous"}
                 </div>
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__d5Jt9)}>
+              <div
+                className={classNames(projectcss.all, sty.freeBox__d5Jt9, {
+                  [sty.freeBoxliked__d5Jt9DFe6S]: hasVariant(
+                    $state,
+                    "liked",
+                    "liked"
+                  )
+                })}
+              >
                 <div
                   data-plasmic-name={"text"}
                   data-plasmic-override={overrides.text}
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text
+                    sty.text,
+                    { [sty.textliked]: hasVariant($state, "liked", "liked") }
                   )}
                 >
                   {"Group C is the best!"}
@@ -135,22 +182,102 @@ function PlasmicComment__RenderFunc(props) {
                 )}
                 hideFooter={true}
                 modalScopeClassName={sty["modal__modal"]}
-                onOpenChange={p.generateStateOnChangeProp($state, [
+                onOpenChange={generateStateOnChangeProp($state, [
                   "modal",
                   "open"
                 ])}
-                open={p.generateStateValueProp($state, ["modal", "open"])}
+                open={generateStateValueProp($state, ["modal", "open"])}
                 title={"Comment Options"}
                 trigger={null}
                 width={"1200"}
               >
                 <div className={classNames(projectcss.all, sty.freeBox__d3Fcb)}>
                   <Button
+                    children2={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__uhdRv
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
+                    children3={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___7YRct
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
                     className={classNames("__wab_instance", sty.button__sIvBb)}
                   >
                     {"Edit Comment"}
                   </Button>
                   <Button
+                    children2={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__mh0V4
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
+                    children3={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__zQVuq
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ fontWeight: 700, color: "#FFFFFF" }}
+                          >
+                            {"Button"}
+                          </span>
+                        </React.Fragment>
+                      </div>
+                    }
                     className={classNames("__wab_instance", sty.button__yb73)}
                   >
                     {"Delete Comment"}
@@ -158,7 +285,15 @@ function PlasmicComment__RenderFunc(props) {
                 </div>
               </AntdModal>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__xpSoV)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__xpSoV, {
+                [sty.freeBoxliked__xpSoVdFe6S]: hasVariant(
+                  $state,
+                  "liked",
+                  "liked"
+                )
+              })}
+            >
               <div
                 data-plasmic-name={"likeButton"}
                 data-plasmic-override={overrides.likeButton}
@@ -199,7 +334,7 @@ function PlasmicComment__RenderFunc(props) {
                 />
               </div>
             </div>
-          </p.Stack>
+          </Stack__>
         </div>
       </div>
     </div>

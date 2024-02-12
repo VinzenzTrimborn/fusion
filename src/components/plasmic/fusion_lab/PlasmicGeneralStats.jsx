@@ -9,13 +9,14 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: M92W_pizgO6s
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useCurrentUser
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -39,10 +40,10 @@ function PlasmicGeneralStats__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   return (
     <div
       data-plasmic-name={"root"}
@@ -91,7 +92,7 @@ function PlasmicGeneralStats__RenderFunc(props) {
             className={classNames(projectcss.all, sty.statBoxRectangle)}
           />
 
-          <p.Stack
+          <Stack__
             as={"div"}
             data-plasmic-name={"statGroup"}
             data-plasmic-override={overrides.statGroup}
@@ -279,7 +280,7 @@ function PlasmicGeneralStats__RenderFunc(props) {
                 role={"img"}
               />
             </div>
-          </p.Stack>
+          </Stack__>
         </div>
       </div>
     </div>

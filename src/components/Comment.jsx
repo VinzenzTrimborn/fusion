@@ -2,7 +2,7 @@ import * as React from "react";
 import {PlasmicComment} from "./plasmic/fusion_lab/PlasmicComment";
 
 function Comment_({comment, lookAt, changeLike, ...props}, ref) {
-    const {likes, text, username, cameraPosition, commentPosition} = comment;
+    const {likes, text, cameraPosition, commentPosition} = comment;
     return <PlasmicComment
         likes={likes}
         liked={comment.likedByUser}
@@ -13,7 +13,6 @@ function Comment_({comment, lookAt, changeLike, ...props}, ref) {
         showLocation={{
             onClick: () => lookAt(cameraPosition, commentPosition)
         }}
-        username={username}
         root={{ref}}
         {...props}
     />;

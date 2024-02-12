@@ -9,13 +9,14 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: IwB4ixeF6-I9
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useCurrentUser
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -40,10 +41,10 @@ function PlasmicAboutUs__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   return (
     <div
       data-plasmic-name={"root"}
@@ -83,7 +84,7 @@ function PlasmicAboutUs__RenderFunc(props) {
             role={"img"}
           />
 
-          <p.Stack
+          <Stack__
             as={"div"}
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
@@ -92,7 +93,7 @@ function PlasmicAboutUs__RenderFunc(props) {
           >
             <div className={classNames(projectcss.all, sty.column___2AwPy)}>
               <div className={classNames(projectcss.all, sty.freeBox__wY6Ka)}>
-                <p.Stack
+                <Stack__
                   as={"div"}
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__ua1Ib)}
@@ -105,16 +106,16 @@ function PlasmicAboutUs__RenderFunc(props) {
                     )}
                   >
                     {
-                      "\n\nWelcome to our innovation hub! We, master's students from the Technical University of Munich specializing in Information Technologies for the Built Environment, have collaborated to create a tool that prioritizes public participation in designing significant projects like the Donnersberger Bridge. As we approach further development, we invite citizens to explore our vision and share opinions through our web application, offering diverse avenues for participation.\n\nExplore our detailed 3D models, virtually walking the span of the new bridge to experience its functionality. Within the model, find information about design, structure, construction, sustainability, and traffic flow presented conveniently as pop-ups. Your voice matters\u2014leave comments directly within the 3D model, and cast your vote for your preferred design option. Join us in shaping the future of architecture, where innovation meets community, and together, we build bridges that transcend expectations. Welcome to a new era of design democracy!\n\n"
+                      "\n\nWelcome to our innovation hub! We, master's students from the Technical University of Munich specializing in Information Technologies for the Built Environment, have collaborated to create a tool that prioritizes public participation in designing significant projects like the Donnersberger Bridge. As we approach further development, we invite citizens to explore our vision and share opinions through our web application, offering diverse avenues for participation.\n\nExplore our detailed 3D models by virtually walking on the span of the new bridge to experience its functionality. Within the model, find information about design, structure, construction, sustainability, and traffic flow presented conveniently as pop-ups. Your voice matters\u2014leave comments directly within the 3D model, and cast your vote for your preferred design option. Join us in shaping the future of architecture, where innovation meets community, and together, we build bridges that transcend expectations. Welcome to a new era of design democracy!\n\n"
                     }
                   </div>
-                </p.Stack>
+                </Stack__>
               </div>
             </div>
             <div className={classNames(projectcss.all, sty.column__jMwXm)}>
               <div className={classNames(projectcss.all, sty.freeBox__nSjqe)} />
             </div>
-          </p.Stack>
+          </Stack__>
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__xs4Pc)}>
           <div className={classNames(projectcss.all, sty.freeBox__p0Vh)}>

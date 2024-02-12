@@ -63,21 +63,37 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   width: auto;
   height: auto;
   max-width: 100%;
   top: auto;
   left: auto;
-  padding: 50px 30px 30px;
-  margin: 10px;
+  align-self: center;
+  padding: 50px 70px 0px;
+  margin: 0px;
+}
+.freeBox__vWrtT > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.freeBox__vWrtT > :global(.__wab_flex-container) > *,
+.freeBox__vWrtT > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__vWrtT > :global(.__wab_flex-container) > picture > img,
+.freeBox__vWrtT
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
 }
 .leftArrow {
   object-fit: cover;
-  max-width: 100%;
+  max-width: auto;
   transform: scale(1, -1) rotate(-180deg);
-  width: 47px;
+  width: auto;
   height: 56px;
   display: block !important;
   transform-origin: top left;
@@ -85,19 +101,42 @@
   transition-property: all;
   transition-duration: 1s;
   cursor: pointer;
-  box-shadow: inset 0px 4px 16px 0px var(--token-MjYUWCcX38Uk);
-  position: relative;
+  box-shadow: 0px 4px 16px 0px var(--token-LqpCVPPZF4_r);
+  margin-right: 10px;
+  margin-left: calc(10px + 10px) !important;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-self: center;
   left: auto;
   top: auto;
-  align-self: center;
-  z-index: 1;
-  flex-shrink: 0;
+  position: relative;
   -webkit-transition-property: all;
   -webkit-transition-duration: 1s;
-  margin: 10px;
+  border-radius: 5px;
+  border: 3px solid var(--token-6G9-A5vsJlrH);
 }
 .leftArrow > picture > img {
   object-fit: cover;
+}
+.root .leftArrow {
+  margin-left: calc(10px + 10px) !important;
+}
+.leftArrowpopUpVariants_activity1 {
+  margin-left: calc(10px + 10px) !important;
+}
+.leftArrowpopUpVariants_activity2 {
+  left: auto;
+  top: auto;
+  margin-left: calc(10px + 10px) !important;
+}
+.leftArrowpopUpVariants_activity3 {
+  margin-left: calc(10px + 10px) !important;
+}
+.root .leftArrow:hover {
+  box-shadow: 6px 4px 16px 0px var(--token-6G9-A5vsJlrH);
+  margin-left: calc(10px + 10px) !important;
+  border-radius: 5px;
+  border: 5px solid var(--token-DxfYAkV7QVUJ);
 }
 .display {
   width: 1023px;
@@ -110,10 +149,13 @@
   box-shadow: 0px 4px 40px 10px var(--token-RHb8DXPBtDBn);
   background: linear-gradient(0deg, #ce9fff57 0%, #56b9ff 100%) 0% 0% / 100%
     100% repeat;
-  align-self: center;
+  align-self: stretch;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-left: calc(50px + 10px) !important;
   flex-shrink: 0;
   border-radius: 15px;
-  margin: 50px;
   border: 1px solid #464646;
 }
 .maskGroup {
@@ -161,6 +203,7 @@
   position: absolute;
   top: 0%;
   left: 0%;
+  padding-right: 0px;
 }
 .extendingFromTheSkateParkUsersWillFlowFromRampsToAnOpenAreaAdornedWithGraffitiCoveredColumnsHereOneCanRelaxWhileLookingAtTheArtOrIndulgeInClimbingConvenientlyCloseToHomeTheClimbingWallIntegratedOntoReinforcedWallsSupportingRampsMaintainsPrivacyWithCoveredUpperSidesAndAllowsNaturalLightThroughCarefullyPlacedOpeningsWellLitForNighttimeUseTheSpaceIncludesAFewParkingSpotsWithPowerStationsForElectricVehiclesEnhancingAccessibilityAndConvenience {
   position: absolute;
@@ -180,6 +223,7 @@
   letter-spacing: 0em;
   line-height: 16px;
   color: rgba(255, 255, 255, 1);
+  padding-bottom: 0px;
 }
 .maskGroup3 {
   transform: rotate(-90deg);
@@ -261,11 +305,59 @@
   left: auto;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: inset 0px 4px 16px 0px var(--token-MjYUWCcX38Uk);
+  box-shadow: 0px 4px 16px 0px var(--token-LqpCVPPZF4_r);
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: calc(10px + 10px) !important;
   align-self: center;
   flex-shrink: 0;
-  margin: 10px;
+  border-radius: 5px;
+  border: 3px solid var(--token-6G9-A5vsJlrH);
 }
 .rightArrow > picture > img {
   object-fit: cover;
+}
+.rightArrowpopUpVariants_activity1 {
+  margin-left: calc(10px + 10px) !important;
+}
+.rightArrowpopUpVariants_activity2 {
+  left: auto;
+  top: auto;
+  margin-left: calc(10px + 10px) !important;
+}
+.rightArrowpopUpVariants_activity3 {
+  left: auto;
+  top: auto;
+  margin-left: calc(10px + 10px) !important;
+}
+.root .rightArrow:hover {
+  box-shadow: 6px 4px 16px 0px var(--token-AkJsX7eWcpyM);
+  margin-left: calc(10px + 10px) !important;
+  border-width: 5px;
+  border-color: var(--token-pRs3-4jrQ4XQ);
+}
+.vottingButton {
+  background: linear-gradient(180deg, #d85caf 0%, #3343db 100%);
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 40px;
+}
+.leaveAComment {
+  display: block;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0em;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
 }

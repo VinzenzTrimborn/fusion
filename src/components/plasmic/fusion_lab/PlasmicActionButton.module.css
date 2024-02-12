@@ -17,6 +17,7 @@
   display: flex;
   position: relative;
   width: auto;
+  cursor: pointer;
 }
 .freeBoxoptions_sVersion {
   width: auto;

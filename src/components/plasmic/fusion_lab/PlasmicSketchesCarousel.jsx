@@ -9,14 +9,20 @@
 // Plasmic Project: adU29zJd9uLGW9TewABBsV
 // Component: SJ9BZMm9j-BB
 import * as React from "react";
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
 import {
-  hasVariant,
+  PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateOnMutateForSpec,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  hasVariant,
+  initializeCodeComponentStates,
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -56,10 +62,10 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
     ...args,
     ...variants
   };
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -81,10 +87,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
             ? 0
             : 0,
         refName: "sliderCarousel",
-        onMutate: p.generateOnMutateForSpec(
-          "currentSlide",
-          SliderWrapper_Helpers
-        )
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       },
       {
         path: "sketchPopUp1",
@@ -96,7 +99,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
 
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -165,7 +168,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
           )
         })}
       >
-        <p.PlasmicImg
+        <PlasmicImg__
           alt={""}
           className={classNames(sty.img__hfEFx)}
           displayHeight={"36px"}
@@ -179,7 +182,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
             const $steps = {};
             $steps["goToGallery"] = true
               ? (() => {
-                  const actionArgs = { destination: `/gallery` };
+                  const actionArgs = {};
                   return (({ destination }) => {
                     if (
                       typeof destination === "string" &&
@@ -213,7 +216,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
       {(() => {
         const child$Props = {
           arrowColor: true ? "var(--antd-colorPrimaryText)" : undefined,
-          beforeChange: p.generateStateOnChangePropForCodeComponents(
+          beforeChange: generateStateOnChangePropForCodeComponents(
             $state,
             "currentSlide",
             ["sliderCarousel", "currentSlide"],
@@ -252,7 +255,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
               "sketch6"
             )
           }),
-          initialSlide: p.generateStateValueProp($state, [
+          initialSlide: generateStateValueProp($state, [
             "sliderCarousel",
             "currentSlide"
           ]),
@@ -261,7 +264,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
           },
           sliderScopeClassName: sty["sliderCarousel__slider"]
         };
-        p.initializeCodeComponentStates(
+        initializeCodeComponentStates(
           $state,
           [
             {
@@ -289,7 +292,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
                 )
               })}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__lFwq4, {
                   [sty.imgsketchPopUp1_sketch1__lFwq49P3Ay]: hasVariant(
@@ -323,7 +326,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
               />
             </div>
             <div className={classNames(projectcss.all, sty.freeBox__ujuJq)}>
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___5ZMfH, {
                   [sty.imgsketchPopUp1_sketch2___5ZMfHCrWip]: hasVariant(
@@ -360,7 +363,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
                 )
               })}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__pEWvK, {
                   [sty.imgsketchPopUp1_sketch2__pEWvKCrWip]: hasVariant(
@@ -384,7 +387,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
               />
             </div>
             <div className={classNames(projectcss.all, sty.freeBox__n7Cbg)}>
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__jcGKw)}
                 displayHeight={"auto"}
@@ -410,7 +413,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
                 )
               })}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__ggJwn, {
                   [sty.imgsketchPopUp1_sketch2__ggJwnCrWip]: hasVariant(
@@ -434,7 +437,7 @@ function PlasmicSketchesCarousel__RenderFunc(props) {
               />
             </div>
             <div className={classNames(projectcss.all, sty.freeBox__j6TAq)}>
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__ffTwk)}
                 displayHeight={"auto"}

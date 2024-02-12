@@ -47,83 +47,45 @@
   color: #000000;
   margin: 0px;
 }
-.freeBox__mcGsO {
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-}
-.freeBox__mcGsO > :global(.__wab_flex-container) {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  align-content: center;
-  margin-left: calc(0px - 20px);
-  width: calc(100% + 20px);
-  margin-top: calc(0px - 20px);
-  height: calc(100% + 20px);
-}
-.freeBox__mcGsO > :global(.__wab_flex-container) > *,
-.freeBox__mcGsO > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__mcGsO > :global(.__wab_flex-container) > picture > img,
-.freeBox__mcGsO
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 20px;
-  margin-top: 20px;
-}
-.firstRoll {
+.freeBox___4BVv {
   display: flex;
   position: relative;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  width: auto;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%;
   height: auto;
-  max-width: 100%;
+  flex-wrap: wrap;
+  min-width: 0;
   padding: 8px 8px 8px 16px;
 }
 .boxLelino {
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  left: 0px;
-  top: 0px;
+  left: auto;
+  top: auto;
   z-index: 1;
-  position: sticky;
-  min-width: 0;
+  position: relative;
+  cursor: pointer;
 }
 .photoLelino {
   object-fit: cover;
-  max-width: 80%;
-  width: auto;
-  height: auto;
+  width: 150px;
+  height: 150px;
   display: block !important;
   left: auto;
   top: auto;
   position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
   margin: 10px;
 }
 .photoLelino > picture > img {
   object-fit: cover;
-}
-.linkedinLelino {
-  background: url("./images/image5.png") center center / cover no-repeat;
-  width: 17%;
-  height: 15%;
-  display: block;
-  position: absolute;
-  top: 166px;
-  left: 108px;
-  cursor: pointer;
-  padding-top: 0px;
-  margin: 10px;
 }
 .text___144B0 {
   display: block;
@@ -137,12 +99,13 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 62.83%;
-  height: 11.62%;
+  width: auto;
+  height: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .boxTina {
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   position: relative;
@@ -151,33 +114,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-width: 0;
+  cursor: pointer;
   margin: 0px;
 }
 .photoTina {
   position: relative;
   object-fit: cover;
-  max-width: 80%;
-  width: auto;
-  height: auto;
+  width: 150px;
+  height: 150px;
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
   margin: 10px;
 }
 .photoTina > picture > img {
   object-fit: cover;
-}
-.linkedinTina {
-  background: url("./images/image5.png") center center / cover no-repeat;
-  width: 17%;
-  height: 15%;
-  display: block;
-  position: absolute;
-  top: 176px;
-  left: 117px;
-  cursor: pointer;
-  padding-top: 0px;
 }
 .text__rxhKp {
   display: block;
@@ -191,43 +144,38 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 62.83%;
-  height: 11.62%;
+  width: auto;
+  height: auto;
+  transition-property: all;
+  transition-duration: 1s;
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
   margin: 10px;
 }
 .boxMohammad {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-width: 0;
-  min-height: 0;
+  cursor: pointer;
 }
 .photoMohammad {
   position: relative;
   object-fit: cover;
-  max-width: 80%;
-  width: auto;
-  height: auto;
+  width: 150px;
+  height: 150px;
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
   margin: 10px;
 }
 .photoMohammad > picture > img {
   object-fit: cover;
-}
-.linkedinMohammad {
-  background: url("./images/image5.png") center center / cover no-repeat;
-  width: 17%;
-  height: 15%;
-  display: block;
-  position: absolute;
-  top: 176px;
-  left: 120px;
-  cursor: pointer;
 }
 .text__nwz1W {
   display: block;
@@ -241,13 +189,14 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 62.83%;
-  height: 11.62%;
+  width: auto;
+  height: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .boxVinzenz {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   display: flex;
   position: relative;
   top: auto;
@@ -255,32 +204,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-width: 0;
-  min-height: 0;
+  cursor: pointer;
 }
 .photoVinzenz {
   position: relative;
   object-fit: cover;
-  max-width: 80%;
-  width: auto;
-  height: auto;
+  width: 150px;
+  height: 150px;
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
+  flex-shrink: 0;
   margin: 10px;
 }
 .photoVinzenz > picture > img {
   object-fit: cover;
-}
-.linkedinVinzenz {
-  background: url("./images/image5.png") center center / cover no-repeat;
-  width: 17%;
-  height: 15%;
-  display: block;
-  position: absolute;
-  top: 176px;
-  left: 121px;
-  cursor: pointer;
 }
 .text__sVNtH {
   display: block;
@@ -294,13 +233,14 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 62.83%;
-  height: 11.62%;
+  width: auto;
+  height: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .boxKoray {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   display: flex;
   position: relative;
   top: auto;
@@ -308,32 +248,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-width: 0;
-  min-height: 0;
+  cursor: pointer;
 }
 .photoKoray {
   position: relative;
   object-fit: cover;
-  max-width: 80%;
-  width: auto;
+  max-width: 150%;
+  width: 150px;
   height: auto;
   display: block !important;
   top: auto;
   left: auto;
+  cursor: pointer;
   margin: 10px;
 }
 .photoKoray > picture > img {
   object-fit: cover;
-}
-.linkedinKoray {
-  background: url("./images/image5.png") center center / cover no-repeat;
-  width: 17%;
-  height: 15%;
-  display: block;
-  position: absolute;
-  top: 175px;
-  left: 117px;
-  cursor: pointer;
 }
 .text__o2J8N {
   display: block;
@@ -347,7 +277,8 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 62.83%;
-  height: 11.62%;
+  width: auto;
+  height: auto;
+  cursor: pointer;
   margin: 10px;
 }
