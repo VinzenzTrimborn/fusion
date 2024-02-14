@@ -7,7 +7,7 @@ function ArView_(props, ref) {
         {...props}
         ar={{
             onClick: () => {
-                const usdzFile = `${window.location.protocol}//${window.location.host}/asset.usdz`;
+                const usdzFile = `${window.location.protocol}//${window.location.host}/model.usdz`;
                 window.location.href = usdzFile;
             }
         }}

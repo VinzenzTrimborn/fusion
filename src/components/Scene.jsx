@@ -2,25 +2,15 @@ import * as React from "react";
 import {useFrame, useThree} from '@react-three/fiber';
 import {useLoader} from "@react-three/fiber";
 import {Html, Sky} from "@react-three/drei";
-import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 import {useEffect, useMemo, useState} from "react";
 import {IFCLoader} from "web-ifc-three";
-import {MeshLambertMaterial, Vector3} from "three";
+import {MeshStandardMaterial, Vector3} from "three";
 import ViewerAnnotation from "./ViewerAnnotation";
-
-const Model = () => {
-    const gltf = useLoader(GLTFLoader, "./Poimandres.gltf");
-    return (
-        // @ts-ignore
-        <primitive object={gltf.scene} scale={0.4}/>
-    );
-};
 
 export default function Scene({handleCameraChange}) {
 
     const camera = useThree((state) => state.camera);
     const scene = useThree((state) => state.scene);
-    const [highlightedIDs, setHighlightedIDs] = useState([]);
 
     useFrame(() => {
         if (camera) {
@@ -31,7 +21,7 @@ export default function Scene({handleCameraChange}) {
         }
     });
 
-    const [ifcCategorySubsets, setIfcCategorySubsets] = useState({});
+    const [ifcCategorySubsets, setIfcCategorySubsets] = useState(null);
 
 
     const ifc =
@@ -39,30 +29,10 @@ export default function Scene({handleCameraChange}) {
             ifcLoader.ifcManager.setWasmPath("../../wasm/");
         });
 
-
-    const highlightedMaterial = useMemo(() => new MeshLambertMaterial({
-        transparent: false,
-        opacity: 0.6,
-        color: 0xff88ff,
+    const highlightedMaterial = useMemo(() => new MeshStandardMaterial({
+        color: 0xD3D3D3,
         depthTest: true,
     }), []);
-
-    useEffect(() => {
-        const manager = ifc.ifcManager;
-        manager.createSubset({
-            modelID: 0,
-            ids: highlightedIDs,
-            scene: scene,
-            material: highlightedMaterial,
-            removePrevious: true,
-            customID: "highlightedMaterial"
-        });
-        return () => manager.removeSubset({
-            modelID: 0,
-            material: highlightedMaterial,
-            customID: "highlightedMaterial"
-        });
-    }, [ifc, scene, highlightedIDs, highlightedMaterial]);
 
     useEffect(() => {
         const manager = ifc.ifcManager;
@@ -79,6 +49,7 @@ export default function Scene({handleCameraChange}) {
                         modelID: 0,
                         ids: slabsIDs,
                         scene: scene,
+                        //material: highlightedMaterial,
                         customID: category
                     });
                 }
@@ -98,11 +69,10 @@ export default function Scene({handleCameraChange}) {
             <pointLight position={[0, 400, -400]} intensity={0.4} color="white"/>
             <pointLight position={[0, 400, 400]} intensity={0.2} color="white"/>
             <group>
-                {Object.entries(ifcCategorySubsets).map(([key, value], index) =>
+                {ifcCategorySubsets && Object.entries(ifcCategorySubsets).map(([key, value], index) =>
                     <primitive key={index} object={value}
                                onDoubleClick={(e) => {
                                    ifc.ifcManager.getItemProperties(0, value.id).then((value) => console.log(value))
-                                   setHighlightedIDs([value.id]);
                                    console.log(value.id)
                                    console.log({
                                        position: camera.position,

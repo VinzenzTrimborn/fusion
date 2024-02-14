@@ -85,7 +85,7 @@
   padding: 0px;
   margin: 16px;
 }
-.svg {
+.svg___2Zo0X {
   position: relative;
   object-fit: cover;
   max-width: 100%;
@@ -282,6 +282,26 @@
 .comment__bbf8W:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+}
+.link {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+  min-width: 0;
+  padding: 8px;
+}
+.svg__fDZp {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  height: 1em;
+  flex-shrink: 0;
 }
 .freeBox__p0MIh {
   background: #5353530a;
