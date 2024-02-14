@@ -168,7 +168,6 @@ function ParticipationArea_(props, ref) {
                             <Canvas frameloop="demand">
                                 <Scene handleCameraChange={handleCameraChange}/>
                                 <Control lookAt={cameraDirection} position={cameraPosition}/>
-                                <Environment preset="sunset"/>
                             </Canvas>
                         </Suspense>
                         <Loader/>

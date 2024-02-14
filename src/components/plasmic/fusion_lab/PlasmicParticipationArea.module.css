@@ -284,6 +284,7 @@
   position: relative;
 }
 .link {
+  display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -293,7 +294,6 @@
   max-width: 100%;
   cursor: pointer;
   min-width: 0;
-  display: none;
   padding: 8px;
 }
 .svg__fDZp {
