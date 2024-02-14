@@ -30,7 +30,6 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU29zJd9uLGW9TewABBsV/projectcss
 import sty from "./PlasmicParticipationArea.module.css"; // plasmic-import: clPh1NSkBPaO/css
 import QuestionCircleSvgrepoComsvgIcon from "./icons/PlasmicIcon__QuestionCircleSvgrepoComsvg"; // plasmic-import: 0DE5OuaA8WJ1/icon
-import LogoAppleArSvgrepoComsvgIcon from "./icons/PlasmicIcon__LogoAppleArSvgrepoComsvg"; // plasmic-import: 4quAB0E9u3r5/icon
 
 createPlasmicElementProxy;
 
@@ -115,7 +114,9 @@ function PlasmicParticipationArea__RenderFunc(props) {
             className={classNames(projectcss.all, sty.helpButton)}
           >
             <QuestionCircleSvgrepoComsvgIcon
-              className={classNames(projectcss.all, sty.svg___2Zo0X)}
+              data-plasmic-name={"svg"}
+              data-plasmic-override={overrides.svg}
+              className={classNames(projectcss.all, sty.svg)}
               onMouseOver={async event => {
                 const $steps = {};
                 $steps["updateModalOpen"] = true
@@ -286,17 +287,6 @@ function PlasmicParticipationArea__RenderFunc(props) {
                 className={classNames("__wab_instance", sty.comment__bbf8W)}
               />
             </Stack__>
-            <a
-              data-plasmic-name={"link"}
-              data-plasmic-override={overrides.link}
-              className={classNames(projectcss.all, projectcss.a, sty.link)}
-              id={"arlink"}
-            >
-              <LogoAppleArSvgrepoComsvgIcon
-                className={classNames(projectcss.all, sty.svg__fDZp)}
-                role={"img"}
-              />
-            </a>
           </Stack__>
         </div>
       </div>
@@ -404,12 +394,12 @@ const PlasmicDescendants = {
     "root",
     "canvas",
     "helpButton",
+    "svg",
     "modal",
     "hintsDropdownMenu",
     "newCommentText",
     "sendButton",
     "commentSidebar",
-    "link",
     "viewButton1",
     "viewButton2",
     "viewButton3",
@@ -418,13 +408,13 @@ const PlasmicDescendants = {
   ],
 
   canvas: ["canvas"],
-  helpButton: ["helpButton", "modal", "hintsDropdownMenu"],
+  helpButton: ["helpButton", "svg", "modal", "hintsDropdownMenu"],
+  svg: ["svg"],
   modal: ["modal", "hintsDropdownMenu"],
   hintsDropdownMenu: ["hintsDropdownMenu"],
   newCommentText: ["newCommentText"],
   sendButton: ["sendButton"],
   commentSidebar: ["commentSidebar"],
-  link: ["link"],
   viewButton1: ["viewButton1"],
   viewButton2: ["viewButton2"],
   viewButton3: ["viewButton3"],
@@ -466,12 +456,12 @@ export const PlasmicParticipationArea = Object.assign(
     // Helper components rendering sub-elements
     canvas: makeNodeComponent("canvas"),
     helpButton: makeNodeComponent("helpButton"),
+    svg: makeNodeComponent("svg"),
     modal: makeNodeComponent("modal"),
     hintsDropdownMenu: makeNodeComponent("hintsDropdownMenu"),
     newCommentText: makeNodeComponent("newCommentText"),
     sendButton: makeNodeComponent("sendButton"),
     commentSidebar: makeNodeComponent("commentSidebar"),
-    link: makeNodeComponent("link"),
     viewButton1: makeNodeComponent("viewButton1"),
     viewButton2: makeNodeComponent("viewButton2"),
     viewButton3: makeNodeComponent("viewButton3"),
