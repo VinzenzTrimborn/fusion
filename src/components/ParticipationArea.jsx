@@ -7,6 +7,7 @@ import Scene from "./Scene";
 import Comment from "./Comment";
 import {Environment, Loader} from "@react-three/drei";
 import MyContext from "../MyContext";
+import supabaseClient from '../supabaseClient';
 
 function ParticipationArea_(props, ref) {
     const {state} = useContext(MyContext);
@@ -39,30 +40,36 @@ function ParticipationArea_(props, ref) {
         setCameraDirection(direction);
     }, []);
 
-    const getCommentsFromDB = useCallback(() => {
-        //ToDo Koray: get comments from DB
-        return [
-            {
-                id: 1,
-                likes: 45,
-                text: "I really like the boldering walls under the bridge!",
-                cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0}
-            },
-            {
-                id: 2,
-                likes: 23,
-                text: "With so less parking I have to search for a parking spot for hours!",
-                cameraPosition: {x: 0, y: 2, z: 0},
-                commentPosition: {x: 0, y: 2, z: 0}
-            }
-        ];
-    }, []);
+    const getCommentsFromDB = async () => {
+        try {
+          // Make a request to the get_comments PostgreSQL function
+          const { data, error } = await supabaseClient.rpc('get_comments');
+      
+          if (error) {
+            console.error("Error getting comments from DB:", error.message);
+            return [];
+          }
+      
+          // Map the data to the expected format
+          const comments = data.map(comment => ({
+            likes: comment.likesCount,
+            text: comment.commentText,
+            username: comment.userId, // Replace with the actual field containing usernames
+            commentPosition: comment.modelLocation, // Replace with the actual field containing comment positions
+            likedByUser: false // You may need to implement this based on user likes
+          }));
+      
+          return comments;
+        } catch (error) {
+          console.error("Error:", error.message);
+          return [];
+        }
+      };
 
     const getLikesFromDB = useCallback((comments, userID) => {
         //ToDo Koray: Get the liked comments of userID from the DB
         const likedCommentsIDs = [1, 2];
-
+        console.log(comments);
         return comments.map((c) => {
             if (likedCommentsIDs.includes(c.id)) {
                 return {...c, likedByUser: true};
@@ -102,9 +109,8 @@ function ParticipationArea_(props, ref) {
 
     useEffect(() => {
         if (state.userID) {
-            let comments = getCommentsFromDB();
-            comments = getLikesFromDB(comments, state.userID);
-            setComments(comments);
+            let comments = getCommentsFromDB().then((result)=>setComments(result));
+            //comments = getLikesFromDB(comments, state.userID);
         }
     }, [getCommentsFromDB, state.userID, getLikesFromDB]);
 
