@@ -9,7 +9,7 @@ import supabaseClient from '../supabaseClient';
 //import { SupabaseClient } from "@supabase/supabase-js";
 
 function ParticipationArea_(props, ref) {
-    const {state} = useContext(MyContext);
+    //const {state} = useContext(MyContext);
 
     const [comments, setComments] = useState([]);
     const [input, setInput] = useState("");
@@ -86,24 +86,40 @@ function ParticipationArea_(props, ref) {
         }
     }
 
-    const changeLike = useCallback((comment) => {
-        //ToDo Koray: increase or decrease likes in DB
-        console.log("User ID: " + state.userID);
-        console.log("Comment ID: " + comment.id);
-        // If the comment was liked by the user, then decrease the likes, else increase the likes
-        console.log("Liked by user: " + comment.likedByUser);
-
-        // Update like in the frontend
-        const newComments = comments.map((c) => {
-            if (c === comment && !c.likedByUser) {
-                return {...c, likes: c.likes + 1, likedByUser: true};
-            } else if (c === comment && c.likedByUser) {
-                return {...c, likes: c.likes - 1, likedByUser: false};
+    const changeLike = useCallback(async (comment) => {
+        try {
+            // Make a request to the backend to toggle the like status
+            const response = await fetch('/api/toggle_comment_like', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    comment_id: comment.id // Assuming comment.id contains the comment's ID
+                })
+            });
+    
+            if (!response.ok) {
+                throw new Error('Failed to toggle like status');
             }
-            return c;
-        });
-        setComments(newComments);
-    }, [comments, state.userID]);
+    
+            // Toggle the like status in the frontend
+            const newComments = comments.map((c) => {
+                if (c === comment) {
+                    // Toggle likedByUser and update likes count based on the previous state
+                    return {
+                        ...c,
+                        likes: c.likes + (c.likedByUser ? -1 : 1),
+                        likedByUser: !c.likedByUser
+                    };
+                }
+                return c;
+            });
+            setComments(newComments);
+        } catch (error) {
+            console.error('Error toggling like:', error);
+        }
+    }, [comments]);
 
     useEffect(() => {
 
@@ -168,10 +184,10 @@ function ParticipationArea_(props, ref) {
                             <Canvas frameloop="demand">
                                 <Scene handleCameraChange={handleCameraChange}/>
                                 <Control lookAt={cameraDirection} position={cameraPosition}/>
-                                <Environment preset="sunset"/>
+                                {/* <Environment preset="sunset"/> */}
                             </Canvas>
                         </Suspense>
-                        <Loader/>
+                        
                     </>
                 )
             }}
