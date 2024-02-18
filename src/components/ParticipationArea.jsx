@@ -5,8 +5,9 @@ import {Suspense, useCallback, useContext, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
+import {Environment, Loader} from "@react-three/drei";
+import MyContext from "../MyContext";
 import supabaseClient from '../supabaseClient';
-//import { SupabaseClient } from "@supabase/supabase-js";
 
 function ParticipationArea_(props, ref) {
     const {state} = useContext(MyContext);
@@ -65,26 +66,27 @@ function ParticipationArea_(props, ref) {
         }
       };
 
-    const addCommentToDB = async (createdByUserId, commentText, modelLocation) => {
-        try {
-          // Make a request to the PostgreSQL function add_comment
-          const { data, error } = await supabaseClient.rpc('add_comment', {
-            p_created_by_user_id: createdByUserId,
-            p_comment_text: commentText,
-            p_model_location: modelLocation,
-          });
-      
-          if (error) {
-            console.error("Error adding comment to DB:", error.message);
-          } else {
-            console.log("Comment added successfully:", data);
-            return data; // You might want to return the added comment or its ID
-          }
-        } catch (error) {
-          console.error("Error:", error.message);
-          return null;
-        }
-    }
+    const getLikesFromDB = useCallback((comments, userID) => {
+        //ToDo Koray: Get the liked comments of userID from the DB
+        const likedCommentsIDs = [1, 2];
+        console.log(comments);
+        return comments.map((c) => {
+            if (likedCommentsIDs.includes(c.id)) {
+                return {...c, likedByUser: true};
+            }
+            return {...c, likedByUser: false};
+        });
+    }, []);
+
+    const addCommentDB = useCallback((newComment) => {
+        console.log("User ID: " + state.userID);
+        //ToDo Koray: add comment to DB and associate it with the userID and return the comment ID
+        // Set the comment ID here
+        newComment.id = comments.length + 1;
+
+        // Update comments in the frontend
+        setComments([newComment, ...comments]);
+    }, [comments, state.userID]);
 
     const changeLike = useCallback((comment) => {
         //ToDo Koray: increase or decrease likes in DB
@@ -106,20 +108,11 @@ function ParticipationArea_(props, ref) {
     }, [comments, state.userID]);
 
     useEffect(() => {
-
-        const fetchData = async () => {
-            try {
-                const comments = await getCommentsFromDB();
-                setComments(comments);
-            } catch (error) {
-                console.error("Error fetching comments:", error);
-                setComments([]); // Set an empty array or handle the error accordingly
-            }
-        };
-    
-        fetchData();
-    }, []); // Empty dependency array
-    
+        if (state.userID) {
+            let comments = getCommentsFromDB().then((result)=>setComments(result));
+            //comments = getLikesFromDB(comments, state.userID);
+        }
+    }, [getCommentsFromDB, state.userID, getLikesFromDB]);
 
     return (
         <PlasmicParticipationArea
@@ -157,7 +150,7 @@ function ParticipationArea_(props, ref) {
                             z: currentCameraDirection.z
                         }
                     }
-                    addCommentToDB(newComment);
+                    addCommentDB(newComment);
                     setInput("");
                 }
             }}
@@ -212,4 +205,3 @@ function ParticipationArea_(props, ref) {
 const ParticipationArea = React.forwardRef(ParticipationArea_);
 
 export default ParticipationArea;
-
