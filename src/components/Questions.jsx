@@ -47,37 +47,28 @@ function Questions_(props, ref) {
         submitButton={{
             onClick: async (e) => {
                 e.preventDefault();
-                const object = {
-                    postalCode: postCode,
-                    country: country,
-                    howOften: howOften,
-                    bridgeUse: bridgeUse,
-                    commute: commute
-                };
-                console.log(object);
-                console.log(state.userId);
-        
+
                 try {
                     // Call the Supabase function to add a survey
-                    const { data, error } = await supabaseClient
-                    .from('surveys')
-                    .insert([{
-                        postalCode: postCode,
-                        country: country,
-                        bridgeUse: bridgeUse,
-                        commute: commute,
-                        howOften: howOften,
-                        userId: state.userId
-                    }]);
-        
+                    const {error} = await supabaseClient
+                        .from('surveys')
+                        .insert([{
+                            postalCode: postCode,
+                            country: country,
+                            bridgeUse: bridgeUse,
+                            commute: commute,
+                            howOften: howOften,
+                            userId: state.userId
+                        }]);
+
                     if (error) {
-                        console.error('Error adding survey:', error.message);
+                        console.error('Error adding survey:', error);
                         // Handle error accordingly
                     } else {
-                        console.log('Survey added successfully:', data);
+                        console.log('Survey added successfully.');
                         // Handle success accordingly
                     }
-        
+
                     // Reset the form
                     setPostCode("");
                     setCountry("");
@@ -90,7 +81,7 @@ function Questions_(props, ref) {
                 }
             }
         }}
-        
+
         root={{ref}}
         {...props}
     />;

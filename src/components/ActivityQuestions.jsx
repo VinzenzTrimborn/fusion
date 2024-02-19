@@ -16,30 +16,27 @@ function ActivityQuestions_(props, ref) {
 
     const sendToServer = async (e, activityName) => {
         e.preventDefault();
-        const object = {
-            grade: grade,
-            often: often,
-            notLike: notLike,
-            improvementComment: improvementComment,
-            userId: state.userId
-        };
-    
+
         try {
             // Call the Supabase function to add an activity question
-            const { data, error } = await supabaseClient
-            .from('activityQuestions')
-            .insert([{
-                activityName: activityName,
-                grade: grade,
-                often: often,
-                notLike: notLike,
-                improvementComment: improvementComment,
-                userId: state.userId
-            }]);
-            
-    
-            console.log('Activity question added successfully:', data);
-            
+            const {error} = await supabaseClient
+                .from('activityQuestions')
+                .insert([{
+                    activityName: activityName,
+                    grade: grade,
+                    often: often,
+                    notLike: notLike,
+                    improvementComment: improvementComment,
+                    userId: state.userId
+                }]);
+
+            if (error) {
+                console.error('Error adding activity survey', error);
+                // Handle error accordingly
+            } else {
+                console.log('Activity question added successfully.');
+            }
+
             // Clear the form
             setGrade("");
             setOften("");
