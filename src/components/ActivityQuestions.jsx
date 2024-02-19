@@ -2,6 +2,7 @@ import * as React from "react";
 import {PlasmicActivityQuestions} from "./plasmic/fusion_lab/PlasmicActivityQuestions";
 import {useContext} from "react";
 import MyContext from "../MyContext";
+import supabaseClient from "../supabaseClient";
 
 function ActivityQuestions_(props, ref) {
 
@@ -13,26 +14,44 @@ function ActivityQuestions_(props, ref) {
 
     const {state} = useContext(MyContext);
 
-    const sendToServer = (e, activityName) => {
+    const sendToServer = async (e, activityName) => {
         e.preventDefault();
         const object = {
             grade: grade,
             often: often,
             notLike: notLike,
-            improvementComment: improvementComment
+            improvementComment: improvementComment,
+            userId: state.userId // Uncomment this line if you want to include userId
+        };
+    
+        try {
+            // Call the Supabase function to add an activity question
+            const { data, error } = await supabaseClient.rpc('add_activity_question', {
+                activityName: activityName,
+                grade: grade,
+                often: often,
+                notLike: notLike,
+                improvementComment: improvementComment,
+                userId: state.userId
+            });
+    
+            if (error) {
+                console.error('Error adding activity question:', error.message);
+                // Handle error accordingly
+                return;
+            }
+    
+            console.log('Activity question added successfully:', data);
+            
+            // Clear the form
+            setGrade("");
+            setOften("");
+            setNotLike("");
+            setImprovementComment("");
+        } catch (error) {
+            console.error('Error:', error.message);
         }
-        console.log(object);
-        console.log(activityName);
-        console.log("User ID: " + state.userId);
-        //ToDo Koray: Save the answers in the database and associate it with the userId
-
-        //clear the form
-        setGrade("");
-        setOften("");
-        setNotLike("");
-        setImprovementComment("");
-    }
-
+    };
 
     return <PlasmicActivityQuestions
         grade={{
