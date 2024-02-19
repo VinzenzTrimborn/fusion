@@ -45,7 +45,7 @@ function Questions_(props, ref) {
             }
         }}
         submitButton={{
-            onClick: (e) => {
+            onClick: async (e) => {
                 e.preventDefault();
                 const object = {
                     postalCode: postCode,
@@ -55,19 +55,42 @@ function Questions_(props, ref) {
                     commute: commute
                 };
                 console.log(object);
-                console.log(state.userId)
-                //ToDo Koray: Save the answers in the database and associate it with the userId
-                
-
-                // Reset the form
-                setPostCode("");
-                setCountry("");
-                setHowOften("");
-                setBridgeUse("");
-                setCommute("");
+                console.log(state.userId);
+        
+                try {
+                    // Call the Supabase function to add a survey
+                    const { data, error } = await supabaseClient
+                    .from('surveys')
+                    .insert([{
+                        postalCode: postCode,
+                        country: country,
+                        bridgeUse: bridgeUse,
+                        commute: commute,
+                        howOften: howOften,
+                        userId: state.userId
+                    }]);
+        
+                    if (error) {
+                        console.error('Error adding survey:', error.message);
+                        // Handle error accordingly
+                    } else {
+                        console.log('Survey added successfully:', data);
+                        // Handle success accordingly
+                    }
+        
+                    // Reset the form
+                    setPostCode("");
+                    setCountry("");
+                    setHowOften("");
+                    setBridgeUse("");
+                    setCommute("");
+                } catch (error) {
+                    console.error('Error:', error.message);
+                    // Handle error accordingly
+                }
             }
         }}
-
+        
         root={{ref}}
         {...props}
     />;
