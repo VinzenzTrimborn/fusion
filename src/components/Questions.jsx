@@ -54,8 +54,8 @@ function Questions_(props, ref) {
                     commute: commute
                 };
                 console.log(object);
-                console.log(state.userID)
-                //ToDo Koray: Save the answers in the database and associate it with the userID
+                console.log(state.userId)
+                //ToDo Koray: Save the answers in the database and associate it with the userId
 
                 // Reset the form
                 setPostCode("");

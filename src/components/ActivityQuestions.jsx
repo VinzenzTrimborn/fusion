@@ -23,8 +23,8 @@ function ActivityQuestions_(props, ref) {
         }
         console.log(object);
         console.log(activityName);
-        console.log("User ID: " + state.userID);
-        //ToDo Koray: Save the answers in the database and associate it with the userID
+        console.log("User ID: " + state.userId);
+        //ToDo Koray: Save the answers in the database and associate it with the userId
 
         //clear the form
         setGrade("");

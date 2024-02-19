@@ -66,8 +66,8 @@ function ParticipationArea_(props, ref) {
         }
       };
 
-    const getLikesFromDB = useCallback((comments, userID) => {
-        //ToDo Koray: Get the liked comments of userID from the DB
+    const getLikesFromDB = useCallback((comments, userId) => {
+        //ToDo Koray: Get the liked comments of userId from the DB
         const likedCommentsIDs = [1, 2];
         console.log(comments);
         return comments.map((c) => {
@@ -79,18 +79,18 @@ function ParticipationArea_(props, ref) {
     }, []);
 
     const addCommentDB = useCallback((newComment) => {
-        console.log("User ID: " + state.userID);
-        //ToDo Koray: add comment to DB and associate it with the userID and return the comment ID
+        console.log("User ID: " + state.userId);
+        //ToDo Koray: add comment to DB and associate it with the userId and return the comment ID
         // Set the comment ID here
         newComment.id = comments.length + 1;
 
         // Update comments in the frontend
         setComments([newComment, ...comments]);
-    }, [comments, state.userID]);
+    }, [comments, state.userId]);
 
     const changeLike = useCallback((comment) => {
         //ToDo Koray: increase or decrease likes in DB
-        console.log("User ID: " + state.userID);
+        console.log("User ID: " + state.userId);
         console.log("Comment ID: " + comment.id);
         // If the comment was liked by the user, then decrease the likes, else increase the likes
         console.log("Liked by user: " + comment.likedByUser);
@@ -105,14 +105,14 @@ function ParticipationArea_(props, ref) {
             return c;
         });
         setComments(newComments);
-    }, [comments, state.userID]);
+    }, [comments, state.userId]);
 
     useEffect(() => {
-        if (state.userID) {
+        if (state.userId) {
             let comments = getCommentsFromDB().then((result)=>setComments(result));
-            //comments = getLikesFromDB(comments, state.userID);
+            //comments = getLikesFromDB(comments, state.userId);
         }
-    }, [getCommentsFromDB, state.userID, getLikesFromDB]);
+    }, [getCommentsFromDB, state.userId, getLikesFromDB]);
 
     return (
         <PlasmicParticipationArea
