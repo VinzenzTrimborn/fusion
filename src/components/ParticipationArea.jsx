@@ -5,7 +5,7 @@ import {Suspense, useCallback, useContext, useEffect, useState} from "react";
 import Control from "./Control";
 import Scene from "./Scene";
 import Comment from "./Comment";
-import {Environment, Loader} from "@react-three/drei";
+import {Loader} from "@react-three/drei";
 import MyContext from "../MyContext";
 import supabaseClient from '../supabaseClient';
 
@@ -15,7 +15,6 @@ function ParticipationArea_(props, ref) {
     const [comments, setComments] = useState([]);
     const [input, setInput] = useState("");
 
-    //ToDo Mohammad: set initial camera position and direction so that the user is looking at the bridge
     const [cameraPosition, setCameraPosition] = useState({
         x: 307.34795619787735,
         y: 44.0000000000001,
@@ -42,79 +41,107 @@ function ParticipationArea_(props, ref) {
 
     const getCommentsFromDB = useCallback(async () => {
         try {
-          // Make a request to the get_comments PostgreSQL function
-          const { data, error } = await supabaseClient.rpc('get_comments');
-      
-          if (error) {
-            console.error("Error getting comments from DB:", error.message);
-            return [];
-          }
-      
-          // Map the data to the expected format
-          const comments = data.map(comment => ({
-            likes: comment.likesCount,
-            text: comment.commentText,
-            username: comment.userId, // Replace with the actual field containing usernames
-            commentPosition: comment.modelLocation, // Replace with the actual field containing comment positions
-            likedByUser: false // You may need to implement this based on user likes
-          }));
-      
-          return comments;
-        } catch (error) {
-          console.error("Error:", error.message);
-          return [];
-        }
-      }, []);
+            let {data, error} = await supabaseClient
+                .from('comments')
+                .select('*')
 
-    const getLikesFromDB = useCallback((comments, userId) => {
-        //ToDo Koray: Get the liked comments of userId from the DB
-        const likedCommentsIDs = [1, 2];
-        console.log(comments);
+            if (error) {
+                console.error('Error fetching comments:', error)
+                return [];
+            }
+
+            return data.map(comment => (
+                {...comment, likedByUser: false}));
+        } catch (error) {
+            console.error("Error:", error.message);
+            return [];
+        }
+    }, []);
+
+    const getLikesFromDB = useCallback(async (comments, userId) => {
+        const {data, error} = await supabaseClient
+            .from('commentLikes')
+            .select('commentId') // Select all columns
+            .eq('userId', userId); // Where 'userId' equals the specified userId
+
+        if (error) {
+            console.error('Error fetching likes by userId:', error);
+            return [];
+        }
+
+        const likedCommentsIDs = data.map(like => like.commentId);
         return comments.map((c) => {
             if (likedCommentsIDs.includes(c.id)) {
                 return {...c, likedByUser: true};
             }
             return {...c, likedByUser: false};
-        });
+        }).sort((a, b) => b.likes - a.likes);
     }, []);
 
-    const addCommentDB = useCallback((newComment) => {
-        console.log("User ID: " + state.userId);
-        //ToDo Koray: add comment to DB and associate it with the userId and return the comment ID
-        // Set the comment ID here
-        newComment.id = comments.length + 1;
+    const addCommentDB = useCallback(async (comment) => {
+        try {
+            const {data, error} = await supabaseClient
+                .from('comments')
+                .insert([
+                    {userId: state.userId, ...comment},
+                ]).select('*').single();
 
-        // Update comments in the frontend
-        setComments([newComment, ...comments]);
+            if (error) {
+                console.error('Error creating comment:', error);
+            }
+            setComments([{...data, likedByUser: false}, ...comments])
+        } catch (error) {
+            console.error('Unexpected error creating comment:', error);
+        }
     }, [comments, state.userId]);
 
-    const changeLike = useCallback((comment) => {
-        //ToDo Koray: increase or decrease likes in DB
-        console.log("User ID: " + state.userId);
-        console.log("Comment ID: " + comment.id);
-        // If the comment was liked by the user, then decrease the likes, else increase the likes
-        console.log("Liked by user: " + comment.likedByUser);
-
-        // Update like in the frontend
+    const changeLike = useCallback(async (comment) => {
         const newComments = comments.map((c) => {
-            if (c === comment && !c.likedByUser) {
+            if (c.id === comment.id && !c.likedByUser) {
                 return {...c, likes: c.likes + 1, likedByUser: true};
-            } else if (c === comment && c.likedByUser) {
+            } else if (c.id === comment.id && c.likedByUser) {
                 return {...c, likes: c.likes - 1, likedByUser: false};
             }
             return c;
         });
         setComments(newComments);
+
+        if (!comment.likedByUser) {
+            const {error} = await supabaseClient
+                .from('commentLikes')
+                .upsert({
+                    userId: state.userId,
+                    commentId: comment.id
+                }, {
+                    onConflict: ['userId', 'commentId']
+                });
+
+            if (error) {
+                console.error('Error upserting comment like:', error);
+            }
+        } else {
+            const {error} = await supabaseClient
+                .from('commentLikes')
+                .delete()
+                .match({userId: state.userId, commentId: comment.id});
+
+            if (error) {
+                console.error('Error deleting comment like:', error);
+            }
+        }
     }, [comments, state.userId]);
 
     useEffect(() => {
-        if (state.userId) {
-            let comments = getCommentsFromDB().then((result)=> {
-                console.log(result)
-                setComments(result)
-            });
-            //comments = getLikesFromDB(comments, state.userId);
+
+        async function getCommentsAndLikes(userId) {
+            if (userId) {
+                let comments = await getCommentsFromDB();
+                comments = await getLikesFromDB(comments, userId);
+                setComments(comments);
+            }
         }
+
+        getCommentsAndLikes(state.userId);
     }, [getCommentsFromDB, state.userId, getLikesFromDB]);
 
     return (
