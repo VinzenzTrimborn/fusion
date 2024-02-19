@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import MyContext from "./MyContext";
 import supabaseClient from "./supabaseClient";
 
 const MyProvider = ({ children }) => {
-  const [state, setState] = useState(() => {
-    const storedState = localStorage.getItem("state");
-    if (storedState) {
-      return JSON.parse(storedState);
-    } else {
-      // ToDo Koray: Call superbase and ask for a new user ID
-      supabaseClient.rpc("create_user").then(({ data, error }) => {
-        console.log(data);
-        setState({ userID: 1 });
-        console.log(error);
-      });
-      return { userID: 1 };
-    }
-  });
+  const [state, setState] = useState({ userId: null });
+
+  useEffect(() => {
+    // Function to fetch user ID
+    const fetchUserId = async () => {
+      const storedState = localStorage.getItem("state");
+      if (storedState) {
+        setState(JSON.parse(storedState));
+        console.log("UserId: " +  JSON.parse(storedState).userId);
+      } else {
+        // Otherwise, call Supabase to get a new user ID
+        const { data, error } = await supabaseClient.rpc("create_user");
+        if (data) {
+          console.log("UserId: " +  data);
+          setState({ userId: data });
+          localStorage.setItem("state", JSON.stringify({ userId: data }));
+        }
+        if (error) console.log(error);
+      }
+    };
+
+    fetchUserId();
+  }, []);
+
   // value to be passed to consuming components
   const contextValue = {
     state,
