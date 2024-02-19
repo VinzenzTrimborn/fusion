@@ -40,7 +40,7 @@ function ParticipationArea_(props, ref) {
         setCameraDirection(direction);
     }, []);
 
-    const getCommentsFromDB = async () => {
+    const getCommentsFromDB = useCallback(async () => {
         try {
           // Make a request to the get_comments PostgreSQL function
           const { data, error } = await supabaseClient.rpc('get_comments');
@@ -64,7 +64,7 @@ function ParticipationArea_(props, ref) {
           console.error("Error:", error.message);
           return [];
         }
-      };
+      }, []);
 
     const getLikesFromDB = useCallback((comments, userId) => {
         //ToDo Koray: Get the liked comments of userId from the DB
@@ -109,7 +109,10 @@ function ParticipationArea_(props, ref) {
 
     useEffect(() => {
         if (state.userId) {
-            let comments = getCommentsFromDB().then((result)=>setComments(result));
+            let comments = getCommentsFromDB().then((result)=> {
+                console.log(result)
+                setComments(result)
+            });
             //comments = getLikesFromDB(comments, state.userId);
         }
     }, [getCommentsFromDB, state.userId, getLikesFromDB]);
