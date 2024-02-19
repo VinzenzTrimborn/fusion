@@ -21,25 +21,22 @@ function ActivityQuestions_(props, ref) {
             often: often,
             notLike: notLike,
             improvementComment: improvementComment,
-            userId: state.userId // Uncomment this line if you want to include userId
+            userId: state.userId
         };
     
         try {
             // Call the Supabase function to add an activity question
-            const { data, error } = await supabaseClient.rpc('add_activity_question', {
+            const { data, error } = await supabaseClient
+            .from('activityQuestions')
+            .insert([{
                 activityName: activityName,
                 grade: grade,
                 often: often,
                 notLike: notLike,
                 improvementComment: improvementComment,
                 userId: state.userId
-            });
-    
-            if (error) {
-                console.error('Error adding activity question:', error.message);
-                // Handle error accordingly
-                return;
-            }
+            }]);
+            
     
             console.log('Activity question added successfully:', data);
             
