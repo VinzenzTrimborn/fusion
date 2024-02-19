@@ -2,6 +2,7 @@ import * as React from "react";
 import {PlasmicQuestions} from "./plasmic/fusion_lab/PlasmicQuestions";
 import MyContext from "../MyContext";
 import {useContext} from "react";
+import supabaseClient from "../supabaseClient";
 
 function Questions_(props, ref) {
     const {state} = useContext(MyContext);
@@ -56,6 +57,7 @@ function Questions_(props, ref) {
                 console.log(object);
                 console.log(state.userId)
                 //ToDo Koray: Save the answers in the database and associate it with the userId
+                
 
                 // Reset the form
                 setPostCode("");
