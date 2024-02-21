@@ -265,9 +265,9 @@ export default class BimControls {
             }
 
             if (this.zoomOn) {
-                this.object.translateX(-_zoomPointer.x * _zoomDelta.x * 0.08);
-                this.object.translateY(-_zoomPointer.y * _zoomDelta.y * 0.08);
-                this.object.translateZ(_zoomDelta.y * 0.05);
+                this.object.translateX(-_zoomPointer.x * _zoomDelta.x * 0.8);
+                this.object.translateY(-_zoomPointer.y * _zoomDelta.y * 0.8);
+                this.object.translateZ(_zoomDelta.y * 0.8);
                 this.zoomOn = false;
             }
             if (this.scrollOn) {
