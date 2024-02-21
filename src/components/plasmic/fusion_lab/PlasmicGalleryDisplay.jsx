@@ -23,7 +23,7 @@ import {
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import { Video } from "@plasmicpkgs/plasmic-basic-components";
+import YouTube from "@plasmicpkgs/react-youtube";
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import ActivityQuestions from "../../ActivityQuestions"; // plasmic-import: BOUoKYlWFZly/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -32,8 +32,6 @@ import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plas
 import projectcss from "./plasmic_fusion_lab.module.css"; // plasmic-import: adU29zJd9uLGW9TewABBsV/projectcss
 import sty from "./PlasmicGalleryDisplay.module.css"; // plasmic-import: v_wMKsIXVD_E/css
 import CloseSvgrepoComsvgIcon from "./icons/PlasmicIcon__CloseSvgrepoComsvg"; // plasmic-import: naIJz5VNedYp/icon
-import rectangle3173JHnSZtXoqzEu from "./images/rectangle3173.jpg"; // plasmic-import: jHnSZtXoqzEu/picture
-import rectangle3185Cy33Bese3Vn from "./images/rectangle3185.png"; // plasmic-import: Cy_33BESE3VN/picture
 import layout3PopUppngPQuGwnoEoieY from "./images/layout3PopUppng.png"; // plasmic-import: pQuGwnoEoieY/picture
 import layoutPopUp2PngRvBzf5OSPi3J from "./images/layoutPopUp2Png.png"; // plasmic-import: rvBZF5oSPi3j/picture
 import layout1PopUppngI0WjXKLs7G0 from "./images/layout1PopUppng.png"; // plasmic-import: i0WjX-KLs7g0/picture
@@ -698,22 +696,21 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
               </div>
             </div>
           </div>
-          <Video
-            data-plasmic-name={"renderedVideo"}
-            data-plasmic-override={overrides.renderedVideo}
-            autoPlay={true}
-            className={classNames("__wab_instance", sty.renderedVideo, {
-              [sty.renderedVideovariants2_renderings]: hasVariant(
+          <YouTube
+            className={classNames("__wab_instance", sty.youTube___0YzHv, {
+              [sty.youTubevariants2_renderings___0YzHVhKtTu]: hasVariant(
                 $state,
                 "variants2",
                 "renderings"
               )
             })}
-            controls={true}
+            disablekb={true}
             loop={true}
-            muted={true}
-            poster={rectangle3173JHnSZtXoqzEu}
-            src={"https://www.youtube.com/watch?v=3fekaeXh4Kw"}
+            modestbranding={true}
+            mute={true}
+            playsinline={true}
+            rel={false}
+            videoId={"3fekaeXh4Kw"}
           />
 
           <div
@@ -734,28 +731,24 @@ function PlasmicGalleryDisplay__RenderFunc(props) {
                 )
               })}
             >
-              <Video
-                data-plasmic-name={"analysisVideo"}
-                data-plasmic-override={overrides.analysisVideo}
-                autoPlay={true}
-                className={classNames("__wab_instance", sty.analysisVideo, {
-                  [sty.analysisVideovariants2_analysis]: hasVariant(
+              <YouTube
+                cc_load_policy={false}
+                className={classNames("__wab_instance", sty.youTube__afMgH, {
+                  [sty.youTubevariants2_analysis__afMgHw6Kp]: hasVariant(
                     $state,
                     "variants2",
                     "analysis"
-                  ),
-                  [sty.analysisVideovariants2_renderings]: hasVariant(
-                    $state,
-                    "variants2",
-                    "renderings"
                   )
                 })}
                 controls={true}
+                disablekb={true}
+                fs={true}
                 loop={true}
-                muted={true}
-                playsInline={false}
-                poster={rectangle3185Cy33Bese3Vn}
-                src={"https://youtu.be/zEtPgtiNg_I"}
+                modestbranding={true}
+                mute={true}
+                playsinline={true}
+                rel={false}
+                videoId={"zEtPgtiNg_I"}
               />
 
               {(hasVariant($state, "variants2", "analysis") ? true : false) ? (
@@ -2757,8 +2750,6 @@ const PlasmicDescendants = {
     "analysis",
     "sketches",
     "map",
-    "renderedVideo",
-    "analysisVideo",
     "headingsParagraph2",
     "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2",
     "headingsParagraph4",
@@ -2810,8 +2801,6 @@ const PlasmicDescendants = {
   analysis: ["analysis"],
   sketches: ["sketches"],
   map: ["map"],
-  renderedVideo: ["renderedVideo"],
-  analysisVideo: ["analysisVideo"],
   headingsParagraph2: [
     "headingsParagraph2",
     "fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2"
@@ -3030,8 +3019,6 @@ export const PlasmicGalleryDisplay = Object.assign(
     analysis: makeNodeComponent("analysis"),
     sketches: makeNodeComponent("sketches"),
     map: makeNodeComponent("map"),
-    renderedVideo: makeNodeComponent("renderedVideo"),
-    analysisVideo: makeNodeComponent("analysisVideo"),
     headingsParagraph2: makeNodeComponent("headingsParagraph2"),
     fromStartToFinishOurMeticulousProjectManagementMinimizesRiskAndAssuresCustomersPeaceOfMindWeOverseeEachStepEnsuringSuccessfulCompletion2:
       makeNodeComponent(

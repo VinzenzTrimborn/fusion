@@ -411,17 +411,17 @@
 .textvariants2_activities__jSUdxoy1JL {
   font-weight: 600;
 }
-.renderedVideo:global(.__wab_instance) {
-  width: 758px;
-  height: auto;
+.youTube___0YzHv:global(.__wab_instance) {
+  width: 640px;
+  height: 390px;
+  max-height: 100%;
   max-width: 100%;
   object-fit: cover;
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  flex-shrink: 0;
   display: none;
 }
-.renderedVideovariants2_renderings:global(.__wab_instance) {
+.youTubevariants2_renderings___0YzHVhKtTu:global(.__wab_instance) {
   display: flex;
 }
 .freeBox__xHBol {
@@ -456,17 +456,17 @@
 .freeBoxvariants2_analysis__j13GxW6Kp {
   width: auto;
 }
-.analysisVideo:global(.__wab_instance) {
-  width: 1165px;
-  height: auto;
+.youTube__afMgH:global(.__wab_instance) {
+  width: 640px;
+  height: 390px;
+  max-height: 100%;
   max-width: 100%;
   object-fit: cover;
+  position: relative;
+  flex-shrink: 0;
   display: none;
 }
-.analysisVideovariants2_renderings:global(.__wab_instance) {
-  display: none;
-}
-.analysisVideovariants2_analysis:global(.__wab_instance) {
+.youTubevariants2_analysis__afMgHw6Kp:global(.__wab_instance) {
   display: flex;
 }
 .headingsParagraph2 {
